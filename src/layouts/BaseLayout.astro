@@ -1,0 +1,36 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+const { title, description = 'Kho lưu trữ thần thoại và truyền thuyết Việt Nam' } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@400;700&display=swap" rel="stylesheet" />
+  </head>
+  <body class="bg-white text-[var(--color-text-primary)] font-sans">
+    <nav class="border-b border-gray-200 bg-white sticky top-0 z-10">
+      <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+        <a href="/" class="font-bold text-lg text-[var(--color-primary)]">Thần Thoại Việt</a>
+        <div class="flex gap-6">
+          <a href="/" class="text-sm text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors">Trang chủ</a>
+          <a href="/entries" class="text-sm text-[var(--color-text-muted)] hover:text-[var(--color-primary)] transition-colors">Mục lục</a>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <slot />
+    </main>
+    <footer class="border-t border-gray-200 mt-16 py-8 text-center text-sm text-[var(--color-text-muted)]">
+      <p>Thần Thoại Việt Nam — Lưu giữ di sản văn hóa dân tộc</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+---
+import SidebarCard from './SidebarCard.astro';
+
+interface Props {
+  data: Record<string, any>;
+}
+const { data } = Astro.props;
+
+const rows = [
+  { label: 'Tên tiếng Việt', value: data.ten_vn },
+  data.ten_han ? { label: 'Tên chữ Hán', value: data.ten_han } : null,
+  data.ten_khac?.length ? { label: 'Tên khác', value: data.ten_khac.join(', ') } : null,
+  { label: 'Loại', value: data.loai },
+  data.thoi_dai ? { label: 'Thời đại', value: data.thoi_dai } : null,
+  data.vung_mien ? { label: 'Vùng miền', value: data.vung_mien } : null,
+  data.dia_diem_chinh?.length ? { label: 'Địa điểm', value: data.dia_diem_chinh.join(', ') } : null,
+].filter(Boolean);
+---
+<SidebarCard label="Thông tin">
+  <dl class="space-y-2">
+    {rows.map((row) => (
+      <div class="flex flex-col">
+        <dt class="text-xs text-[var(--color-text-muted)] font-medium">{row!.label}</dt>
+        <dd class="text-sm text-[var(--color-text-primary)]">{row!.value}</dd>
+      </div>
+    ))}
+  </dl>
+</SidebarCard>

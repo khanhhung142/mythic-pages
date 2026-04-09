@@ -1,0 +1,32 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import EntryCard from '../../components/EntryCard.astro';
+import { getCollection } from 'astro:content';
+
+const allEntries = await getCollection('entries', ({ data }) => data.trang_thai === 'published');
+const sorted = allEntries.sort((a, b) => {
+  const popDiff = (b.data.do_pho_bien ?? 1) - (a.data.do_pho_bien ?? 1);
+  if (popDiff !== 0) return popDiff;
+  return a.data.ten_vn.localeCompare(b.data.ten_vn, 'vi');
+});
+---
+<BaseLayout title="Mục Lục — Thần Thoại Việt Nam" description="Toàn bộ mục lục thần thoại và truyền thuyết Việt Nam">
+  <div class="max-w-6xl mx-auto px-4 py-12">
+    <div class="mb-8">
+      <h1 class="text-3xl font-bold text-[var(--color-text-primary)]">Mục Lục</h1>
+      <p class="text-[var(--color-text-muted)] mt-2">{sorted.length} mục</p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {sorted.map((entry) => (
+        <EntryCard
+          id={entry.id}
+          ten_vn={entry.data.ten_vn}
+          ten_en={entry.data.ten_en}
+          loai={entry.data.loai}
+          chu_de={entry.data.chu_de}
+          summary={entry.body?.slice(0, 200)}
+        />
+      ))}
+    </div>
+  </div>
+</BaseLayout>

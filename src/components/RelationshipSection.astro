@@ -1,0 +1,36 @@
+---
+import SidebarCard from './SidebarCard.astro';
+
+interface Props {
+  lien_quan: {
+    gia_dinh?: string[];
+    dong_minh?: string[];
+    ke_thu?: string[];
+    vat_pham?: string[];
+  };
+}
+const { lien_quan } = Astro.props;
+
+function stripWikilinks(items: string[]): string[] {
+  return items.map(item => item.replace(/\[\[(.+?)\]\]/g, '$1'));
+}
+
+const groups = [
+  { label: 'Gia đình', items: lien_quan.gia_dinh },
+  { label: 'Đồng minh', items: lien_quan.dong_minh },
+  { label: 'Kẻ thù', items: lien_quan.ke_thu },
+  { label: 'Vật phẩm', items: lien_quan.vat_pham },
+].filter(g => g.items && g.items.length > 0);
+---
+{groups.length > 0 && (
+  <SidebarCard label="Liên quan">
+    <div class="space-y-3">
+      {groups.map((group) => (
+        <div>
+          <p class="text-xs font-semibold text-[var(--color-text-primary)] mb-1">{group.label}</p>
+          <p class="text-sm text-[var(--color-text-muted)]">{stripWikilinks(group.items!).join(', ')}</p>
+        </div>
+      ))}
+    </div>
+  </SidebarCard>
+)}

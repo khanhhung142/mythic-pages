@@ -1,0 +1,37 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import EntryCard from '../components/EntryCard.astro';
+import { getCollection } from 'astro:content';
+
+const allEntries = await getCollection('entries', ({ data }) => data.trang_thai === 'published');
+const featured = allEntries
+  .sort((a, b) => (b.data.do_pho_bien ?? 1) - (a.data.do_pho_bien ?? 1))
+  .slice(0, 6);
+---
+<BaseLayout title="Thần Thoại Việt Nam" description="Kho lưu trữ thần thoại và truyền thuyết Việt Nam">
+  <section class="bg-[var(--color-secondary)] py-20 px-4 text-center">
+    <h1 class="text-4xl md:text-5xl font-bold text-[var(--color-text-primary)] mb-4">Thần Thoại Việt Nam</h1>
+    <p class="text-lg text-[var(--color-text-muted)] max-w-2xl mx-auto mb-8">
+      Kho lưu trữ thần thoại, truyền thuyết và nhân vật huyền thoại của Việt Nam
+    </p>
+    <a href="/entries" class="inline-block bg-[var(--color-primary)] text-white px-8 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity">
+      Khám Phá Mục Lục
+    </a>
+  </section>
+
+  <section class="max-w-6xl mx-auto px-4 py-16">
+    <h2 class="text-2xl font-bold text-[var(--color-text-primary)] mb-8">Nổi Bật</h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {featured.map((entry) => (
+        <EntryCard
+          id={entry.id}
+          ten_vn={entry.data.ten_vn}
+          ten_en={entry.data.ten_en}
+          loai={entry.data.loai}
+          chu_de={entry.data.chu_de}
+          summary={entry.body?.slice(0, 200)}
+        />
+      ))}
+    </div>
+  </section>
+</BaseLayout>

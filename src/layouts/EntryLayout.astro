@@ -1,0 +1,71 @@
+---
+import BaseLayout from './BaseLayout.astro';
+import InfoTable from '../components/InfoTable.astro';
+import RelationshipSection from '../components/RelationshipSection.astro';
+import ThemeCloud from '../components/ThemeCloud.astro';
+
+const { entry } = Astro.props;
+const { data } = entry;
+
+const loaiLabels: Record<string, string> = {
+  'than': 'Thần',
+  'anh-hung': 'Anh hùng',
+  'yeu-quai': 'Yêu quái',
+  'linh-vat': 'Linh vật',
+  'dia-danh': 'Địa danh',
+  'vat-pham': 'Vật phẩm',
+  'le-hoi': 'Lễ hội',
+};
+---
+<BaseLayout title={`${data.ten_vn} — Thần Thoại Việt Nam`} description={data.ten_en}>
+  <div class="max-w-6xl mx-auto px-4 py-8">
+    <!-- Breadcrumb -->
+    <nav class="text-sm text-[var(--color-text-muted)] mb-6">
+      <a href="/" class="hover:text-[var(--color-primary)]">Trang chủ</a>
+      <span class="mx-2">/</span>
+      <a href="/entries" class="hover:text-[var(--color-primary)]">Mục lục</a>
+      <span class="mx-2">/</span>
+      <span class="text-[var(--color-text-primary)]">{data.ten_vn}</span>
+    </nav>
+
+    <div class="flex flex-col lg:flex-row gap-8">
+      <!-- Main content -->
+      <article class="flex-1 min-w-0">
+        <!-- Category pill -->
+        <span class="inline-block pill-blue rounded-full px-3 py-1 text-xs font-medium uppercase tracking-wide mb-4">
+          {loaiLabels[data.loai] ?? data.loai}
+        </span>
+
+        <!-- Title -->
+        <h1 class="text-3xl font-bold text-[var(--color-text-primary)] mb-1">
+          {data.ten_vn}
+          {data.ten_han && <span class="text-xl font-normal text-[var(--color-text-muted)] ml-2">{data.ten_han}</span>}
+        </h1>
+
+        {data.ten_khac && data.ten_khac.length > 0 && (
+          <p class="text-sm text-[var(--color-text-muted)] mb-1">
+            Còn gọi: {data.ten_khac.join(' · ')}
+          </p>
+        )}
+
+        {data.ten_en && (
+          <p class="text-sm italic text-[var(--color-text-muted)] mb-6">{data.ten_en}</p>
+        )}
+
+        <!-- Article body -->
+        <div class="prose prose-slate max-w-none">
+          <slot />
+        </div>
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="lg:w-72 shrink-0">
+        <div class="lg:sticky lg:top-20">
+          <InfoTable data={data} />
+          {data.lien_quan && <RelationshipSection lien_quan={data.lien_quan} />}
+          {data.chu_de && data.chu_de.length > 0 && <ThemeCloud chu_de={data.chu_de} />}
+        </div>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

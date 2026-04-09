@@ -1,0 +1,37 @@
+---
+interface Props {
+  id: string;
+  ten_vn: string;
+  ten_en?: string;
+  loai: string;
+  chu_de?: string[];
+  summary?: string;
+}
+const { id, ten_vn, ten_en, loai, chu_de, summary } = Astro.props;
+
+const pillClasses = ['pill-coral', 'pill-teal', 'pill-blue', 'pill-amber', 'pill-violet', 'pill-green'];
+const loaiLabels: Record<string, string> = {
+  'than': 'Thần',
+  'anh-hung': 'Anh hùng',
+  'yeu-quai': 'Yêu quái',
+  'linh-vat': 'Linh vật',
+  'dia-danh': 'Địa danh',
+  'vat-pham': 'Vật phẩm',
+  'le-hoi': 'Lễ hội',
+};
+---
+<a href={`/entries/${id}`} class="block border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow hover:border-[var(--color-primary)]">
+  <h3 class="font-bold text-lg text-[var(--color-text-primary)] mb-0.5">{ten_vn}</h3>
+  {ten_en && <p class="text-sm italic text-[var(--color-text-muted)] mb-2">{ten_en}</p>}
+  <div class="flex flex-wrap gap-2 mb-3">
+    <span class="pill-blue rounded-full px-2 py-0.5 text-xs font-medium">{loaiLabels[loai] ?? loai}</span>
+    {chu_de?.slice(0, 2).map((tag, i) => (
+      <span class={`rounded-full px-2 py-0.5 text-xs font-medium ${pillClasses[i % pillClasses.length]}`}>
+        {tag.replace(/-/g, ' ')}
+      </span>
+    ))}
+  </div>
+  {summary && (
+    <p class="text-sm text-[var(--color-text-muted)] line-clamp-2">{summary.replace(/^#+ .+$/gm, '').trim()}</p>
+  )}
+</a>

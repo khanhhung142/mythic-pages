@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "ten_vn": {
+      "type": "string"
+    },
+    "ten_han": {
+      "type": "string"
+    },
+    "ten_khac": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "ten_en": {
+      "type": "string"
+    },
+    "loai": {
+      "type": "string"
+    },
+    "phan_loai_phu": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "gioi_tinh": {
+      "type": "string"
+    },
+    "thoi_dai": {
+      "type": "string"
+    },
+    "nam_uoc_luong": {
+      "type": "number"
+    },
+    "vung_mien": {
+      "type": "string"
+    },
+    "dia_diem_chinh": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "toa_do": {
+      "type": "array",
+      "items": {
+        "type": "number"
+      }
+    },
+    "lien_quan": {
+      "type": "object",
+      "properties": {
+        "gia_dinh": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "dong_minh": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "ke_thu": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "vat_pham": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "nguon_co": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "ten": {
+            "type": "string"
+          },
+          "chuong": {
+            "type": "string"
+          },
+          "ban_dich": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "ten"
+        ]
+      }
+    },
+    "chu_de": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "do_pho_bien": {
+      "default": 1,
+      "type": "number"
+    },
+    "trang_thai": {
+      "default": "draft",
+      "type": "string"
+    },
+    "tac_gia": {
+      "type": "string"
+    },
+    "cap_nhat": {
+      "type": "string"
+    },
+    "$schema": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "ten_vn",
+    "loai"
+  ]
+}
