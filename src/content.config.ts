@@ -27,6 +27,8 @@ const entries = defineCollection({
       chuong: z.string().optional(),
       ban_dich: z.string().optional(),
     })).optional(),
+    tom_tat: z.string().optional(),
+    nhom: z.string().optional(),
     chu_de: z.array(z.string()).optional(),
     do_pho_bien: z.number().default(1),
     trang_thai: z.string().default('draft'),

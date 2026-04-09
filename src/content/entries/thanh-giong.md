@@ -42,6 +42,8 @@ chu_de:
   - bao-ve-to-quoc
   - than-dong
   - hy-sinh
+tom_tat: "Cậu bé ba tuổi không nói không cười, nghe tin giặc Ân xâm lược liền vươn vai thành tráng sĩ khổng lồ, cưỡi ngựa sắt, cầm roi sắt đánh tan quân thù, rồi bay về trời."
+nhom: Tứ Bất Tử
 do_pho_bien: 5
 trang_thai: published
 tac_gia: claude+admin

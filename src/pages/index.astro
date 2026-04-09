@@ -7,21 +7,46 @@ const allEntries = await getCollection('entries', ({ data }) => data.trang_thai 
 const featured = allEntries
   .sort((a, b) => (b.data.do_pho_bien ?? 1) - (a.data.do_pho_bien ?? 1))
   .slice(0, 6);
+
+const categories = [
+  { slug: 'than', label: 'Thần', description: 'Các vị thần trong tín ngưỡng dân gian', color: 'pill-violet' },
+  { slug: 'anh-hung', label: 'Anh hùng', description: 'Anh hùng và danh nhân huyền thoại', color: 'pill-coral' },
+  { slug: 'yeu-quai', label: 'Yêu quái', description: 'Quỷ dữ và linh vật kỳ bí', color: 'pill-amber' },
+  { slug: 'linh-vat', label: 'Linh vật', description: 'Sinh vật thần kỳ và linh thú', color: 'pill-green' },
+  { slug: 'dia-danh', label: 'Địa danh', description: 'Vùng đất và địa danh huyền thoại', color: 'pill-teal' },
+  { slug: 'vat-pham', label: 'Vật phẩm', description: 'Bảo vật và vũ khí thần kỳ', color: 'pill-blue' },
+  { slug: 'le-hoi', label: 'Lễ hội', description: 'Lễ hội và nghi lễ truyền thống', color: 'pill-slate' },
+];
 ---
 <BaseLayout title="Thần Thoại Việt Nam" description="Kho lưu trữ thần thoại và truyền thuyết Việt Nam">
-  <section class="bg-[var(--color-secondary)] py-20 px-4 text-center">
-    <h1 class="text-4xl md:text-5xl font-bold text-[var(--color-text-primary)] mb-4">Thần Thoại Việt Nam</h1>
-    <p class="text-lg text-[var(--color-text-muted)] max-w-2xl mx-auto mb-8">
-      Kho lưu trữ thần thoại, truyền thuyết và nhân vật huyền thoại của Việt Nam
-    </p>
-    <a href="/entries" class="inline-block bg-[var(--color-primary)] text-white px-8 py-3 rounded-lg font-medium hover:opacity-90 transition-opacity">
-      Khám Phá Mục Lục
-    </a>
+
+  <!-- Hero -->
+  <section class="bg-[#F8F7F4] border-b border-[#E5E7EB]">
+    <div class="max-w-[1200px] mx-auto px-4 py-20">
+      <p class="text-[11px] uppercase tracking-widest text-[#9CA3AF] mb-4 font-sans">Kho tư liệu</p>
+      <h1 class="text-[48px] font-medium text-[#1A1A1A] leading-tight mb-4 font-sans max-w-xl">
+        Thần Thoại<br />Việt Nam
+      </h1>
+      <p class="font-serif italic text-[17px] text-[#6B7280] leading-relaxed max-w-lg mb-8">
+        Kho lưu trữ thần thoại, truyền thuyết và nhân vật huyền thoại của người Việt — từ thuở Hồng Bàng đến ngày nay.
+      </p>
+      <a
+        href="/entries"
+        class="inline-flex items-center gap-2 text-[14px] font-medium text-[#185FA5] hover:underline font-sans"
+      >
+        Khám phá mục lục
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
   </section>
 
-  <section class="max-w-6xl mx-auto px-4 py-16">
-    <h2 class="text-2xl font-bold text-[var(--color-text-primary)] mb-8">Nổi Bật</h2>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+  <!-- Featured entries -->
+  <section class="max-w-[1200px] mx-auto px-4 py-14">
+    <div class="flex items-baseline justify-between mb-6">
+      <h2 class="text-[18px] font-medium text-[#1A1A1A] font-sans">Nổi bật</h2>
+      <a href="/entries" class="text-[13px] text-[#185FA5] hover:underline font-sans">Xem tất cả →</a>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
       {featured.map((entry) => (
         <EntryCard
           id={entry.id}
@@ -29,9 +54,42 @@ const featured = allEntries
           ten_en={entry.data.ten_en}
           loai={entry.data.loai}
           chu_de={entry.data.chu_de}
-          summary={entry.body?.slice(0, 200)}
+          summary={entry.data.tom_tat ?? entry.body?.slice(0, 160)}
         />
       ))}
     </div>
   </section>
+
+  <!-- Divider -->
+  <div class="max-w-[1200px] mx-auto px-4">
+    <hr class="border-t border-[#E5E7EB]" />
+  </div>
+
+  <!-- Categories -->
+  <section class="max-w-[1200px] mx-auto px-4 py-14">
+    <h2 class="text-[18px] font-medium text-[#1A1A1A] mb-2 font-sans">Khám phá theo loại</h2>
+    <p class="text-[14px] text-[#6B7280] mb-8 font-sans">Duyệt qua các nhóm nhân vật và địa danh trong thần thoại Việt Nam.</p>
+    <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3">
+      {categories.map((cat) => (
+        <a
+          href={`/entries`}
+          class={`rounded-lg px-4 py-4 flex flex-col gap-1 ${cat.color}`}
+          style="border: 0.5px solid transparent;"
+        >
+          <span class="text-[14px] font-medium font-sans">{cat.label}</span>
+          <span class="text-[12px] opacity-75 font-sans leading-snug">{cat.description}</span>
+        </a>
+      ))}
+    </div>
+  </section>
+
+  <!-- About strip -->
+  <section class="border-t border-[#E5E7EB] bg-[#F8F7F4]">
+    <div class="max-w-[1200px] mx-auto px-4 py-10 text-center">
+      <p class="text-[13px] text-[#9CA3AF] max-w-xl mx-auto font-sans leading-relaxed">
+        Dữ liệu tổng hợp từ <em class="font-serif italic not-italic">Lĩnh Nam Chích Quái</em>, <em class="font-serif italic not-italic">Việt Điện U Linh Tập</em> và các công trình nghiên cứu văn hóa dân gian Việt Nam.
+      </p>
+    </div>
+  </section>
+
 </BaseLayout>

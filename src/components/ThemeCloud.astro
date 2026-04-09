@@ -6,13 +6,15 @@ interface Props {
 }
 const { chu_de } = Astro.props;
 
-const pillClasses = ['pill-coral', 'pill-teal', 'pill-blue', 'pill-amber', 'pill-violet', 'pill-green'];
+function slugToLabel(slug: string): string {
+  return slug.replace(/-/g, ' ');
+}
 ---
-<SidebarCard label="Chủ đề">
-  <div class="flex flex-wrap gap-2">
-    {chu_de.map((tag, i) => (
-      <span class={`rounded-full px-3 py-1 text-xs font-medium ${pillClasses[i % pillClasses.length]}`}>
-        {tag.replace(/-/g, ' ')}
+<SidebarCard label="CHỦ ĐỀ">
+  <div class="flex flex-wrap gap-1.5">
+    {chu_de.map((tag) => (
+      <span class="bg-gray-100 text-[#1A1A1A] rounded-full px-2.5 py-1 text-[12px] font-sans">
+        {slugToLabel(tag)}
       </span>
     ))}
   </div>

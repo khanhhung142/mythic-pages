@@ -1,10 +1,16 @@
 ---
-import BaseLayout from './BaseLayout.astro';
+import '../styles/global.css';
 import InfoTable from '../components/InfoTable.astro';
 import RelationshipSection from '../components/RelationshipSection.astro';
 import ThemeCloud from '../components/ThemeCloud.astro';
+import EntryCard from '../components/EntryCard.astro';
 
-const { entry } = Astro.props;
+interface Props {
+  entry: any;
+  related?: any[];
+}
+
+const { entry, related = [] } = Astro.props;
 const { data } = entry;
 
 const loaiLabels: Record<string, string> = {
@@ -16,56 +22,122 @@ const loaiLabels: Record<string, string> = {
   'vat-pham': 'Vật phẩm',
   'le-hoi': 'Lễ hội',
 };
+
+const vungLabels: Record<string, string> = {
+  'bac': 'Bắc Bộ',
+  'trung': 'Trung Bộ',
+  'nam': 'Nam Bộ',
+};
+
+const categoryPills = [
+  data.loai ? { label: loaiLabels[data.loai] ?? data.loai, color: 'pill-coral' } : null,
+  data.vung_mien ? { label: vungLabels[data.vung_mien] ?? data.vung_mien, color: 'pill-teal' } : null,
+  data.thoi_dai ? { label: data.thoi_dai, color: 'pill-amber' } : null,
+].filter(Boolean);
 ---
-<BaseLayout title={`${data.ten_vn} — Thần Thoại Việt Nam`} description={data.ten_en}>
-  <div class="max-w-6xl mx-auto px-4 py-8">
-    <!-- Breadcrumb -->
-    <nav class="text-sm text-[var(--color-text-muted)] mb-6">
-      <a href="/" class="hover:text-[var(--color-primary)]">Trang chủ</a>
-      <span class="mx-2">/</span>
-      <a href="/entries" class="hover:text-[var(--color-primary)]">Mục lục</a>
-      <span class="mx-2">/</span>
-      <span class="text-[var(--color-text-primary)]">{data.ten_vn}</span>
-    </nav>
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={data.tom_tat ?? data.ten_en ?? data.ten_vn} />
+    <title>{data.ten_vn} — Thần Thoại Việt Nam</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+  </head>
+  <body class="bg-white text-[#1A1A1A] font-sans">
+    <div class="max-w-[1200px] mx-auto px-4 py-8">
 
-    <div class="flex flex-col lg:flex-row gap-8">
-      <!-- Main content -->
-      <article class="flex-1 min-w-0">
-        <!-- Category pill -->
-        <span class="inline-block pill-blue rounded-full px-3 py-1 text-xs font-medium uppercase tracking-wide mb-4">
-          {loaiLabels[data.loai] ?? data.loai}
-        </span>
-
-        <!-- Title -->
-        <h1 class="text-3xl font-bold text-[var(--color-text-primary)] mb-1">
-          {data.ten_vn}
-          {data.ten_han && <span class="text-xl font-normal text-[var(--color-text-muted)] ml-2">{data.ten_han}</span>}
-        </h1>
-
-        {data.ten_khac && data.ten_khac.length > 0 && (
-          <p class="text-sm text-[var(--color-text-muted)] mb-1">
-            Còn gọi: {data.ten_khac.join(' · ')}
-          </p>
-        )}
-
-        {data.ten_en && (
-          <p class="text-sm italic text-[var(--color-text-muted)] mb-6">{data.ten_en}</p>
-        )}
-
-        <!-- Article body -->
-        <div class="prose prose-slate max-w-none">
-          <slot />
+      <!-- Breadcrumb + language switcher -->
+      <div class="flex items-center justify-between mb-5">
+        <nav aria-label="breadcrumb" class="text-xs text-[#6B7280]">
+          <a href="/" class="hover:text-[#185FA5] transition-colors">Wiki</a>
+          <span class="mx-1.5 text-[#9CA3AF]">›</span>
+          <a href="/entries" class="hover:text-[#185FA5] transition-colors">{loaiLabels[data.loai] ?? data.loai}</a>
+          <span class="mx-1.5 text-[#9CA3AF]">›</span>
+          <span class="text-[#1A1A1A]">{data.ten_vn}</span>
+        </nav>
+        <div class="flex gap-1">
+          <button class="px-3 py-1 text-xs rounded-full bg-[#1A1A1A] text-white font-medium font-sans">VI</button>
+          <button class="px-3 py-1 text-xs rounded-full border border-[#E5E7EB] text-[#6B7280] font-sans hover:border-[#9CA3AF]">EN</button>
         </div>
-      </article>
+      </div>
 
-      <!-- Sidebar -->
-      <aside class="lg:w-72 shrink-0">
-        <div class="lg:sticky lg:top-20">
-          <InfoTable data={data} />
-          {data.lien_quan && <RelationshipSection lien_quan={data.lien_quan} />}
-          {data.chu_de && data.chu_de.length > 0 && <ThemeCloud chu_de={data.chu_de} />}
-        </div>
-      </aside>
+      <!-- Category tag pills -->
+      <div class="flex flex-wrap gap-2 mb-4">
+        {categoryPills.map((pill) => (
+          <span class={`rounded-full px-3 py-1 text-xs font-medium font-sans ${pill!.color}`}>
+            {pill!.label}
+          </span>
+        ))}
+      </div>
+
+      <!-- H1 -->
+      <h1 class="text-[32px] font-medium text-[#1A1A1A] leading-tight mb-1 font-sans">{data.ten_vn}</h1>
+
+      <!-- Alternative names: serif italic 14px -->
+      {data.ten_khac && data.ten_khac.length > 0 && (
+        <p class="font-serif italic text-[14px] text-[#9CA3AF] mb-1">
+          {data.ten_khac.join(' · ')}
+        </p>
+      )}
+
+      <!-- Han + English: 13px light gray -->
+      {(data.ten_han || data.ten_en) && (
+        <p class="text-[13px] text-[#9CA3AF] mb-8 font-sans">
+          {[data.ten_han, data.ten_en].filter(Boolean).join(' · ')}
+        </p>
+      )}
+
+      <!-- Two-column layout -->
+      <div class="flex flex-col lg:flex-row gap-8">
+
+        <!-- LEFT: main content -->
+        <article class="flex-1 min-w-0">
+
+          <!-- Summary box -->
+          {data.tom_tat && (
+            <div class="bg-[#F9FAFB] rounded-lg px-5 py-4 mb-8">
+              <p class="font-serif italic text-[16px] leading-[1.7] text-[#1A1A1A]">{data.tom_tat}</p>
+            </div>
+          )}
+
+          <!-- Markdown body -->
+          <div class="entry-prose">
+            <slot />
+          </div>
+
+          <!-- Đọc thêm -->
+          {related.length > 0 && (
+            <div class="mt-12 pt-6 border-t border-[#E5E7EB]">
+              <h2 class="text-[18px] font-medium text-[#1A1A1A] mb-4 font-sans">Đọc thêm</h2>
+              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                {related.map((e: any) => (
+                  <EntryCard
+                    id={e.id}
+                    ten_vn={e.data.ten_vn}
+                    ten_en={e.data.ten_en}
+                    loai={e.data.loai}
+                    chu_de={e.data.chu_de}
+                    summary={e.body?.slice(0, 150)}
+                  />
+                ))}
+              </div>
+            </div>
+          )}
+        </article>
+
+        <!-- RIGHT: sidebar (mobile: below content) -->
+        <aside class="lg:w-[280px] shrink-0">
+          <div class="lg:sticky lg:top-6 flex flex-col gap-4">
+            <InfoTable data={data} />
+            {data.lien_quan && <RelationshipSection lien_quan={data.lien_quan} />}
+            {data.chu_de && data.chu_de.length > 0 && <ThemeCloud chu_de={data.chu_de} />}
+          </div>
+        </aside>
+
+      </div>
     </div>
-  </div>
-</BaseLayout>
+  </body>
+</html>

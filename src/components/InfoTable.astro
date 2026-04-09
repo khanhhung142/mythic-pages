@@ -6,22 +6,48 @@ interface Props {
 }
 const { data } = Astro.props;
 
+const loaiLabels: Record<string, string> = {
+  'than': 'Thần',
+  'anh-hung': 'Anh hùng',
+  'yeu-quai': 'Yêu quái',
+  'linh-vat': 'Linh vật',
+  'dia-danh': 'Địa danh',
+  'vat-pham': 'Vật phẩm',
+  'le-hoi': 'Lễ hội',
+};
+
+const vungLabels: Record<string, string> = {
+  'bac': 'Bắc Bộ',
+  'trung': 'Trung Bộ',
+  'nam': 'Nam Bộ',
+};
+
+const gioiTinhLabels: Record<string, string> = {
+  'nam': 'Nam',
+  'nu': 'Nữ',
+  'khong-xac-dinh': 'Không xác định',
+};
+
 const rows = [
-  { label: 'Tên tiếng Việt', value: data.ten_vn },
-  data.ten_han ? { label: 'Tên chữ Hán', value: data.ten_han } : null,
-  data.ten_khac?.length ? { label: 'Tên khác', value: data.ten_khac.join(', ') } : null,
-  { label: 'Loại', value: data.loai },
+  data.loai ? { label: 'Loại', value: loaiLabels[data.loai] ?? data.loai } : null,
+  data.gioi_tinh ? { label: 'Giới tính', value: gioiTinhLabels[data.gioi_tinh] ?? data.gioi_tinh } : null,
   data.thoi_dai ? { label: 'Thời đại', value: data.thoi_dai } : null,
-  data.vung_mien ? { label: 'Vùng miền', value: data.vung_mien } : null,
-  data.dia_diem_chinh?.length ? { label: 'Địa điểm', value: data.dia_diem_chinh.join(', ') } : null,
+  data.vung_mien ? { label: 'Vùng', value: vungLabels[data.vung_mien] ?? data.vung_mien } : null,
+  data.dia_diem_chinh?.length ? { label: 'Địa điểm', value: data.dia_diem_chinh[0], isLink: true } : null,
+  data.nhom ? { label: 'Nhóm', value: data.nhom } : null,
 ].filter(Boolean);
 ---
-<SidebarCard label="Thông tin">
-  <dl class="space-y-2">
+<SidebarCard label="THÔNG TIN">
+  <dl>
     {rows.map((row) => (
-      <div class="flex flex-col">
-        <dt class="text-xs text-[var(--color-text-muted)] font-medium">{row!.label}</dt>
-        <dd class="text-sm text-[var(--color-text-primary)]">{row!.value}</dd>
+      <div class="flex justify-between items-baseline py-1.5 border-b border-[#F3F4F6] last:border-0">
+        <dt class="text-[13px] text-[#6B7280] shrink-0 mr-3 font-sans">{row!.label}</dt>
+        <dd class="text-[13px] text-[#1A1A1A] text-right font-sans">
+          {row!.isLink
+            ? <a href="#" class="text-[#185FA5] hover:underline">{row!.value}</a>
+            : row!.value
+          }
+        </dd>
       </div>
     ))}
   </dl>

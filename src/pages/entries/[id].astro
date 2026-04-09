@@ -4,15 +4,22 @@ import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
   const entries = await getCollection('entries');
-  return entries.map((entry) => ({
+  const published = entries.filter(e => e.data.trang_thai === 'published');
+  return published.map((entry) => ({
     params: { id: entry.id },
-    props: { entry },
+    props: {
+      entry,
+      related: published
+        .filter(e => e.id !== entry.id)
+        .sort((a, b) => (b.data.do_pho_bien ?? 1) - (a.data.do_pho_bien ?? 1))
+        .slice(0, 3),
+    },
   }));
 }
 
-const { entry } = Astro.props;
+const { entry, related } = Astro.props;
 const { Content } = await render(entry);
 ---
-<EntryLayout entry={entry}>
+<EntryLayout entry={entry} related={related}>
   <Content />
 </EntryLayout>
