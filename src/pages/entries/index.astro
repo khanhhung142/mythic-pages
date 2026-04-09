@@ -1,32 +1,215 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import EntryCard from '../../components/EntryCard.astro';
 import { getCollection } from 'astro:content';
 
-const allEntries = await getCollection('entries', ({ data }) => data.trang_thai === 'published');
-const sorted = allEntries.sort((a, b) => {
-  const popDiff = (b.data.do_pho_bien ?? 1) - (a.data.do_pho_bien ?? 1);
-  if (popDiff !== 0) return popDiff;
-  return a.data.ten_vn.localeCompare(b.data.ten_vn, 'vi');
+const allEntries = await getCollection('entries', e => e.data.trang_thai === 'published');
+allEntries.sort((a, b) => {
+  if ((b.data.do_pho_bien ?? 0) !== (a.data.do_pho_bien ?? 0)) {
+    return (b.data.do_pho_bien ?? 0) - (a.data.do_pho_bien ?? 0);
+  }
+  return (a.data.ten_vn ?? '').localeCompare(b.data.ten_vn ?? '', 'vi');
 });
+
+const loaiLabels: Record<string, string> = {
+  'than': 'Thần',
+  'anh-hung': 'Anh hùng',
+  'yeu-quai': 'Yêu quái',
+  'linh-vat': 'Linh vật',
+  'dia-danh': 'Địa danh',
+  'vat-pham': 'Vật phẩm',
+  'le-hoi': 'Lễ hội',
+  'tich-co': 'Tích cổ',
+};
 ---
-<BaseLayout title="Mục Lục — Thần Thoại Việt Nam" description="Toàn bộ mục lục thần thoại và truyền thuyết Việt Nam">
-  <div class="max-w-6xl mx-auto px-4 py-12">
-    <div class="mb-8">
-      <h1 class="text-3xl font-bold text-[var(--color-text-primary)]">Mục Lục</h1>
-      <p class="text-[var(--color-text-muted)] mt-2">{sorted.length} mục</p>
+<BaseLayout title="Mục lục — Thần Thoại Việt Nam">
+  <!-- Page header -->
+  <div class="entries-header">
+    <div class="entries-header-inner">
+      <div class="eyebrow">№ 03 — Kho tàng</div>
+      <h1 class="entries-title">Mục <em>lục</em></h1>
+      <p class="entries-desc">Toàn bộ {allEntries.length} nhân vật, thần linh, yêu quái và sự tích trong kho tàng thần thoại Việt Nam.</p>
     </div>
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {sorted.map((entry) => (
-        <EntryCard
-          id={entry.id}
-          ten_vn={entry.data.ten_vn}
-          ten_en={entry.data.ten_en}
-          loai={entry.data.loai}
-          chu_de={entry.data.chu_de}
-          summary={entry.body?.slice(0, 200)}
-        />
+  </div>
+
+  <!-- Filter bar -->
+  <div class="filter-bar">
+    <div class="filter-inner">
+      <span class="filter-label">Phân loại:</span>
+      <div class="filter-pills">
+        <a href="/entries" class="pill pill-active">Tất cả</a>
+        {Object.entries(loaiLabels).map(([slug, label]) => (
+          <a href="/entries" class="pill">{label}</a>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <!-- Entries grid -->
+  <div class="entries-section">
+    <div class="entries-grid">
+      {allEntries.map(entry => (
+        <article class="entry-card">
+          <a href={`/entries/${entry.id}`} class="entry-card-link">
+            <div class="entry-img img-placeholder"></div>
+            <div class="entry-body">
+              <div class="entry-meta">
+                <span class="entry-tag">{loaiLabels[entry.data.loai] ?? entry.data.loai}</span>
+              </div>
+              <h3 class="entry-name">{entry.data.ten_vn}</h3>
+              {entry.data.ten_en && <div class="entry-subtitle">{entry.data.ten_en}</div>}
+              {entry.data.ten_han && <div class="entry-han">{entry.data.ten_han}</div>}
+              <p class="entry-summary">{entry.data.tom_tat?.slice(0, 140)}...</p>
+            </div>
+          </a>
+        </article>
       ))}
     </div>
   </div>
 </BaseLayout>
+
+<style>
+/* Page header */
+.entries-header{
+  padding:10rem 3rem 4rem;
+  border-bottom:1px solid rgba(26,15,8,.15);
+  position:relative;
+  overflow:hidden;
+}
+.entries-header::before{
+  content:'目錄';
+  position:absolute;top:50%;right:-2%;
+  transform:translateY(-50%);
+  font-family:'Cormorant Garamond',serif;
+  font-size:22rem;
+  color:rgba(168,50,30,.04);
+  font-weight:700;
+  line-height:1;
+  pointer-events:none;
+  user-select:none;
+}
+.entries-header-inner{position:relative;z-index:1;max-width:700px}
+.eyebrow{
+  font-size:.75rem;letter-spacing:.4em;text-transform:uppercase;
+  color:var(--vermilion);margin-bottom:1.5rem;
+  display:flex;align-items:center;gap:1rem;
+}
+.eyebrow::before{content:'';width:40px;height:1px;background:var(--vermilion)}
+.entries-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(4rem,9vw,8rem);
+  font-weight:500;line-height:.9;
+  letter-spacing:-.02em;
+  margin-bottom:1.5rem;
+}
+.entries-title em{
+  font-family:'Playfair Display',serif;
+  font-style:italic;font-weight:400;
+  color:var(--vermilion);
+}
+.entries-desc{
+  font-size:1.1rem;color:var(--ink-soft);
+  max-width:500px;font-weight:300;
+}
+
+/* Filter bar */
+.filter-bar{
+  padding:1.5rem 3rem;
+  border-bottom:1px solid rgba(26,15,8,.1);
+  position:sticky;top:68px;z-index:50;
+  background:rgba(244,234,213,.92);
+  backdrop-filter:blur(12px);
+}
+.filter-inner{display:flex;align-items:center;gap:1.5rem;flex-wrap:wrap}
+.filter-label{
+  font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--ink-soft);white-space:nowrap;
+}
+.filter-pills{display:flex;gap:.5rem;flex-wrap:wrap}
+.pill{
+  font-size:.72rem;letter-spacing:.15em;text-transform:uppercase;
+  padding:.45rem 1rem;
+  border:1px solid rgba(26,15,8,.25);
+  color:var(--ink-soft);
+  text-decoration:none;
+  transition:all .3s ease;
+}
+.pill:hover{border-color:var(--vermilion);color:var(--vermilion)}
+.pill-active{background:var(--ink);border-color:var(--ink);color:var(--paper)}
+
+/* Entries grid */
+.entries-section{padding:4rem 3rem 6rem}
+.entries-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:2rem;
+}
+.entry-card{
+  background:var(--paper-dark);
+  transition:transform .4s ease;
+  border:1px solid rgba(26,15,8,.08);
+}
+.entry-card:hover{transform:translateY(-6px)}
+.entry-card-link{text-decoration:none;color:inherit;display:block}
+.entry-img{height:200px}
+.img-placeholder{
+  background:linear-gradient(135deg,var(--paper-dark),#d4c19a);
+  position:relative;overflow:hidden;
+  border-bottom:1px solid rgba(26,15,8,.1);
+}
+.img-placeholder::before{
+  content:'';position:absolute;inset:0;
+  background:repeating-linear-gradient(45deg,transparent,transparent 20px,rgba(26,15,8,.03) 20px,rgba(26,15,8,.03) 21px);
+}
+.img-placeholder::after{
+  content:'圖';position:absolute;top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  font-family:'Cormorant Garamond',serif;font-size:3rem;color:rgba(26,15,8,.12);
+}
+.entry-body{padding:1.5rem}
+.entry-meta{margin-bottom:.8rem}
+.entry-tag{
+  font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;
+  padding:.35rem .8rem;
+  background:var(--vermilion);
+  color:var(--paper);
+}
+.entry-name{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.8rem;font-weight:500;
+  line-height:1.1;
+  margin-bottom:.3rem;
+  color:var(--ink);
+}
+.entry-subtitle{
+  font-size:.8rem;letter-spacing:.1em;
+  color:var(--ink-soft);
+  margin-bottom:.2rem;
+}
+.entry-han{
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  font-size:.95rem;
+  color:var(--gold);
+  margin-bottom:.8rem;
+}
+.entry-summary{
+  font-size:.88rem;
+  color:var(--ink-soft);
+  line-height:1.6;
+  display:-webkit-box;
+  -webkit-line-clamp:3;
+  -webkit-box-orient:vertical;
+  overflow:hidden;
+}
+
+@media (max-width:900px){
+  .entries-header{padding:8rem 1.5rem 3rem}
+  .entries-header::before{font-size:12rem}
+  .filter-bar{padding:1rem 1.5rem}
+  .entries-section{padding:2rem 1.5rem 4rem}
+  .entries-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:600px){
+  .entries-grid{grid-template-columns:1fr}
+}
+</style>
