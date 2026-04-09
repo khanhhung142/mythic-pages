@@ -24,6 +24,7 @@ const entries = defineCollection({
     }).optional(),
     nguon_co: z.array(z.object({
       ten: z.string(),
+      tac_gia: z.string().optional(),
       chuong: z.string().optional(),
       ban_dich: z.string().optional(),
     })).optional(),

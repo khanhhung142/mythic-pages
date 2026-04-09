@@ -87,6 +87,9 @@
           "ten": {
             "type": "string"
           },
+          "tac_gia": {
+            "type": "string"
+          },
           "chuong": {
             "type": "string"
           },

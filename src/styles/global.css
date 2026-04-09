@@ -3,12 +3,17 @@
 :root{
   --paper:#f4ead5;
   --paper-dark:#e8d9b8;
+  --paper-light:#faf4e3;
   --ink:#1a0f08;
   --ink-soft:#3d2817;
+  --ink-mute:#6b5945;
+  --ink-light:#9c8a72;
   --vermilion:#a8321e;
   --vermilion-dark:#7a1e10;
   --gold:#b8860b;
   --jade:#2d5a3d;
+  --line:rgba(26,15,8,.15);
+  --line-soft:rgba(26,15,8,.08);
   --shadow:rgba(26,15,8,.12);
 }
 *{margin:0;padding:0;box-sizing:border-box}

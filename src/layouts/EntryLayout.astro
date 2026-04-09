@@ -1,9 +1,5 @@
 ---
 import '../styles/global.css';
-import InfoTable from '../components/InfoTable.astro';
-import RelationshipSection from '../components/RelationshipSection.astro';
-import ThemeCloud from '../components/ThemeCloud.astro';
-import EntryCard from '../components/EntryCard.astro';
 
 interface Props {
   entry: any;
@@ -29,115 +25,654 @@ const vungLabels: Record<string, string> = {
   'nam': 'Nam Bộ',
 };
 
-const categoryPills = [
-  data.loai ? { label: loaiLabels[data.loai] ?? data.loai, color: 'pill-coral' } : null,
-  data.vung_mien ? { label: vungLabels[data.vung_mien] ?? data.vung_mien, color: 'pill-teal' } : null,
-  data.thoi_dai ? { label: data.thoi_dai, color: 'pill-amber' } : null,
-].filter(Boolean);
+const gioiTinhLabels: Record<string, string> = {
+  'nam': 'Nam',
+  'nu': 'Nữ',
+  'khong-xac-dinh': 'Không xác định',
+};
+
+const loaiLabel = loaiLabels[data.loai] ?? data.loai;
+const hanChar = data.ten_han?.charAt(0) ?? '';
+
+const infoRows = [
+  data.loai        ? { label: 'Loại',      value: loaiLabel,                                          isLink: false } : null,
+  data.gioi_tinh   ? { label: 'Giới tính', value: gioiTinhLabels[data.gioi_tinh] ?? data.gioi_tinh,  isLink: false } : null,
+  data.thoi_dai    ? { label: 'Thời đại',  value: data.thoi_dai,                                      isLink: false } : null,
+  data.vung_mien   ? { label: 'Vùng',      value: vungLabels[data.vung_mien] ?? data.vung_mien,       isLink: false } : null,
+  data.dia_diem_chinh?.length ? { label: 'Địa điểm', value: data.dia_diem_chinh[0], isLink: true }   : null,
+  data.nhom        ? { label: 'Nhóm',      value: data.nhom,                                          isLink: false } : null,
+].filter(Boolean) as { label: string; value: string; isLink: boolean }[];
+
+const relGroups = [
+  { label: 'Gia đình', items: data.lien_quan?.gia_dinh },
+  { label: 'Đồng minh', items: data.lien_quan?.dong_minh },
+  { label: 'Kẻ thù', items: data.lien_quan?.ke_thu },
+  { label: 'Vật phẩm', items: data.lien_quan?.vat_pham },
+].filter(g => g.items?.length) as { label: string; items: string[] }[];
+
+function slugToLabel(slug: string): string {
+  return slug.replace(/-/g, ' ');
+}
 ---
 <!DOCTYPE html>
 <html lang="vi">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content={data.tom_tat ?? data.ten_en ?? data.ten_vn} />
-    <title>{data.ten_vn} — Thần Thoại Việt Nam</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
-  </head>
-  <body class="bg-white text-[#1A1A1A] font-sans">
-    <div class="max-w-[1200px] mx-auto px-4 py-8">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content={data.tom_tat ?? data.ten_en ?? data.ten_vn} />
+  <title>{data.ten_vn} — Thần Thoại Việt Nam</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Be+Vietnam+Pro:wght@300;400;500;600&family=Playfair+Display:ital,wght@1,400;1,600&display=swap" rel="stylesheet" />
+</head>
+<body>
 
-      <!-- Breadcrumb + language switcher -->
-      <div class="flex items-center justify-between mb-5">
-        <nav aria-label="breadcrumb" class="text-xs text-[#6B7280]">
-          <a href="/" class="hover:text-[#185FA5] transition-colors">Wiki</a>
-          <span class="mx-1.5 text-[#9CA3AF]">›</span>
-          <a href="/entries" class="hover:text-[#185FA5] transition-colors">{loaiLabels[data.loai] ?? data.loai}</a>
-          <span class="mx-1.5 text-[#9CA3AF]">›</span>
-          <span class="text-[#1A1A1A]">{data.ten_vn}</span>
-        </nav>
-        <div class="flex gap-1">
-          <button class="px-3 py-1 text-xs rounded-full bg-[#1A1A1A] text-white font-medium font-sans">VI</button>
-          <button class="px-3 py-1 text-xs rounded-full border border-[#E5E7EB] text-[#6B7280] font-sans hover:border-[#9CA3AF]">EN</button>
+<nav>
+  <div class="logo">
+    <div class="logo-mark">神</div>
+    Thần Thoại Việt
+  </div>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="/">Trang chủ</a></li>
+      <li><a href="/entries">Mục lục</a></li>
+    </ul>
+    <div class="lang-switch">
+      <button class="active">VI</button>
+      <button>EN</button>
+    </div>
+  </div>
+</nav>
+
+<header class="entry-head" data-han={hanChar}>
+  <div class="breadcrumb">
+    <a href="/">Wiki</a>
+    <span class="sep">/</span>
+    <a href="/entries">{loaiLabel}</a>
+    <span class="sep">/</span>
+    <span class="current">{data.ten_vn}</span>
+  </div>
+
+  {data.nhom && (
+    <div class="eyebrow">{data.nhom}</div>
+  )}
+
+  <h1 class="entry-title">{data.ten_vn}</h1>
+
+  {data.ten_khac && data.ten_khac.length > 0 && (
+    <div class="alt-names">{data.ten_khac.join(' · ')}</div>
+  )}
+
+  {(data.ten_han || data.ten_en) && (
+    <div class="han-en">
+      {data.ten_han && <span class="han">{data.ten_han}</span>}
+      {data.ten_en && <span>· {data.ten_en}</span>}
+    </div>
+  )}
+
+  <div class="tag-row">
+    {data.loai && <span class="tag primary">{loaiLabel}</span>}
+    {data.vung_mien && <span class="tag region">{vungLabels[data.vung_mien] ?? data.vung_mien}</span>}
+    {data.thoi_dai && <span class="tag">{data.thoi_dai}</span>}
+  </div>
+</header>
+
+<div class="main-grid">
+
+  <article>
+
+    <div class="hero-img">
+      <div class="hero-img-caption">{data.ten_vn}</div>
+    </div>
+
+    {data.tom_tat && (
+      <div class="summary">
+        <p>{data.tom_tat}</p>
+      </div>
+    )}
+
+    <div class="entry-content">
+      <slot />
+    </div>
+
+    {data.nguon_co && data.nguon_co.length > 0 && (
+      <div class="sources">
+        <div class="section-label">Nguồn tham khảo</div>
+        <ol>
+          {data.nguon_co.map((src: any) => (
+            <li>
+              {src.tac_gia && <Fragment>{src.tac_gia}. </Fragment>}
+              <em>{src.ten}</em>
+              {src.chuong && <Fragment>. {src.chuong}</Fragment>}
+              {src.ban_dich && <Fragment>. {src.ban_dich}</Fragment>}.
+            </li>
+          ))}
+        </ol>
+      </div>
+    )}
+
+    {related.length > 0 && (
+      <div class="related">
+        <div class="section-label">Đọc thêm</div>
+        <div class="related-grid">
+          {related.map((e: any) => (
+            <a href={`/entries/${e.id}`} class="related-card">
+              <div class="img-ph"></div>
+              <div class="meta">{loaiLabels[e.data.loai] ?? e.data.loai}</div>
+              <h4>{e.data.ten_vn}</h4>
+              <p>{e.data.tom_tat ?? ''}</p>
+            </a>
+          ))}
         </div>
       </div>
+    )}
 
-      <!-- Category tag pills -->
-      <div class="flex flex-wrap gap-2 mb-4">
-        {categoryPills.map((pill) => (
-          <span class={`rounded-full px-3 py-1 text-xs font-medium font-sans ${pill!.color}`}>
-            {pill!.label}
-          </span>
-        ))}
+  </article>
+
+  <aside>
+    <div class="sidebar-sticky">
+
+      <div class="side-card">
+        <div class="side-label">Thông tin <span class="num">i.</span></div>
+        <dl class="info-table">
+          {infoRows.map((row) => (
+            <div class="info-row">
+              <dt>{row.label}</dt>
+              <dd>
+                {row.isLink
+                  ? <a href="#">{row.value}</a>
+                  : row.value
+                }
+              </dd>
+            </div>
+          ))}
+        </dl>
       </div>
 
-      <!-- H1 -->
-      <h1 class="text-[32px] font-medium text-[#1A1A1A] leading-tight mb-1 font-sans">{data.ten_vn}</h1>
-
-      <!-- Alternative names: serif italic 14px -->
-      {data.ten_khac && data.ten_khac.length > 0 && (
-        <p class="font-serif italic text-[14px] text-[#9CA3AF] mb-1">
-          {data.ten_khac.join(' · ')}
-        </p>
-      )}
-
-      <!-- Han + English: 13px light gray -->
-      {(data.ten_han || data.ten_en) && (
-        <p class="text-[13px] text-[#9CA3AF] mb-8 font-sans">
-          {[data.ten_han, data.ten_en].filter(Boolean).join(' · ')}
-        </p>
-      )}
-
-      <!-- Two-column layout -->
-      <div class="flex flex-col lg:flex-row gap-8">
-
-        <!-- LEFT: main content -->
-        <article class="flex-1 min-w-0">
-
-          <!-- Summary box -->
-          {data.tom_tat && (
-            <div class="bg-[#F9FAFB] rounded-lg px-5 py-4 mb-8">
-              <p class="font-serif italic text-[16px] leading-[1.7] text-[#1A1A1A]">{data.tom_tat}</p>
-            </div>
-          )}
-
-          <!-- Markdown body -->
-          <div class="entry-prose">
-            <slot />
-          </div>
-
-          <!-- Đọc thêm -->
-          {related.length > 0 && (
-            <div class="mt-12 pt-6 border-t border-[#E5E7EB]">
-              <h2 class="text-[18px] font-medium text-[#1A1A1A] mb-4 font-sans">Đọc thêm</h2>
-              <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                {related.map((e: any) => (
-                  <EntryCard
-                    id={e.id}
-                    ten_vn={e.data.ten_vn}
-                    ten_en={e.data.ten_en}
-                    loai={e.data.loai}
-                    chu_de={e.data.chu_de}
-                    summary={e.body?.slice(0, 150)}
-                  />
+      {relGroups.length > 0 && (
+        <div class="side-card">
+          <div class="side-label">Liên quan <span class="num">ii.</span></div>
+          {relGroups.map((group) => (
+            <div class="rel-group">
+              <h6>{group.label}</h6>
+              <div class="items">
+                {group.items.map((item: string, i: number) => (
+                  <>
+                    <a href="#">{item}</a>
+                    {i < group.items.length - 1 && <span class="sep">·</span>}
+                  </>
                 ))}
               </div>
             </div>
-          )}
-        </article>
+          ))}
+        </div>
+      )}
 
-        <!-- RIGHT: sidebar (mobile: below content) -->
-        <aside class="lg:w-[280px] shrink-0">
-          <div class="lg:sticky lg:top-6 flex flex-col gap-4">
-            <InfoTable data={data} />
-            {data.lien_quan && <RelationshipSection lien_quan={data.lien_quan} />}
-            {data.chu_de && data.chu_de.length > 0 && <ThemeCloud chu_de={data.chu_de} />}
+      {data.chu_de && data.chu_de.length > 0 && (
+        <div class="side-card">
+          <div class="side-label">Chủ đề <span class="num">iii.</span></div>
+          <div class="themes">
+            {data.chu_de.map((tag: string) => (
+              <span class="theme-tag">{slugToLabel(tag)}</span>
+            ))}
           </div>
-        </aside>
+        </div>
+      )}
 
-      </div>
     </div>
-  </body>
+  </aside>
+
+</div>
+
+<footer>
+  <span>© 2026 Thần Thoại Việt Nam</span>
+  <span>·</span>
+  <span>Lưu giữ di sản văn hóa dân tộc</span>
+</footer>
+
+</body>
 </html>
+
+<style is:global>
+a{color:inherit;text-decoration:none}
+
+/* NAV */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:1.2rem 3rem;
+  display:flex;justify-content:space-between;align-items:center;
+  background:rgba(244,234,213,.85);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--line);
+}
+.logo{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.4rem;font-weight:600;
+  letter-spacing:.05em;
+  display:flex;align-items:center;gap:.6rem;
+}
+.logo-mark{
+  width:32px;height:32px;
+  background:var(--vermilion);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  color:var(--paper);font-size:.9rem;
+  box-shadow:0 0 0 2px var(--paper),0 0 0 3px var(--vermilion);
+}
+.nav-right{display:flex;align-items:center;gap:2.5rem}
+.nav-links{display:flex;gap:2.5rem;list-style:none}
+.nav-links a{
+  font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;
+  position:relative;transition:color .3s;
+}
+.nav-links a::after{
+  content:'';position:absolute;bottom:-4px;left:0;
+  width:0;height:1px;background:var(--vermilion);transition:width .4s ease;
+}
+.nav-links a:hover{color:var(--vermilion)}
+.nav-links a:hover::after{width:100%}
+.lang-switch{display:flex;border:1px solid var(--ink)}
+.lang-switch button{
+  background:none;border:none;cursor:pointer;
+  padding:.4rem .8rem;
+  font-family:inherit;font-size:.7rem;
+  letter-spacing:.15em;color:var(--ink);
+}
+.lang-switch button.active{background:var(--ink);color:var(--paper)}
+
+/* HEADER */
+header.entry-head{
+  padding:8rem 3rem 3rem;
+  max-width:1400px;
+  margin:0 auto;
+  position:relative;
+}
+header.entry-head::before{
+  content:attr(data-han);
+  position:absolute;
+  top:6rem;right:3rem;
+  font-family:'Cormorant Garamond',serif;
+  font-size:24rem;
+  color:rgba(168,50,30,.05);
+  font-weight:700;
+  line-height:.8;
+  pointer-events:none;
+}
+.breadcrumb{
+  font-size:.75rem;
+  letter-spacing:.15em;text-transform:uppercase;
+  color:var(--ink-mute);
+  margin-bottom:2rem;
+  display:flex;align-items:center;gap:.7rem;
+}
+.breadcrumb a{transition:color .3s}
+.breadcrumb a:hover{color:var(--vermilion)}
+.breadcrumb .sep{color:var(--ink-light)}
+.breadcrumb .current{color:var(--ink)}
+.eyebrow{
+  font-size:.75rem;
+  letter-spacing:.4em;text-transform:uppercase;
+  color:var(--vermilion);
+  margin-bottom:1.5rem;
+  display:flex;align-items:center;gap:1rem;
+}
+.eyebrow::before{content:'';width:40px;height:1px;background:var(--vermilion)}
+.entry-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(3.5rem,8vw,6.5rem);
+  font-weight:500;
+  line-height:.95;
+  letter-spacing:-.02em;
+  margin-bottom:1rem;
+  position:relative;z-index:2;
+}
+.alt-names{
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-size:1.15rem;
+  color:var(--ink-soft);
+  margin-bottom:.5rem;
+}
+.han-en{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1rem;
+  color:var(--ink-light);
+  letter-spacing:.05em;
+  margin-bottom:2rem;
+}
+.han-en .han{color:var(--vermilion);font-size:1.2rem;margin-right:.5rem}
+.tag-row{display:flex;gap:.6rem;flex-wrap:wrap}
+.tag{
+  font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;
+  padding:.5rem 1rem;
+  border:1px solid var(--ink);
+  background:transparent;
+  font-weight:400;
+}
+.tag.primary{background:var(--vermilion);border-color:var(--vermilion);color:var(--paper)}
+.tag.region{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+
+/* MAIN GRID */
+.main-grid{
+  max-width:1400px;
+  margin:0 auto;
+  padding:2rem 3rem 6rem;
+  display:grid;
+  grid-template-columns:1fr 320px;
+  gap:5rem;
+}
+
+/* HERO IMAGE */
+.hero-img{
+  height:480px;
+  margin-bottom:3rem;
+  position:relative;
+  background:linear-gradient(135deg,var(--paper-dark),#d4c19a);
+  border:1px solid var(--line);
+  overflow:hidden;
+}
+.hero-img::before{
+  content:'';position:absolute;inset:0;
+  background:repeating-linear-gradient(45deg,transparent,transparent 24px,rgba(26,15,8,.03) 24px,rgba(26,15,8,.03) 25px);
+}
+.hero-img::after{
+  content:'圖 · IMAGE';
+  position:absolute;top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.5rem;letter-spacing:.3em;
+  color:rgba(26,15,8,.2);
+}
+.hero-img-caption{
+  position:absolute;bottom:1.2rem;left:1.5rem;
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-size:.85rem;
+  color:var(--ink-soft);
+  background:var(--paper);
+  padding:.4rem .8rem;
+  z-index:1;
+}
+
+/* SUMMARY BOX */
+.summary{
+  background:var(--paper-light);
+  border-left:3px solid var(--vermilion);
+  padding:2rem 2.5rem;
+  margin-bottom:4rem;
+  position:relative;
+}
+.summary::before{
+  content:'❝';
+  position:absolute;
+  top:.5rem;left:1rem;
+  font-family:'Cormorant Garamond',serif;
+  font-size:3rem;
+  color:var(--vermilion);
+  opacity:.2;
+  line-height:1;
+}
+.summary p{
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-size:1.25rem;
+  line-height:1.6;
+  color:var(--ink-soft);
+}
+
+/* CONTENT TYPOGRAPHY */
+.entry-content h2{
+  font-family:'Cormorant Garamond',serif;
+  font-size:2.5rem;
+  font-weight:500;
+  line-height:1.1;
+  margin:3.5rem 0 1.5rem;
+  display:flex;align-items:baseline;gap:1rem;
+}
+.entry-content h2::before{
+  content:'';
+  width:32px;height:1px;
+  background:var(--vermilion);
+  flex-shrink:0;
+  align-self:center;
+}
+.entry-content h2 em{
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  color:var(--vermilion);
+}
+.entry-content h3{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.6rem;
+  font-style:italic;
+  font-weight:500;
+  margin:2.5rem 0 1rem;
+  color:var(--ink-soft);
+}
+.entry-content p{
+  font-family:'Be Vietnam Pro',sans-serif;
+  font-size:1.05rem;
+  line-height:1.85;
+  color:var(--ink-soft);
+  margin-bottom:1.3rem;
+  font-weight:300;
+}
+.entry-content > p:first-of-type::first-letter{
+  font-family:'Cormorant Garamond',serif;
+  font-size:4.5rem;
+  font-weight:600;
+  float:left;
+  line-height:.85;
+  margin:.3rem .6rem 0 0;
+  color:var(--vermilion);
+}
+.entry-content em{
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  color:var(--ink);
+}
+.entry-content strong{font-weight:600;color:var(--ink)}
+.entry-content a{color:var(--vermilion);text-decoration:underline}
+.entry-content ul,.entry-content ol{
+  margin:1rem 0 1.2rem 1.5rem;
+  color:var(--ink-soft);
+  font-size:1.05rem;
+  line-height:1.85;
+}
+.entry-content li{margin-bottom:.4rem}
+.entry-content blockquote{
+  margin:3.5rem 0;
+  padding:2rem 3rem;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  text-align:center;
+}
+.entry-content blockquote p{
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-size:1.7rem;
+  line-height:1.4;
+  color:var(--ink);
+}
+.entry-content blockquote p::before{content:'"';color:var(--vermilion)}
+.entry-content blockquote p::after{content:'"';color:var(--vermilion)}
+.entry-content blockquote > p:first-of-type::first-letter{all:unset}
+
+/* SOURCES */
+.sources{
+  margin-top:5rem;
+  padding-top:3rem;
+  border-top:1px solid var(--line);
+}
+.section-label{
+  font-size:.7rem;
+  letter-spacing:.3em;
+  text-transform:uppercase;
+  color:var(--vermilion);
+  margin-bottom:1.5rem;
+  display:flex;align-items:center;gap:1rem;
+}
+.section-label::after{content:'';flex:1;height:1px;background:var(--line)}
+.sources ol{list-style:none;counter-reset:src}
+.sources li{
+  counter-increment:src;
+  font-size:.9rem;
+  color:var(--ink-soft);
+  padding:.8rem 0 .8rem 2.5rem;
+  border-bottom:1px solid var(--line-soft);
+  position:relative;
+  line-height:1.6;
+}
+.sources li::before{
+  content:counter(src,decimal-leading-zero);
+  position:absolute;left:0;top:.8rem;
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  color:var(--vermilion);
+  font-size:.95rem;
+}
+.sources em{
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  color:var(--ink);
+}
+
+/* RELATED */
+.related{margin-top:5rem}
+.related-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:2rem;
+}
+.related-card{
+  display:block;
+  transition:transform .4s ease;
+}
+.related-card:hover{transform:translateY(-6px)}
+.related-card .img-ph{
+  height:200px;
+  background:linear-gradient(135deg,var(--paper-dark),#d4c19a);
+  border:1px solid var(--line);
+  margin-bottom:1.2rem;
+  position:relative;overflow:hidden;
+}
+.related-card .img-ph::before{
+  content:'';position:absolute;inset:0;
+  background:repeating-linear-gradient(45deg,transparent,transparent 20px,rgba(26,15,8,.03) 20px,rgba(26,15,8,.03) 21px);
+}
+.related-card .img-ph::after{
+  content:'圖';position:absolute;top:50%;left:50%;
+  transform:translate(-50%,-50%);
+  font-family:'Cormorant Garamond',serif;
+  font-size:2rem;color:rgba(26,15,8,.15);
+}
+.related-card .meta{
+  font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--vermilion);margin-bottom:.5rem;
+}
+.related-card h4{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.7rem;font-weight:500;
+  line-height:1.05;margin-bottom:.5rem;
+}
+.related-card p{
+  font-size:.85rem;
+  color:var(--ink-mute);
+  line-height:1.5;
+}
+
+/* SIDEBAR */
+aside{position:relative}
+.sidebar-sticky{
+  position:sticky;top:6rem;
+  display:flex;flex-direction:column;gap:1.5rem;
+}
+.side-card{
+  background:var(--paper-light);
+  border:1px solid var(--line);
+  padding:1.8rem;
+}
+.side-label{
+  font-size:.7rem;
+  letter-spacing:.3em;
+  text-transform:uppercase;
+  color:var(--vermilion);
+  margin-bottom:1.3rem;
+  padding-bottom:.8rem;
+  border-bottom:1px solid var(--line);
+  display:flex;align-items:center;justify-content:space-between;
+}
+.side-label .num{
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  color:var(--ink-light);
+  letter-spacing:0;
+}
+.info-table{display:flex;flex-direction:column;gap:.9rem}
+.info-row{
+  display:grid;
+  grid-template-columns:90px 1fr;
+  gap:1rem;
+  font-size:.85rem;
+  align-items:baseline;
+}
+.info-row dt{
+  color:var(--ink-light);
+  font-size:.75rem;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+.info-row dd{color:var(--ink);text-align:right;font-weight:400}
+.info-row dd a{
+  color:var(--vermilion);
+  border-bottom:1px solid var(--vermilion);
+  padding-bottom:1px;
+}
+.rel-group{margin-bottom:1.3rem}
+.rel-group:last-child{margin-bottom:0}
+.rel-group h6{
+  font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--ink-light);margin-bottom:.5rem;font-weight:500;
+}
+.rel-group .items{font-size:.9rem;color:var(--ink);line-height:1.5}
+.rel-group .items a{
+  color:var(--vermilion);
+  border-bottom:1px solid transparent;
+  transition:border-color .3s;
+}
+.rel-group .items a:hover{border-color:var(--vermilion)}
+.rel-group .sep{color:var(--ink-light);margin:0 .3rem}
+.themes{display:flex;flex-wrap:wrap;gap:.4rem}
+.theme-tag{
+  font-size:.7rem;padding:.4rem .8rem;
+  background:var(--paper-dark);color:var(--ink-soft);
+  border:1px solid var(--line);letter-spacing:.05em;
+  transition:all .3s;cursor:pointer;
+}
+.theme-tag:hover{background:var(--vermilion);color:var(--paper);border-color:var(--vermilion)}
+
+/* FOOTER */
+footer{
+  background:var(--ink);
+  color:rgba(244,234,213,.5);
+  padding:3rem;
+  text-align:center;
+  font-size:.75rem;
+  letter-spacing:.15em;
+  text-transform:uppercase;
+}
+footer span{margin:0 1rem}
+
+@media (max-width:1024px){
+  .main-grid{grid-template-columns:1fr;gap:3rem;padding:2rem 1.5rem 4rem}
+  .sidebar-sticky{position:static}
+  header.entry-head{padding:7rem 1.5rem 2rem}
+  header.entry-head::before{font-size:14rem;right:1rem}
+  nav{padding:1rem 1.5rem}
+  .nav-links{display:none}
+  .related-grid{grid-template-columns:1fr;gap:1.5rem}
+  .hero-img{height:300px}
+  .entry-content h2{font-size:2rem}
+  .entry-content > p:first-of-type::first-letter{font-size:3.5rem}
+}
+</style>
