@@ -9,10 +9,14 @@ export default {
       center: true,
       padding: "2rem",
       screens: {
-        "2xl": "1400px",
+        "2xl": "1200px",
       },
     },
     extend: {
+      fontFamily: {
+        sans: ["Inter", "sans-serif"],
+        serif: ["Lora", "serif"],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -47,43 +51,29 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
-        sidebar: {
-          DEFAULT: "hsl(var(--sidebar-background))",
-          foreground: "hsl(var(--sidebar-foreground))",
-          primary: "hsl(var(--sidebar-primary))",
-          "primary-foreground": "hsl(var(--sidebar-primary-foreground))",
-          accent: "hsl(var(--sidebar-accent))",
-          "accent-foreground": "hsl(var(--sidebar-accent-foreground))",
-          border: "hsl(var(--sidebar-border))",
-          ring: "hsl(var(--sidebar-ring))",
-        },
+        "link-blue": "hsl(var(--link-blue))",
+        "text-primary": "hsl(var(--text-primary))",
+        "text-muted": "hsl(var(--text-muted))",
+        "text-light": "hsl(var(--text-light))",
+        "pill-coral-bg": "hsl(var(--pill-coral-bg))",
+        "pill-coral-text": "hsl(var(--pill-coral-text))",
+        "pill-teal-bg": "hsl(var(--pill-teal-bg))",
+        "pill-teal-text": "hsl(var(--pill-teal-text))",
+        "pill-blue-bg": "hsl(var(--pill-blue-bg))",
+        "pill-blue-text": "hsl(var(--pill-blue-text))",
+        "pill-amber-bg": "hsl(var(--pill-amber-bg))",
+        "pill-amber-text": "hsl(var(--pill-amber-text))",
+        "pill-violet-bg": "hsl(var(--pill-violet-bg))",
+        "pill-violet-text": "hsl(var(--pill-violet-text))",
+        "pill-green-bg": "hsl(var(--pill-green-bg))",
+        "pill-green-text": "hsl(var(--pill-green-text))",
+        "pill-slate-bg": "hsl(var(--pill-slate-bg))",
+        "pill-slate-text": "hsl(var(--pill-slate-text))",
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
-      },
-      keyframes: {
-        "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
-        },
-        "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
-        },
-      },
-      animation: {
-        "accordion-down": "accordion-down 0.2s ease-out",
-        "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
   },
