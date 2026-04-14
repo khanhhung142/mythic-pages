@@ -1,5 +1,7 @@
 ---
 import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
 
 interface Props {
   title: string;
@@ -14,139 +16,10 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
-    <nav>
-      <div class="logo">
-        <div class="logo-mark">神</div>
-        Thần Thoại Việt
-      </div>
-      <ul class="nav-links">
-        <li><a href="/">Trang chủ</a></li>
-        <li><a href="/entries">Mục lục</a></li>
-        <li><a href="/#categories">Phân loại</a></li>
-        <li><a href="/#about">Về dự án</a></li>
-      </ul>
-    </nav>
+    <Header />
     <main>
       <slot />
     </main>
-    <footer>
-      <div class="foot-grid">
-        <div class="foot-brand">
-          <h3>Thần Thoại Việt Nam</h3>
-          <p>Kho lưu trữ phi lợi nhuận về thần thoại, truyền thuyết và nhân vật huyền thoại của người Việt — lưu giữ di sản văn hóa dân tộc cho thế hệ mai sau.</p>
-        </div>
-        <div class="foot-col">
-          <h5>Khám phá</h5>
-          <ul>
-            <li><a href="/">Trang chủ</a></li>
-            <li><a href="/entries">Mục lục</a></li>
-            <li><a href="/#categories">Phân loại</a></li>
-          </ul>
-        </div>
-        <div class="foot-col">
-          <h5>Tư liệu</h5>
-          <ul>
-            <li><a href="#">Lĩnh Nam Chích Quái</a></li>
-            <li><a href="#">Việt Điện U Linh</a></li>
-            <li><a href="#">Đại Việt Sử Ký</a></li>
-          </ul>
-        </div>
-        <div class="foot-col">
-          <h5>Liên hệ</h5>
-          <ul>
-            <li><a href="#">Đóng góp</a></li>
-            <li><a href="#">Github</a></li>
-            <li><a href="#">Email</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="foot-bottom">
-        <span>© 2026 — Lưu giữ di sản văn hóa dân tộc</span>
-        <span>Made with ♡ in Việt Nam</span>
-      </div>
-    </footer>
+    <Footer />
   </body>
 </html>
-
-<style is:global>
-nav{
-  position:fixed;top:0;left:0;right:0;z-index:100;
-  padding:1.2rem 3rem;
-  display:flex;justify-content:space-between;align-items:center;
-  background:rgba(244,234,213,.85);
-  backdrop-filter:blur(12px);
-  border-bottom:1px solid rgba(26,15,8,.1);
-}
-.logo{
-  font-family:'Cormorant Garamond',serif;
-  font-size:1.4rem;font-weight:600;
-  letter-spacing:.05em;
-  display:flex;align-items:center;gap:.6rem;
-  text-decoration:none;color:var(--ink);
-}
-.logo-mark{
-  width:32px;height:32px;
-  background:var(--vermilion);
-  border-radius:50%;
-  display:flex;align-items:center;justify-content:center;
-  color:var(--paper);
-  font-size:.9rem;
-  box-shadow:0 0 0 2px var(--paper),0 0 0 3px var(--vermilion);
-}
-.nav-links{display:flex;gap:2.5rem;list-style:none}
-.nav-links a{
-  color:var(--ink);text-decoration:none;
-  font-size:.85rem;
-  letter-spacing:.15em;text-transform:uppercase;
-  position:relative;
-  transition:color .3s;
-}
-.nav-links a::after{
-  content:'';position:absolute;bottom:-4px;left:0;
-  width:0;height:1px;background:var(--vermilion);
-  transition:width .4s ease;
-}
-.nav-links a:hover{color:var(--vermilion)}
-.nav-links a:hover::after{width:100%}
-
-footer{
-  background:var(--ink);
-  color:var(--paper);
-  padding:5rem 3rem 2rem;
-}
-.foot-grid{
-  display:grid;
-  grid-template-columns:2fr 1fr 1fr 1fr;
-  gap:3rem;
-  margin-bottom:4rem;
-  padding-bottom:3rem;
-  border-bottom:1px solid rgba(244,234,213,.15);
-}
-.foot-brand h3{
-  font-family:'Cormorant Garamond',serif;
-  font-size:2rem;
-  margin-bottom:1rem;
-}
-.foot-brand p{color:rgba(244,234,213,.6);max-width:380px;font-size:.9rem}
-.foot-col h5{
-  font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;
-  color:var(--gold);margin-bottom:1.2rem;
-}
-.foot-col ul{list-style:none}
-.foot-col li{margin-bottom:.6rem}
-.foot-col a{
-  color:rgba(244,234,213,.7);text-decoration:none;
-  font-size:.9rem;transition:color .3s;
-}
-.foot-col a:hover{color:var(--gold)}
-.foot-bottom{
-  display:flex;justify-content:space-between;
-  font-size:.75rem;color:rgba(244,234,213,.5);
-  letter-spacing:.1em;
-}
-@media (max-width:900px){
-  nav{padding:1rem 1.5rem}
-  .nav-links{display:none}
-  .foot-grid{grid-template-columns:1fr 1fr;gap:2rem}
-}
-</style>

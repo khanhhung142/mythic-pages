@@ -32,7 +32,7 @@ const entries = defineCollection({
     nhom: z.string().optional(),
     chu_de: z.array(z.string()).optional(),
     do_pho_bien: z.number().default(1),
-    trang_thai: z.string().default('draft'),
+    trang_thai: z.string().default('published'),
     tac_gia: z.string().optional(),
     cap_nhat: z.coerce.string().optional(),
   }),

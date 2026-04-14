@@ -1,0 +1,76 @@
+---
+// no props needed
+---
+<nav>
+  <div class="logo">
+    <div class="logo-mark">神</div>
+    Thần Thoại Việt
+  </div>
+  <div class="nav-right">
+    <ul class="nav-links">
+      <li><a href="/">Trang chủ</a></li>
+      <li><a href="/entries">Mục lục</a></li>
+      <li><a href="/#categories">Phân loại</a></li>
+      <li><a href="/#about">Về dự án</a></li>
+    </ul>
+    <div class="lang-switch">
+      <button class="active">VI</button>
+      <button>EN</button>
+    </div>
+  </div>
+</nav>
+
+<style is:global>
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  padding:1.2rem 3rem;
+  display:flex;justify-content:space-between;align-items:center;
+  background:rgba(244,234,213,.85);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(26,15,8,.1);
+}
+.logo{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.4rem;font-weight:600;
+  letter-spacing:.05em;
+  display:flex;align-items:center;gap:.6rem;
+  text-decoration:none;color:var(--ink);
+}
+.logo-mark{
+  width:32px;height:32px;
+  background:var(--vermilion);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  color:var(--paper);
+  font-size:.9rem;
+  box-shadow:0 0 0 2px var(--paper),0 0 0 3px var(--vermilion);
+}
+.nav-right{display:flex;align-items:center;gap:2.5rem}
+.nav-links{display:flex;gap:2.5rem;list-style:none}
+.nav-links a{
+  color:var(--ink);text-decoration:none;
+  font-size:.85rem;
+  letter-spacing:.15em;text-transform:uppercase;
+  position:relative;
+  transition:color .3s;
+}
+.nav-links a::after{
+  content:'';position:absolute;bottom:-4px;left:0;
+  width:0;height:1px;background:var(--vermilion);
+  transition:width .4s ease;
+}
+.nav-links a:hover{color:var(--vermilion)}
+.nav-links a:hover::after{width:100%}
+.lang-switch{display:flex;border:1px solid var(--ink)}
+.lang-switch button{
+  background:none;border:none;cursor:pointer;
+  padding:.4rem .8rem;
+  font-family:inherit;font-size:.7rem;
+  letter-spacing:.15em;color:var(--ink);
+}
+.lang-switch button.active{background:var(--ink);color:var(--paper)}
+@media (max-width:900px){
+  nav{padding:1rem 1.5rem}
+  .nav-links{display:none}
+}
+</style>

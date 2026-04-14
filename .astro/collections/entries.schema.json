@@ -119,7 +119,7 @@
       "type": "number"
     },
     "trang_thai": {
-      "default": "draft",
+      "default": "published",
       "type": "string"
     },
     "tac_gia": {
