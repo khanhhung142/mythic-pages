@@ -6,7 +6,7 @@ interface Props {
 }
 const { data } = Astro.props;
 
-const loaiLabels: Record<string, string> = {
+const categoryLabels: Record<string, string> = {
   'than': 'Thần',
   'anh-hung': 'Anh hùng',
   'yeu-quai': 'Yêu quái',
@@ -14,6 +14,7 @@ const loaiLabels: Record<string, string> = {
   'dia-danh': 'Địa danh',
   'vat-pham': 'Vật phẩm',
   'le-hoi': 'Lễ hội',
+  'tich-co': 'Tích cổ',
 };
 
 const vungLabels: Record<string, string> = {
@@ -29,12 +30,12 @@ const gioiTinhLabels: Record<string, string> = {
 };
 
 const rows = [
-  data.loai ? { label: 'Loại', value: loaiLabels[data.loai] ?? data.loai } : null,
-  data.gioi_tinh ? { label: 'Giới tính', value: gioiTinhLabels[data.gioi_tinh] ?? data.gioi_tinh } : null,
-  data.thoi_dai ? { label: 'Thời đại', value: data.thoi_dai } : null,
-  data.vung_mien ? { label: 'Vùng', value: vungLabels[data.vung_mien] ?? data.vung_mien } : null,
-  data.dia_diem_chinh?.length ? { label: 'Địa điểm', value: data.dia_diem_chinh[0], isLink: true } : null,
-  data.nhom ? { label: 'Nhóm', value: data.nhom } : null,
+  data.category ? { label: 'Loại', value: categoryLabels[data.category] ?? data.category } : null,
+  data.gender ? { label: 'Giới tính', value: gioiTinhLabels[data.gender] ?? data.gender } : null,
+  data.era ? { label: 'Thời đại', value: data.era } : null,
+  data.region ? { label: 'Vùng', value: vungLabels[data.region] ?? data.region } : null,
+  data.locations?.length ? { label: 'Địa điểm', value: data.locations[0], isLink: true } : null,
+  data.group ? { label: 'Nhóm', value: data.group } : null,
 ].filter(Boolean);
 ---
 <SidebarCard label="THÔNG TIN">

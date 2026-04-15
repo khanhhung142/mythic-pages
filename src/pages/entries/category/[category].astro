@@ -1,0 +1,22 @@
+---
+import EntriesListPage from '../../../components/EntriesListPage.astro';
+import { getCollection } from 'astro:content';
+import { CATEGORY_LABELS, CATEGORY_SLUGS } from '../../../data/category-labels';
+
+export async function getStaticPaths() {
+  return CATEGORY_SLUGS.map((category) => ({ params: { category } }));
+}
+
+const category = Astro.params.category as keyof typeof CATEGORY_LABELS;
+
+const allEntries = await getCollection('entries', e => e.data.status === 'published');
+allEntries.sort((a, b) => {
+  if ((b.data.popularity ?? 0) !== (a.data.popularity ?? 0)) {
+    return (b.data.popularity ?? 0) - (a.data.popularity ?? 0);
+  }
+  return (a.data.name_vi ?? '').localeCompare(b.data.name_vi ?? '', 'vi');
+});
+
+const filtered = allEntries.filter((e) => e.data.category === category);
+---
+<EntriesListPage entries={filtered} activeCategory={category} totalPublished={allEntries.length} />

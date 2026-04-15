@@ -2,20 +2,20 @@
 import SidebarCard from './SidebarCard.astro';
 
 interface Props {
-  lien_quan: {
-    gia_dinh?: string[];
-    dong_minh?: string[];
-    ke_thu?: string[];
-    vat_pham?: string[];
+  relations: {
+    family?: string[];
+    allies?: string[];
+    enemies?: string[];
+    artifacts?: string[];
   };
 }
-const { lien_quan } = Astro.props;
+const { relations } = Astro.props;
 
 const groups = [
-  { label: 'GIA ĐÌNH', items: lien_quan.gia_dinh },
-  { label: 'ĐỒNG MINH', items: lien_quan.dong_minh },
-  { label: 'KẺ THÙ', items: lien_quan.ke_thu },
-  { label: 'VẬT PHẨM', items: lien_quan.vat_pham },
+  { label: 'GIA ĐÌNH', items: relations.family },
+  { label: 'ĐỒNG MINH', items: relations.allies },
+  { label: 'KẺ THÙ', items: relations.enemies },
+  { label: 'VẬT PHẨM', items: relations.artifacts },
 ].filter(g => g.items && g.items.length > 0);
 ---
 {groups.length > 0 && (

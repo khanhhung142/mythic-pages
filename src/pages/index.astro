@@ -2,11 +2,14 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCollection } from 'astro:content';
 
-const allEntries = await getCollection('entries', e => e.data.trang_thai === 'published');
-allEntries.sort((a, b) => (b.data.do_pho_bien ?? 0) - (a.data.do_pho_bien ?? 0));
-
-const featured = allEntries[0];
-const sideEntries = allEntries.slice(1, 4);
+const allEntries = await getCollection('entries', e => e.data.status === 'published');
+const shuffled = [...allEntries];
+for (let i = shuffled.length - 1; i > 0; i--) {
+  const j = Math.floor(Math.random() * (i + 1));
+  [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+}
+const featured = shuffled[0];
+const sideEntries = shuffled.slice(1, 4);
 
 const categories = [
   { num: 'i.', name: 'Thần', han: '神 — Deities', desc: 'Các vị thần trong tín ngưỡng dân gian, từ thần núi sông đến thần bếp.', slug: 'than' },
@@ -26,7 +29,7 @@ const categories = [
     <div class="hero-content">
       <div class="eyebrow">Kho tàng huyền sử Việt</div>
       <h1>Thần Thoại<em>Việt Nam</em></h1>
-      <p>Hành trình ngược dòng thời gian — từ thuở Hồng Bàng dựng nước, qua những trang Lĩnh Nam Chích Quái, đến lễ hội còn vang vọng đến hôm nay.</p>
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor labore accusantium aut at doloribus, quam aliquid facere et. Ullam, suscipit.</p>
       <div class="cta-row">
         <a href="/entries" class="btn-primary"><span>Khám phá mục lục</span></a>
         <a href="#featured" class="btn-secondary">Xem nổi bật ↓</a>
@@ -42,36 +45,33 @@ const categories = [
   <!-- Featured -->
   <section class="section" id="featured">
     <div class="section-header">
-      <div class="section-num">№ 01 — Tuyển chọn</div>
       <h2 class="section-title">Nhân vật <em>nổi bật</em></h2>
       <a href="/entries" class="section-link">Xem tất cả →</a>
     </div>
     <div class="featured-grid">
       {featured && (
-        <article class="featured-main">
-          <a href={`/entries/${featured.id}`}>
-            <div class="img-placeholder featured-img"></div>
-            <div class="featured-text">
-              <div class="featured-tags">
-                <span class="tag primary">{featured.data.loai}</span>
-              </div>
-              <h3>{featured.data.ten_vn}</h3>
-              {featured.data.ten_han && <div class="subtitle">{featured.data.ten_han} — {featured.data.ten_en}</div>}
-              <p>{featured.data.tom_tat}</p>
+        <a href={`/entries/${featured.id}`} class="featured-main">
+          <div class="img-placeholder featured-img"></div>
+          <div class="featured-text">
+            <div class="featured-tags">
+              <span class="tag primary">{featured.data.category}</span>
             </div>
-          </a>
-        </article>
+            <h3>{featured.data.name_vi}</h3>
+            {featured.data.name_han && <div class="subtitle">{featured.data.name_han} — {featured.data.name_en}</div>}
+            <p>{featured.data.summary}</p>
+          </div>
+        </a>
       )}
       <div class="featured-side">
         {sideEntries.map(entry => (
-          <article class="side-card">
+          <a href={`/entries/${entry.id}`} class="side-card">
             <div class="img-placeholder"></div>
             <div>
-              <div class="meta">{entry.data.loai}</div>
-              <h4><a href={`/entries/${entry.id}`}>{entry.data.ten_vn}</a></h4>
-              <p>{entry.data.tom_tat?.slice(0, 120)}...</p>
+              <div class="meta">{entry.data.category}</div>
+              <h4>{entry.data.name_vi}</h4>
+              <p>{entry.data.summary?.slice(0, 120)}...</p>
             </div>
-          </article>
+          </a>
         ))}
       </div>
     </div>
@@ -80,7 +80,6 @@ const categories = [
   <!-- Categories -->
   <section class="section categories" id="categories">
     <div class="section-header">
-      <div class="section-num">№ 02 — Phân loại</div>
       <h2 class="section-title">Khám phá <em>theo loại</em></h2>
       <a href="/entries" class="section-link">Toàn bộ →</a>
     </div>
@@ -101,8 +100,8 @@ const categories = [
 
   <!-- Quote -->
   <section class="quote">
-    <blockquote>Nước Nam ta từ thuở Hồng Bàng, có vua mới lập, nước có thần để giữ, dân có truyện để kể.</blockquote>
-    <cite>— Lĩnh Nam Chích Quái, thế kỷ XIV</cite>
+    <blockquote>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor labore accusantium aut at doloribus, quam aliquid facere et. Ullam, suscipit.</blockquote>
+    <cite>— Lorem ipsum dolor sit amet.</cite>
   </section>
 
 </BaseLayout>
@@ -110,13 +109,12 @@ const categories = [
 <style>
 .section{padding:6rem 3rem;position:relative}
 .section-header{
-  display:grid;grid-template-columns:auto 1fr auto;
-  gap:2rem;align-items:end;
+  display:flex;justify-content:space-between;align-items:flex-end;flex-wrap:wrap;
+  gap:2rem;
   margin-bottom:4rem;
   padding-bottom:1.5rem;
   border-bottom:1px solid rgba(26,15,8,.2);
 }
-.section-num{font-family:'Cormorant Garamond',serif;font-size:1rem;font-style:italic;color:var(--vermilion)}
 .section-title{font-family:'Cormorant Garamond',serif;font-size:clamp(2.5rem,5vw,4rem);font-weight:500;line-height:1}
 .section-title em{font-family:'Playfair Display',serif;font-style:italic;color:var(--vermilion)}
 .section-link{font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:2px}
@@ -198,9 +196,11 @@ const categories = [
 }
 
 .featured-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:3rem}
-.featured-main{background:var(--paper-dark);position:relative;cursor:pointer;transition:transform .5s ease}
+.featured-main{
+  background:var(--paper-dark);position:relative;cursor:pointer;transition:transform .5s ease;
+  text-decoration:none;color:inherit;display:block
+}
 .featured-main:hover{transform:translateY(-8px)}
-.featured-main a{text-decoration:none;color:inherit;display:block}
 .featured-img{height:520px;position:relative}
 .featured-text{padding:2.5rem}
 .featured-tags{display:flex;gap:.6rem;margin-bottom:1rem;flex-wrap:wrap}
@@ -210,19 +210,20 @@ const categories = [
 .featured-main .subtitle{font-family:'Playfair Display',serif;font-style:italic;color:var(--ink-soft);margin-bottom:1rem}
 .featured-main p{color:var(--ink-soft);font-size:1rem;max-width:560px}
 .featured-side{display:flex;flex-direction:column;gap:2rem}
-.side-card{display:grid;grid-template-columns:120px 1fr;gap:1.5rem;cursor:pointer;transition:transform .4s ease}
+.side-card{
+  display:grid;grid-template-columns:120px 1fr;gap:1.5rem;cursor:pointer;transition:transform .4s ease;
+  text-decoration:none;color:inherit
+}
 .side-card:hover{transform:translateX(8px)}
 .side-card .img-placeholder{height:140px}
-.side-card h4{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;margin-bottom:.3rem;line-height:1.1}
-.side-card h4 a{text-decoration:none;color:var(--ink)}
-.side-card h4 a:hover{color:var(--vermilion)}
+.side-card h4{font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:600;margin-bottom:.3rem;line-height:1.1;color:var(--ink)}
+.side-card:hover h4{color:var(--vermilion)}
 .side-card .meta{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--vermilion);margin-bottom:.5rem}
 .side-card p{font-size:.85rem;color:var(--ink-soft);line-height:1.5}
 
 .categories{background:var(--ink);color:var(--paper);position:relative}
 .categories::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
 .categories .section-header{border-color:rgba(244,234,213,.2)}
-.categories .section-num{color:var(--gold)}
 .categories .section-title em{color:var(--gold)}
 .categories .section-link{color:var(--paper);border-color:var(--paper)}
 .cat-grid{
@@ -263,7 +264,7 @@ const categories = [
   .hero{grid-template-columns:1fr;padding:7rem 1.5rem 3rem;gap:3rem}
   .hero-visual{height:60vh}
   .section{padding:4rem 1.5rem}
-  .section-header{grid-template-columns:1fr;gap:1rem}
+  .section-header{flex-direction:column;align-items:flex-start;gap:1rem}
   .featured-grid{grid-template-columns:1fr}
   .cat-grid{grid-template-columns:1fr 1fr}
   .featured-img{height:300px}

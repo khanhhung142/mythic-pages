@@ -2,9 +2,9 @@
 import SidebarCard from './SidebarCard.astro';
 
 interface Props {
-  chu_de: string[];
+  themes: string[];
 }
-const { chu_de } = Astro.props;
+const { themes } = Astro.props;
 
 function slugToLabel(slug: string): string {
   return slug.replace(/-/g, ' ');
@@ -12,7 +12,7 @@ function slugToLabel(slug: string): string {
 ---
 <SidebarCard label="CHỦ ĐỀ">
   <div class="flex flex-wrap gap-1.5">
-    {chu_de.map((tag) => (
+    {themes.map((tag) => (
       <span class="bg-gray-100 text-[#1A1A1A] rounded-full px-2.5 py-1 text-[12px] font-sans">
         {slugToLabel(tag)}
       </span>

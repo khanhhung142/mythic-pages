@@ -4,14 +4,14 @@ import { getCollection, render } from 'astro:content';
 
 export async function getStaticPaths() {
   const entries = await getCollection('entries');
-  const published = entries.filter(e => e.data.trang_thai === 'published');
+  const published = entries.filter(e => e.data.status === 'published');
   return published.map((entry) => ({
     params: { id: entry.id },
     props: {
       entry,
       related: published
         .filter(e => e.id !== entry.id)
-        .sort((a, b) => (b.data.do_pho_bien ?? 1) - (a.data.do_pho_bien ?? 1))
+        .sort((a, b) => (b.data.popularity ?? 1) - (a.data.popularity ?? 1))
         .slice(0, 3),
     },
   }));
