@@ -1,21 +1,11 @@
 ---
 import SidebarCard from './SidebarCard.astro';
+import { CATEGORY_LABELS } from '../data/category-labels';
 
 interface Props {
   data: Record<string, any>;
 }
 const { data } = Astro.props;
-
-const categoryLabels: Record<string, string> = {
-  'than': 'Thần',
-  'anh-hung': 'Anh hùng',
-  'yeu-quai': 'Yêu quái',
-  'linh-vat': 'Linh vật',
-  'dia-danh': 'Địa danh',
-  'vat-pham': 'Vật phẩm',
-  'le-hoi': 'Lễ hội',
-  'tich-co': 'Tích cổ',
-};
 
 const vungLabels: Record<string, string> = {
   'bac': 'Bắc Bộ',
@@ -30,7 +20,7 @@ const gioiTinhLabels: Record<string, string> = {
 };
 
 const rows = [
-  data.category ? { label: 'Loại', value: categoryLabels[data.category] ?? data.category } : null,
+  data.category ? { label: 'Loại', value: CATEGORY_LABELS[data.category] ?? data.category } : null,
   data.gender ? { label: 'Giới tính', value: gioiTinhLabels[data.gender] ?? data.gender } : null,
   data.era ? { label: 'Thời đại', value: data.era } : null,
   data.region ? { label: 'Vùng', value: vungLabels[data.region] ?? data.region } : null,

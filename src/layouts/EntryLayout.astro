@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import { CATEGORY_LABELS } from '../data/category-labels';
 
 interface Props {
   entry: any;
@@ -10,17 +11,6 @@ interface Props {
 
 const { entry, related = [] } = Astro.props;
 const { data } = entry;
-
-const categoryLabels: Record<string, string> = {
-  'than': 'Thần',
-  'anh-hung': 'Anh hùng',
-  'yeu-quai': 'Yêu quái',
-  'linh-vat': 'Linh vật',
-  'dia-danh': 'Địa danh',
-  'vat-pham': 'Vật phẩm',
-  'le-hoi': 'Lễ hội',
-  'tich-co': 'Tích cổ',
-};
 
 const vungLabels: Record<string, string> = {
   'bac': 'Bắc Bộ',
@@ -34,7 +24,7 @@ const gioiTinhLabels: Record<string, string> = {
   'khong-xac-dinh': 'Không xác định',
 };
 
-const categoryLabel = categoryLabels[data.category] ?? data.category;
+const categoryLabel = CATEGORY_LABELS[data.category] ?? data.category;
 const hanChar = data.name_han?.charAt(0) ?? '';
 
 const infoRows = [
@@ -146,7 +136,7 @@ function slugToLabel(slug: string): string {
           {related.map((e: any) => (
             <a href={`/entries/${e.id}`} class="related-card">
               <div class="img-ph"></div>
-              <div class="meta">{categoryLabels[e.data.category] ?? e.data.category}</div>
+              <div class="meta">{CATEGORY_LABELS[e.data.category] ?? e.data.category}</div>
               <h4>{e.data.name_vi}</h4>
               <p>{e.data.summary ?? ''}</p>
             </a>

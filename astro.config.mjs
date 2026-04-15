@@ -8,4 +8,8 @@ export default defineConfig({
   build: {
     format: "directory",
   },
+  // redirects: {
+  //   "/entries/category/than": "/entries/category/linh-than",
+  //   "/entries/category/than-linh": "/entries/category/linh-than",
+  // },
 });
