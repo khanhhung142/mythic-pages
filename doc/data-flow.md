@@ -6,13 +6,14 @@ All data is resolved at **build time**. There is no runtime API, no database, no
 
 ```mermaid
 graph TD
-    A["Markdown files<br/>src/content/entries/*.md"] -->|"glob loader"| B["Astro Content Collections"]
+    A["Markdown files<br/>src/content/vi|en/entries/*.md"] -->|"glob loaders"| B["Astro Content Collections<br/>entriesVi, entriesEn"]
     B -->|"Zod validation"| C{"Valid?"}
-    C -->|"Yes"| D["In-memory collection"]
+    C -->|"Yes"| D["In-memory collections"]
     C -->|"No"| E["Build error"]
-    D -->|"getCollection()"| F["Page frontmatter scripts"]
-    F -->|"filter/sort/slice"| G["Template data"]
-    G -->|"Astro rendering"| H["Static HTML in dist/"]
+    D -->|"getLocalizedEntries / getLocalizedEntry"| F["src/i18n/content.ts"]
+    F --> G["Page frontmatter scripts<br/>src/pages/[lang]/..."]
+    G -->|"filter/sort/slice"| H["Template data"]
+    H -->|"Astro rendering"| I["Static HTML in dist/"]
 ```
 
 ## Step-by-Step Flow
@@ -20,9 +21,10 @@ graph TD
 ### 1. Content Loading
 
 ```
-src/content/entries/*.md
+src/content/vi/entries/*.md   → collection entriesVi
+src/content/en/entries/*.md   → collection entriesEn
         ↓
-glob({ pattern: '**/*.md', base: './src/content/entries' })
+glob({ pattern: '**/*.md', base: './src/content/{locale}/entries' })
         ↓
 Each .md file parsed: YAML frontmatter → data, body → markdown
         ↓
@@ -32,72 +34,76 @@ entry.id = filename without .md (e.g. "thanh-giong")
 ### 2. Schema Validation
 
 ```
-entry.data (frontmatter) → Zod schema validation
+entry.data (frontmatter) → Zod schema validation (shared entrySchema)
         ↓
 Required fields: name_vi, category
 Defaults applied: popularity=1, status='published'
 Optional fields: all others
         ↓
-Type-safe entry object: CollectionEntry<'entries'>
+Type-safe entry objects: CollectionEntry<'entriesVi'> | CollectionEntry<'entriesEn'>
 ```
 
-### 3. Page Data Resolution
+### 3. Locale merge (English)
 
-Each page fetches data differently:
+For **`lang === 'en'`**, `getLocalizedEntries`:
+
+1. Loads published entries from `entriesEn`
+2. Loads published entries from `entriesVi`
+3. Appends VI entries whose `id` is not present in EN
+
+So the EN catalog and static paths include every story that exists in VI even before EN markdown exists.
+
+### 4. Page Data Resolution
 
 ```mermaid
 graph LR
-    subgraph "Home Page"
-        H1["getCollection('entries', published)"] --> H2["Fisher-Yates shuffle"] --> H3["featured = [0]<br/>sideEntries = [1..3]"]
+    subgraph "Home Page ([lang]/index)"
+        H1["getLocalizedEntries(lang)"] --> H2["Fisher-Yates shuffle"] --> H3["featured = [0]<br/>sideEntries = [1..3]"]
     end
 
     subgraph "Catalog Page"
-        C1["getCollection('entries', published)"] --> C2["sort by popularity desc,<br/>then name_vi asc (vi locale)"] --> C3["pass all to EntriesListPage"]
+        C1["getLocalizedEntries(lang)"] --> C2["sort by popularity desc,<br/>then name_vi asc (vi locale)"] --> C3["pass all to EntriesListPage + lang"]
     end
 
     subgraph "Category Page"
-        F1["getCollection('entries', published)"] --> F2["sort (same as catalog)"] --> F3["filter by category"] --> F4["pass filtered to EntriesListPage"]
+        F1["getLocalizedEntries(lang)"] --> F2["sort (same as catalog)"] --> F3["filter by category"] --> F4["pass filtered to EntriesListPage + lang"]
     end
 
     subgraph "Entry Detail"
-        E1["getCollection('entries')"] --> E2["filter published"] --> E3["getStaticPaths():<br/>one path per entry"]
-        E2 --> E4["related = top 3 by popularity<br/>(excluding current)"]
-        E3 --> E5["render(entry) → Content component"]
+        E1["getLocalizedEntry(lang, id)"] --> E2["getStaticPaths():<br/>paths per locale + id"]
+        E2 --> E3["related = top 3 by popularity<br/>(excluding current)"]
+        E3 --> E4["render(entry) → Content component"]
     end
 ```
 
-### 4. Sort Logic
+### 5. Sort Logic
 
 Used in catalog and category pages:
 
 ```typescript
 entries.sort((a, b) => {
-  // Primary: popularity descending
   if ((b.data.popularity ?? 0) !== (a.data.popularity ?? 0)) {
     return (b.data.popularity ?? 0) - (a.data.popularity ?? 0);
   }
-  // Secondary: name_vi ascending (Vietnamese locale)
   return (a.data.name_vi ?? '').localeCompare(b.data.name_vi ?? '', 'vi');
 });
 ```
 
-### 5. Related Entries Logic
+### 6. Related Entries Logic
 
-In `[id].astro` → `getStaticPaths()`:
+In `[lang]/entries/[id].astro` → `getStaticPaths()` / props:
 
 ```typescript
 related: published
-  .filter(e => e.id !== entry.id)        // exclude current
-  .sort((a, b) => (b.data.popularity ?? 1) - (a.data.popularity ?? 1))  // by popularity
-  .slice(0, 3)                           // top 3
+  .filter(e => e.id !== entry.id)
+  .sort((a, b) => (b.data.popularity ?? 1) - (a.data.popularity ?? 1))
+  .slice(0, 3)
 ```
 
-### 6. Markdown Rendering
+### 7. Markdown Rendering
 
 ```typescript
 const { Content } = await render(entry);
-// Content is an Astro component that renders the markdown body
-// Passed as <slot> to EntryLayout
 ```
 
 The rendered markdown receives typography from `EntryLayout`'s `.entry-content` styles.
@@ -106,21 +112,21 @@ The rendered markdown receives typography from `EntryLayout`'s `.entry-content` 
 
 ```mermaid
 graph LR
-    A["entry.data.category<br/>(slug: 'anh-hung')"] --> B["CATEGORY_LABELS[slug]<br/>(map lookup)"]
-    B --> C["Vietnamese label<br/>('Anh hùng')"]
-    B -->|"not found"| D["fallback: raw slug"]
+    A["entry.data.category<br/>(slug: 'anh-hung')"] --> B["getCategoryLabel(slug, lang)"]
+    B --> C["CATEGORY_LABELS[slug][lang]"]
+    B -->|"missing"| D["fallback: vi label, then slug"]
 ```
 
-Used in: `EntriesListPage` (tags), `EntryLayout` (breadcrumb, info table), `index.astro` (featured)
+Used in: `EntriesListPage`, `EntryLayout`, `[lang]/index.astro`
 
 ## Data Flow per Page
 
 | Page | Input | Transform | Output |
 |------|-------|-----------|--------|
-| `/` | All published entries | Shuffle → take first 4 | Featured card + 3 side cards |
-| `/entries` | All published entries | Sort by popularity/name | Full card grid |
-| `/entries/category/X` | All published entries | Sort → filter by category | Filtered card grid |
-| `/entries/Y` | Single entry + all published | render() + top 3 related | Full article + sidebar + related |
+| `/vi/`, `/en/` | Localized published entries | Shuffle → take first 4 | Featured card + 3 side cards |
+| `/vi/entries`, `/en/entries` | Localized entries | Sort by popularity/name | Full card grid |
+| `/.../entries/category/X` | Localized entries | Sort → filter by category | Filtered card grid |
+| `/.../entries/Y` | `getLocalizedEntry` + published | render() + top 3 related | Full article + sidebar + related |
 
 ## Key Gotcha
 

@@ -6,12 +6,12 @@
 
 File: `src/components/Header.astro`
 
-**Props**: None
+**Props**: `{ lang?: Locale }` (default `'vi'`)
 
 **Renders**: Fixed top navigation bar with:
-- Logo (神 mark + "Thần Thoại Việt")
-- Nav links: Trang chủ, Mục lục, Phân loại, Về dự án
-- Language switch buttons (VI/EN) — **non-functional**, buttons have no handlers
+- Logo (神 mark + "Thần Thoại Việt" — brand text not yet fully localized)
+- Nav links from `t(lang, 'nav.*')` with `href` under `/${lang}/` (About → `/${lang}/about`)
+- Language switch: `<a>` links to the same path with `/vi/` ↔ `/en/` swapped
 
 **Styling**: `<style is:global>` — fixed position, backdrop blur, responsive (hides nav links on mobile)
 
@@ -23,14 +23,9 @@ File: `src/components/Header.astro`
 
 File: `src/components/Footer.astro`
 
-**Props**: None
+**Props**: `{ lang?: Locale }` (default `'vi'`)
 
-**Renders**: Dark footer with 4-column grid:
-- Brand column (description)
-- Khám phá (links: Trang chủ, Mục lục, Phân loại)
-- Tư liệu (links: Lĩnh Nam Chích Quái, etc. — all `href="#"`)
-- Liên hệ (links: Đóng góp, Github, Email — all `href="#"`)
-- Bottom bar: copyright + "Made with ♡ in Việt Nam"
+**Renders**: Dark footer with 4-column grid; labels via `t(lang, 'footer.*')` and explore links under `/${lang}/`
 
 **Used by**: `BaseLayout.astro`, `EntryLayout.astro`
 
@@ -43,21 +38,22 @@ File: `src/components/EntriesListPage.astro`
 **Props**:
 ```typescript
 interface Props {
-  entries: CollectionEntry<'entries'>[];
-  activeCategory: string | null;  // null = show all
+  entries: any[];  // localized collection entries from getLocalizedEntries
+  activeCategory: string | null;
   totalPublished: number;
+  lang?: Locale;
 }
 ```
 
 **Renders**: Full catalog page inside `BaseLayout`:
-1. Page header with "Mục lục" title + description
-2. Sticky filter bar with category pills (links to `/entries/category/[slug]`)
+1. Page header — `t(lang, 'entries.*')`
+2. Sticky filter bar with category pills linking to `/${lang}/entries/category/[slug]`
 3. 3-column card grid of entries (image placeholder, category tag, name, summary)
 
-**Used by**: `entries/index.astro`, `entries/category/[category].astro`
+**Used by**: `[lang]/entries/index.astro`, `[lang]/entries/category/[category].astro`
 
 **Key behavior**:
-- `activeCategory` determines which pill is highlighted and description text
+- `activeCategory` determines which pill is highlighted
 - Card grid renders inline (does NOT use `EntryCard.astro`)
 
 ---
@@ -66,24 +62,24 @@ interface Props {
 
 File: `src/layouts/BaseLayout.astro`
 
-**Props**: `{ title: string }`
+**Props**: `{ title: string; lang?: Locale }`
 
 **Renders**:
 ```html
 <!DOCTYPE html>
-<html lang="vi">
+<html lang={lang}>
   <head><!-- meta, title --></head>
   <body>
-    <Header />
+    <Header lang={lang} />
     <main><slot /></main>
-    <Footer />
+    <Footer lang={lang} />
   </body>
 </html>
 ```
 
 Imports `global.css`.
 
-**Used by**: `index.astro`, `EntriesListPage.astro`
+**Used by**: `[lang]/index.astro`, `EntriesListPage.astro`
 
 ---
 
@@ -91,12 +87,12 @@ Imports `global.css`.
 
 File: `src/layouts/EntryLayout.astro`
 
-**Props**: `{ entry: any; related?: any[] }`
+**Props**: `{ entry: any; related?: any[]; lang?: Locale }` (see file for exact interface)
 
-**Renders**: Complete standalone HTML document (NOT extending BaseLayout):
+**Renders**: Complete standalone HTML document (NOT extending `BaseLayout`):
 
 ```
-<html>
+<html lang={lang}>
   <head> (fonts, meta description) </head>
   <body>
     Header
@@ -123,8 +119,9 @@ File: `src/layouts/EntryLayout.astro`
 - `infoRows` — builds info table from entry data
 - `relGroups` — filters non-empty relation groups
 - `slugToLabel()` — converts theme slugs to display text
+- Category/region/gender labels use `getCategoryLabel` and `t(lang, ...)`
 
-**Used by**: `entries/[id].astro`
+**Used by**: `[lang]/entries/[id].astro`
 
 ## Unused Components
 
@@ -146,10 +143,10 @@ These files exist but are **not imported by any page or layout**:
 ```mermaid
 graph TD
     subgraph "Pages"
-        P1["index.astro"]
-        P2["entries/index.astro"]
-        P3["entries/[id].astro"]
-        P4["entries/category/[category].astro"]
+        P1["[lang]/index.astro"]
+        P2["[lang]/entries/index.astro"]
+        P3["[lang]/entries/[id].astro"]
+        P4["[lang]/entries/category/[category].astro"]
     end
 
     subgraph "Layouts"
@@ -165,6 +162,7 @@ graph TD
 
     subgraph "Data"
         CL["category-labels.ts"]
+        I18N["i18n/config.ts"]
         GC["global.css"]
     end
 
@@ -180,6 +178,8 @@ graph TD
     EL --> H
     EL --> F
     EL --> CL
+    EL --> I18N
     ELP --> CL
+    ELP --> I18N
     ELP --> BL
 ```

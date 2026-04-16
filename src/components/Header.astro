@@ -24,7 +24,7 @@ const altPath = currentPath.replace(/^\/(vi|en)(\/|$)/, `/${altLang}$2`);
       <li><a href={`/${lang}/`}>{t(lang, 'nav.home')}</a></li>
       <li><a href={`/${lang}/entries`}>{t(lang, 'nav.entries')}</a></li>
       <li><a href={`/${lang}/#categories`}>{t(lang, 'nav.categories')}</a></li>
-      <li><a href={`/${lang}/#about`}>{t(lang, 'nav.about')}</a></li>
+      <li><a href={`/${lang}/about`}>{t(lang, 'nav.about')}</a></li>
     </ul>
     <div class="lang-switch">
       <a href={lang === 'vi' ? currentPath : altPath} class:list={[{ active: lang === 'vi' }]}>VI</a>

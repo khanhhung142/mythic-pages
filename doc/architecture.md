@@ -17,7 +17,7 @@
 
 ```
 mythic-pages/
-├── astro.config.mjs          # Astro config (trailingSlash, build format)
+├── astro.config.mjs          # Astro config: i18n, trailingSlash, build format
 ├── package.json               # Dependencies and scripts
 ├── tailwind.config.ts         # Tailwind theme (shadcn-like tokens, mostly unused)
 ├── tsconfig.json              # Extends astro/tsconfigs/base
@@ -28,32 +28,34 @@ mythic-pages/
 │   ├── placeholder.svg
 │   └── robots.txt
 └── src/
-    ├── content.config.ts      # Zod schema for entries collection
+    ├── content.config.ts      # Zod schema + entriesVi / entriesEn collections
     ├── env.d.ts               # Astro type references
+    ├── i18n/
+    │   ├── config.ts          # locales, defaultLocale, ui strings, t()
+    │   └── content.ts         # getLocalizedEntries, getLocalizedEntry, getAllEntryIds
     ├── data/
-    │   └── category-labels.ts # Category slug → Vietnamese label map
+    │   └── category-labels.ts # Category slug → label per locale (vi/en)
     ├── content/
-    │   └── entries/           # Markdown content files (one per mythological entry)
-    │       ├── au-co.md
-    │       ├── ho-tinh.md
-    │       ├── lac-long-quan.md
-    │       ├── moc-tinh.md
-    │       ├── ngu-tinh.md
-    │       └── thanh-giong.md
+    │   ├── vi/entries/        # Vietnamese markdown (canonical set of entries)
+    │   │   └── *.md
+    │   └── en/entries/        # English markdown (optional per entry; missing → VI fallback)
+    │       └── *.md
     ├── layouts/
-    │   ├── BaseLayout.astro   # Minimal shell: <html>, global.css, Header, Footer
+    │   ├── BaseLayout.astro   # Minimal shell: <html lang>, global.css, Header, Footer
     │   └── EntryLayout.astro  # Full entry page: standalone <html>, sidebar, typography
     ├── pages/                 # File-based routing
-    │   ├── index.astro        # Home page
-    │   └── entries/
-    │       ├── index.astro    # Entries catalog
-    │       ├── [id].astro     # Entry detail (dynamic)
-    │       └── category/
-    │           └── [category].astro  # Category filter (dynamic)
+    │   ├── index.astro        # Redirect / → /vi/
+    │   └── [lang]/            # locale segment: vi | en
+    │       ├── index.astro    # Home page
+    │       └── entries/
+    │           ├── index.astro
+    │           ├── [id].astro
+    │           └── category/
+    │               └── [category].astro
     ├── styles/
     │   └── global.css         # CSS variables, reset, base typography
     ├── components/
-    │   ├── Header.astro       # Fixed nav bar
+    │   ├── Header.astro       # Fixed nav bar + lang switch
     │   ├── Footer.astro       # Site footer
     │   ├── EntriesListPage.astro  # Shared list page (catalog + category filter)
     │   ├── EntryCard.astro    # ⚠️ UNUSED — not imported anywhere
@@ -76,12 +78,13 @@ mythic-pages/
 
 ```mermaid
 graph LR
-    A[Markdown files<br/>src/content/entries/*.md] --> B[Zod validation<br/>src/content.config.ts]
-    B --> C[Astro Content Collections<br/>getCollection / getStaticPaths]
-    C --> D[Astro Pages<br/>src/pages/**/*.astro]
-    D --> E[Static HTML<br/>dist/]
-    F[global.css + Tailwind] --> D
-    G[Components<br/>Header, Footer, etc.] --> D
+    A["Markdown files<br/>src/content/vi|en/entries/*.md"] --> B[Zod validation<br/>src/content.config.ts]
+    B --> C[Astro Content Collections<br/>entriesVi / entriesEn]
+    C --> D["getLocalized* helpers<br/>src/i18n/content.ts"]
+    D --> E[Astro Pages<br/>src/pages/[lang]/**/*.astro]
+    E --> F[Static HTML<br/>dist/]
+    G[global.css + Tailwind] --> E
+    H[Components + t(lang,key)] --> E
 ```
 
 ## Build Commands
@@ -99,16 +102,24 @@ File: `astro.config.mjs`
 
 ```js
 export default defineConfig({
+  i18n: {
+    defaultLocale: 'vi',
+    locales: ['vi', 'en'],
+    routing: {
+      prefixDefaultLocale: true,   // /vi/... not bare /
+      redirectToDefaultLocale: true, // / → default locale
+    },
+  },
   trailingSlash: "ignore",  // both /entries and /entries/ work
   build: {
-    format: "directory",    // dist/entries/index.html (not entries.html)
+    format: "directory",    // dist/vi/entries/index.html style
   },
 });
 ```
 
 - No integrations installed (no `@astrojs/react`, no `@astrojs/tailwind`)
 - No server adapter → pure static output
-- No redirects active (commented out)
+- Root `/` also redirects explicitly in `src/pages/index.astro` (301 → `/vi/`)
 
 ## Deploy
 

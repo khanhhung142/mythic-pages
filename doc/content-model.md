@@ -1,89 +1,96 @@
 # Content Model
 
-All content lives as Markdown files in `src/content/entries/`. Each file = one mythological entry.
+Myth entries live as Markdown under **locale-specific folders**:
+
+- `src/content/vi/entries/*.md` — Vietnamese (canonical set)
+- `src/content/en/entries/*.md` — English translations (optional per entry)
+
+Each file = one mythological entry. Same filename (`id`) in both folders denotes the same story in two languages. If an EN file is missing, the site still serves the entry under `/en/...` using the VI file (see `src/i18n/content.ts`).
 
 ## Schema Definition
 
 File: `src/content.config.ts`
 
+Two collections share one schema (`entrySchema`):
+
 ```typescript
-const entries = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/entries' }),
-  schema: z.object({
-    name_vi: z.string(),                          // Vietnamese name (required)
-    name_han: z.string().optional(),               // Hán tự name
-    aliases: z.array(z.string()).optional(),        // Alternative names
-    name_en: z.string().optional(),                // English name
-    category: z.string(),                          // Category slug (required)
-    subcategories: z.array(z.string()).optional(),
-    gender: z.string().optional(),                 // "nam" | "nu" | "khong-xac-dinh"
-    era: z.string().optional(),                    // Historical era text
-    year_approx: z.number().optional(),            // Approximate year (negative = BCE)
-    year_end: z.number().optional(),
-    region: z.string().optional(),                 // "bac" | "trung" | "nam"
-    locations: z.array(z.string()).optional(),      // Place names
-    coordinates: z.array(z.number()).optional(),    // [lat, lng]
-    relations: z.object({
-      family: z.array(z.string()).optional(),
-      allies: z.array(z.string()).optional(),
-      enemies: z.array(z.string()).optional(),
-      artifacts: z.array(z.string()).optional(),
-    }).optional(),
-    sources: z.array(z.object({
-      title: z.string(),
-      author: z.string().optional(),
-      chapter: z.string().optional(),
-      edition: z.string().optional(),
-    })).optional(),
-    summary: z.string().optional(),                // Short description
-    group: z.string().optional(),                  // Grouping label (e.g. "Tứ Bất Tử")
-    themes: z.array(z.string()).optional(),         // Theme tags (slugs)
-    popularity: z.number().default(1),             // Sorting weight
-    status: z.string().default('published'),       // "published" = visible
-    author: z.string().optional(),
-    updated_at: z.coerce.string().optional(),
-  }),
+const entriesVi = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/vi/entries' }),
+  schema: entrySchema,
 });
+
+const entriesEn = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/en/entries' }),
+  schema: entrySchema,
+});
+
+export const collections = { entriesVi, entriesEn };
+```
+
+`entrySchema` fields:
+
+```typescript
+z.object({
+  name_vi: z.string(),                          // Vietnamese name (required)
+  name_han: z.string().optional(),               // Hán tự name
+  aliases: z.array(z.string()).optional(),        // Alternative names
+  name_en: z.string().optional(),                // English name
+  category: z.string(),                          // Category slug (required)
+  subcategories: z.array(z.string()).optional(),
+  gender: z.string().optional(),                 // "nam" | "nu" | "khong-xac-dinh"
+  era: z.string().optional(),                    // Historical era text
+  year_approx: z.number().optional(),            // Approximate year (negative = BCE)
+  year_end: z.number().optional(),
+  region: z.string().optional(),                 // "bac" | "trung" | "nam"
+  locations: z.array(z.string()).optional(),      // Place names
+  coordinates: z.array(z.number()).optional(),    // [lat, lng]
+  relations: z.object({
+    family: z.array(z.string()).optional(),
+    allies: z.array(z.string()).optional(),
+    enemies: z.array(z.string()).optional(),
+    artifacts: z.array(z.string()).optional(),
+  }).optional(),
+  sources: z.array(z.object({
+    title: z.string(),
+    author: z.string().optional(),
+    chapter: z.string().optional(),
+    edition: z.string().optional(),
+  })).optional(),
+  summary: z.string().optional(),                // Short description
+  group: z.string().optional(),                  // Grouping label (e.g. "Tứ Bất Tử")
+  themes: z.array(z.string()).optional(),         // Theme tags (slugs)
+  popularity: z.number().default(1),             // Sorting weight
+  status: z.string().default('published'),       // "published" = visible
+  author: z.string().optional(),
+  updated_at: z.coerce.string().optional(),
+})
 ```
 
 ## Category System
 
 File: `src/data/category-labels.ts`
 
-| Slug | Vietnamese Label | Meaning |
-|------|-----------------|---------|
+| Slug | VI label | EN label (via `getCategoryLabel`) |
+|------|----------|-------------------------------------|
 | `than-linh` | Thần linh | Deities |
 | `anh-hung` | Anh hùng | Heroes |
 | `yeu-quai` | Yêu quái | Demons |
-| `linh-vat` | Linh vật | Sacred beasts |
+| `linh-vat` | Linh vật | Sacred Beasts |
 | `dia-danh` | Địa danh | Places |
 | `vat-pham` | Vật phẩm | Artifacts |
 | `le-hoi` | Lễ hội | Festivals |
-| `tich-co` | Tích cổ | Ancient tales |
+| `tich-co` | Tích cổ | Ancient Tales |
 
 `CATEGORY_SLUGS` = array of all slug keys. Used for `getStaticPaths()` in category pages.
 
-## Region Labels (in EntryLayout)
+## Region & gender labels (UI)
 
-| Slug | Label |
-|------|-------|
-| `bac` | Bắc Bộ |
-| `trung` | Trung Bộ |
-| `nam` | Nam Bộ |
-
-## Gender Labels (in EntryLayout)
-
-| Slug | Label |
-|------|-------|
-| `nam` | Nam |
-| `nu` | Nữ |
-| `khong-xac-dinh` | Không xác định |
+Region and gender **slugs** in frontmatter are fixed; **display strings** for the sidebar and filters come from `t(lang, 'region.*')` and `t(lang, 'gender.*')` in `src/i18n/config.ts`, not only from hardcoded Vietnamese tables.
 
 ## Frontmatter Example
 
 ```yaml
 ---
-id: thanh-giong
 name_vi: Thánh Gióng
 name_han: 聖揀
 aliases:
@@ -132,7 +139,7 @@ Markdown body here...
 
 ## Content Conventions
 
-- **File naming**: `kebab-case.md` matching the entry's ID (e.g. `thanh-giong.md`)
+- **File naming**: `kebab-case.md` matching the entry's ID (e.g. `thanh-giong.md`); use the **same** `id` in `vi` and `en` when both exist
 - **Markdown headings**: Use `## Heading _italic_` style — the italic part gets styled differently via `EntryLayout.astro`
 - **Only `status: 'published'`** entries appear on the site
 - **`popularity`** drives sort order (higher = shown first) and "related entries" selection
@@ -140,6 +147,8 @@ Markdown body here...
 - **Themes** are slug strings, displayed via `slugToLabel()` which replaces `-` with spaces
 
 ## Existing Entries
+
+Markdown files live under `src/content/vi/entries/` (and optionally `src/content/en/entries/`). Regenerate this table from the repo when inventory matters for agents:
 
 | File | Name | Category | Popularity |
 |------|------|----------|-----------|

@@ -62,6 +62,32 @@ export const ui: Record<Locale, Record<string, string>> = {
     "region.nam": "Nam Bộ",
     "quote.content": "TODO: add một cái quote ý nghĩa và dài. ",
     "quote.source": "Tác giả, trích dẫn quote",
+    "about.title": "Về dự án",
+    "about.lead":
+      "Một kho truyện mở, miễn phí — gom và sắp xếp thần thoại, truyền thuyết và dân gian Việt Nam theo một hệ thống dễ đọc, dễ tra cứu.",
+    "about.body1":
+      "Thần Thoại Việt Nam không nhằm thay thế sách hay nghiên cứu học thuật, mà giúp mọi người tiếp cận các câu chuyện đã nuôi dưỡng trí tưởng tượng và ký ức văn hóa — từ thần linh, anh hùng đến yêu quái và địa danh.",
+    "about.body2":
+      "Dự án luôn chào đón góp ý, bổ sung nguồn, sửa lỗi nội dung hoặc báo lỗi kỹ thuật. Mọi đóng góp đều quý — cùng nhau giữ di sản cho thế hệ sau.",
+    "about.cta.contribute": "Đóng góp nội dung",
+    "about.cta.report": "Báo lỗi",
+    "about.cta.note": "Liên kết chi tiết (repo, email, form) sẽ được bổ sung sau.",
+    "about.roadmap.title": "Lộ trình",
+    "about.rm1.title": "Kho nội dung & entries",
+    "about.rm1.desc":
+      "Tổng hợp truyền thuyết và ghi thành từng mục (entry); mở rộng dần khi đã có đủ khối lượng và chất lượng biên tập.",
+    "about.rm2.title": "Liên kết giữa các trang",
+    "about.rm2.desc":
+      "Nối các nhân vật, địa danh và câu chuyện với nhau — điều hướng trong cùng một mạng lưới truyện.",
+    "about.rm3.title": "Timeline theo truyền thuyết",
+    "about.rm3.desc":
+      "Một trang hoặc khung thời gian riêng cho từng sự tích, giúp đặt nhân vật và biến cố trong bối cảnh thời gian.",
+    "about.rm4.title": "Bản đồ địa danh",
+    "about.rm4.desc":
+      "Bản đồ gắn truyền thuyết, vị thần và linh thiêng với từng vùng đất — núi, sông, làng, đền.",
+    "about.rm5.title": "Đóng góp từ cộng đồng",
+    "about.rm5.desc":
+      "Tính năng để người dùng thêm câu chuyện địa phương và tài liệu của chính mình — do tác giả dự án triển khai ở giai đoạn sau.",
   },
   en: {
     "site.title": "Vietnamese Mythology",
@@ -122,6 +148,32 @@ export const ui: Record<Locale, Record<string, string>> = {
     "region.nam": "Southern",
     "quote.content": "TODO: add một cái quote ý nghĩa và dài.",
     "quote.source": "Tác giả, trích dẫn quote",
+    "about.title": "About this project",
+    "about.lead":
+      "A free, open treasury — organizing Vietnamese myths, legends, and folk tales into a clear, browsable structure.",
+    "about.body1":
+      "Vietnamese Mythology is not meant to replace books or academic work, but to help everyone access the stories that shaped imagination and cultural memory — deities, heroes, spirits, and places.",
+    "about.body2":
+      "Feedback, source suggestions, content fixes, and bug reports are all welcome. Every contribution helps preserve this heritage for the next generation.",
+    "about.cta.contribute": "Contribute content",
+    "about.cta.report": "Report an issue",
+    "about.cta.note": "Detailed links (repo, email, form) will be added later.",
+    "about.roadmap.title": "Roadmap",
+    "about.rm1.title": "Content & entries",
+    "about.rm1.desc":
+      "Compile legends into structured entries; grow the archive as volume and editorial quality allow.",
+    "about.rm2.title": "Cross-linking",
+    "about.rm2.desc":
+      "Connect characters, places, and tales — navigate a single web of stories.",
+    "about.rm3.title": "Per-tale timelines",
+    "about.rm3.desc":
+      "A timeline view for each legend, placing figures and events in time.",
+    "about.rm4.title": "Places map",
+    "about.rm4.desc":
+      "A map tying myths, deities, and sacred sites to regions — mountains, rivers, villages, temples.",
+    "about.rm5.title": "Community submissions",
+    "about.rm5.desc":
+      "A future feature for readers to add local stories and materials — to be built by the project author in a later phase.",
   },
 };
 

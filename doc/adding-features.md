@@ -4,13 +4,14 @@ Step-by-step patterns for common tasks. Follow these to stay consistent with exi
 
 ## Adding a New Entry (Content)
 
-1. Create `src/content/entries/{slug}.md`
-2. Add frontmatter matching the Zod schema (see `content-model.md`)
-3. Required fields: `name_vi`, `category` (must be one of `CATEGORY_SLUGS`)
-4. Set `status: published` to make it visible
-5. Set `popularity` to control sort order (higher = shown first)
-6. Write markdown body with `## Heading _italic_` pattern
-7. No code changes needed — Astro auto-discovers new `.md` files
+1. Add `src/content/vi/entries/{slug}.md` (required for the story to exist in the canonical set)
+2. Optionally add `src/content/en/entries/{slug}.md` with the **same** filename for a full English page body; if omitted, `/en/entries/{slug}` still works and shows the VI markdown via fallback
+3. Add frontmatter matching the Zod schema (see `content-model.md`)
+4. Required fields: `name_vi`, `category` (must be one of `CATEGORY_SLUGS`)
+5. Set `status: published` to make it visible
+6. Set `popularity` to control sort order (higher = shown first)
+7. Write markdown body with `## Heading _italic_` pattern
+8. No routing code changes needed — collections pick up new `.md` files on build
 
 ```yaml
 ---
@@ -47,62 +48,58 @@ Content here...
 
 ## Adding a New Category
 
-1. Add slug → label in `src/data/category-labels.ts`:
+1. Add slug → **per-locale** labels in `src/data/category-labels.ts`:
    ```typescript
-   export const CATEGORY_LABELS: Record<string, string> = {
+   export const CATEGORY_LABELS: Record<string, Record<Locale, string>> = {
      // ... existing
-     "new-slug": "Nhãn mới",
+     "new-slug": { vi: "Nhãn mới", en: "New label" },
    };
    ```
-2. Add category card in `src/pages/index.astro` (hardcoded `categories` array in frontmatter)
-3. Category page auto-generates via `getStaticPaths()` from `CATEGORY_SLUGS`
+2. Add category card metadata in `src/pages/[lang]/index.astro` (`categoryMeta` object) so the home grid has copy for both locales
+3. Category list pages auto-generate via `getStaticPaths()` from `CATEGORY_SLUGS` × locales
 
 ## Adding a New Page
 
-1. Create `src/pages/{path}.astro`
-2. Import and use `BaseLayout`:
+1. Prefer placing pages under `src/pages/[lang]/...` so URLs stay locale-prefixed
+2. Import and use `BaseLayout` with `title` and `lang`:
    ```astro
    ---
-   import BaseLayout from '../layouts/BaseLayout.astro';
+   import BaseLayout from '../../layouts/BaseLayout.astro';
+   import type { Locale } from '../../i18n/config';
+   const { lang } = Astro.params as { lang: Locale };
    ---
-   <BaseLayout title="Page Title">
-     <!-- content -->
-   </BaseLayout>
+   <BaseLayout title="..." lang={lang}>
    ```
-3. For dynamic routes, export `getStaticPaths()`:
-   ```astro
-   ---
-   export async function getStaticPaths() {
-     return [
-       { params: { slug: 'value' }, props: { /* data */ } },
-     ];
-   }
-   ---
-   ```
-4. Add navigation link in `Header.astro` if needed
+3. For dynamic routes, export `getStaticPaths()` including `lang` when needed
+4. Use `t(lang, 'key')` for user-visible strings; add keys to `src/i18n/config.ts` for both `vi` and `en`
+5. Update `Header.astro` / footer links only if you add a top-level section
+
+### Example: static About page (`/[lang]/about`)
+
+Reference implementation: [`src/pages/[lang]/about.astro`](src/pages/[lang]/about.astro).
+
+- `export async function getStaticPaths() { return locales.map((lang) => ({ params: { lang } })); }`
+- `const { lang } = Astro.params as { lang: Locale };`
+- `BaseLayout title={pageTitle} lang={lang}` with `pageTitle` built from `t(lang, 'about.title')` and `site.title`
+- All copy via `about.*` keys in `src/i18n/config.ts` (vi + en)
+- Nav label “Về dự án” / “About” in [`Header.astro`](src/components/Header.astro) points to `/${lang}/about`
+
+After adding a similar page, update `doc/routing-and-pages.md` and this file if the pattern changes.
 
 ## Adding a New Component
 
 1. Create `src/components/{Name}.astro`
-2. Define props interface:
+2. Define props interface; pass `lang: Locale` when rendering UI strings:
    ```astro
    ---
-   interface Props {
-     title: string;
-     items: string[];
-   }
-   const { title, items } = Astro.props;
+   import { t } from '../i18n/config';
+   import type { Locale } from '../i18n/config';
+   interface Props { lang?: Locale; }
+   const { lang = 'vi' } = Astro.props;
    ---
-   <div class="my-component">
-     <h3>{title}</h3>
-     {items.map(item => <span>{item}</span>)}
-   </div>
-
-   <style>
-   .my-component { /* scoped styles */ }
-   </style>
+   <div>{t(lang, 'some.key')}</div>
    ```
-3. Import in page: `import MyComponent from '../components/MyComponent.astro';`
+3. Import in page from the appropriate path depth
 
 ### Style Conventions for New Components
 
@@ -146,16 +143,7 @@ Astro components are server-only by default. For interactivity:
 
 Pattern for a search feature:
 
-1. Build search index at build time in a page's frontmatter:
-   ```typescript
-   const entries = await getCollection('entries', e => e.data.status === 'published');
-   const searchData = entries.map(e => ({
-     id: e.id,
-     name: e.data.name_vi,
-     summary: e.data.summary,
-     category: e.data.category,
-   }));
-   ```
+1. Build search index at build time using `getLocalizedEntries(lang)` (or both collections if you need raw splits)
 2. Pass as JSON to a `<script>` tag or island component
 3. Filter client-side with vanilla JS or a small library
 
@@ -163,27 +151,20 @@ Pattern for a search feature:
 
 The entry detail page is in `src/layouts/EntryLayout.astro`. Key areas:
 
-- **Header section**: lines 65–96 (breadcrumb, title, tags)
-- **Article content**: lines 100–148 (hero image, summary, markdown, sources, related)
-- **Sidebar**: lines 150–200 (info table, relations, themes)
-- **Styles**: lines 210–594 (all scoped global CSS)
+- **Header section**: breadcrumb, title, tags
+- **Article content**: hero image, summary, markdown, sources, related
+- **Sidebar**: info table, relations, themes
+- **Styles**: scoped global CSS at bottom of file
 
-To add a new sidebar section:
-```astro
-<!-- Add inside .sidebar-sticky, after existing .side-card blocks -->
-<div class="side-card">
-  <div class="side-label">New Section <span class="num">iv.</span></div>
-  <!-- content -->
-</div>
-```
+To add a new sidebar section, follow existing `.side-card` blocks and use `t(lang, ...)` for labels.
 
 ## Modifying the Home Page
 
-`src/pages/index.astro` has four sections:
+`src/pages/[lang]/index.astro` has four sections:
 1. `.hero` — hero section with CTAs
 2. `#featured` — featured entry cards
-3. `#categories` — category grid (dark bg)
-4. `.quote` — blockquote
+3. `#categories` — category grid (links to `/${lang}/entries/category/...`)
+4. `.quote` — blockquote (`#quote`)
 
 Each section's styles are in the same file's `<style>` block.
 
@@ -199,12 +180,6 @@ Currently all images are placeholders. To add real images:
    ```
 4. Reference in templates: `<img src={entry.data.image} alt={entry.data.name_vi} />`
 
-## Adding i18n (Internationalization)
+## i18n Reference
 
-The site has non-functional VI/EN buttons. To implement:
-
-1. Create content in both languages (e.g. `src/content/entries/en/thanh-giong.md`)
-2. Or add translated fields to schema (`summary_en`, `name_display_en`)
-3. Use Astro's i18n routing: `src/pages/en/entries/[id].astro`
-4. Update Header language buttons to link to `/en/` prefix routes
-5. Store locale preference in URL path (not cookies — static site)
+Implemented behavior (locales, fallback, `t()`, collections) is documented in [i18n.md](./i18n.md). When adding UI copy, always add **both** `vi` and `en` keys in `src/i18n/config.ts` unless the string is intentionally locale-only.

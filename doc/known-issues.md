@@ -55,38 +55,21 @@ Google Fonts loaded in two places:
 
 **Action**: Consider refactoring `EntryLayout` to extend `BaseLayout` with a slot-based approach, keeping entry-specific styles scoped.
 
-## 6. Home Page Category Links
+## 6. ~~Home Page Category Links~~ (fixed)
 
-**Severity**: Low — UX bug
+Previously, category cards on the home page all linked to `/entries` instead of per-category URLs. **`src/pages/[lang]/index.astro`** now uses `href={\`/${lang}/entries/category/${slug}\`}`.
 
-In `src/pages/index.astro`, category cards all link to `/entries` instead of `/entries/category/{slug}`:
+## 7. ~~Non-functional Language Switcher~~ (implemented)
 
-```astro
-<!-- Current (broken) -->
-<a href="/entries" class="cat-card">
-
-<!-- Should be -->
-<a href={`/entries/category/${cat.slug}`} class="cat-card">
-```
-
-**Action**: Fix the `href` to use category slug.
-
-## 7. Non-functional Language Switcher
-
-**Severity**: Low — placeholder feature
-
-`Header.astro` has VI/EN buttons with no click handlers and no i18n routing.
-
-**Action**: Either remove the buttons or implement i18n (see `adding-features.md`).
+Header VI/EN controls are `<a>` links that swap the locale segment in the current path. See `src/components/Header.astro` and [i18n.md](./i18n.md).
 
 ## 8. Placeholder Content
 
 **Severity**: Low — cosmetic
 
-- Hero section has lorem ipsum text
-- Quote section has lorem ipsum
+- Hero/quote copy may still use placeholders in `src/i18n/config.ts` (`TODO` strings)
 - All images are CSS-only placeholders (no actual images)
-- Footer links (Đóng góp, Github, Email) point to `#`
+- Footer links (Đóng góp, Github, Email) may still point to `#`
 
 **Action**: Replace with real content when ready.
 
@@ -114,11 +97,18 @@ Relations in frontmatter (family, allies, enemies) are plain text strings, not l
 
 **Action**: Consider adding an `entry_id` field to relations, or auto-matching relation text to existing entry `name_vi` values.
 
+## 12. Filtered catalog description (EN)
+
+**Severity**: Low — copy
+
+On category-filtered list pages, `EntriesListPage` may still use a Vietnamese-only sentence for the filtered description while `lang === 'en'`. Catalog titles and pills use `t(lang, ...)`.
+
+**Action**: Localize `descFiltered` or build it with `t()` keys if full EN UX is required.
+
 ## Priority Order
 
-1. **Fix category links on home page** (#6) — quick fix, improves UX
-2. **Delete unused components** (#1) — reduces confusion
-3. **Align Tailwind config** (#2) — prevents misuse
-4. **Refactor EntryLayout** (#5) — reduces duplication
-5. **Link relations** (#11) — improves content interconnection
-6. Other items as needed
+1. **Delete unused components** (#1) — reduces confusion
+2. **Align Tailwind config** (#2) — prevents misuse
+3. **Refactor EntryLayout** (#5) — reduces duplication
+4. **Link relations** (#11) — improves content interconnection
+5. Other items as needed
