@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { getCategoryLabel, CATEGORY_LABELS } from '../data/category-labels';
 import { t } from '../i18n/config';
+import { localePath } from '../i18n/paths';
 import type { Locale } from '../i18n/config';
 
 interface Props {
@@ -37,10 +38,10 @@ const descFiltered = activeCategory
     <div class="filter-inner">
       <span class="filter-label">{t(lang, 'entries.filter')}</span>
       <div class="filter-pills">
-        <a href={`/${lang}/entries`} class:list={['pill', { 'pill-active': !activeCategory }]}>{t(lang, 'entries.all')}</a>
+        <a href={localePath(lang, '/entries')} class:list={['pill', { 'pill-active': !activeCategory }]}>{t(lang, 'entries.all')}</a>
         {Object.keys(CATEGORY_LABELS).map((slug) => (
           <a
-            href={`/${lang}/entries/category/${slug}`}
+            href={localePath(lang, `/entries/category/${slug}`)}
             class:list={['pill', { 'pill-active': activeCategory === slug }]}
           >
             {getCategoryLabel(slug, lang)}
@@ -54,7 +55,7 @@ const descFiltered = activeCategory
     <div class="entries-grid">
       {entries.map(entry => (
         <article class="entry-card">
-          <a href={`/${lang}/entries/${entry.id}`} class="entry-card-link">
+          <a href={localePath(lang, `/entries/${entry.id}`)} class="entry-card-link">
             <div class="entry-img img-placeholder"></div>
             <div class="entry-body">
               <div class="entry-meta">

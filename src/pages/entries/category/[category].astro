@@ -1,0 +1,29 @@
+---
+import EntriesListPage from '../../../components/EntriesListPage.astro';
+import { getLocalizedEntries } from '../../../i18n/content';
+import { CATEGORY_SLUGS } from '../../../data/category-labels';
+
+const lang = 'vi' as const;
+
+export async function getStaticPaths() {
+  return CATEGORY_SLUGS.map((category) => ({ params: { category } }));
+}
+
+const { category } = Astro.params as { category: string };
+
+const allEntries = await getLocalizedEntries(lang);
+allEntries.sort((a, b) => {
+  if ((b.data.popularity ?? 0) !== (a.data.popularity ?? 0)) {
+    return (b.data.popularity ?? 0) - (a.data.popularity ?? 0);
+  }
+  return (a.data.name_vi ?? '').localeCompare(b.data.name_vi ?? '', 'vi');
+});
+
+const filtered = allEntries.filter((e) => e.data.category === category);
+---
+<EntriesListPage
+  entries={filtered}
+  activeCategory={category}
+  totalPublished={allEntries.length}
+  lang={lang}
+/>

@@ -55,34 +55,32 @@ Content here...
      "new-slug": { vi: "Nhãn mới", en: "New label" },
    };
    ```
-2. Add category card metadata in `src/pages/[lang]/index.astro` (`categoryMeta` object) so the home grid has copy for both locales
-3. Category list pages auto-generate via `getStaticPaths()` from `CATEGORY_SLUGS` × locales
+2. Add category card metadata in `src/components/HomePage.astro` (`categoryMeta` object) so the home grid has copy for both locales
+3. Category list pages auto-generate via `getStaticPaths()` from `CATEGORY_SLUGS` in `entries/category/[category].astro` and `en/entries/category/[category].astro`
 
 ## Adding a New Page
 
-1. Prefer placing pages under `src/pages/[lang]/...` so URLs stay locale-prefixed
-2. Import and use `BaseLayout` with `title` and `lang`:
+1. Vietnamese (default): add pages under `src/pages/` (e.g. `about.astro`). English: mirror under `src/pages/en/`.
+2. Import and use `BaseLayout` with `title` and `lang` (fixed `'vi'` / `'en'` or from context):
    ```astro
    ---
-   import BaseLayout from '../../layouts/BaseLayout.astro';
-   import type { Locale } from '../../i18n/config';
-   const { lang } = Astro.params as { lang: Locale };
+   import BaseLayout from '../layouts/BaseLayout.astro';
+   const lang = 'vi' as const;
    ---
    <BaseLayout title="..." lang={lang}>
    ```
-3. For dynamic routes, export `getStaticPaths()` including `lang` when needed
+3. For dynamic routes, export `getStaticPaths()` in each locale file that needs it
 4. Use `t(lang, 'key')` for user-visible strings; add keys to `src/i18n/config.ts` for both `vi` and `en`
 5. Update `Header.astro` / footer links only if you add a top-level section
 
-### Example: static About page (`/[lang]/about`)
+### Example: static About page (`/about` and `/en/about`)
 
-Reference implementation: [`src/pages/[lang]/about.astro`](src/pages/[lang]/about.astro).
+Reference: [`src/pages/about.astro`](../src/pages/about.astro) and [`src/pages/en/about.astro`](../src/pages/en/about.astro).
 
-- `export async function getStaticPaths() { return locales.map((lang) => ({ params: { lang } })); }`
-- `const { lang } = Astro.params as { lang: Locale };`
+- `const lang = 'vi' as const` (or `'en'` in the `en/` tree)
 - `BaseLayout title={pageTitle} lang={lang}` with `pageTitle` built from `t(lang, 'about.title')` and `site.title`
 - All copy via `about.*` keys in `src/i18n/config.ts` (vi + en)
-- Nav label “Về dự án” / “About” in [`Header.astro`](src/components/Header.astro) points to `/${lang}/about`
+- Nav label “Về dự án” / “About” in [`Header.astro`](src/components/Header.astro) uses `localePath(lang, '/about')`
 
 After adding a similar page, update `doc/routing-and-pages.md` and this file if the pattern changes.
 
@@ -160,13 +158,13 @@ To add a new sidebar section, follow existing `.side-card` blocks and use `t(lan
 
 ## Modifying the Home Page
 
-`src/pages/[lang]/index.astro` has four sections:
+`src/components/HomePage.astro` (used by `src/pages/index.astro` and `src/pages/en/index.astro`) has four sections:
 1. `.hero` — hero section with CTAs
 2. `#featured` — featured entry cards
-3. `#categories` — category grid (links to `/${lang}/entries/category/...`)
+3. `#categories` — category grid (links via `localePath(lang, '/entries/category/...')`)
 4. `.quote` — blockquote (`#quote`)
 
-Each section's styles are in the same file's `<style>` block.
+Each section's styles are in `HomePage.astro`'s `<style>` block.
 
 ## Adding Images
 

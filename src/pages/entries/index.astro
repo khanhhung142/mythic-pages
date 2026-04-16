@@ -1,0 +1,15 @@
+---
+import EntriesListPage from '../../components/EntriesListPage.astro';
+import { getLocalizedEntries } from '../../i18n/content';
+
+const lang = 'vi' as const;
+
+const allEntries = await getLocalizedEntries(lang);
+allEntries.sort((a, b) => {
+  if ((b.data.popularity ?? 0) !== (a.data.popularity ?? 0)) {
+    return (b.data.popularity ?? 0) - (a.data.popularity ?? 0);
+  }
+  return (a.data.name_vi ?? '').localeCompare(b.data.name_vi ?? '', 'vi');
+});
+---
+<EntriesListPage entries={allEntries} activeCategory={null} totalPublished={allEntries.length} lang={lang} />

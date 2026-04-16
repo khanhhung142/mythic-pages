@@ -11,7 +11,7 @@ graph TD
     C -->|"Yes"| D["In-memory collections"]
     C -->|"No"| E["Build error"]
     D -->|"getLocalizedEntries / getLocalizedEntry"| F["src/i18n/content.ts"]
-    F --> G["Page frontmatter scripts<br/>src/pages/[lang]/..."]
+    F --> G["Page frontmatter scripts<br/>src/pages/... and en/..."]
     G -->|"filter/sort/slice"| H["Template data"]
     H -->|"Astro rendering"| I["Static HTML in dist/"]
 ```
@@ -57,7 +57,7 @@ So the EN catalog and static paths include every story that exists in VI even be
 
 ```mermaid
 graph LR
-    subgraph "Home Page ([lang]/index)"
+    subgraph "Home Page (index / HomePage)"
         H1["getLocalizedEntries(lang)"] --> H2["Fisher-Yates shuffle"] --> H3["featured = [0]<br/>sideEntries = [1..3]"]
     end
 
@@ -91,7 +91,7 @@ entries.sort((a, b) => {
 
 ### 6. Related Entries Logic
 
-In `[lang]/entries/[id].astro` → `getStaticPaths()` / props:
+In `entries/[id].astro` and `en/entries/[id].astro` → `getStaticPaths()` / props:
 
 ```typescript
 related: published
@@ -117,14 +117,14 @@ graph LR
     B -->|"missing"| D["fallback: vi label, then slug"]
 ```
 
-Used in: `EntriesListPage`, `EntryLayout`, `[lang]/index.astro`
+Used in: `EntriesListPage`, `EntryLayout`, `HomePage`
 
 ## Data Flow per Page
 
 | Page | Input | Transform | Output |
 |------|-------|-----------|--------|
-| `/vi/`, `/en/` | Localized published entries | Shuffle → take first 4 | Featured card + 3 side cards |
-| `/vi/entries`, `/en/entries` | Localized entries | Sort by popularity/name | Full card grid |
+| `/`, `/en/` | Localized published entries | Shuffle → take first 4 | Featured card + 3 side cards |
+| `/entries`, `/en/entries` | Localized entries | Sort by popularity/name | Full card grid |
 | `/.../entries/category/X` | Localized entries | Sort → filter by category | Filtered card grid |
 | `/.../entries/Y` | `getLocalizedEntry` + published | render() + top 3 related | Full article + sidebar + related |
 

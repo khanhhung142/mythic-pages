@@ -1,6 +1,7 @@
 ---
 import type { Locale } from '../i18n/config';
 import { t } from '../i18n/config';
+import { localePath } from '../i18n/paths';
 
 interface Props {
   lang?: Locale;
@@ -17,9 +18,9 @@ const { lang = 'vi' } = Astro.props;
     <div class="foot-col">
       <h5>{t(lang, 'footer.explore')}</h5>
       <ul>
-        <li><a href={`/${lang}/`}>{t(lang, 'nav.home')}</a></li>
-        <li><a href={`/${lang}/entries`}>{t(lang, 'nav.entries')}</a></li>
-        <li><a href={`/${lang}/#categories`}>{t(lang, 'nav.categories')}</a></li>
+        <li><a href={localePath(lang, '/')}>{t(lang, 'nav.home')}</a></li>
+        <li><a href={localePath(lang, '/entries')}>{t(lang, 'nav.entries')}</a></li>
+        <li><a href={localePath(lang, '/#categories')}>{t(lang, 'nav.categories')}</a></li>
       </ul>
     </div>
     <div class="foot-col">

@@ -11,7 +11,7 @@
 | Language | TypeScript 5, Astro components, Markdown |
 | Styling | CSS variables + Tailwind 3 + scoped `<style>` |
 | Content | Astro Content Collections + Zod schemas (`entriesVi`, `entriesEn`) |
-| i18n | `vi` (default) + `en`; prefix routes `/vi/...`, `/en/...`; EN markdown falls back to VI when missing; static pages e.g. `/vi/about`, `/en/about` |
+| i18n | `vi` (default) + `en`; VI at site root (`/`, `/about`, `/entries/...`), EN under `/en/...`; EN markdown falls back to VI when missing |
 | Backend | None — pure static site |
 | Auth | None |
 | State | None — all data resolved at build time |
@@ -25,7 +25,7 @@ Read these files in order for full understanding:
 |---|------|---------------|
 | 1 | [architecture.md](./architecture.md) | Tech stack, project structure, build pipeline, deploy config |
 | 2 | [content-model.md](./content-model.md) | Zod schema, frontmatter fields, category system, writing content |
-| 3 | [routing-and-pages.md](./routing-and-pages.md) | URL routes, `[lang]` pages, layout hierarchy, mermaid diagrams |
+| 3 | [routing-and-pages.md](./routing-and-pages.md) | URL routes, VI root vs `/en/`, layout hierarchy, mermaid diagrams |
 | 4 | [i18n.md](./i18n.md) | Locales, collections, EN↔VI fallback, UI strings, lang switch |
 | 5 | [components.md](./components.md) | Component catalog — active vs unused, props, where each is used |
 | 6 | [styling.md](./styling.md) | CSS variables (design tokens), Tailwind config, font system, responsive |

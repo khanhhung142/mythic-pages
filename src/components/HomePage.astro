@@ -1,15 +1,16 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getLocalizedEntries } from '../../i18n/content';
-import { getCategoryLabel, CATEGORY_SLUGS } from '../../data/category-labels';
-import { t, locales } from '../../i18n/config';
-import type { Locale } from '../../i18n/config';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getLocalizedEntries } from '../i18n/content';
+import { getCategoryLabel, CATEGORY_SLUGS } from '../data/category-labels';
+import { t } from '../i18n/config';
+import { localePath } from '../i18n/paths';
+import type { Locale } from '../i18n/config';
 
-export async function getStaticPaths() {
-  return locales.map((lang) => ({ params: { lang } }));
+interface Props {
+  lang: Locale;
 }
 
-const { lang } = Astro.params as { lang: Locale };
+const { lang } = Astro.props;
 
 const allEntries = await getLocalizedEntries(lang);
 const shuffled = [...allEntries];
@@ -41,7 +42,7 @@ const categoryMeta: Record<string, CatMeta> = {
       <h1>{t(lang, 'hero.title1')}<em>{t(lang, 'hero.title2')}</em></h1>
       <p class="hero-lead">{t(lang, 'hero.lead')}</p>
       <div class="cta-row">
-        <a href={`/${lang}/entries`} class="btn-primary"><span>{t(lang, 'hero.cta.explore')}</span></a>
+        <a href={localePath(lang, '/entries')} class="btn-primary"><span>{t(lang, 'hero.cta.explore')}</span></a>
         <a href="#featured" class="btn-secondary">{t(lang, 'hero.cta.featured')}</a>
       </div>
     </div>
@@ -56,11 +57,11 @@ const categoryMeta: Record<string, CatMeta> = {
   <section class="section" id="featured">
     <div class="section-header">
       <h2 class="section-title">{t(lang, 'featured.title1')}<em>{t(lang, 'featured.title2')}</em></h2>
-      <a href={`/${lang}/entries`} class="section-link">{t(lang, 'featured.viewAll')}</a>
+      <a href={localePath(lang, '/entries')} class="section-link">{t(lang, 'featured.viewAll')}</a>
     </div>
     <div class="featured-grid">
       {featured && (
-        <a href={`/${lang}/entries/${featured.id}`} class="featured-main">
+        <a href={localePath(lang, `/entries/${featured.id}`)} class="featured-main">
           <div class="img-placeholder featured-img"></div>
           <div class="featured-text">
             <div class="featured-tags">
@@ -74,7 +75,7 @@ const categoryMeta: Record<string, CatMeta> = {
       )}
       <div class="featured-side">
         {sideEntries.map(entry => (
-          <a href={`/${lang}/entries/${entry.id}`} class="side-card">
+          <a href={localePath(lang, `/entries/${entry.id}`)} class="side-card">
             <div class="img-placeholder"></div>
             <div>
               <div class="meta">{getCategoryLabel(entry.data.category, lang)}</div>
@@ -91,14 +92,14 @@ const categoryMeta: Record<string, CatMeta> = {
   <section class="section categories" id="categories">
     <div class="section-header">
       <h2 class="section-title">{t(lang, 'categories.title1')}<em>{t(lang, 'categories.title2')}</em></h2>
-      <a href={`/${lang}/entries`} class="section-link">{t(lang, 'categories.viewAll')}</a>
+      <a href={localePath(lang, '/entries')} class="section-link">{t(lang, 'categories.viewAll')}</a>
     </div>
     <div class="cat-grid">
       {CATEGORY_SLUGS.map(slug => {
         const cat = categoryMeta[slug];
         if (!cat) return null;
         return (
-          <a href={`/${lang}/entries/category/${slug}`} class="cat-card">
+          <a href={localePath(lang, `/entries/category/${slug}`)} class="cat-card">
             <div class="cat-num">{cat.num}</div>
             <div>
               <h3>{getCategoryLabel(slug, lang)}</h3>

@@ -10,12 +10,24 @@ File: `src/components/Header.astro`
 
 **Renders**: Fixed top navigation bar with:
 - Logo (神 mark + "Thần Thoại Việt" — brand text not yet fully localized)
-- Nav links from `t(lang, 'nav.*')` with `href` under `/${lang}/` (About → `/${lang}/about`)
-- Language switch: `<a>` links to the same path with `/vi/` ↔ `/en/` swapped
+- Nav links from `t(lang, 'nav.*')` with `href` from `localePath(lang, ...)` in `src/i18n/paths.ts` (About → `/about` or `/en/about`)
+- Language switch: `<a>` links via `alternateLocalePath(pathname, 'vi' | 'en')`
 
 **Styling**: `<style is:global>` — fixed position, backdrop blur, responsive (hides nav links on mobile)
 
 **Used by**: `BaseLayout.astro`, `EntryLayout.astro`
+
+---
+
+### HomePage.astro
+
+File: `src/components/HomePage.astro`
+
+**Props**: `{ lang: Locale }`
+
+**Renders**: Full home page content (hero, featured, categories, quote) inside `BaseLayout`; internal links use `localePath` from `src/i18n/paths.ts`.
+
+**Used by**: `src/pages/index.astro` (`lang="vi"`), `src/pages/en/index.astro` (`lang="en"`)
 
 ---
 
@@ -25,7 +37,7 @@ File: `src/components/Footer.astro`
 
 **Props**: `{ lang?: Locale }` (default `'vi'`)
 
-**Renders**: Dark footer with 4-column grid; labels via `t(lang, 'footer.*')` and explore links under `/${lang}/`
+**Renders**: Dark footer with 4-column grid; labels via `t(lang, 'footer.*')` and explore links via `localePath(lang, ...)`
 
 **Used by**: `BaseLayout.astro`, `EntryLayout.astro`
 
@@ -47,10 +59,10 @@ interface Props {
 
 **Renders**: Full catalog page inside `BaseLayout`:
 1. Page header — `t(lang, 'entries.*')`
-2. Sticky filter bar with category pills linking to `/${lang}/entries/category/[slug]`
+2. Sticky filter bar with category pills linking to `localePath(lang, '/entries/category/[slug]')`
 3. 3-column card grid of entries (image placeholder, category tag, name, summary)
 
-**Used by**: `[lang]/entries/index.astro`, `[lang]/entries/category/[category].astro`
+**Used by**: `entries/index.astro`, `en/entries/index.astro`, `entries/category/[category].astro`, `en/entries/category/[category].astro`
 
 **Key behavior**:
 - `activeCategory` determines which pill is highlighted
@@ -79,7 +91,7 @@ File: `src/layouts/BaseLayout.astro`
 
 Imports `global.css`.
 
-**Used by**: `[lang]/index.astro`, `EntriesListPage.astro`
+**Used by**: `index.astro`, `en/index.astro` (via `HomePage.astro`), `EntriesListPage.astro`
 
 ---
 
@@ -121,7 +133,7 @@ File: `src/layouts/EntryLayout.astro`
 - `slugToLabel()` — converts theme slugs to display text
 - Category/region/gender labels use `getCategoryLabel` and `t(lang, ...)`
 
-**Used by**: `[lang]/entries/[id].astro`
+**Used by**: `entries/[id].astro`, `en/entries/[id].astro`
 
 ## Unused Components
 
@@ -143,10 +155,10 @@ These files exist but are **not imported by any page or layout**:
 ```mermaid
 graph TD
     subgraph "Pages"
-        P1["[lang]/index.astro"]
-        P2["[lang]/entries/index.astro"]
-        P3["[lang]/entries/[id].astro"]
-        P4["[lang]/entries/category/[category].astro"]
+        P1["index.astro / en/index.astro"]
+        P2["entries/index.astro"]
+        P3["entries/[id].astro"]
+        P4["entries/category/[category].astro"]
     end
 
     subgraph "Layouts"

@@ -26,12 +26,14 @@ mythic-pages/
 ├── public/                    # Static assets
 │   ├── favicon.ico
 │   ├── placeholder.svg
-│   └── robots.txt
+│   ├── robots.txt
+│   └── _redirects             # Netlify-style: legacy /vi/* → /*
 └── src/
     ├── content.config.ts      # Zod schema + entriesVi / entriesEn collections
     ├── env.d.ts               # Astro type references
     ├── i18n/
     │   ├── config.ts          # locales, defaultLocale, ui strings, t()
+    │   ├── paths.ts           # localePath, alternateLocalePath for hrefs
     │   └── content.ts         # getLocalizedEntries, getLocalizedEntry, getAllEntryIds
     ├── data/
     │   └── category-labels.ts # Category slug → label per locale (vi/en)
@@ -43,10 +45,17 @@ mythic-pages/
     ├── layouts/
     │   ├── BaseLayout.astro   # Minimal shell: <html lang>, global.css, Header, Footer
     │   └── EntryLayout.astro  # Full entry page: standalone <html>, sidebar, typography
-    ├── pages/                 # File-based routing
-    │   ├── index.astro        # Redirect / → /vi/
-    │   └── [lang]/            # locale segment: vi | en
-    │       ├── index.astro    # Home page
+    ├── pages/                 # File-based routing (vi = root, en = under en/)
+    │   ├── index.astro        # VI home (HomePage)
+    │   ├── about.astro
+    │   ├── entries/
+    │   │   ├── index.astro
+    │   │   ├── [id].astro
+    │   │   └── category/
+    │   │       └── [category].astro
+    │   └── en/                # English-prefixed URLs /en/...
+    │       ├── index.astro
+    │       ├── about.astro
     │       └── entries/
     │           ├── index.astro
     │           ├── [id].astro
@@ -57,6 +66,7 @@ mythic-pages/
     ├── components/
     │   ├── Header.astro       # Fixed nav bar + lang switch
     │   ├── Footer.astro       # Site footer
+    │   ├── HomePage.astro     # Shared home sections (hero, featured, categories, quote)
     │   ├── EntriesListPage.astro  # Shared list page (catalog + category filter)
     │   ├── EntryCard.astro    # ⚠️ UNUSED — not imported anywhere
     │   ├── InfoTable.astro    # ⚠️ UNUSED — sidebar info table
@@ -81,7 +91,7 @@ graph LR
     A["Markdown files<br/>src/content/vi|en/entries/*.md"] --> B[Zod validation<br/>src/content.config.ts]
     B --> C[Astro Content Collections<br/>entriesVi / entriesEn]
     C --> D["getLocalized* helpers<br/>src/i18n/content.ts"]
-    D --> E[Astro Pages<br/>src/pages/[lang]/**/*.astro]
+    D --> E[Astro Pages<br/>src/pages/** and en/**]
     E --> F[Static HTML<br/>dist/]
     G[global.css + Tailwind] --> E
     H[Components + t(lang,key)] --> E
@@ -106,20 +116,22 @@ export default defineConfig({
     defaultLocale: 'vi',
     locales: ['vi', 'en'],
     routing: {
-      prefixDefaultLocale: true,   // /vi/... not bare /
-      redirectToDefaultLocale: true, // / → default locale
+      prefixDefaultLocale: false,  // VI at /..., EN at /en/...
     },
   },
-  trailingSlash: "ignore",  // both /entries and /entries/ work
+  trailingSlash: "ignore",
   build: {
-    format: "directory",    // dist/vi/entries/index.html style
+    format: "directory",
+  },
+  redirects: {
+    '/vi': '/',   // legacy prefixed URLs → unprefixed VI
   },
 });
 ```
 
 - No integrations installed (no `@astrojs/react`, no `@astrojs/tailwind`)
 - No server adapter → pure static output
-- Root `/` also redirects explicitly in `src/pages/index.astro` (301 → `/vi/`)
+- Legacy `/vi/*` paths: `public/_redirects` (and optional `redirects` in config for `/vi` → `/`)
 
 ## Deploy
 

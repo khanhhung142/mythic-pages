@@ -57,7 +57,7 @@ Google Fonts loaded in two places:
 
 ## 6. ~~Home Page Category Links~~ (fixed)
 
-Previously, category cards on the home page all linked to `/entries` instead of per-category URLs. **`src/pages/[lang]/index.astro`** now uses `href={\`/${lang}/entries/category/${slug}\`}`.
+Previously, category cards on the home page all linked to `/entries` instead of per-category URLs. **`src/components/HomePage.astro`** now uses `localePath(lang, \`/entries/category/${slug}\`)`.
 
 ## 7. ~~Non-functional Language Switcher~~ (implemented)
 

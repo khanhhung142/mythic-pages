@@ -1,6 +1,7 @@
 ---
 import type { Locale } from '../i18n/config';
 import { t } from '../i18n/config';
+import { localePath, alternateLocalePath } from '../i18n/paths';
 
 interface Props {
   lang?: Locale;
@@ -9,26 +10,24 @@ interface Props {
 const { lang = 'vi' } = Astro.props;
 
 const currentPath = Astro.url.pathname;
-// Replace the locale segment to build the alternate-locale path
-// e.g. /vi/entries/x -> /en/entries/x
-const altLang: Locale = lang === 'vi' ? 'en' : 'vi';
-const altPath = currentPath.replace(/^\/(vi|en)(\/|$)/, `/${altLang}$2`);
+const altPathVi = alternateLocalePath(currentPath, 'vi');
+const altPathEn = alternateLocalePath(currentPath, 'en');
 ---
 <nav>
-  <a href={`/${lang}/`} class="logo" aria-label={t(lang, 'nav.home')}>
+  <a href={localePath(lang, '/')} class="logo" aria-label={t(lang, 'nav.home')}>
     <div class="logo-mark">神</div>
     Thần Thoại Việt
   </a>
   <div class="nav-right">
     <ul class="nav-links">
-      <li><a href={`/${lang}/`}>{t(lang, 'nav.home')}</a></li>
-      <li><a href={`/${lang}/entries`}>{t(lang, 'nav.entries')}</a></li>
-      <li><a href={`/${lang}/#categories`}>{t(lang, 'nav.categories')}</a></li>
-      <li><a href={`/${lang}/about`}>{t(lang, 'nav.about')}</a></li>
+      <li><a href={localePath(lang, '/')}>{t(lang, 'nav.home')}</a></li>
+      <li><a href={localePath(lang, '/entries')}>{t(lang, 'nav.entries')}</a></li>
+      <li><a href={localePath(lang, '/#categories')}>{t(lang, 'nav.categories')}</a></li>
+      <li><a href={localePath(lang, '/about')}>{t(lang, 'nav.about')}</a></li>
     </ul>
     <div class="lang-switch">
-      <a href={lang === 'vi' ? currentPath : altPath} class:list={[{ active: lang === 'vi' }]}>VI</a>
-      <a href={lang === 'en' ? currentPath : altPath} class:list={[{ active: lang === 'en' }]}>EN</a>
+      <a href={lang === 'vi' ? currentPath : altPathVi} class:list={[{ active: lang === 'vi' }]}>VI</a>
+      <a href={lang === 'en' ? currentPath : altPathEn} class:list={[{ active: lang === 'en' }]}>EN</a>
     </div>
   </div>
 </nav>

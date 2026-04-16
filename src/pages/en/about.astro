@@ -1,13 +1,8 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { t, locales } from '../../i18n/config';
-import type { Locale } from '../../i18n/config';
+import { t } from '../../i18n/config';
 
-export async function getStaticPaths() {
-  return locales.map((lang) => ({ params: { lang } }));
-}
-
-const { lang } = Astro.params as { lang: Locale };
+const lang = 'en' as const;
 
 const pageTitle = `${t(lang, 'about.title')} — ${t(lang, 'site.title')}`;
 

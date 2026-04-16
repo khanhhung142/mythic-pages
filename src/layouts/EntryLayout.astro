@@ -4,6 +4,7 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { getCategoryLabel } from '../data/category-labels';
 import { t } from '../i18n/config';
+import { localePath } from '../i18n/paths';
 import type { Locale } from '../i18n/config';
 
 interface Props {
@@ -55,9 +56,9 @@ function slugToLabel(slug: string): string {
 
 <header class="entry-head" data-han={hanChar}>
   <div class="breadcrumb">
-    <a href={`/${lang}/`}>Wiki</a>
+    <a href={localePath(lang, '/')}>Wiki</a>
     <span class="sep">/</span>
-    <a href={data.category ? `/${lang}/entries/category/${data.category}` : `/${lang}/entries`}>{categoryLabel}</a>
+    <a href={data.category ? localePath(lang, `/entries/category/${data.category}`) : localePath(lang, '/entries')}>{categoryLabel}</a>
     <span class="sep">/</span>
     <span class="current">{data.name_vi}</span>
   </div>
@@ -125,7 +126,7 @@ function slugToLabel(slug: string): string {
         <div class="section-label">{t(lang, 'entry.readMore')}</div>
         <div class="related-grid">
           {related.map((e: any) => (
-            <a href={`/${lang}/entries/${e.id}`} class="related-card">
+            <a href={localePath(lang, `/entries/${e.id}`)} class="related-card">
               <div class="img-ph"></div>
               <div class="meta">{getCategoryLabel(e.data.category, lang)}</div>
               <h4>{e.data.name_vi}</h4>

@@ -1,0 +1,4 @@
+# Legacy prefixed Vietnamese URLs → unprefixed (Netlify / compatible hosts)
+/vi  /  301
+/vi/  /  301
+/vi/*  /:splat  301
