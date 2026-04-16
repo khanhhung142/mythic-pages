@@ -110,7 +110,7 @@ sources:
   - title: "Vấn đề người Lạc Việt"
     author: Trần Quốc Vượng
     chapter: Thông báo khoa học — Sử học, ĐHTH Hà Nội, tập II, tr. 47-73
-    edition: 1966's edition
+    edition: "1966"
   - title: Khai nguyên rồng tiên
     author: Nguyễn Mạnh Tiến
     edition: NXB Tao Đàn

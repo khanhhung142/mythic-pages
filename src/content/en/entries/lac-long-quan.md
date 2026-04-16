@@ -110,7 +110,7 @@ sources:
   - title: "Vấn đề người Lạc Việt"
     author: Trần Quốc Vượng
     chapter: Thông báo khoa học — Sử học, ĐHTH Hà Nội, Vol. II, pp. 47-73
-    edition: 1966
+    edition: "1966"
   - title: Khai nguyên rồng tiên
     author: Nguyễn Mạnh Tiến
     edition: NXB Tao Đàn
@@ -144,7 +144,7 @@ According to _Lĩnh Nam chích quái_, the lineage begins with Viêm Đế Thầ
 
 Kinh Dương Vương married the daughter of the Dragon King of Động Đình Lake — **Long Nữ**, also called Thần Long — and she bore him **Sùng Lãm**, who took the title **Lạc Long Quân** (貉龍君). The three characters translate directly: "the Dragon Lord of the Lạc people."
 
-Lạc Long Quân grew up with extraordinary strength and the power to transform at will, moving through water "as easily as walking on land." He taught the people to farm, to clothe and feed themselves, established the ranks of ruler and subject, and set out the proper relations between parent and child, husband and wife. When there was nothing urgent, he returned to his palace beneath the sea. When the people were in trouble, they called out: *"Father! Why won't you come save us?"* — and he appeared at once. That detail — calling their lord *Bố* ("Father") rather than "Your Majesty" — is one of the stranger things about this legend. It suggests a relationship more intimate than almost any other founding myth in the region.
+Lạc Long Quân grew up with extraordinary strength and the power to transform at will, moving through water "as easily as walking on land." He taught the people to farm, to clothe and feed themselves, established the ranks of ruler and subject, and set out the proper relations between parent and child, husband and wife. When there was nothing urgent, he returned to his palace beneath the sea. When the people were in trouble, they called out: _"Father! Why won't you come save us?"_ — and he appeared at once. That detail — calling their lord _Bố_ ("Father") rather than "Your Majesty" — is one of the stranger things about this legend. It suggests a relationship more intimate than almost any other founding myth in the region.
 
 Then came three crises, three summons, three demon-slayings.
 
@@ -160,7 +160,7 @@ While Lạc Long Quân was away in his sea palace, Đế Lai — son of Đế Ng
 
 Âu Cơ became pregnant and delivered **a single sack**. Both of them found this strange and left it out in the open. Seven days later it split apart into **a hundred eggs**, each hatching into a son. None of them needed to be nursed; they grew on their own, every one of them brave and sharp.
 
-Then Lạc Long Quân said: *"I am of the dragon lineage, lord of the water tribes. You are of the fairy lineage, dwelling on land. Though yin and yang joined to produce children, our natures are different — water and fire oppose each other, and we cannot live together long. I will take fifty sons to the sea; you take fifty sons to the mountains. We will each govern our half. Those in the highlands, those in the lowlands — if anything happens, let each other know. Don't forget."*
+Then Lạc Long Quân said: _"I am of the dragon lineage, lord of the water tribes. You are of the fairy lineage, dwelling on land. Though yin and yang joined to produce children, our natures are different — water and fire oppose each other, and we cannot live together long. I will take fifty sons to the sea; you take fifty sons to the mountains. We will each govern our half. Those in the highlands, those in the lowlands — if anything happens, let each other know. Don't forget."_
 
 Âu Cơ led fifty sons to Phong Hiệp (now around Bạch Hạc, Việt Trì). The eldest was made king, with the title **Hùng Vương**, and the kingdom was named **Văn Lang**, with its capital at Phong Châu. Eighteen generations all bore the same title: Hùng Vương.
 
@@ -168,13 +168,13 @@ Then Lạc Long Quân said: *"I am of the dragon lineage, lord of the water trib
 
 The Lạc Long Quân legend survives in several versions, and the differences between them are not trivial.
 
-**Who was Âu Cơ?** In _Lĩnh Nam chích quái_, Âu Cơ is Đế Lai's **concubine**. _Đại Việt sử ký toàn thư_ changes her to Đế Lai's **daughter**. This is not a small edit: a concubine taken by force reads as conquest; a daughter given in marriage reads as a legitimate union. Ngô Sĩ Liên chose the second version, likely because it fit Confucian ideas about proper relations — though he immediately noticed the incest problem that followed: if Kinh Dương Vương was Đế Nghi's younger brother, and Lạc Long Quân married Đế Lai's daughter (Đế Nghi's granddaughter), that's a marriage within the clan. His solution was to note that *"in those ancient days, ritual was not yet established."*
+**Who was Âu Cơ?** In _Lĩnh Nam chích quái_, Âu Cơ is Đế Lai's **concubine**. _Đại Việt sử ký toàn thư_ changes her to Đế Lai's **daughter**. This is not a small edit: a concubine taken by force reads as conquest; a daughter given in marriage reads as a legitimate union. Ngô Sĩ Liên chose the second version, likely because it fit Confucian ideas about proper relations — though he immediately noticed the incest problem that followed: if Kinh Dương Vương was Đế Nghi's younger brother, and Lạc Long Quân married Đế Lai's daughter (Đế Nghi's granddaughter), that's a marriage within the clan. His solution was to note that _"in those ancient days, ritual was not yet established."_
 
 **The date 2879 BCE.** Ngô Sĩ Liên set the Hồng Bàng founding year at Nhâm Tuất — 2879 BCE — over six hundred years before China's Xia dynasty. The intent was clear: Vietnamese civilization is older than Chinese civilization. _Lĩnh Nam chích quái_ had no specific date. Ngô Sĩ Liên added it when bringing the legend into the official record.
 
 **The sack of eggs: "it is said."** _Đại Việt sử ký toàn thư_ uses the phrase _"tục truyền sinh bách noãn"_ — "it is traditionally said that she bore a sack of a hundred eggs." That hedge is meaningful: the historian knew he was recording folklore, not documented fact. _Lĩnh Nam chích quái_ just tells the story straight, with no such disclaimer.
 
-**Thiên Nam ngữ lục** — a 17th-century narrative poem of 8,136 lục bát couplets — retells the legend in verse but adds an unusual reading: the Lạc Long Quân branch represents **Thủy Tinh** (Water God), the Âu Cơ branch represents **Sơn Tinh** (Mountain God). This splices two otherwise independent legends together — something no other source does. The poem describes the fifty sons who followed their father to the sea: *"Father and sons dwelt in the water palace / Spreading order, guarding the southeast / A hundred streams and thousand channels flowing / Water their world, waves their authority..."*
+**Thiên Nam ngữ lục** — a 17th-century narrative poem of 8,136 lục bát couplets — retells the legend in verse but adds an unusual reading: the Lạc Long Quân branch represents **Thủy Tinh** (Water God), the Âu Cơ branch represents **Sơn Tinh** (Mountain God). This splices two otherwise independent legends together — something no other source does. The poem describes the fifty sons who followed their father to the sea: _"Father and sons dwelt in the water palace / Spreading order, guarding the southeast / A hundred streams and thousand channels flowing / Water their world, waves their authority..."_
 
 **Khâm định Việt sử thông giám cương mục** — the Nguyễn dynasty's official history (19th century) — goes further than any other source: it rejects both Kinh Dương Vương and Lạc Long Quân outright. Emperor Tự Đức wrote in his marginal notes that the Hồng Bàng account was built on nothing, fabricated by its author, and moreover borrowed from a Tang dynasty fiction about a dragon-girl from Động Đình Lake. This is the only case in Vietnamese imperial history where a dynasty formally rejected its own founding myth — and it shows that critical scholarship existed here well before Western contact.
 
@@ -192,17 +192,17 @@ Keith Taylor in _The Birth of Vietnam_ (1983, pp. 1-44) reads deeper: the three 
 
 The legend's structural core is a pair of oppositions.
 
-Lạc Long Quân belongs to the sea, to water, to dragons, to the lowlands. Âu Cơ belongs to the mountains, to fire, to fairies, to the highlands. The phrase *"thủy hỏa tương khắc"* in the original Chinese text — *"Ngã thị long chủng, nhĩ thị tiên chủng, thủy hỏa tương khắc"* — is the given reason for the separation: two natures that cannot coexist.
+Lạc Long Quân belongs to the sea, to water, to dragons, to the lowlands. Âu Cơ belongs to the mountains, to fire, to fairies, to the highlands. The phrase _"thủy hỏa tương khắc"_ in the original Chinese text — _"Ngã thị long chủng, nhĩ thị tiên chủng, thủy hỏa tương khắc"_ — is the given reason for the separation: two natures that cannot coexist.
 
 Taylor reads this as a memory of **a maritime culture encountering a continental one** — sea-oriented Việt peoples meeting the Sinitic interior. At another level, the separation works as a **charter myth**: fifty sons to the sea plus fifty to the mountains equals one people, despite the split. The parting instruction — "if anything happens, let each other know; don't forget" — functions as a mythological pledge of unity across distance. It resonates strangely with the actual geography of Vietnam, stretched thin along a north-south axis.
 
-Trần Đình Hoành's commentary on _Lĩnh Nam chích quái_ (2015) finds another layer: dragon and fairy aren't opposing forces so much as complementary ones. The division of children isn't a tragic divorce but a sensible allocation — each parent governing the terrain they're suited for. That reading may be more optimistic than the original text warrants (which does stress that they *cannot live together*), but it explains why the legend carries no particular sadness in popular memory.
+Trần Đình Hoành's commentary on _Lĩnh Nam chích quái_ (2015) finds another layer: dragon and fairy aren't opposing forces so much as complementary ones. The division of children isn't a tragic divorce but a sensible allocation — each parent governing the terrain they're suited for. That reading may be more optimistic than the original text warrants (which does stress that they _cannot live together_), but it explains why the legend carries no particular sadness in popular memory.
 
 ### _"Đồng bào"_ — when myth becomes vocabulary
 
 The word **"đồng bào"** (同胞) — đồng meaning "same," bào meaning "sac/womb" — literally means "from the same pouch." It comes directly from the sack of a hundred eggs. Every Vietnamese person descended from the same sack, making them all siblings by blood.
 
-This is one of the rare cases anywhere in the world where **a basic political term** — "đồng bào" meaning compatriots, fellow citizens — is anchored directly to a founding myth. Hồ Chí Minh used it constantly in his speeches: *"Hỡi đồng bào cả nước..."* ("Fellow countrymen throughout the land..."). The word's force comes partly from that mythological layer beneath it — not "citizens" (a legal category) but "siblings from the same sack" (a mythological bloodline).
+This is one of the rare cases anywhere in the world where **a basic political term** — "đồng bào" meaning compatriots, fellow citizens — is anchored directly to a founding myth. Hồ Chí Minh used it constantly in his speeches: _"Hỡi đồng bào cả nước..."_ ("Fellow countrymen throughout the land..."). The word's force comes partly from that mythological layer beneath it — not "citizens" (a legal category) but "siblings from the same sack" (a mythological bloodline).
 
 Similarly, **"con Rồng cháu Tiên"** — Children of the Dragon, Grandchildren of the Fairy — is how Vietnamese people have long described themselves. Dragon = Lạc Long Quân, Fairy = Âu Cơ. The implication: every Vietnamese person has noble origins, regardless of region, ethnicity, or wealth. The phrase appears in _Lĩnh Nam chích quái_ as a written formulation, but it was almost certainly in circulation orally before that.
 
@@ -248,21 +248,21 @@ The Palang people of mainland Southeast Asia: their ancestors trace back to a Na
 
 Philippines: Francisco Demetrio (1979) and Damiana Eugenio (2001) recorded egg-origin motifs in indigenous creation stories.
 
-Inside _Đại Việt sử ký toàn thư_ itself: *"sinh bách nam... thị vi Bách Việt chi tổ"* — "bore a hundred sons... who became the ancestors of the Hundred Việt." The number "hundred" maps directly onto the concept of Bách Việt (百越, the "Hundred Việt" peoples). If Ferlus is right that 百 (Bǎi) was originally a phonetic rendering of an ethnic name rather than a numeral, then the "hundred eggs" may be a secondary reinterpretation of the same sound. Still a hypothesis.
+Inside _Đại Việt sử ký toàn thư_ itself: _"sinh bách nam... thị vi Bách Việt chi tổ"_ — "bore a hundred sons... who became the ancestors of the Hundred Việt." The number "hundred" maps directly onto the concept of Bách Việt (百越, the "Hundred Việt" peoples). If Ferlus is right that 百 (Bǎi) was originally a phonetic rendering of an ethnic name rather than a numeral, then the "hundred eggs" may be a secondary reinterpretation of the same sound. Still a hypothesis.
 
 Mircea Eliade in _Patterns in Comparative Religion_ (1958) analyzed the cosmic egg as a near-universal archetype, but the specific form — an egg that births a people's ancestors — is particularly common in mainland Southeast Asia. The Vietnamese version is the most elaborate instance of this motif in the region: a hundred eggs, versus three among the Palang.
 
 ### Comparative table: who mentions _Lạc Long Quân_ and who doesn't
 
-| Source | Date | Mentions LLQ? | Notes |
-|---|---|---|---|
-| _Giao Châu Ngoại Vực Ký_ | 3rd-4th c. | No (only Lạc fields, Lạc lords) | Earliest Chinese source |
-| _Việt sử lược_ | ~1377 | **No** | Earliest Vietnamese history |
-| _An Nam chí lược_ | ~1307-1339 | **No** (only Lạc Vương) | Sino-Vietnamese source |
-| _Lĩnh Nam chích quái_ | 14th c. (ed. 1492) | **Yes — full account** | Most detailed source for the legend |
-| _Đại Việt sử ký toàn thư_ | 1479 (printed 1697) | **Yes — in official annals** | Adds the date 2879 BCE |
-| _Thiên Nam ngữ lục_ | Late 17th c. | **Yes — in verse** | Merges with Sơn Tinh-Thủy Tinh |
-| _Khâm định VSTGCM_ | 19th c. | **Rejected** | Emperor Tự Đức: "fabricated" |
+| Source                    | Date                | Mentions LLQ?                   | Notes                               |
+| ------------------------- | ------------------- | ------------------------------- | ----------------------------------- |
+| _Giao Châu Ngoại Vực Ký_  | 3rd-4th c.          | No (only Lạc fields, Lạc lords) | Earliest Chinese source             |
+| _Việt sử lược_            | ~1377               | **No**                          | Earliest Vietnamese history         |
+| _An Nam chí lược_         | ~1307-1339          | **No** (only Lạc Vương)         | Sino-Vietnamese source              |
+| _Lĩnh Nam chích quái_     | 14th c. (ed. 1492)  | **Yes — full account**          | Most detailed source for the legend |
+| _Đại Việt sử ký toàn thư_ | 1479 (printed 1697) | **Yes — in official annals**    | Adds the date 2879 BCE              |
+| _Thiên Nam ngữ lục_       | Late 17th c.        | **Yes — in verse**              | Merges with Sơn Tinh-Thủy Tinh      |
+| _Khâm định VSTGCM_        | 19th c.             | **Rejected**                    | Emperor Tự Đức: "fabricated"        |
 
 ## In _Modern_ Culture
 
@@ -276,7 +276,7 @@ Mircea Eliade in _Patterns in Comparative Religion_ (1958) analyzed the cosmic e
 
 ### _Giỗ Tổ Hùng Vương_ and UNESCO
 
-Giỗ Tổ Hùng Vương — the Ancestors' Death Anniversary on the 10th day of the third lunar month — connects directly to Lạc Long Quân: the Hùng kings were his eldest sons, his direct heirs. Emperor Khải Định formally fixed the date in 1917. In 2007, the National Assembly amended the Labor Code (Article 73) to make Giỗ Tổ a paid national holiday. On December 6, 2012, at its 7th session in Paris, UNESCO inscribed the "Worship of Hùng kings in Phú Thọ" on the Representative List of the Intangible Cultural Heritage of Humanity, with a unanimous vote of 24 to 0. It was the first *belief practice* (as distinct from performing arts) from Vietnam to receive UNESCO recognition.
+Giỗ Tổ Hùng Vương — the Ancestors' Death Anniversary on the 10th day of the third lunar month — connects directly to Lạc Long Quân: the Hùng kings were his eldest sons, his direct heirs. Emperor Khải Định formally fixed the date in 1917. In 2007, the National Assembly amended the Labor Code (Article 73) to make Giỗ Tổ a paid national holiday. On December 6, 2012, at its 7th session in Paris, UNESCO inscribed the "Worship of Hùng kings in Phú Thọ" on the Representative List of the Intangible Cultural Heritage of Humanity, with a unanimous vote of 24 to 0. It was the first _belief practice_ (as distinct from performing arts) from Vietnam to receive UNESCO recognition.
 
 The country has 1,417 registered sites connected to Hùng Vương worship, including 345 in Phú Thọ province alone (37 nationally listed, 135 provincially listed). Within the festival calendar, the 6th day of the third lunar month is reserved for the offering ceremony at the Quốc Tổ Lạc Long Quân Temple on Sim Hill — four days before the main ceremony.
 
@@ -288,7 +288,7 @@ Put plainly: every Vietnamese person from age 12 onward has read this story. It 
 
 ### In _art_ and _everyday life_
 
-Artist **Tạ Huy Long** generated considerable attention with his 200-page illustrated edition of _Lĩnh Nam chích quái_ (NXB Kim Đồng, 2017) — the book sold out before its official release date. Poet Nguyễn Khoa Điềm, in his narrative poem _Mặt đường khát vọng_ (1971), wrote: *"Lạc Long Quân and Âu Cơ / Gave birth to our people within a sack of eggs"* — lines included in school curricula.
+Artist **Tạ Huy Long** generated considerable attention with his 200-page illustrated edition of _Lĩnh Nam chích quái_ (NXB Kim Đồng, 2017) — the book sold out before its official release date. Poet Nguyễn Khoa Điềm, in his narrative poem _Mặt đường khát vọng_ (1971), wrote: _"Lạc Long Quân and Âu Cơ / Gave birth to our people within a sack of eggs"_ — lines included in school curricula.
 
 Nearly every city in Vietnam has a **Lạc Long Quân Street** and an **Âu Cơ Street** running parallel or intersecting. In Hà Nội, Lạc Long Quân Street runs along the southern shore of Hồ Tây — the lake formed when Hồ Tinh's cave collapsed. In Ho Chi Minh City, it runs through Tân Bình district. The legend has become part of the city's physical fabric: people live on Lạc Long Quân Street without needing to know who he was. The name has been absorbed into the map.
 
