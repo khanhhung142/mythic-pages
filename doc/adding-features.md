@@ -5,7 +5,7 @@ Step-by-step patterns for common tasks. Follow these to stay consistent with exi
 ## Adding a New Entry (Content)
 
 1. Add `src/content/vi/entries/{slug}.md` (required for the story to exist in the canonical set)
-2. Optionally add `src/content/en/entries/{slug}.md` with the **same** filename for a full English page body; if omitted, `/en/entries/{slug}` still works and shows the VI markdown via fallback
+2. Optionally add `src/content/{locale}/entries/{slug}.md` (same filename) for localized page body; if omitted, `/{locale}/entries/{slug}` still works via default-locale fallback
 3. Add frontmatter matching the Zod schema (see `content-model.md`)
 4. Required fields: `name_vi`, `category` (must be one of `CATEGORY_SLUGS`)
 5. Set `status: published` to make it visible
@@ -56,12 +56,13 @@ Content here...
    };
    ```
 2. Add category card metadata in `src/components/HomePage.astro` (`categoryMeta` object) so the home grid has copy for both locales
-3. Category list pages auto-generate via `getStaticPaths()` from `CATEGORY_SLUGS` in `entries/category/[category].astro` and `en/entries/category/[category].astro`
+3. Category list pages auto-generate via `getStaticPaths()` from `CATEGORY_SLUGS` in `entries/category/[category].astro` and `[lang]/entries/category/[category].astro`
 
 ## Adding a New Page
 
-1. Vietnamese (default): add pages under `src/pages/` (e.g. `about.astro`). English: mirror under `src/pages/en/`.
-2. Import and use `BaseLayout` with `title` and `lang` (fixed `'vi'` / `'en'` or from context):
+1. Default locale page goes under `src/pages/`.
+2. Non-default locale page must go under `src/pages/[lang]/...` (dynamic), not `src/pages/en/...`.
+3. Import and use `BaseLayout` with `title` and `lang` (fixed `'vi'` for root wrappers, dynamic `lang` for `[lang]` routes):
    ```astro
    ---
    import BaseLayout from '../layouts/BaseLayout.astro';
@@ -69,17 +70,17 @@ Content here...
    ---
    <BaseLayout title="..." lang={lang}>
    ```
-3. For dynamic routes, export `getStaticPaths()` in each locale file that needs it
-4. Use `t(lang, 'key')` for user-visible strings; add keys to `src/i18n/config.ts` for both `vi` and `en`
-5. Update `Header.astro` / footer links only if you add a top-level section
+4. For dynamic routes, export `getStaticPaths()` from `[lang]` files using `locales.filter(l => l !== defaultLocale)`
+5. Use `t(lang, 'key')` for user-visible strings; add keys to every supported locale in `src/i18n/config.ts`
+6. Update `Header.astro` / footer links only if you add a top-level section
 
-### Example: static About page (`/about` and `/en/about`)
+### Example: static About page (`/about` and `/{lang}/about`)
 
-Reference: [`src/pages/about.astro`](../src/pages/about.astro) and [`src/pages/en/about.astro`](../src/pages/en/about.astro).
+Reference: [`src/pages/about.astro`](../src/pages/about.astro) and [`src/pages/[lang]/about.astro`](../src/pages/[lang]/about.astro).
 
-- `const lang = 'vi' as const` (or `'en'` in the `en/` tree)
-- `BaseLayout title={pageTitle} lang={lang}` with `pageTitle` built from `t(lang, 'about.title')` and `site.title`
-- All copy via `about.*` keys in `src/i18n/config.ts` (vi + en)
+- `src/pages/about.astro` is default-locale wrapper (`lang="vi"`)
+- `src/pages/[lang]/about.astro` renders non-default locales via `getStaticPaths()`
+- All copy via `about.*` keys in `src/i18n/config.ts`
 - Nav label “Về dự án” / “About” in [`Header.astro`](src/components/Header.astro) uses `localePath(lang, '/about')`
 
 After adding a similar page, update `doc/routing-and-pages.md` and this file if the pattern changes.
@@ -158,7 +159,7 @@ To add a new sidebar section, follow existing `.side-card` blocks and use `t(lan
 
 ## Modifying the Home Page
 
-`src/components/HomePage.astro` (used by `src/pages/index.astro` and `src/pages/en/index.astro`) has four sections:
+`src/components/HomePage.astro` (used by `src/pages/index.astro` and `src/pages/[lang]/index.astro`) has four sections:
 1. `.hero` — hero section with CTAs
 2. `#featured` — featured entry cards
 3. `#categories` — category grid (links via `localePath(lang, '/entries/category/...')`)
@@ -180,4 +181,13 @@ Currently all images are placeholders. To add real images:
 
 ## i18n Reference
 
-Implemented behavior (locales, fallback, `t()`, collections) is documented in [i18n.md](./i18n.md). When adding UI copy, always add **both** `vi` and `en` keys in `src/i18n/config.ts` unless the string is intentionally locale-only.
+Implemented behavior (locales, fallback, `t()`, collections) is documented in [i18n.md](./i18n.md).
+
+## Agent Contract: Dynamic-Only
+
+All agents contributing to this repo must follow:
+
+1. No locale-mirrored page trees (`src/pages/en`, `src/pages/ja`, etc.).
+2. Locale routing/features must be implemented once in dynamic paths/helpers.
+3. New locale onboarding must be config/content-driven, not page-copy-driven.
+4. Any non-dynamic i18n implementation is considered a regression.

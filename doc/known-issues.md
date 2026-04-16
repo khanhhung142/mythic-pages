@@ -2,20 +2,18 @@
 
 Issues discovered during codebase audit. Address these before they cause confusion.
 
-## 1. Unused Components (Dead Code)
+## 1. Dynamic-First Rule Violations (Preventive)
 
-**Severity**: Low — no runtime impact
+**Severity**: High — architectural regression risk
 
-| File | Status |
-|------|--------|
-| `src/components/EntryCard.astro` | Not imported anywhere |
-| `src/components/InfoTable.astro` | Not imported anywhere |
-| `src/components/RelationshipSection.astro` | Not imported anywhere |
-| `src/components/SidebarCard.astro` | Not imported anywhere |
-| `src/components/ThemeCloud.astro` | Not imported anywhere |
-| `src/components/wiki/*.tsx` (5 files) | React components — no React installed |
+The project has been refactored to dynamic locale routing (`src/pages/[lang]/...`) and dynamic content collections (`entries{Locale}` from `locales`).
 
-**Action**: Delete or refactor. The `.astro` versions duplicate functionality already in `EntryLayout.astro`. The `.tsx` files are completely non-functional.
+**Forbidden patterns**:
+- Adding mirrored trees like `src/pages/en/*`, `src/pages/ja/*`
+- Hardcoding locale logic to only `vi/en` in route helpers/components
+- Adding feature variants per locale instead of generic `lang`-driven behavior
+
+**Action**: Reject/refactor any PR that reintroduces locale-specific duplication.
 
 ## 2. Tailwind Config Mismatch
 
@@ -105,9 +103,13 @@ On category-filtered list pages, `EntriesListPage` may still use a Vietnamese-on
 
 **Action**: Localize `descFiltered` or build it with `t()` keys if full EN UX is required.
 
+## 13. ~~Unused Components (Dead Code)~~ (fixed)
+
+The old unused `.astro` and `src/components/wiki/*.tsx` files were removed during dynamic routing cleanup.
+
 ## Priority Order
 
-1. **Delete unused components** (#1) — reduces confusion
+1. **Enforce dynamic-first i18n/routing** (#1) — prevent architecture drift
 2. **Align Tailwind config** (#2) — prevents misuse
 3. **Refactor EntryLayout** (#5) — reduces duplication
 4. **Link relations** (#11) — improves content interconnection

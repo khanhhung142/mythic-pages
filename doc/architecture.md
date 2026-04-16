@@ -29,7 +29,7 @@ mythic-pages/
 │   ├── robots.txt
 │   └── _redirects             # Netlify-style: legacy /vi/* → /*
 └── src/
-    ├── content.config.ts      # Zod schema + entriesVi / entriesEn collections
+    ├── content.config.ts      # Zod schema + dynamic entries{Locale} collections
     ├── env.d.ts               # Astro type references
     ├── i18n/
     │   ├── config.ts          # locales, defaultLocale, ui strings, t()
@@ -40,12 +40,12 @@ mythic-pages/
     ├── content/
     │   ├── vi/entries/        # Vietnamese markdown (canonical set of entries)
     │   │   └── *.md
-    │   └── en/entries/        # English markdown (optional per entry; missing → VI fallback)
+    │   └── {locale}/entries/  # Localized markdown (optional; missing → default-locale fallback)
     │       └── *.md
     ├── layouts/
     │   ├── BaseLayout.astro   # Minimal shell: <html lang>, global.css, Header, Footer
     │   └── EntryLayout.astro  # Full entry page: standalone <html>, sidebar, typography
-    ├── pages/                 # File-based routing (vi = root, en = under en/)
+    ├── pages/                 # File-based routing (default root + dynamic [lang]/)
     │   ├── index.astro        # VI home (HomePage)
     │   ├── about.astro
     │   ├── entries/
@@ -53,7 +53,7 @@ mythic-pages/
     │   │   ├── [id].astro
     │   │   └── category/
     │   │       └── [category].astro
-    │   └── en/                # English-prefixed URLs /en/...
+    │   └── [lang]/            # Non-default locale URLs /{lang}/...
     │       ├── index.astro
     │       ├── about.astro
     │       └── entries/
@@ -68,17 +68,7 @@ mythic-pages/
     │   ├── Footer.astro       # Site footer
     │   ├── HomePage.astro     # Shared home sections (hero, featured, categories, quote)
     │   ├── EntriesListPage.astro  # Shared list page (catalog + category filter)
-    │   ├── EntryCard.astro    # ⚠️ UNUSED — not imported anywhere
-    │   ├── InfoTable.astro    # ⚠️ UNUSED — sidebar info table
-    │   ├── RelationshipSection.astro  # ⚠️ UNUSED
-    │   ├── SidebarCard.astro  # ⚠️ UNUSED
-    │   ├── ThemeCloud.astro   # ⚠️ UNUSED
-    │   └── wiki/              # ⚠️ UNUSED React components (no React installed)
-    │       ├── InfoTable.tsx
-    │       ├── RelatedEntries.tsx
-    │       ├── RelationshipSection.tsx
-    │       ├── SidebarCard.tsx
-    │       └── ThemeCloud.tsx
+    │   └── AboutPage.astro    # Shared About content for all locales
     └── test/
         ├── setup.ts
         └── example.test.ts
@@ -88,10 +78,10 @@ mythic-pages/
 
 ```mermaid
 graph LR
-    A["Markdown files<br/>src/content/vi|en/entries/*.md"] --> B[Zod validation<br/>src/content.config.ts]
-    B --> C[Astro Content Collections<br/>entriesVi / entriesEn]
+    A["Markdown files<br/>src/content/{locale}/entries/*.md"] --> B[Zod validation<br/>src/content.config.ts]
+    B --> C[Astro Content Collections<br/>entries{Locale}]
     C --> D["getLocalized* helpers<br/>src/i18n/content.ts"]
-    D --> E[Astro Pages<br/>src/pages/** and en/**]
+    D --> E[Astro Pages<br/>src/pages/** and [lang]/**]
     E --> F[Static HTML<br/>dist/]
     G[global.css + Tailwind] --> E
     H[Components + t(lang,key)] --> E

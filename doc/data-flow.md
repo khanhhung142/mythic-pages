@@ -6,12 +6,12 @@ All data is resolved at **build time**. There is no runtime API, no database, no
 
 ```mermaid
 graph TD
-    A["Markdown files<br/>src/content/vi|en/entries/*.md"] -->|"glob loaders"| B["Astro Content Collections<br/>entriesVi, entriesEn"]
+    A["Markdown files<br/>src/content/{locale}/entries/*.md"] -->|"glob loaders"| B["Astro Content Collections<br/>entries{Locale}"]
     B -->|"Zod validation"| C{"Valid?"}
     C -->|"Yes"| D["In-memory collections"]
     C -->|"No"| E["Build error"]
     D -->|"getLocalizedEntries / getLocalizedEntry"| F["src/i18n/content.ts"]
-    F --> G["Page frontmatter scripts<br/>src/pages/... and en/..."]
+    F --> G["Page frontmatter scripts<br/>src/pages/... and [lang]/..."]
     G -->|"filter/sort/slice"| H["Template data"]
     H -->|"Astro rendering"| I["Static HTML in dist/"]
 ```
@@ -21,8 +21,7 @@ graph TD
 ### 1. Content Loading
 
 ```
-src/content/vi/entries/*.md   → collection entriesVi
-src/content/en/entries/*.md   → collection entriesEn
+src/content/{locale}/entries/*.md   → collection entries{Locale}
         ↓
 glob({ pattern: '**/*.md', base: './src/content/{locale}/entries' })
         ↓
@@ -40,18 +39,18 @@ Required fields: name_vi, category
 Defaults applied: popularity=1, status='published'
 Optional fields: all others
         ↓
-Type-safe entry objects: CollectionEntry<'entriesVi'> | CollectionEntry<'entriesEn'>
+Type-safe entry objects: CollectionEntry<`entries${Capitalize<Locale>}`>
 ```
 
-### 3. Locale merge (English)
+### 3. Locale fallback (generic)
 
-For **`lang === 'en'`**, `getLocalizedEntries`:
+For **any non-default locale**, `getLocalizedEntries`:
 
-1. Loads published entries from `entriesEn`
-2. Loads published entries from `entriesVi`
-3. Appends VI entries whose `id` is not present in EN
+1. Loads published entries from `entries{Locale}`
+2. Loads published entries from default-locale collection
+3. Appends default-locale entries whose `id` is missing in requested locale
 
-So the EN catalog and static paths include every story that exists in VI even before EN markdown exists.
+So localized catalogs and static paths include every story from the canonical default locale even before translation exists.
 
 ### 4. Page Data Resolution
 
@@ -91,7 +90,7 @@ entries.sort((a, b) => {
 
 ### 6. Related Entries Logic
 
-In `entries/[id].astro` and `en/entries/[id].astro` → `getStaticPaths()` / props:
+In `entries/[id].astro` and `[lang]/entries/[id].astro` → `getStaticPaths()` / props:
 
 ```typescript
 related: published
@@ -124,7 +123,7 @@ Used in: `EntriesListPage`, `EntryLayout`, `HomePage`
 | Page | Input | Transform | Output |
 |------|-------|-----------|--------|
 | `/`, `/en/` | Localized published entries | Shuffle → take first 4 | Featured card + 3 side cards |
-| `/entries`, `/en/entries` | Localized entries | Sort by popularity/name | Full card grid |
+| `/entries`, `/{lang}/entries` | Localized entries | Sort by popularity/name | Full card grid |
 | `/.../entries/category/X` | Localized entries | Sort → filter by category | Filtered card grid |
 | `/.../entries/Y` | `getLocalizedEntry` + published | render() + top 3 related | Full article + sidebar + related |
 

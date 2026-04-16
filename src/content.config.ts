@@ -1,5 +1,6 @@
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
+import { locales } from './i18n/config';
 
 const entrySchema = z.object({
   name_vi: z.string(),
@@ -36,14 +37,18 @@ const entrySchema = z.object({
   updated_at: z.coerce.string().optional(),
 });
 
-const entriesVi = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/vi/entries' }),
-  schema: entrySchema,
-});
+function toCollectionKey(locale: string) {
+  return `entries${locale.charAt(0).toUpperCase()}${locale.slice(1)}`;
+}
 
-const entriesEn = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/en/entries' }),
-  schema: entrySchema,
-});
+const collections = Object.fromEntries(
+  locales.map((locale) => [
+    toCollectionKey(locale),
+    defineCollection({
+      loader: glob({ pattern: '**/*.md', base: `./src/content/${locale}/entries` }),
+      schema: entrySchema,
+    }),
+  ])
+);
 
-export const collections = { entriesVi, entriesEn };
+export { collections };

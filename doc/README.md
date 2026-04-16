@@ -10,8 +10,8 @@
 | Framework | Astro 6.1.5 (static SSG) |
 | Language | TypeScript 5, Astro components, Markdown |
 | Styling | CSS variables + Tailwind 3 + scoped `<style>` |
-| Content | Astro Content Collections + Zod schemas (`entriesVi`, `entriesEn`) |
-| i18n | `vi` (default) + `en`; VI at site root (`/`, `/about`, `/entries/...`), EN under `/en/...`; EN markdown falls back to VI when missing |
+| Content | Astro Content Collections + Zod schemas (dynamic `entries{Locale}` from `locales`) |
+| i18n | Dynamic-locale routing: default locale at root (`/`), non-default locales under `/{lang}/...`; fallback to default-locale markdown when localized file is missing |
 | Backend | None — pure static site |
 | Auth | None |
 | State | None — all data resolved at build time |
@@ -44,3 +44,13 @@ When building a new feature:
 5. Read `styling.md` for design tokens and CSS conventions
 6. Read `adding-features.md` for step-by-step patterns
 7. Check `known-issues.md` to avoid existing pitfalls
+
+## Dynamic-First Rule (Mandatory)
+
+This repository is now **dynamic-first** for i18n and routing.
+
+- Do not create mirrored page trees like `src/pages/en/...`, `src/pages/ja/...`, etc.
+- Add locale-aware behavior by extending shared dynamic paths (`src/pages/[lang]/...`) and shared helpers in `src/i18n/*`.
+- Any new route or feature must work for **all locales in `src/i18n/config.ts`**, not only `vi`/`en`.
+- When adding locale-specific content, add files under `src/content/{locale}/...`; routing must stay generic.
+- If a proposed change introduces locale-specific duplication, it should be considered incorrect and refactored.

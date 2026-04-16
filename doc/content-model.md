@@ -5,26 +5,24 @@ Myth entries live as Markdown under **locale-specific folders**:
 - `src/content/vi/entries/*.md` — Vietnamese (canonical set)
 - `src/content/en/entries/*.md` — English translations (optional per entry)
 
-Each file = one mythological entry. Same filename (`id`) in both folders denotes the same story in two languages. If an EN file is missing, the site still serves the entry under `/en/...` using the VI file (see `src/i18n/content.ts`).
+Each file = one mythological entry. Same filename (`id`) across locales denotes the same story. If a localized file is missing, the site serves default-locale content for that route (see `src/i18n/content.ts`).
 
 ## Schema Definition
 
 File: `src/content.config.ts`
 
-Two collections share one schema (`entrySchema`):
+Collections are generated dynamically from `locales` and share one schema (`entrySchema`):
 
 ```typescript
-const entriesVi = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/vi/entries' }),
-  schema: entrySchema,
-});
-
-const entriesEn = defineCollection({
-  loader: glob({ pattern: '**/*.md', base: './src/content/en/entries' }),
-  schema: entrySchema,
-});
-
-export const collections = { entriesVi, entriesEn };
+const collections = Object.fromEntries(
+  locales.map((locale) => [
+    `entries${locale.charAt(0).toUpperCase()}${locale.slice(1)}`,
+    defineCollection({
+      loader: glob({ pattern: '**/*.md', base: `./src/content/${locale}/entries` }),
+      schema: entrySchema,
+    }),
+  ])
+);
 ```
 
 `entrySchema` fields:
@@ -148,7 +146,7 @@ Markdown body here...
 
 ## Existing Entries
 
-Markdown files live under `src/content/vi/entries/` (and optionally `src/content/en/entries/`). Regenerate this table from the repo when inventory matters for agents:
+Markdown files live under `src/content/{locale}/entries/`. Regenerate this table from the repo when inventory matters for agents:
 
 | File | Name | Category | Popularity |
 |------|------|----------|-----------|

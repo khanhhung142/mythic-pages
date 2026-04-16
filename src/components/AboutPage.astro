@@ -1,8 +1,13 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro';
-import { t } from '../../i18n/config';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { t } from '../i18n/config';
+import type { Locale } from '../i18n/config';
 
-const lang = 'en' as const;
+interface Props {
+  lang: Locale;
+}
+
+const { lang } = Astro.props;
 
 const pageTitle = `${t(lang, 'about.title')} — ${t(lang, 'site.title')}`;
 

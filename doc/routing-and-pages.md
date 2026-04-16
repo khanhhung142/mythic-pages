@@ -1,136 +1,51 @@
 # Routing & Pages
 
-Astro uses file-based routing. **Vietnamese** (default locale) has **no URL prefix**: pages live at `src/pages/` root. **English** uses the `/en/...` prefix: files under `src/pages/en/`. Legacy URLs `/vi` and `/vi/*` redirect to `/` and the matching unprefixed paths (see `astro.config.mjs` `redirects` and `public/_redirects`).
+Astro file-based routing now uses a **dynamic locale strategy**:
+
+- default locale (`vi`) routes are unprefixed in `src/pages/*`
+- non-default locales are generated via `src/pages/[lang]/*`
+- no mirrored locale folders (e.g. `src/pages/en/*`) should be created
+
+Legacy `/vi` redirects are still supported.
 
 ## Route Map
 
 | URL Pattern | File | Layout | Description |
 |------------|------|--------|-------------|
-| `/` | `src/pages/index.astro` | `BaseLayout` (via `HomePage`) | Home — hero, featured entries, category grid, quote (VI) |
-| `/en/` | `src/pages/en/index.astro` | same | Home (EN) |
-| `/about`, `/en/about` | `src/pages/about.astro`, `src/pages/en/about.astro` | `BaseLayout` | About — mission, contribute/issue CTAs (placeholders), roadmap |
-| `/entries`, `/en/entries` | `src/pages/entries/index.astro`, `src/pages/en/entries/index.astro` | `BaseLayout` (via `EntriesListPage`) | Full catalog (EN uses VI fallback for missing files) |
-| `/entries/category/[category]`, `/en/entries/category/[category]` | `src/pages/entries/category/[category].astro`, `src/pages/en/entries/category/[category].astro` | `BaseLayout` (via `EntriesListPage`) | Filtered list by category |
-| `/entries/[id]`, `/en/entries/[id]` | `src/pages/entries/[id].astro`, `src/pages/en/entries/[id].astro` | `EntryLayout` | Entry detail (EN falls back to VI markdown when no EN file) |
+| `/` | `src/pages/index.astro` | `BaseLayout` (via `HomePage`) | Home (default locale) |
+| `/{lang}/` | `src/pages/[lang]/index.astro` | same | Home for any non-default locale |
+| `/about` | `src/pages/about.astro` | `BaseLayout` (via `AboutPage`) | About (default locale) |
+| `/{lang}/about` | `src/pages/[lang]/about.astro` | same | About for non-default locales |
+| `/entries` | `src/pages/entries/index.astro` | `BaseLayout` (via `EntriesListPage`) | Entries catalog (default locale) |
+| `/{lang}/entries` | `src/pages/[lang]/entries/index.astro` | same | Entries catalog for non-default locales |
+| `/entries/category/[category]` | `src/pages/entries/category/[category].astro` | `BaseLayout` (via `EntriesListPage`) | Category page (default locale) |
+| `/{lang}/entries/category/[category]` | `src/pages/[lang]/entries/category/[category].astro` | same | Category page for non-default locales |
+| `/entries/[id]` | `src/pages/entries/[id].astro` | `EntryLayout` | Entry detail (default locale) |
+| `/{lang}/entries/[id]` | `src/pages/[lang]/entries/[id].astro` | `EntryLayout` | Entry detail for non-default locales |
 
 ## Request Flow
 
 ```mermaid
 graph TD
-    subgraph "Build Time (getStaticPaths)"
-        A[getLocalizedEntries / getLocalizedEntry] --> B{Filter: status = published}
-        B --> C[Generate static paths per locale + id/category]
+    subgraph buildTime [BuildTime_getStaticPaths]
+        localeCfg[locales_and_defaultLocale] --> langRoutes[pages_[lang]_generate_non_default_paths]
+        contentHelpers[getLocalizedEntries_or_getLocalizedEntry] --> publishedOnly[status_published_filter]
+        publishedOnly --> staticPaths[paths_lang_id_category]
     end
 
-    subgraph "URL Resolution"
-        D["/ "] --> F["index.astro / HomePage"]
-        E["/en/"] --> FEN["en/index.astro"]
-        G["/entries"] --> H["entries/index.astro"]
-        I["/entries/category/than-linh"] --> J[category/[category].astro]
-        K["/entries/thanh-giong"] --> L["[id].astro"]
-    end
-
-    subgraph "Layout Selection"
-        F --> M[BaseLayout lang=vi]
-        FEN --> MEN[BaseLayout lang=en]
-        H --> N[EntriesListPage → BaseLayout]
-        J --> N
-        L --> O[EntryLayout — standalone]
+    subgraph routing [Routing]
+        rootRoute["/about"] --> rootFile["src/pages/about.astro"]
+        langRoute["/{lang}/about"] --> langFile["src/pages/[lang]/about.astro"]
+        rootEntries["/entries/[id]"] --> rootEntry["src/pages/entries/[id].astro"]
+        langEntries["/{lang}/entries/[id]"] --> langEntry["src/pages/[lang]/entries/[id].astro"]
     end
 ```
 
-## Layout Hierarchy
+## Dynamic-First Guardrail
 
-```mermaid
-graph TD
-    subgraph "BaseLayout.astro"
-        BL["&lt;html lang={lang}&gt;<br/>global.css<br/>Header lang<br/>&lt;main&gt;&lt;slot/&gt;&lt;/main&gt;<br/>Footer lang"]
-    end
+All future route work must be locale-generic:
 
-    subgraph "EntryLayout.astro"
-        EL["&lt;html lang={lang}&gt; — standalone<br/>Google Fonts link<br/>Header<br/>entry-head (breadcrumb, title, tags)<br/>main-grid (article + aside)<br/>Footer<br/>Scoped global styles"]
-    end
-
-    HP["index.astro → HomePage"] --> BL
-    LP["entries/index.astro"] --> ELP[EntriesListPage] --> BL
-    CP["entries/category/[category].astro"] --> ELP
-    EP["entries/[id].astro"] --> EL
-```
-
-**Key distinction**: `EntryLayout` does NOT extend `BaseLayout`. It is a complete standalone HTML document with its own `<html>`, font imports, and extensive scoped styles.
-
-## Page Details
-
-### Home Page (`/`, `/en/`)
-
-Files: `src/pages/index.astro` (wraps `src/components/HomePage.astro` with `lang="vi"`), `src/pages/en/index.astro` (`lang="en"`).
-
-**Data fetching:**
-- `getLocalizedEntries(lang)` → published entries for that locale (EN includes VI fallbacks for missing EN files)
-- Fisher-Yates shuffle → random `featured` (first) + `sideEntries` (next 3)
-- Category grid uses `CATEGORY_SLUGS` + `getCategoryLabel(slug, lang)`; links use `localePath(lang, ...)` from `src/i18n/paths.ts`
-
-**Sections:**
-1. Hero — `t(lang, ...)` for titles and CTAs
-2. Featured — random featured entry card + 3 side cards
-3. Categories — grid of category cards (locale-aware hrefs)
-4. Quote — blockquote (anchor `id="quote"`)
-
-### Entries Catalog (`/entries`, `/en/entries`)
-
-Files: `src/pages/entries/index.astro`, `src/pages/en/entries/index.astro`
-
-**Data fetching:**
-- `getLocalizedEntries(lang)`, sorted by `popularity` desc → `name_vi` asc (Vietnamese locale)
-
-**Delegates to**: `EntriesListPage.astro` with `activeCategory={null}` and `lang`
-
-### Category Page (`/entries/category/[category]`, …)
-
-Files: `src/pages/entries/category/[category].astro`, `src/pages/en/entries/category/[category].astro`
-
-**Static paths**: Generated from `CATEGORY_SLUGS` per locale tree
-
-**Data fetching:**
-- Same sort as catalog, then filtered by `entry.data.category === category`
-
-**Delegates to**: `EntriesListPage.astro` with `activeCategory={category}` and `lang`
-
-### Entry Detail (`/entries/[id]`, …)
-
-Files: `src/pages/entries/[id].astro`, `src/pages/en/entries/[id].astro`
-
-**Static paths**: Published entries per locale (see `getLocalizedEntries` + localized entry resolution).
-
-**Props computed in `getStaticPaths`:**
-- `entry` — from merged collection (may be VI content when `lang === 'en'` and EN file absent)
-- `related` — top 3 other entries by popularity (excluding current)
-- `lang`
-
-**Rendering:**
-- `render(entry)` → `{ Content }` component for markdown body
-- Passed to `EntryLayout` as `<Content />` slot
-
-## getStaticPaths Pattern
-
-Entry detail example (one locale per file):
-
-```typescript
-export async function getStaticPaths() {
-  const lang = 'vi' as const;
-  const paths = [];
-  const entries = await getLocalizedEntries(lang);
-  const published = entries.filter((e) => e.data.status === 'published');
-  for (const entry of published) {
-    paths.push({
-      params: { id: entry.id },
-      props: { entry, related: /* ... */ },
-    });
-  }
-  return paths;
-}
-```
-
-Category pages: `CATEGORY_SLUGS` mapped to `{ params: { category } }` in each locale file.
-
-See `src/pages/entries/**/*.astro` and `src/pages/en/entries/**/*.astro` for implementations.
+1. Extend dynamic pages/helpers, never duplicate locale directories.
+2. Use `locales` and `defaultLocale` from `src/i18n/config.ts`.
+3. Keep `getStaticPaths()` locale loops generic (`locales.filter(...)`).
+4. If a PR adds locale-specific page duplication, it violates project routing rules.

@@ -3,6 +3,7 @@ import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { alternateLocalePath } from '../i18n/paths';
+import { defaultLocale, locales } from '../i18n/config';
 import type { Locale } from '../i18n/config';
 
 interface Props {
@@ -13,10 +14,13 @@ interface Props {
 const { title, description, lang = 'vi' } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
-const altViPath = alternateLocalePath(Astro.url.pathname, 'vi');
-const altEnPath = alternateLocalePath(Astro.url.pathname, 'en');
-const altViURL = new URL(altViPath, Astro.site);
-const altEnURL = new URL(altEnPath, Astro.site);
+const alternateUrls = locales.map((locale) => ({
+  locale,
+  href: new URL(alternateLocalePath(Astro.url.pathname, locale), Astro.site).href,
+}));
+const defaultLocaleHref =
+  alternateUrls.find((item) => item.locale === defaultLocale)?.href ?? canonicalURL.href;
+const ogLocale = lang === 'vi' ? 'vi_VN' : lang === 'en' ? 'en_US' : lang;
 ---
 <!DOCTYPE html>
 <html lang={lang}>
@@ -26,11 +30,12 @@ const altEnURL = new URL(altEnPath, Astro.site);
     <title>{title}</title>
     {description && <meta name="description" content={description} />}
     <link rel="canonical" href={canonicalURL.href} />
-    <link rel="alternate" hreflang="vi" href={altViURL.href} />
-    <link rel="alternate" hreflang="en" href={altEnURL.href} />
-    <link rel="alternate" hreflang="x-default" href={altViURL.href} />
+    {alternateUrls.map((item) => (
+      <link rel="alternate" hreflang={item.locale} href={item.href} />
+    ))}
+    <link rel="alternate" hreflang="x-default" href={defaultLocaleHref} />
     <meta property="og:type" content="website" />
-    <meta property="og:locale" content={lang === 'vi' ? 'vi_VN' : 'en_US'} />
+    <meta property="og:locale" content={ogLocale} />
     <meta property="og:title" content={title} />
     {description && <meta property="og:description" content={description} />}
     <meta property="og:url" content={canonicalURL.href} />

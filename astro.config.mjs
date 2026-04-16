@@ -5,6 +5,7 @@ export default defineConfig({
   site: "https://vietmyth.vn",
   i18n: {
     defaultLocale: "vi",
+    // Keep this list in sync with src/i18n/config.ts -> locales.
     locales: ["vi", "en"],
     routing: {
       prefixDefaultLocale: false,
@@ -14,6 +15,7 @@ export default defineConfig({
     sitemap({
       i18n: {
         defaultLocale: "vi",
+        // Keep this map in sync with i18n.locales above.
         locales: { vi: "vi-VN", en: "en" },
       },
     }),

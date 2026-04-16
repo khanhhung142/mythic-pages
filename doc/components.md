@@ -10,8 +10,8 @@ File: `src/components/Header.astro`
 
 **Renders**: Fixed top navigation bar with:
 - Logo (神 mark + "Thần Thoại Việt" — brand text not yet fully localized)
-- Nav links from `t(lang, 'nav.*')` with `href` from `localePath(lang, ...)` in `src/i18n/paths.ts` (About → `/about` or `/en/about`)
-- Language switch: `<a>` links via `alternateLocalePath(pathname, 'vi' | 'en')`
+- Nav links from `t(lang, 'nav.*')` with `href` from `localePath(lang, ...)` in `src/i18n/paths.ts` (About → `/about` or `/{lang}/about`)
+- Language switch: `<a>` links generated from `locales` via `alternateLocalePath(pathname, locale)`
 
 **Styling**: `<style is:global>` — fixed position, backdrop blur, responsive (hides nav links on mobile)
 
@@ -27,7 +27,19 @@ File: `src/components/HomePage.astro`
 
 **Renders**: Full home page content (hero, featured, categories, quote) inside `BaseLayout`; internal links use `localePath` from `src/i18n/paths.ts`.
 
-**Used by**: `src/pages/index.astro` (`lang="vi"`), `src/pages/en/index.astro` (`lang="en"`)
+**Used by**: `src/pages/index.astro` (`lang="vi"`), `src/pages/[lang]/index.astro` (`lang` dynamic)
+
+---
+
+### AboutPage.astro
+
+File: `src/components/AboutPage.astro`
+
+**Props**: `{ lang: Locale }`
+
+**Renders**: Shared About content (hero, prose, CTA, roadmap) with localized copy via `t(lang, 'about.*')`.
+
+**Used by**: `src/pages/about.astro` (`lang="vi"`), `src/pages/[lang]/about.astro` (`lang` dynamic)
 
 ---
 
@@ -62,7 +74,7 @@ interface Props {
 2. Sticky filter bar with category pills linking to `localePath(lang, '/entries/category/[slug]')`
 3. 3-column card grid of entries (image placeholder, category tag, name, summary)
 
-**Used by**: `entries/index.astro`, `en/entries/index.astro`, `entries/category/[category].astro`, `en/entries/category/[category].astro`
+**Used by**: `entries/index.astro`, `[lang]/entries/index.astro`, `entries/category/[category].astro`, `[lang]/entries/category/[category].astro`
 
 **Key behavior**:
 - `activeCategory` determines which pill is highlighted
@@ -91,7 +103,7 @@ File: `src/layouts/BaseLayout.astro`
 
 Imports `global.css`.
 
-**Used by**: `index.astro`, `en/index.astro` (via `HomePage.astro`), `EntriesListPage.astro`
+**Used by**: `index.astro`, `[lang]/index.astro` (via `HomePage.astro`), `EntriesListPage.astro`, `AboutPage.astro`
 
 ---
 
@@ -133,29 +145,14 @@ File: `src/layouts/EntryLayout.astro`
 - `slugToLabel()` — converts theme slugs to display text
 - Category/region/gender labels use `getCategoryLabel` and `t(lang, ...)`
 
-**Used by**: `entries/[id].astro`, `en/entries/[id].astro`
-
-## Unused Components
-
-These files exist but are **not imported by any page or layout**:
-
-| File | Original Purpose | Status |
-|------|-----------------|--------|
-| `src/components/EntryCard.astro` | Entry card for lists | Replaced by inline markup in `EntriesListPage` |
-| `src/components/InfoTable.astro` | Sidebar info table | Functionality built into `EntryLayout` |
-| `src/components/RelationshipSection.astro` | Relation groups | Functionality built into `EntryLayout` |
-| `src/components/SidebarCard.astro` | Sidebar card wrapper | Functionality built into `EntryLayout` |
-| `src/components/ThemeCloud.astro` | Theme tag cloud | Functionality built into `EntryLayout` |
-| `src/components/wiki/*.tsx` | React versions of above | No React installed — completely dead code |
-
-**Recommendation**: These can be deleted or refactored into active use. The `wiki/*.tsx` files require `@astrojs/react` integration which is not installed.
+**Used by**: `entries/[id].astro`, `[lang]/entries/[id].astro`
 
 ## Component Dependency Graph
 
 ```mermaid
 graph TD
     subgraph "Pages"
-        P1["index.astro / en/index.astro"]
+        P1["index.astro / [lang]/index.astro"]
         P2["entries/index.astro"]
         P3["entries/[id].astro"]
         P4["entries/category/[category].astro"]
