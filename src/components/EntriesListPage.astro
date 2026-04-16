@@ -25,7 +25,7 @@ const descFiltered = activeCategory
   ? `${entries.length} mục thuộc phân loại «${getCategoryLabel(activeCategory, lang)}». (Kho đầy đủ: ${totalPublished} mục đã xuất bản.)`
   : descAll;
 ---
-<BaseLayout title={pageTitle} lang={lang}>
+<BaseLayout title={pageTitle} description={activeCategory ? descFiltered : descAll} lang={lang}>
   <div class="entries-header">
     <div class="entries-header-inner">
       <div class="eyebrow">{t(lang, 'entries.eyebrow')}</div>

@@ -11,7 +11,7 @@ const roadmapSteps = [1, 2, 3, 4, 5].map((n) => ({
   desc: t(lang, `about.rm${n}.desc`),
 }));
 ---
-<BaseLayout title={pageTitle} lang={lang}>
+<BaseLayout title={pageTitle} description={t(lang, 'about.lead')} lang={lang}>
   <article class="about-page">
     <header class="about-hero">
       <div class="eyebrow">{t(lang, 'nav.about')}</div>
