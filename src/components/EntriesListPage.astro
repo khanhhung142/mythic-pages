@@ -1,47 +1,49 @@
 ---
-import type { CollectionEntry } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import { CATEGORY_LABELS } from '../data/category-labels';
+import { getCategoryLabel, CATEGORY_LABELS } from '../data/category-labels';
+import { t } from '../i18n/config';
+import type { Locale } from '../i18n/config';
 
 interface Props {
-  entries: CollectionEntry<'entries'>[];
+  entries: any[];
   /** Slug category đang lọc, hoặc null = tất cả */
   activeCategory: string | null;
   /** Tổng số entry đã published (dùng trong mô tả khi đang lọc) */
   totalPublished: number;
+  lang?: Locale;
 }
 
-const { entries, activeCategory, totalPublished } = Astro.props;
+const { entries, activeCategory, totalPublished, lang = 'vi' } = Astro.props;
 
 const pageTitle = activeCategory
-  ? `${CATEGORY_LABELS[activeCategory] ?? activeCategory} — Mục lục — Thần Thoại Việt Nam`
-  : 'Mục lục — Thần Thoại Việt Nam';
+  ? `${getCategoryLabel(activeCategory, lang)} — ${t(lang, 'nav.entries')} — ${t(lang, 'site.title')}`
+  : `${t(lang, 'nav.entries')} — ${t(lang, 'site.title')}`;
 
-const descAll = `Toàn bộ ${totalPublished} nhân vật, thần linh, yêu quái và sự tích trong kho tàng thần thoại Việt Nam.`;
+const descAll = t(lang, 'entries.descAll').replace('{count}', String(totalPublished));
 const descFiltered = activeCategory
-  ? `${entries.length} mục thuộc phân loại «${CATEGORY_LABELS[activeCategory] ?? activeCategory}». (Kho đầy đủ: ${totalPublished} mục đã xuất bản.)`
+  ? `${entries.length} mục thuộc phân loại «${getCategoryLabel(activeCategory, lang)}». (Kho đầy đủ: ${totalPublished} mục đã xuất bản.)`
   : descAll;
 ---
-<BaseLayout title={pageTitle}>
+<BaseLayout title={pageTitle} lang={lang}>
   <div class="entries-header">
     <div class="entries-header-inner">
-      <div class="eyebrow">№ 03 — Kho tàng</div>
-      <h1 class="entries-title">Mục <em>lục</em></h1>
+      <div class="eyebrow">{t(lang, 'entries.eyebrow')}</div>
+      <h1 class="entries-title">{t(lang, 'entries.title1')}<em>{t(lang, 'entries.title2')}</em></h1>
       <p class="entries-desc">{activeCategory ? descFiltered : descAll}</p>
     </div>
   </div>
 
   <div class="filter-bar">
     <div class="filter-inner">
-      <span class="filter-label">Phân loại:</span>
+      <span class="filter-label">{t(lang, 'entries.filter')}</span>
       <div class="filter-pills">
-        <a href="/entries" class:list={['pill', { 'pill-active': !activeCategory }]}>Tất cả</a>
-        {Object.entries(CATEGORY_LABELS).map(([slug, label]) => (
+        <a href={`/${lang}/entries`} class:list={['pill', { 'pill-active': !activeCategory }]}>{t(lang, 'entries.all')}</a>
+        {Object.keys(CATEGORY_LABELS).map((slug) => (
           <a
-            href={`/entries/category/${slug}`}
+            href={`/${lang}/entries/category/${slug}`}
             class:list={['pill', { 'pill-active': activeCategory === slug }]}
           >
-            {label}
+            {getCategoryLabel(slug, lang)}
           </a>
         ))}
       </div>
@@ -52,11 +54,11 @@ const descFiltered = activeCategory
     <div class="entries-grid">
       {entries.map(entry => (
         <article class="entry-card">
-          <a href={`/entries/${entry.id}`} class="entry-card-link">
+          <a href={`/${lang}/entries/${entry.id}`} class="entry-card-link">
             <div class="entry-img img-placeholder"></div>
             <div class="entry-body">
               <div class="entry-meta">
-                <span class="entry-tag">{CATEGORY_LABELS[entry.data.category] ?? entry.data.category}</span>
+                <span class="entry-tag">{getCategoryLabel(entry.data.category, lang)}</span>
               </div>
               <h3 class="entry-name">{entry.data.name_vi}</h3>
               {entry.data.name_en && <div class="entry-subtitle">{entry.data.name_en}</div>}

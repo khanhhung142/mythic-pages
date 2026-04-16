@@ -1,22 +1,29 @@
 ---
-// no props needed
+import type { Locale } from '../i18n/config';
+import { t } from '../i18n/config';
+
+interface Props {
+  lang?: Locale;
+}
+
+const { lang = 'vi' } = Astro.props;
 ---
 <footer>
   <div class="foot-grid">
     <div class="foot-brand">
-      <h3>Thần Thoại Việt Nam</h3>
-      <p>Kho lưu trữ phi lợi nhuận về thần thoại, truyền thuyết và nhân vật huyền thoại của người Việt — lưu giữ di sản văn hóa dân tộc cho thế hệ mai sau.</p>
+      <h3>{t(lang, 'footer.brand')}</h3>
+      <p>{t(lang, 'footer.desc')}</p>
     </div>
     <div class="foot-col">
-      <h5>Khám phá</h5>
+      <h5>{t(lang, 'footer.explore')}</h5>
       <ul>
-        <li><a href="/">Trang chủ</a></li>
-        <li><a href="/entries">Mục lục</a></li>
-        <li><a href="/#categories">Phân loại</a></li>
+        <li><a href={`/${lang}/`}>{t(lang, 'nav.home')}</a></li>
+        <li><a href={`/${lang}/entries`}>{t(lang, 'nav.entries')}</a></li>
+        <li><a href={`/${lang}/#categories`}>{t(lang, 'nav.categories')}</a></li>
       </ul>
     </div>
     <div class="foot-col">
-      <h5>Tư liệu</h5>
+      <h5>{t(lang, 'footer.sources')}</h5>
       <ul>
         <li><a href="#">Lĩnh Nam Chích Quái</a></li>
         <li><a href="#">Việt Điện U Linh</a></li>
@@ -24,17 +31,17 @@
       </ul>
     </div>
     <div class="foot-col">
-      <h5>Liên hệ</h5>
+      <h5>{t(lang, 'footer.contact')}</h5>
       <ul>
-        <li><a href="#">Đóng góp</a></li>
+        <li><a href="#">{t(lang, 'footer.contribute')}</a></li>
         <li><a href="#">Github</a></li>
         <li><a href="#">Email</a></li>
       </ul>
     </div>
   </div>
   <div class="foot-bottom">
-    <span>© 2026 — Lưu giữ di sản văn hóa dân tộc</span>
-    <span>Made with ♡ in Việt Nam</span>
+    <span>{t(lang, 'footer.copyright')}</span>
+    <span>{t(lang, 'footer.made')}</span>
   </div>
 </footer>
 

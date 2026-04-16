@@ -1,0 +1,21 @@
+---
+import EntriesListPage from '../../../components/EntriesListPage.astro';
+import { getLocalizedEntries } from '../../../i18n/content';
+import { locales } from '../../../i18n/config';
+import type { Locale } from '../../../i18n/config';
+
+export async function getStaticPaths() {
+  return locales.map((lang) => ({ params: { lang } }));
+}
+
+const { lang } = Astro.params as { lang: Locale };
+
+const allEntries = await getLocalizedEntries(lang);
+allEntries.sort((a, b) => {
+  if ((b.data.popularity ?? 0) !== (a.data.popularity ?? 0)) {
+    return (b.data.popularity ?? 0) - (a.data.popularity ?? 0);
+  }
+  return (a.data.name_vi ?? '').localeCompare(b.data.name_vi ?? '', 'vi');
+});
+---
+<EntriesListPage entries={allEntries} activeCategory={null} totalPublished={allEntries.length} lang={lang} />

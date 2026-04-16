@@ -1,13 +1,18 @@
-/** Frontmatter `category` slug → nhãn hiển thị (tiếng Việt) */
-export const CATEGORY_LABELS: Record<string, string> = {
-  "than-linh": "Thần linh",
-  "anh-hung": "Anh hùng",
-  "yeu-quai": "Yêu quái",
-  "linh-vat": "Linh vật",
-  "dia-danh": "Địa danh",
-  "vat-pham": "Vật phẩm",
-  "le-hoi": "Lễ hội",
-  "tich-co": "Tích cổ",
+import type { Locale } from '../i18n/config';
+
+export const CATEGORY_LABELS: Record<string, Record<Locale, string>> = {
+  "than-linh": { vi: "Thần linh", en: "Deities" },
+  "anh-hung": { vi: "Anh hùng", en: "Heroes" },
+  "yeu-quai": { vi: "Yêu quái", en: "Demons" },
+  "linh-vat": { vi: "Linh vật", en: "Sacred Beasts" },
+  "dia-danh": { vi: "Địa danh", en: "Places" },
+  "vat-pham": { vi: "Vật phẩm", en: "Artifacts" },
+  "le-hoi": { vi: "Lễ hội", en: "Festivals" },
+  "tich-co": { vi: "Tích cổ", en: "Ancient Tales" },
 };
 
 export const CATEGORY_SLUGS = Object.keys(CATEGORY_LABELS);
+
+export function getCategoryLabel(slug: string, locale: Locale): string {
+  return CATEGORY_LABELS[slug]?.[locale] ?? CATEGORY_LABELS[slug]?.vi ?? slug;
+}

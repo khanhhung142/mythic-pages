@@ -1,21 +1,34 @@
 ---
-// no props needed
+import type { Locale } from '../i18n/config';
+import { t } from '../i18n/config';
+
+interface Props {
+  lang?: Locale;
+}
+
+const { lang = 'vi' } = Astro.props;
+
+const currentPath = Astro.url.pathname;
+// Replace the locale segment to build the alternate-locale path
+// e.g. /vi/entries/x -> /en/entries/x
+const altLang: Locale = lang === 'vi' ? 'en' : 'vi';
+const altPath = currentPath.replace(/^\/(vi|en)(\/|$)/, `/${altLang}$2`);
 ---
 <nav>
-  <div class="logo">
+  <a href={`/${lang}/`} class="logo" aria-label={t(lang, 'nav.home')}>
     <div class="logo-mark">神</div>
     Thần Thoại Việt
-  </div>
+  </a>
   <div class="nav-right">
     <ul class="nav-links">
-      <li><a href="/">Trang chủ</a></li>
-      <li><a href="/entries">Mục lục</a></li>
-      <li><a href="/#categories">Phân loại</a></li>
-      <li><a href="/#about">Về dự án</a></li>
+      <li><a href={`/${lang}/`}>{t(lang, 'nav.home')}</a></li>
+      <li><a href={`/${lang}/entries`}>{t(lang, 'nav.entries')}</a></li>
+      <li><a href={`/${lang}/#categories`}>{t(lang, 'nav.categories')}</a></li>
+      <li><a href={`/${lang}/#about`}>{t(lang, 'nav.about')}</a></li>
     </ul>
     <div class="lang-switch">
-      <button class="active">VI</button>
-      <button>EN</button>
+      <a href={lang === 'vi' ? currentPath : altPath} class:list={[{ active: lang === 'vi' }]}>VI</a>
+      <a href={lang === 'en' ? currentPath : altPath} class:list={[{ active: lang === 'en' }]}>EN</a>
     </div>
   </div>
 </nav>
@@ -62,13 +75,14 @@ nav{
 .nav-links a:hover{color:var(--vermilion)}
 .nav-links a:hover::after{width:100%}
 .lang-switch{display:flex;border:1px solid var(--ink)}
-.lang-switch button{
+.lang-switch a{
   background:none;border:none;cursor:pointer;
   padding:.4rem .8rem;
   font-family:inherit;font-size:.7rem;
   letter-spacing:.15em;color:var(--ink);
+  text-decoration:none;
 }
-.lang-switch button.active{background:var(--ink);color:var(--paper)}
+.lang-switch a.active{background:var(--ink);color:var(--paper)}
 @media (max-width:900px){
   nav{padding:1rem 1.5rem}
   .nav-links{display:none}

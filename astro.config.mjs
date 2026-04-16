@@ -1,15 +1,16 @@
 import { defineConfig } from "astro/config";
 
-// `build.format: 'directory'` → `dist/entries/index.html`, `dist/entries/ho-tinh/index.html`
-// Many static hosts only resolve /entries if that folder has index.html (not root-level entries.html).
-// `trailingSlash: 'ignore'` → both `/entries` and `/entries/` work in dev/preview.
 export default defineConfig({
+  i18n: {
+    defaultLocale: 'vi',
+    locales: ['vi', 'en'],
+    routing: {
+      prefixDefaultLocale: true,
+      redirectToDefaultLocale: true,
+    },
+  },
   trailingSlash: "ignore",
   build: {
     format: "directory",
   },
-  // redirects: {
-  //   "/entries/category/than": "/entries/category/linh-than",
-  //   "/entries/category/than-linh": "/entries/category/linh-than",
-  // },
 });
