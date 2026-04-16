@@ -60,9 +60,8 @@ export const ui: Record<Locale, Record<string, string>> = {
     "region.bac": "Bắc Bộ",
     "region.trung": "Trung Bộ",
     "region.nam": "Nam Bộ",
-    "quote.content":
-      "Truyện xưa không phải để tin từng chữ, mà để nhớ: ta từ đâu mà có, và vì sao đất nước này được kể như một câu chuyện dài.",
-    "quote.source": "Dân gian & khảo cứu thần thoại Việt Nam",
+    "quote.content": "TODO: add một cái quote ý nghĩa và dài. ",
+    "quote.source": "Tác giả, trích dẫn quote",
   },
   en: {
     "site.title": "Vietnamese Mythology",
@@ -121,9 +120,8 @@ export const ui: Record<Locale, Record<string, string>> = {
     "region.bac": "Northern",
     "region.trung": "Central",
     "region.nam": "Southern",
-    "quote.content":
-      "Old tales are not meant to be believed word for word, but remembered: where we came from, and why this land is told as one long story.",
-    "quote.source": "Folk tradition & mythology scholarship",
+    "quote.content": "TODO: add một cái quote ý nghĩa và dài.",
+    "quote.source": "Tác giả, trích dẫn quote",
   },
 };
 
