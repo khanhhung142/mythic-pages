@@ -1,4 +1,2 @@
-# Legacy prefixed Vietnamese URLs → unprefixed (Netlify / compatible hosts)
-/vi  /  301
-/vi/  /  301
-/vi/*  /:splat  301
+# Legacy prefixed paths: astro.config redirects /vi; this rule covers /vi/... subpaths.
+/vi/* /:splat 301
