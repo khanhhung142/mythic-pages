@@ -66,12 +66,13 @@ export const ui: Record<Locale, Record<string, string>> = {
     "about.lead":
       "Một kho truyện mở, miễn phí — gom và sắp xếp thần thoại, truyền thuyết và dân gian Việt Nam theo một hệ thống dễ đọc, dễ tra cứu.",
     "about.body1":
-      "Thần Thoại Việt Nam không nhằm thay thế sách hay nghiên cứu học thuật, mà giúp mọi người tiếp cận các câu chuyện đã nuôi dưỡng trí tưởng tượng và ký ức văn hóa — từ thần linh, anh hùng đến yêu quái và địa danh.",
+      "Vietmyth.vn không nhằm thay thế sách hay nghiên cứu học thuật, mà giúp mọi người tiếp cận các câu chuyện đã nuôi dưỡng trí tưởng tượng và ký ức văn hóa — từ thần linh, anh hùng đến yêu quái và địa danh.",
     "about.body2":
       "Dự án luôn chào đón góp ý, bổ sung nguồn, sửa lỗi nội dung hoặc báo lỗi kỹ thuật. Mọi đóng góp đều quý — cùng nhau giữ di sản cho thế hệ sau.",
     "about.cta.contribute": "Đóng góp nội dung",
     "about.cta.report": "Báo lỗi",
-    "about.cta.note": "Liên kết chi tiết (repo, email, form) sẽ được bổ sung sau.",
+    "about.cta.note":
+      "Liên kết chi tiết (repo, email, form) sẽ được bổ sung sau.",
     "about.roadmap.title": "Lộ trình",
     "about.rm1.title": "Kho nội dung & entries",
     "about.rm1.desc":
@@ -152,7 +153,7 @@ export const ui: Record<Locale, Record<string, string>> = {
     "about.lead":
       "A free, open treasury — organizing Vietnamese myths, legends, and folk tales into a clear, browsable structure.",
     "about.body1":
-      "Vietnamese Mythology is not meant to replace books or academic work, but to help everyone access the stories that shaped imagination and cultural memory — deities, heroes, spirits, and places.",
+      "Vietmyth.vn is not meant to replace books or academic work, but to help everyone access the stories that shaped imagination and cultural memory — deities, heroes, spirits, and places.",
     "about.body2":
       "Feedback, source suggestions, content fixes, and bug reports are all welcome. Every contribution helps preserve this heritage for the next generation.",
     "about.cta.contribute": "Contribute content",
