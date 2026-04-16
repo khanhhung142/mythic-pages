@@ -1,21 +1,21 @@
 ---
 import EntryLayout from '../../../layouts/EntryLayout.astro';
 import { getLocalizedEntries } from '../../../i18n/content';
-import { defaultLocale, locales } from '../../../i18n/config';
+import { localeStaticPaths } from '../../../i18n/paths';
 import type { Locale } from '../../../i18n/config';
 import { render } from 'astro:content';
 
 export async function getStaticPaths() {
   const paths = [];
-  const targetLocales = locales.filter((locale) => locale !== defaultLocale);
 
-  for (const lang of targetLocales) {
+  for (const path of localeStaticPaths()) {
+    const lang = path.props.lang as Locale;
     const entries = await getLocalizedEntries(lang);
     const published = entries.filter((e) => e.data.status === 'published');
 
     for (const entry of published) {
       paths.push({
-        params: { lang, id: entry.id },
+        params: { ...path.params, id: entry.id },
         props: {
           lang,
           entry,

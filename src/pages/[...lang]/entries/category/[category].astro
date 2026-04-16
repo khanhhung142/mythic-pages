@@ -1,20 +1,21 @@
 ---
 import EntriesListPage from '../../../../components/EntriesListPage.astro';
 import { getLocalizedEntries } from '../../../../i18n/content';
-import { defaultLocale, locales } from '../../../../i18n/config';
+import { localeStaticPaths } from '../../../../i18n/paths';
 import type { Locale } from '../../../../i18n/config';
 import { CATEGORY_SLUGS } from '../../../../data/category-labels';
 
 export async function getStaticPaths() {
-  const targetLocales = locales.filter((locale) => locale !== defaultLocale);
-  return targetLocales.flatMap((lang) =>
+  return localeStaticPaths().flatMap((path) =>
     CATEGORY_SLUGS.map((category) => ({
-      params: { lang, category },
+      params: { ...path.params, category },
+      props: { ...path.props },
     }))
   );
 }
 
-const { lang, category } = Astro.params as { lang: Locale; category: string };
+const { lang } = Astro.props as { lang: Locale };
+const { category } = Astro.params as { category: string };
 
 const allEntries = await getLocalizedEntries(lang);
 allEntries.sort((a, b) => {

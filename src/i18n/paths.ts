@@ -1,6 +1,13 @@
 import { defaultLocale, locales } from './config';
 import type { Locale } from './config';
 
+export function localeStaticPaths() {
+  return locales.map((locale) => ({
+    params: { lang: locale === defaultLocale ? undefined : locale },
+    props: { lang: locale },
+  }));
+}
+
 /**
  * Build a localized site path (no origin).
  * `path` is the path without locale prefix: "/", "/about", "/entries", "/entries/foo", or "/#hash".
