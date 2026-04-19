@@ -42,6 +42,7 @@ const graphPayload = {
   edges: graph.edges,
   ghostCount: graph.ghostCount,
   mode: 'global' as const,
+  lang,
 };
 ---
 
@@ -92,11 +93,12 @@ const graphPayload = {
         const from = graph.nodes.find((n) => n.id === e.source);
         const to = graph.nodes.find((n) => n.id === e.target);
         const kind = t(lang, kindUiKey[e.kind]);
+        const note = e.qualifier ? ` (${e.qualifier})` : '';
         return (
           <li>
             <a href={from?.href}>{from?.name ?? e.source}</a>
             {' — '}
-            <span>{kind}</span>
+            <span>{kind}{note}</span>
             {' → '}
             {to?.href ? <a href={to.href}>{to.name}</a> : <span>{to?.name ?? e.target}</span>}
           </li>

@@ -15,6 +15,26 @@
   --line:rgba(26,15,8,.15);
   --line-soft:rgba(26,15,8,.08);
   --shadow:rgba(26,15,8,.12);
+  /* Graph nodes by entry category (porcelain / ink palette) */
+  --graph-node-default-fill:#c45c3e;
+  --graph-node-default-stroke:#8a2814;
+  --graph-node-ghost-stroke:var(--ink-light);
+  --graph-cat-than-linh-fill:#7a4a8f;
+  --graph-cat-than-linh-stroke:#4a2d5c;
+  --graph-cat-anh-hung-fill:#b84328;
+  --graph-cat-anh-hung-stroke:#7a1e10;
+  --graph-cat-yeu-quai-fill:#5c4a6b;
+  --graph-cat-yeu-quai-stroke:#3a2d4a;
+  --graph-cat-linh-vat-fill:#2f6b52;
+  --graph-cat-linh-vat-stroke:#1d4535;
+  --graph-cat-dia-danh-fill:#4a6e8c;
+  --graph-cat-dia-danh-stroke:#2d4a5e;
+  --graph-cat-vat-pham-fill:#8b6914;
+  --graph-cat-vat-pham-stroke:#5c450e;
+  --graph-cat-le-hoi-fill:#a85c2e;
+  --graph-cat-le-hoi-stroke:#6b3a1a;
+  --graph-cat-tich-co-fill:#6b5344;
+  --graph-cat-tich-co-stroke:#45362c;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}

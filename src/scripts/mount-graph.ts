@@ -6,8 +6,9 @@ import {
   forceManyBody,
   forceSimulation,
 } from 'd3-force';
-import { pointer, select } from 'd3-selection';
+import { pointer, select, type Selection } from 'd3-selection';
 import { zoom, zoomIdentity } from 'd3-zoom';
+import type { Locale } from '../i18n/config';
 import {
   RELATION_KINDS,
   type GraphEdge,
@@ -23,7 +24,12 @@ export type GraphMountPayload = {
   edges: GraphEdge[];
   ghostCount: number;
   mode: 'global' | 'local';
+  lang?: Locale;
 };
+
+const NODE_R = 15;
+const HAN_DY = 26;
+const NAME_DY = 28;
 
 const STROKE: Record<RelationKind, string> = {
   family: 'var(--vermilion)',
@@ -37,6 +43,62 @@ const STROKE: Record<RelationKind, string> = {
   historic_events: 'var(--ink-light)',
   related_sites: 'var(--ink-mute)',
 };
+
+function categoryFill(cat: string | undefined): string {
+  if (!cat) return 'var(--graph-node-default-fill)';
+  return `var(--graph-cat-${cat}-fill, var(--graph-node-default-fill))`;
+}
+
+function categoryStroke(cat: string | undefined): string {
+  if (!cat) return 'var(--graph-node-default-stroke)';
+  return `var(--graph-cat-${cat}-stroke, var(--graph-node-default-stroke))`;
+}
+
+/**
+ * Zoom/pan so the whole graph fits in the SVG viewBox on first load.
+ * Uses the same convention as typical d3 "fit to box": center of bounds → viewport center.
+ */
+function computeFitTransform(
+  nodes: SimNode[],
+  width: number,
+  height: number
+) {
+  const pad = 72;
+  if (nodes.length === 0) {
+    return zoomIdentity;
+  }
+
+  let minX = Infinity;
+  let minY = Infinity;
+  let maxX = -Infinity;
+  let maxY = -Infinity;
+
+  for (const n of nodes) {
+    const x = n.x ?? 0;
+    const y = n.y ?? 0;
+    const top = n.han ? y - NODE_R - HAN_DY : y - NODE_R;
+    const bottom = y + NODE_R + NAME_DY;
+    minX = Math.min(minX, x - NODE_R);
+    maxX = Math.max(maxX, x + NODE_R);
+    minY = Math.min(minY, top);
+    maxY = Math.max(maxY, bottom);
+  }
+
+  const rawW = maxX - minX;
+  const rawH = maxY - minY;
+  const cx = (minX + maxX) / 2;
+  const cy = (minY + maxY) / 2;
+
+  const graphW = Math.max(rawW, 28);
+  const graphH = Math.max(rawH, 28);
+
+  const innerW = Math.max(width - 2 * pad, 100);
+  const innerH = Math.max(height - 2 * pad, 100);
+  let k = Math.min(innerW / graphW, innerH / graphH);
+  k = Math.min(Math.max(k, 0.18), 3.2);
+
+  return zoomIdentity.translate(width / 2, height / 2).scale(k).translate(-cx, -cy);
+}
 
 function layout(
   nodes: SimNode[],
@@ -57,12 +119,12 @@ function layout(
       'link',
       forceLink(simLinks)
         .id((d: unknown) => (d as SimNode).id)
-        .distance(90)
-        .strength(0.6)
+        .distance(138)
+        .strength(0.55)
     )
-    .force('charge', forceManyBody().strength(-220))
+    .force('charge', forceManyBody().strength(-340))
     .force('center', forceCenter(width / 2, height / 2))
-    .force('collide', forceCollide(28));
+    .force('collide', forceCollide(NODE_R * 3.8));
 
   for (let i = 0; i < 320; i++) sim.tick();
   sim.stop();
@@ -119,7 +181,10 @@ function applyVisibility(
   });
 }
 
-function updateLinks(linkLines: any, hitLines: any) {
+function updateLinks(
+  linkLines: Selection<SVGLineElement, SimLink, SVGElement, unknown>,
+  hitLines: Selection<SVGLineElement, SimLink, SVGElement, unknown>
+) {
   linkLines
     .attr('x1', (d: SimLink) => (d.source as SimNode).x ?? 0)
     .attr('y1', (d: SimLink) => (d.source as SimNode).y ?? 0)
@@ -150,19 +215,23 @@ export function mountGraphWithPayload(
     height
   );
 
+  const fitTransform = computeFitTransform(simNodes, width, height);
+
   svg.attr('viewBox', `0 0 ${width} ${height}`).attr('role', 'img');
 
   svg.selectAll('*').remove();
 
   const root = svg.append('g').attr('class', 'graph-viewport');
 
-  let currentTransform = zoomIdentity;
-  const z = zoom<SVGSVGElement, unknown>().on('zoom', (ev) => {
-    currentTransform = ev.transform;
-    root.attr('transform', ev.transform.toString());
-  });
+  let currentTransform = fitTransform;
+  const z = zoom<SVGSVGElement, unknown>()
+    .scaleExtent([0.12, 8])
+    .on('zoom', (ev) => {
+      currentTransform = ev.transform;
+      root.attr('transform', ev.transform.toString());
+    });
 
-  svg.call(z as never).call(z.transform as never, zoomIdentity);
+  svg.call(z as never);
 
   const edgesG = root.append('g').attr('class', 'edges');
 
@@ -187,41 +256,6 @@ export function mountGraphWithPayload(
 
   updateLinks(linkLines, hitLines);
 
-  const tooltip = root
-    .append('g')
-    .attr('class', 'edge-tooltip')
-    .style('display', 'none')
-    .style('pointer-events', 'none');
-
-  const tipBg = tooltip.append('rect').attr('rx', 4).attr('fill', 'var(--paper)').attr('stroke', 'var(--line)');
-  const tipText = tooltip
-    .append('text')
-    .attr('font-size', 11)
-    .attr('font-family', 'Be Vietnam Pro, sans-serif')
-    .attr('fill', 'var(--ink-soft)');
-
-  hitLines
-    .on('mouseenter', (_ev, d) => {
-      if (!d.qualifier) return;
-      const sx = (d.source as SimNode).x ?? 0;
-      const sy = (d.source as SimNode).y ?? 0;
-      const tx = (d.target as SimNode).x ?? 0;
-      const ty = (d.target as SimNode).y ?? 0;
-      const mx = (sx + tx) / 2;
-      const my = (sy + ty) / 2;
-      tipText.text(`(${d.qualifier})`).attr('x', mx + 6).attr('y', my - 6);
-      const bbox = (tipText.node() as SVGTextElement).getBBox();
-      tipBg
-        .attr('x', bbox.x - 4)
-        .attr('y', bbox.y - 2)
-        .attr('width', bbox.width + 8)
-        .attr('height', bbox.height + 4);
-      tooltip.style('display', null);
-    })
-    .on('mouseleave', () => {
-      tooltip.style('display', 'none');
-    });
-
   const nodesG = root.append('g').attr('class', 'nodes');
   const labelsG = root.append('g').attr('class', 'labels');
 
@@ -234,13 +268,20 @@ export function mountGraphWithPayload(
 
   const nodeCircles = nodeGroups
     .append('circle')
-    .attr('r', 6)
-    .attr('fill', (d) => (d.isGhost ? 'none' : 'var(--vermilion)'))
-    .attr('stroke', (d) => (d.isGhost ? 'var(--ink-light)' : 'var(--vermilion)'))
-    .attr('stroke-width', (d) => (d.isGhost ? 1 : 0))
+    .attr('r', NODE_R)
+    .attr('fill', (d) => (d.isGhost ? 'none' : categoryFill(d.category)))
+    .attr('stroke', (d) => (d.isGhost ? 'var(--graph-node-ghost-stroke)' : categoryStroke(d.category)))
+    .attr('stroke-width', (d) => (d.isGhost ? 1.5 : 0))
     .attr('stroke-dasharray', (d) => (d.isGhost ? '2 3' : null))
     .attr('cx', (d) => d.x ?? 0)
     .attr('cy', (d) => d.y ?? 0);
+
+  function refreshGeometry() {
+    updateLinks(linkLines, hitLines);
+    nodeCircles.attr('cx', (n) => n.x ?? 0).attr('cy', (n) => n.y ?? 0);
+    hanLabels.attr('x', (n) => n.x ?? 0).attr('y', (n) => (n.y ?? 0) - HAN_DY);
+    nameLabels.attr('x', (n) => n.x ?? 0).attr('y', (n) => (n.y ?? 0) + NAME_DY);
+  }
 
   const dragBeh = drag<SVGCircleElement, SimNode>()
     .on('start', (event) => {
@@ -251,10 +292,7 @@ export function mountGraphWithPayload(
       const [x, y] = currentTransform.invert([px, py]);
       d.x = x;
       d.y = y;
-      updateLinks(linkLines, hitLines);
-      nodeCircles.attr('cx', (n) => n.x ?? 0).attr('cy', (n) => n.y ?? 0);
-      hanLabels.attr('x', (n) => n.x ?? 0).attr('y', (n) => (n.y ?? 0) - 14);
-      nameLabels.attr('x', (n) => n.x ?? 0).attr('y', (n) => (n.y ?? 0) + 18);
+      refreshGeometry();
     });
 
   nodeCircles.call(dragBeh);
@@ -272,12 +310,12 @@ export function mountGraphWithPayload(
     .join('text')
     .attr('class', 'han node-label')
     .attr('text-anchor', 'middle')
-    .attr('font-size', 10)
-    .attr('fill', 'var(--vermilion)')
+    .attr('font-size', 13)
+    .attr('fill', (d) => categoryFill(d.category))
     .attr('font-family', 'Cormorant Garamond, serif')
     .text((d) => d.han ?? '')
     .attr('x', (d) => d.x ?? 0)
-    .attr('y', (d) => (d.y ?? 0) - 14);
+    .attr('y', (d) => (d.y ?? 0) - HAN_DY);
 
   const nameLabels = labelsG
     .selectAll<SVGTextElement, SimNode>('text.nm')
@@ -285,12 +323,12 @@ export function mountGraphWithPayload(
     .join('text')
     .attr('class', 'nm node-label')
     .attr('text-anchor', 'middle')
-    .attr('font-size', 10)
+    .attr('font-size', 12)
     .attr('fill', 'var(--ink-soft)')
     .attr('font-family', 'Be Vietnam Pro, sans-serif')
     .text((d) => d.name)
     .attr('x', (d) => d.x ?? 0)
-    .attr('y', (d) => (d.y ?? 0) + 18);
+    .attr('y', (d) => (d.y ?? 0) + NAME_DY);
 
   const filterRootSel = options?.filterRoot
     ? typeof options.filterRoot === 'string'
@@ -353,6 +391,15 @@ export function mountGraphWithPayload(
 
     refreshFilters();
   }
+
+  currentTransform = fitTransform;
+  root.attr('transform', fitTransform.toString());
+  svg.call(z.transform as never, fitTransform);
+  requestAnimationFrame(() => {
+    currentTransform = fitTransform;
+    root.attr('transform', fitTransform.toString());
+    svg.call(z.transform as never, fitTransform);
+  });
 
   (window as unknown as { __MYTHIC_GRAPH__?: unknown }).__MYTHIC_GRAPH__ = {
     nodes: simNodes,
