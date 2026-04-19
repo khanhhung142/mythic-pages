@@ -8,7 +8,7 @@ aliases:
   - Dạ Trạch
   - Bãi Màn Trò (tên trong Toàn thư — huyện Chu Diên)
 name_en: Nhất Dạ Trạch — The Overnight Lake
-category: dia-danh-than-thoai
+category: dia-danh
 subcategories:
   - dia-danh-linh-thieng
   - chien-truong-lich-su
