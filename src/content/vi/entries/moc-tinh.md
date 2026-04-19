@@ -102,7 +102,6 @@ themes:
   - han-hoa-huyen-thoai
 popularity: 2
 status: published
-author: claude+admin
 updated_at: 2026-04-15
 ---
 

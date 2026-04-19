@@ -18,7 +18,7 @@ era_mythic: Hùng Vương (thành quách hiện một đêm rồi bay lên trờ
 era_historic: Thế kỷ VI (Triệu Quang Phục cố thủ tại đây, 547–550)
 region: bac
 locations:
-  - Thôn Yên Vĩnh, xã Triệu Việt Vương (trước: xã Dạ Trạch), huyện Khoái Châu, tỉnh Hưng Yên
+  - "Thôn Yên Vĩnh, xã Triệu Việt Vương (trước: xã Dạ Trạch), huyện Khoái Châu, tỉnh Hưng Yên"
   - Đền Hoá Dạ Trạch (trên bờ đầm — thờ Chử Đồng Tử, Tiên Dung, Tây Sa công chúa)
 coordinates:
   - 20.8500
@@ -82,7 +82,6 @@ scholarly_debates:
   - "Lớp lịch sử Triệu Quang Phục có trước hay sau lớp huyền thoại Hùng Vương trong văn bản?"
 popularity: 4
 status: published
-author: claude+admin
 updated_at: 2026-04-19
 ---
 

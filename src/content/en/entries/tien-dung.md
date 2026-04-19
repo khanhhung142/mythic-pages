@@ -67,7 +67,6 @@ scholarly_debates:
   - "Reign 3 or 18? Variant between text and shrine tradition"
 popularity: 4
 status: published
-author: claude+admin
 updated_at: 2026-04-19
 ---
 

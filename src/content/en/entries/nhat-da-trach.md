@@ -82,7 +82,6 @@ scholarly_debates:
   - "In the texts, which came first — the 6th-century historical layer involving Triệu Quang Phục, or the Hùng Vương mythological layer?"
 popularity: 4
 status: published
-author: claude+admin
 updated_at: 2026-04-19
 ---
 

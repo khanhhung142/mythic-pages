@@ -16,7 +16,8 @@ subcategories:
   - nhan-than
 gender: male
 era: Reign of Hùng Vương III (per Lĩnh Nam chích quái) / XVIII (per the shrine chronicle of Đa Hoà)
-year_approx: ~-2500 (based on the Hùng Vương III framework; no independent archaeological support)
+year_approx: -2500
+year_note: "Based on the Hùng Vương III framework; no independent archaeological support."
 region: north
 locations:
   - Chử Xá Village (Văn Đức, Gia Lâm, Hanoi — birthplace)
@@ -97,7 +98,6 @@ scholarly_debates:
   - "Is the 'Four Immortals' list genuinely ancient? — Chu Xuân Giao argues it is not"
 popularity: 5
 status: published
-author: claude+admin
 updated_at: 2026-04-19
 ---
 

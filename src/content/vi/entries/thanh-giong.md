@@ -19,7 +19,7 @@ gender: nam
 era: Hùng Vương thứ 6 (theo chính sử Lê), nhưng gốc rễ tín ngưỡng có trước đó nhiều thế kỷ
 region: bac
 locations:
-  - Hương Phù Đổng, huyện Vũ Ninh (nay: xã Phù Đổng, Gia Lâm, Hà Nội)
+  - "Hương Phù Đổng, huyện Vũ Ninh (nay: xã Phù Đổng, Gia Lâm, Hà Nội)"
   - Núi Trâu / Trâu Sơn (chiến trường đánh giặc Ân)
   - Núi Vệ Linh / Sóc Sơn (nơi cởi giáp bay lên trời)
   - Đền Phù Đổng (Di tích quốc gia đặc biệt 2013)
@@ -92,7 +92,6 @@ themes:
   - chong-ngoai-xam
 popularity: 5
 status: published
-author: claude+admin
 updated_at: 2026-04-19
 ---
 

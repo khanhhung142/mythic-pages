@@ -29,21 +29,61 @@ const pageDescription = data.summary ?? data.name_en ?? data.name_vi;
 const categoryLabel = getCategoryLabel(data.category, lang);
 const hanChar = data.name_han?.charAt(0) ?? '';
 
+function formatApproxYear(y: number, locale: Locale): string {
+  if (locale === 'vi') {
+    if (y < 0) return `khoảng ${Math.abs(y)} TCN`;
+    return String(y);
+  }
+  if (y < 0) return `c. ${Math.abs(y)} BCE`;
+  return `${y} CE`;
+}
+
+let approxYearValue: string | undefined;
+if (data.year_approx != null && !Number.isNaN(data.year_approx)) {
+  approxYearValue = formatApproxYear(data.year_approx, lang);
+  if (data.year_note) approxYearValue = `${approxYearValue} — ${data.year_note}`;
+}
+
+const genderKey = data.gender ? `gender.${data.gender}` : '';
+const genderLookup = genderKey ? t(lang, genderKey) : '';
+const genderLabel =
+  data.gender && genderLookup !== genderKey ? genderLookup : (data.gender ?? '');
+
 const infoRows = [
-  data.category          ? { label: t(lang, 'entry.type'),     value: categoryLabel,                            isLink: false } : null,
-  data.gender            ? { label: t(lang, 'entry.gender'),   value: t(lang, `gender.${data.gender}`),         isLink: false } : null,
-  data.era               ? { label: t(lang, 'entry.era'),      value: data.era,                                 isLink: false } : null,
-  data.region            ? { label: t(lang, 'entry.region'),   value: t(lang, `region.${data.region}`),         isLink: false } : null,
-  data.locations?.length ? { label: t(lang, 'entry.location'), value: data.locations[0],                        isLink: true  } : null,
-  data.group             ? { label: t(lang, 'entry.group'),    value: data.group,                               isLink: false } : null,
+  data.category ? { label: t(lang, 'entry.type'), value: categoryLabel, isLink: false } : null,
+  data.type ? { label: t(lang, 'entry.recordType'), value: data.type, isLink: false } : null,
+  data.gender ? { label: t(lang, 'entry.gender'), value: genderLabel ?? '', isLink: false } : null,
+  data.era ? { label: t(lang, 'entry.era'), value: data.era, isLink: false } : null,
+  data.era_mythic ? { label: t(lang, 'entry.eraMythic'), value: data.era_mythic, isLink: false } : null,
+  data.era_historic ? { label: t(lang, 'entry.eraHistoric'), value: data.era_historic, isLink: false } : null,
+  approxYearValue ? { label: t(lang, 'entry.approxYear'), value: approxYearValue, isLink: false } : null,
+  data.region ? { label: t(lang, 'entry.region'), value: t(lang, `region.${data.region}`), isLink: false } : null,
+  data.locations?.length ? { label: t(lang, 'entry.location'), value: data.locations[0], isLink: true } : null,
+  data.group ? { label: t(lang, 'entry.group'), value: data.group, isLink: false } : null,
+  data.location_modern
+    ? { label: t(lang, 'entry.locationModern'), value: data.location_modern, isLink: false }
+    : null,
+  data.text_primary ? { label: t(lang, 'entry.textPrimary'), value: data.text_primary, isLink: false } : null,
+  data.cult_center ? { label: t(lang, 'entry.cultCenter'), value: data.cult_center, isLink: false } : null,
+  data.archaeological_note
+    ? { label: t(lang, 'entry.archaeologicalNote'), value: data.archaeological_note, isLink: false }
+    : null,
 ].filter(Boolean) as { label: string; value: string; isLink: boolean }[];
 
+const geographyEntries = data.geography ? Object.entries(data.geography as Record<string, string>) : [];
+
 const relGroups = [
-  { label: t(lang, 'entry.family'),    items: data.relations?.family },
-  { label: t(lang, 'entry.allies'),    items: data.relations?.allies },
-  { label: t(lang, 'entry.enemies'),   items: data.relations?.enemies },
+  { label: t(lang, 'entry.family'), items: data.relations?.family },
+  { label: t(lang, 'entry.teachers'), items: data.relations?.teachers },
+  { label: t(lang, 'entry.allies'), items: data.relations?.allies },
+  { label: t(lang, 'entry.cohabitors'), items: data.relations?.cohabitors },
+  { label: t(lang, 'entry.alliedHistorical'), items: data.relations?.allied_historical },
+  { label: t(lang, 'entry.enemies'), items: data.relations?.enemies },
   { label: t(lang, 'entry.artifacts'), items: data.relations?.artifacts },
-].filter(g => g.items?.length) as { label: string; items: string[] }[];
+  { label: t(lang, 'entry.mythicEvents'), items: data.relations?.mythic_events },
+  { label: t(lang, 'entry.historicEvents'), items: data.relations?.historic_events },
+  { label: t(lang, 'entry.relatedSites'), items: data.relations?.related_sites },
+].filter((g) => g.items?.length) as { label: string; items: string[] }[];
 
 function slugToLabel(slug: string): string {
   return slug.replace(/-/g, ' ');
@@ -139,6 +179,7 @@ function slugToLabel(slug: string): string {
               <em>{src.title}</em>
               {src.chapter && <Fragment>. {src.chapter}</Fragment>}
               {src.edition && <Fragment>. {src.edition}</Fragment>}.
+              {src.notes && <p class="source-note">{src.notes}</p>}
             </li>
           ))}
         </ol>
@@ -180,6 +221,12 @@ function slugToLabel(slug: string): string {
               </dd>
             </div>
           ))}
+          {geographyEntries.map(([geoKey, geoVal]) => (
+            <div class="info-row">
+              <dt class="geo-key">{geoKey.replace(/_/g, ' ')}</dt>
+              <dd>{geoVal}</dd>
+            </div>
+          ))}
         </dl>
       </div>
 
@@ -212,6 +259,31 @@ function slugToLabel(slug: string): string {
           </div>
         </div>
       )}
+
+      {(data.heritage_status?.length || data.scholarly_debates?.length) ? (
+        <div class="side-card">
+          {data.heritage_status?.length ? (
+            <div class="meta-block">
+              <div class="side-sub">{t(lang, 'entry.heritageStatus')}</div>
+              <ul class="meta-list">
+                {data.heritage_status.map((item: string) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
+          {data.scholarly_debates?.length ? (
+            <div class="meta-block">
+              <div class="side-sub">{t(lang, 'entry.scholarlyDebates')}</div>
+              <ul class="meta-list">
+                {data.scholarly_debates.map((item: string) => (
+                  <li>{item}</li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
+        </div>
+      ) : null}
 
     </div>
   </aside>
@@ -482,6 +554,33 @@ header.entry-head::before{
   font-style:italic;
   color:var(--ink);
 }
+.source-note{
+  margin:.5rem 0 0;
+  font-size:.8rem;
+  line-height:1.5;
+  color:var(--ink-mute);
+  font-style:normal;
+  font-weight:300;
+}
+.info-row dt.geo-key{text-transform:capitalize}
+.side-sub{
+  font-size:.65rem;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+  color:var(--ink-light);
+  margin:0 0 .6rem;
+  font-weight:500;
+}
+.meta-block{margin-bottom:1.2rem}
+.meta-block:last-child{margin-bottom:0}
+.meta-list{
+  margin:0;
+  padding-left:1rem;
+  font-size:.82rem;
+  line-height:1.55;
+  color:var(--ink-soft);
+}
+.meta-list li{margin-bottom:.45rem}
 
 /* RELATED */
 .related{margin-top:5rem}

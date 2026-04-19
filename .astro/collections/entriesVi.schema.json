@@ -2,6 +2,9 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "type": "object",
   "properties": {
+    "id": {
+      "type": "string"
+    },
     "name_vi": {
       "type": "string"
     },
@@ -26,14 +29,26 @@
         "type": "string"
       }
     },
+    "type": {
+      "type": "string"
+    },
     "gender": {
       "type": "string"
     },
     "era": {
       "type": "string"
     },
+    "era_mythic": {
+      "type": "string"
+    },
+    "era_historic": {
+      "type": "string"
+    },
     "year_approx": {
       "type": "number"
+    },
+    "year_note": {
+      "type": "string"
     },
     "year_end": {
       "type": "number"
@@ -47,10 +62,22 @@
         "type": "string"
       }
     },
+    "location_modern": {
+      "type": "string"
+    },
     "coordinates": {
       "type": "array",
       "items": {
         "type": "number"
+      }
+    },
+    "geography": {
+      "type": "object",
+      "propertyNames": {
+        "type": "string"
+      },
+      "additionalProperties": {
+        "type": "string"
       }
     },
     "relations": {
@@ -79,6 +106,42 @@
           "items": {
             "type": "string"
           }
+        },
+        "teachers": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "allied_historical": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "cohabitors": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "mythic_events": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "historic_events": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "related_sites": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
         }
       }
     },
@@ -97,6 +160,9 @@
             "type": "string"
           },
           "edition": {
+            "type": "string"
+          },
+          "notes": {
             "type": "string"
           }
         },
@@ -117,15 +183,33 @@
         "type": "string"
       }
     },
+    "text_primary": {
+      "type": "string"
+    },
+    "cult_center": {
+      "type": "string"
+    },
+    "heritage_status": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "archaeological_note": {
+      "type": "string"
+    },
+    "scholarly_debates": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
     "popularity": {
       "default": 1,
       "type": "number"
     },
     "status": {
       "default": "published",
-      "type": "string"
-    },
-    "author": {
       "type": "string"
     },
     "updated_at": {

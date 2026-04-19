@@ -16,7 +16,8 @@ subcategories:
   - nhan-than
 gender: nam
 era: Hùng Vương thứ 3 (theo Lĩnh Nam chích quái) / thứ 18 (theo thần tích đền Đa Hoà)
-year_approx: ~-2500 (theo khung Hùng Vương thứ 3, không có cơ sở niên đại học thuật độc lập)
+year_approx: -2500
+year_note: "Theo khung Hùng Vương thứ 3; không có cơ sở niên đại học thuật độc lập."
 region: bac
 locations:
   - Làng Chử Xá (Văn Đức, Gia Lâm, Hà Nội — quê hương)
@@ -97,7 +98,6 @@ scholarly_debates:
   - "Tứ bất tử có phải truyền thống cổ? — Chu Xuân Giao phủ nhận tính cổ xưa của bảng này"
 popularity: 5
 status: published
-author: claude+admin
 updated_at: 2026-04-19
 ---
 

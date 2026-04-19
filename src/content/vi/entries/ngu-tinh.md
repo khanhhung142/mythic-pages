@@ -65,7 +65,6 @@ themes:
   - giai-thich-dia-danh
 popularity: 3
 status: published
-author: claude+admin
 updated_at: 2026-04-14
 ---
 

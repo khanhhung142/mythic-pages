@@ -67,7 +67,6 @@ scholarly_debates:
   - "Hùng Vương thứ 3 hay thứ 18? — dị bản giữa văn bản và thần tích"
 popularity: 4
 status: published
-author: claude+admin
 updated_at: 2026-04-19
 ---
 

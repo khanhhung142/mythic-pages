@@ -173,7 +173,6 @@ themes:
   - hung-vuong
 popularity: 5
 status: published
-author: claude+admin
 updated_at: 2026-04-15
 ---
 
