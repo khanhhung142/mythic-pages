@@ -10,7 +10,7 @@ File: `src/components/Header.astro`
 
 **Renders**: Fixed top navigation bar with:
 - Logo (神 mark + "Thần Thoại Việt" — brand text not yet fully localized)
-- Nav links from `t(lang, 'nav.*')` with `href` from `localePath(lang, ...)` in `src/i18n/paths.ts` (About → `/about` or `/{lang}/about`)
+- Nav links from `t(lang, 'nav.*')` with `href` from `localePath(lang, ...)` in `src/i18n/paths.ts` (includes Relations → `/relations` or `/{lang}/relations`, About → `/about` or `/{lang}/about`)
 - Language switch: `<a>` links generated from `locales` via `alternateLocalePath(pathname, locale)`
 
 **Styling**: `<style is:global>` — fixed position, backdrop blur, responsive (hides nav links on mobile)
@@ -74,11 +74,35 @@ interface Props {
 2. Sticky filter bar with category pills linking to `localePath(lang, '/entries/category/[slug]')`
 3. 3-column card grid of entries (image placeholder, category tag, name, summary)
 
-**Used by**: `entries/index.astro`, `[lang]/entries/index.astro`, `entries/category/[category].astro`, `[lang]/entries/category/[category].astro`
+**Used by**: `src/pages/[...lang]/entries/index.astro`, `src/pages/[...lang]/entries/category/[category].astro`
 
 **Key behavior**:
 - `activeCategory` determines which pill is highlighted
 - Card grid renders inline (does NOT use `EntryCard.astro`)
+
+---
+
+### RelationsPage.astro
+
+File: `src/components/RelationsPage.astro`
+
+**Props**: `{ entries: EntryLike[]; lang: Locale }` — collection entries from `getLocalizedEntries(lang)`.
+
+**Renders**: Full graph page inside `BaseLayout`: eyebrow/title/stats, filter pills (relation kinds + categories), SVG `#graph-root`, hidden accessibility list of edges, embedded JSON (`#graph-data`) plus a client script that calls `mountGraphWithPayload()` from `src/scripts/mount-graph.ts`.
+
+**Used by**: `src/pages/[...lang]/relations.astro`
+
+---
+
+### RelationMiniGraph.astro
+
+File: `src/components/RelationMiniGraph.astro`
+
+**Props**: `{ entry: EntryLike; allEntries: EntryLike[]; lang: Locale }`
+
+**Renders**: Section below the “read more” block on entry pages when the 1-hop subgraph has at least one edge. Embeds JSON and runs `mountGraphWithPayload()` for `mode: 'local'` (no filter chrome).
+
+**Used by**: `EntryLayout.astro` (when `allEntries` is passed)
 
 ---
 
@@ -111,7 +135,7 @@ Imports `global.css`.
 
 File: `src/layouts/EntryLayout.astro`
 
-**Props**: `{ entry: any; related?: any[]; lang?: Locale }` (see file for exact interface)
+**Props**: `{ entry: any; related?: any[]; lang?: Locale; allEntries?: any[] }` (see file for exact interface)
 
 **Renders**: Complete standalone HTML document (NOT extending `BaseLayout`):
 
@@ -128,6 +152,7 @@ File: `src/layouts/EntryLayout.astro`
         <slot /> (markdown Content)
         sources list
         related entries grid
+        RelationMiniGraph (optional, needs `allEntries`)
       </article>
       <aside> (sticky sidebar)
         Info table (category, gender, era, region, location, group)
@@ -145,7 +170,7 @@ File: `src/layouts/EntryLayout.astro`
 - `slugToLabel()` — converts theme slugs to display text
 - Category/region/gender labels use `getCategoryLabel` and `t(lang, ...)`
 
-**Used by**: `entries/[id].astro`, `[lang]/entries/[id].astro`
+**Used by**: `src/pages/[...lang]/entries/[id].astro`
 
 ## Component Dependency Graph
 

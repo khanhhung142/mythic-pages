@@ -71,7 +71,13 @@ graph LR
     subgraph "Entry Detail"
         E1["getLocalizedEntry(lang, id)"] --> E2["getStaticPaths():<br/>paths per locale + id"]
         E2 --> E3["related = top 3 by popularity<br/>(excluding current)"]
-        E3 --> E4["render(entry) → Content component"]
+        E3 --> E3b["allEntries = published list<br/>→ RelationMiniGraph"]
+        E3b --> E4["render(entry) → Content component"]
+    end
+
+    subgraph "Relations graph"
+        R1["getLocalizedEntries(lang)"] --> R2["buildGraph() in relations-graph.ts"]
+        R2 --> R3["RelationsPage embeds JSON + mountGraphWithPayload()"]
     end
 ```
 

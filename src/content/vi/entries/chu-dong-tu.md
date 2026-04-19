@@ -101,7 +101,7 @@ status: published
 updated_at: 2026-04-19
 ---
 
-## Câu chuyện
+## Câu _chuyện_
 
 Chử Đồng Tử bắt đầu từ đáy. Bố mẹ mất sớm, nhà cháy, cái nghèo để lại duy nhất một chiếc khố cho hai bố con dùng chung. Khi bố hấp hối, Chử Đồng Tử nhường luôn chiếc khố để liệm cha, còn mình trần truồng ra bờ sông mò cua bắt ốc kiếm sống.
 
@@ -113,7 +113,7 @@ Rồi Chử Đồng Tử theo thuyền buôn ra biển. Tới núi Quỳnh Viên
 
 Về sau, một đêm hai vợ chồng dừng chân giữa đồng trống, cắm gậy xuống đất, úp nón lên. Đến canh ba, thành quách hiện ra, lầu ngọc điện vàng, đầy đủ tiên đồng ngọc nữ. Vua cha nghe tin đem quân đến đánh. Nửa đêm gió nổi, cả thành quách — cùng với Chử Đồng Tử, Tiên Dung và toàn bộ người trong thành — bay lên trời. Mặt đất chỗ đó sụt xuống thành đầm lớn. Người ta gọi là **Nhất Dạ Trạch** — Đầm Một Đêm.
 
-## Lớp truyền thuyết thứ hai: Triệu Quang Phục
+## Lớp truyền thuyết thứ hai: _Triệu Quang Phục_
 
 Khoảng ba trăm năm sau, năm 549, tướng **Triệu Quang Phục** đang cầm cự với quân Lương tại chính đầm Dạ Trạch này. Quân Lương không thể đánh vào vì lau sậy dày đặc, bùn lầy không lội được. Quang Phục đốt hương cầu đảo. Theo *Đại Việt sử ký toàn thư*, "tục truyền rằng thần nhân trong đầm là Chử Đồng Tử cưỡi rồng vàng từ trên trời rơi xuống, rút móng rồng trao cho vua" để gắn vào mũ chiến đấu giặc.
 
@@ -121,7 +121,7 @@ Ngô Sĩ Liên nghi ngờ câu chuyện này — ông ghi xong rồi phê thẳn
 
 Tạ Chí Đại Trường trong *Thần, Người và Đất Việt* gọi cơ chế này là "nhân thần chồng lên thiên thần." Chử Đồng Tử ban đầu có thể chỉ là thuỷ thần địa phương của đầm Dạ Trạch. Cuộc kháng chiến Triệu Quang Phục biến ông thành thần bảo hộ quốc gia. Truyền thuyết Hùng Vương — Tiên Dung — thành một đêm là lớp văn bản được ghi muộn hơn, trong *Lĩnh Nam chích quái*, đặt ông vào thời nguyên thuỷ.
 
-## Đạo giáo, Phật giáo, hay cả hai?
+## Đạo giáo, Phật giáo, hay cả _hai_?
 
 Đây là câu hỏi chưa ai trả lời dứt khoát.
 
@@ -133,7 +133,7 @@ Nguyễn Duy Hinh đứng giữa: chỉ nên gọi Chử Đồng Tử là nhân 
 
 Cặp "gậy – nón" là vật chứng cho sự tranh luận này. Cùng một bộ đồ vật đọc được theo cả hai hướng: **tích trượng và nón tăng** (Phật giáo) hoặc **pháp khí phép thuật** (Đạo giáo). Không có ai thắng cuộc tranh luận này. Có lẽ cũng không cần phân định, vì câu chuyện xuất hiện trước khi cả hai tôn giáo đó có mặt đủ để đặt tên cho chính mình ở vùng đất này.
 
-## Tứ bất tử — và câu hỏi về tính cổ xưa của bảng này
+## Tứ bất tử — và câu hỏi về tính _cổ xưa_ của bảng này
 
 Chử Đồng Tử thường được xếp vào hệ **Tứ bất tử** cùng Tản Viên Sơn Thánh, Phù Đổng Thiên Vương và Thánh Mẫu Liễu Hạnh. Nhưng bảng này không ổn định như người ta tưởng.
 
@@ -141,13 +141,13 @@ Chu Xuân Giao trong bài nghiên cứu đăng *Tạp chí Nghiên cứu Tôn gi
 
 Điều thú vị là: Chử Đồng Tử có mặt trong hầu như mọi dị bản danh sách "bất tử," dù tên còn lại thay đổi. Một số bản thế kỷ XV–XVII thay Liễu Hạnh bằng Nguyễn Minh Không hoặc Từ Đạo Hạnh. Ông là nhân vật ổn định nhất trong một hệ thống vốn không ổn định. Đó là bằng chứng cho thấy tín ngưỡng thờ Chử Đồng Tử có gốc rễ sâu hơn bảng Tứ bất tử, không phải ngược lại.
 
-## Ông tổ nghề buôn
+## Ông tổ nghề _buôn_
 
 Chi tiết thương mại trong truyện không phải tình tiết phụ. Sau khi bị vua cha cấm về cung, Chử Đồng Tử và Tiên Dung không về quê sống ẩn dật — họ mở chợ. Chợ Hà Thị, ngay tại bãi sông nơi kỳ ngộ, giao thương với "khách nước ngoài." Trước khi gặp sư Phật Quang, Chử Đồng Tử đi trên thuyền buôn, không phải thuyền hành hương.
 
 Dân gian vùng Khoái Châu và dọc sông Hồng từ lâu thờ ông như tổ sư nghề thương mại, đặc biệt buôn bán đường sông. Ngày nay một số cộng đồng doanh nhân Việt Nam tôn ông là "Thánh tổ doanh thương" — tiếp nối truyền thống này trong hình thức mới.
 
-## Di tích và thờ cúng
+## Di tích và _thờ cúng_
 
 Hệ thống thờ Chử Đồng Tử trải theo trục sông Hồng từ Gia Lâm đến Khoái Châu, qua khoảng 72 làng. Ba trung tâm chính:
 

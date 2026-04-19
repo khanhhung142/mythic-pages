@@ -23,6 +23,8 @@ Legacy `/vi` redirects are still supported.
 | `/{lang}/entries/category/[category]` | `src/pages/[...lang]/entries/category/[category].astro` | same | Category page (non-default locales) |
 | `/entries/[id]` | `src/pages/[...lang]/entries/[id].astro` | `EntryLayout` | Entry detail (default locale) |
 | `/{lang}/entries/[id]` | `src/pages/[...lang]/entries/[id].astro` | `EntryLayout` | Entry detail (non-default locales) |
+| `/relations` | `src/pages/[...lang]/relations.astro` | `BaseLayout` (via `RelationsPage`) | Full relation graph (default locale) |
+| `/{lang}/relations` | `src/pages/[...lang]/relations.astro` | same | Full relation graph (non-default locales) |
 
 ## Request Flow
 

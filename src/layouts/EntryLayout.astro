@@ -2,6 +2,7 @@
 import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import RelationMiniGraph from '../components/RelationMiniGraph.astro';
 import { getCategoryLabel } from '../data/category-labels';
 import { defaultLocale, locales, t } from '../i18n/config';
 import { localePath, alternateLocalePath } from '../i18n/paths';
@@ -11,9 +12,10 @@ interface Props {
   entry: any;
   related?: any[];
   lang?: Locale;
+  allEntries?: any[];
 }
 
-const { entry, related = [], lang = 'vi' } = Astro.props;
+const { entry, related = [], lang = 'vi', allEntries = [] } = Astro.props;
 const { data } = entry;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -200,6 +202,10 @@ function slugToLabel(slug: string): string {
           ))}
         </div>
       </div>
+    )}
+
+    {allEntries.length > 0 && (
+      <RelationMiniGraph entry={entry} allEntries={allEntries} lang={lang} />
     )}
 
   </article>

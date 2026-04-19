@@ -9,6 +9,7 @@ export const ui: Record<Locale, Record<string, string>> = {
     "nav.entries": "Mục lục",
     "nav.categories": "Phân loại",
     "nav.about": "Về dự án",
+    "nav.relations": "Quan hệ",
     "hero.eyebrow": "Kho tàng huyền sử Việt",
     "hero.title1": "Thần Thoại",
     "hero.title2": "Việt Nam",
@@ -109,6 +110,18 @@ export const ui: Record<Locale, Record<string, string>> = {
     "about.rm5.title": "Đóng góp từ cộng đồng",
     "about.rm5.desc":
       "Tính năng để người dùng thêm câu chuyện địa phương và tài liệu của chính mình — do tác giả dự án triển khai ở giai đoạn sau.",
+    "relations.eyebrow": "№ 04 — Mạng lưới",
+    "relations.title1": "Mạng ",
+    "relations.title2": "quan hệ",
+    "relations.desc":
+      "Khám phá {nodes} nhân vật qua {edges} mối quan hệ — rồng, tiên, yêu quái và phả hệ truyền thuyết.",
+    "relations.stats": "{nodes} mục · {unresolved} chưa ghép",
+    "relations.filter.kindLabel": "Loại quan hệ",
+    "relations.filter.categoryLabel": "Phân loại",
+    "relations.filter.all": "Tất cả",
+    "relations.graphAria": "Đồ thị mạng lưới quan hệ giữa các mục thần thoại",
+    "relations.fallbackHeading": "Danh sách quan hệ (thay thế cho đồ thị)",
+    "relations.mini.title": "Mạng lưới cục bộ",
   },
   en: {
     "site.title": "Vietnamese Mythology",
@@ -116,6 +129,7 @@ export const ui: Record<Locale, Record<string, string>> = {
     "nav.entries": "Entries",
     "nav.categories": "Categories",
     "nav.about": "About",
+    "nav.relations": "Relations",
     "hero.eyebrow": "Treasury of Vietnamese Legends",
     "hero.title1": "Vietnamese",
     "hero.title2": "Mythology",
@@ -215,6 +229,18 @@ export const ui: Record<Locale, Record<string, string>> = {
     "about.rm5.title": "Community submissions",
     "about.rm5.desc":
       "A future feature for readers to add local stories and materials — to be built by the project author in a later phase.",
+    "relations.eyebrow": "№ 04 — Network",
+    "relations.title1": "Relation ",
+    "relations.title2": "network",
+    "relations.desc":
+      "Explore {nodes} figures through {edges} relationships — dragons, spirits, demons and mythic kinship.",
+    "relations.stats": "{nodes} nodes · {unresolved} unresolved",
+    "relations.filter.kindLabel": "Relation type",
+    "relations.filter.categoryLabel": "Category",
+    "relations.filter.all": "All",
+    "relations.graphAria": "Graph of relationships between mythology entries",
+    "relations.fallbackHeading": "Relationship list (graph alternative)",
+    "relations.mini.title": "Local network",
   },
 };
 

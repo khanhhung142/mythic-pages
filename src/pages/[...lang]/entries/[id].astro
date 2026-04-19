@@ -19,6 +19,7 @@ export async function getStaticPaths() {
         props: {
           lang,
           entry,
+          allEntries: published,
           related: published
             .filter((e) => e.id !== entry.id)
             .sort((a, b) => (b.data.popularity ?? 1) - (a.data.popularity ?? 1))
@@ -31,9 +32,14 @@ export async function getStaticPaths() {
   return paths;
 }
 
-const { entry, related, lang } = Astro.props as { entry: any; related: any[]; lang: Locale };
+const { entry, related, lang, allEntries } = Astro.props as {
+  entry: any;
+  related: any[];
+  lang: Locale;
+  allEntries: any[];
+};
 const { Content } = await render(entry);
 ---
-<EntryLayout entry={entry} related={related} lang={lang}>
+<EntryLayout entry={entry} related={related} lang={lang} allEntries={allEntries}>
   <Content />
 </EntryLayout>

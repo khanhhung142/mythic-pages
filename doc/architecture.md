@@ -10,6 +10,7 @@
 | CSS Processing | PostCSS + Autoprefixer | ^8.5.1 / ^10.4.21 |
 | Type Checking | @astrojs/check | ^0.9.0 |
 | Content | Astro Content Collections + Zod | built-in |
+| Graph (client) | d3-force, d3-selection, d3-drag, d3-zoom | ^3.0.0 |
 | Node | 22 (see `.node-version`) |
 | Package Manager | npm (also has `bun.lock`) |
 
@@ -37,6 +38,8 @@ mythic-pages/
     │   └── content.ts         # getLocalizedEntries, getLocalizedEntry, getAllEntryIds
     ├── data/
     │   └── category-labels.ts # Category slug → label per locale (vi/en)
+    ├── lib/
+    │   └── relations-graph.ts # buildGraph, buildLocalSubgraph, name matcher
     ├── content/
     │   ├── vi/entries/        # Vietnamese markdown (canonical set of entries)
     │   │   └── *.md
@@ -45,17 +48,11 @@ mythic-pages/
     ├── layouts/
     │   ├── BaseLayout.astro   # Minimal shell: <html lang>, global.css, Header, Footer
     │   └── EntryLayout.astro  # Full entry page: standalone <html>, sidebar, typography
-    ├── pages/                 # File-based routing (default root + dynamic [lang]/)
-    │   ├── index.astro        # VI home (HomePage)
-    │   ├── about.astro
-    │   ├── entries/
-    │   │   ├── index.astro
-    │   │   ├── [id].astro
-    │   │   └── category/
-    │   │       └── [category].astro
-    │   └── [lang]/            # Non-default locale URLs /{lang}/...
+    ├── pages/                 # File-based routing — all locale-aware routes under [...lang]/
+    │   └── [...lang]/
     │       ├── index.astro
     │       ├── about.astro
+    │       ├── relations.astro
     │       └── entries/
     │           ├── index.astro
     │           ├── [id].astro
@@ -63,15 +60,20 @@ mythic-pages/
     │               └── [category].astro
     ├── styles/
     │   └── global.css         # CSS variables, reset, base typography
+    ├── scripts/
+    │   └── mount-graph.ts     # Client: D3-force layout, zoom, filters, drag
     ├── components/
     │   ├── Header.astro       # Fixed nav bar + lang switch
     │   ├── Footer.astro       # Site footer
     │   ├── HomePage.astro     # Shared home sections (hero, featured, categories, quote)
     │   ├── EntriesListPage.astro  # Shared list page (catalog + category filter)
+    │   ├── RelationsPage.astro    # Full-screen relation graph (D3)
+    │   ├── RelationMiniGraph.astro # Entry-local 1-hop subgraph
     │   └── AboutPage.astro    # Shared About content for all locales
     └── test/
         ├── setup.ts
-        └── example.test.ts
+        ├── example.test.ts
+        └── relations-graph.test.ts
 ```
 
 ## Build Pipeline
@@ -95,6 +97,7 @@ graph LR
 | `npm run build` | `astro build` — generate static site to `dist/` |
 | `npm run preview` | `astro preview` — preview built site |
 | `npm run check` | `astro check` — TypeScript type checking |
+| `npm run test` | `vitest run` — unit tests (e.g. `relations-graph`) |
 
 ## Astro Config
 

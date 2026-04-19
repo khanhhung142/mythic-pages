@@ -1,0 +1,279 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { buildGraph, RELATION_KINDS, type EntryLike, type RelationKind } from '../lib/relations-graph';
+import { getCategoryLabel, CATEGORY_SLUGS } from '../data/category-labels';
+import { t } from '../i18n/config';
+import type { Locale } from '../i18n/config';
+
+interface Props {
+  entries: EntryLike[];
+  lang: Locale;
+}
+
+const { entries, lang } = Astro.props;
+
+const graph = buildGraph(entries, lang);
+
+const kindUiKey: Record<RelationKind, string> = {
+  family: 'entry.family',
+  teachers: 'entry.teachers',
+  allies: 'entry.allies',
+  cohabitors: 'entry.cohabitors',
+  allied_historical: 'entry.alliedHistorical',
+  enemies: 'entry.enemies',
+  artifacts: 'entry.artifacts',
+  mythic_events: 'entry.mythicEvents',
+  historic_events: 'entry.historicEvents',
+  related_sites: 'entry.relatedSites',
+};
+
+const desc = t(lang, 'relations.desc')
+  .replace('{nodes}', String(graph.nodes.length))
+  .replace('{edges}', String(graph.edges.length));
+
+const stats = t(lang, 'relations.stats')
+  .replace('{nodes}', String(graph.nodes.length))
+  .replace('{unresolved}', String(graph.ghostCount));
+
+const pageTitle = `${t(lang, 'relations.title1')}${t(lang, 'relations.title2')} — ${t(lang, 'site.title')}`;
+
+const graphPayload = {
+  nodes: graph.nodes,
+  edges: graph.edges,
+  ghostCount: graph.ghostCount,
+  mode: 'global' as const,
+};
+---
+
+<BaseLayout title={pageTitle} description={desc} lang={lang}>
+  <div class="relations-header">
+    <div class="relations-header-inner">
+      <div class="eyebrow">{t(lang, 'relations.eyebrow')}</div>
+      <h1 class="relations-title">{t(lang, 'relations.title1')}<em>{t(lang, 'relations.title2')}</em></h1>
+      <p class="relations-desc">{desc}</p>
+      <div class="relations-stats">{stats}</div>
+    </div>
+  </div>
+
+  <div class="relations-body">
+    <div id="graph-filters" class="graph-filters">
+      <div class="filter-block">
+        <span class="filter-label">{t(lang, 'relations.filter.kindLabel')}</span>
+        <div class="filter-pills">
+          <button type="button" class="pill pill-active" data-filter-kind="all">{t(lang, 'relations.filter.all')}</button>
+          {RELATION_KINDS.map((k) => (
+            <button type="button" class="pill pill-active" data-filter-kind={k}>
+              {t(lang, kindUiKey[k])}
+            </button>
+          ))}
+        </div>
+      </div>
+      <div class="filter-block">
+        <span class="filter-label">{t(lang, 'relations.filter.categoryLabel')}</span>
+        <div class="filter-pills">
+          <button type="button" class="pill pill-active" data-filter-category="all">{t(lang, 'relations.filter.all')}</button>
+          {CATEGORY_SLUGS.map((slug) => (
+            <button type="button" class="pill" data-filter-category={slug}>
+              {getCategoryLabel(slug, lang)}
+            </button>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <div class="graph-wrap">
+      <svg id="graph-root" class="graph-svg" aria-label={t(lang, 'relations.graphAria')} />
+      <div class="graph-watermark" aria-hidden="true">緣</div>
+    </div>
+
+    <ul class="relations-fallback visually-hidden">
+      <li><strong>{t(lang, 'relations.fallbackHeading')}</strong></li>
+      {graph.edges.map((e) => {
+        const from = graph.nodes.find((n) => n.id === e.source);
+        const to = graph.nodes.find((n) => n.id === e.target);
+        const kind = t(lang, kindUiKey[e.kind]);
+        return (
+          <li>
+            <a href={from?.href}>{from?.name ?? e.source}</a>
+            {' — '}
+            <span>{kind}</span>
+            {' → '}
+            {to?.href ? <a href={to.href}>{to.name}</a> : <span>{to?.name ?? e.target}</span>}
+          </li>
+        );
+      })}
+    </ul>
+
+    <script type="application/json" id="graph-data" set:html={JSON.stringify(graphPayload)} />
+    <script>
+      import { mountGraphWithPayload } from '../scripts/mount-graph.ts';
+      const el = document.getElementById('graph-data');
+      if (el?.textContent) {
+        mountGraphWithPayload('graph-root', JSON.parse(el.textContent), {
+          filterRoot: '#graph-filters',
+        });
+      }
+    </script>
+  </div>
+</BaseLayout>
+
+<style>
+  .relations-header {
+    padding: 10rem 3rem 3rem;
+    border-bottom: 1px solid rgba(26, 15, 8, 0.15);
+    position: relative;
+    overflow: hidden;
+  }
+  .relations-header::before {
+    content: '緣';
+    position: absolute;
+    top: 40%;
+    right: -2%;
+    transform: translateY(-50%);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18rem;
+    color: rgba(168, 50, 30, 0.05);
+    font-weight: 700;
+    line-height: 1;
+    pointer-events: none;
+    user-select: none;
+  }
+  .relations-header-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 800px;
+  }
+  .eyebrow {
+    font-size: 0.75rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--vermilion);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .eyebrow::before {
+    content: '';
+    width: 40px;
+    height: 1px;
+    background: var(--vermilion);
+  }
+  .relations-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    font-weight: 500;
+    line-height: 1.05;
+    margin-bottom: 1rem;
+  }
+  .relations-title em {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    color: var(--vermilion);
+  }
+  .relations-desc {
+    font-size: 1.05rem;
+    color: var(--ink-soft);
+    line-height: 1.7;
+    margin-bottom: 1rem;
+  }
+  .relations-stats {
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ink-mute);
+  }
+  .relations-body {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem 3rem 5rem;
+  }
+  .graph-filters {
+    margin-bottom: 1.5rem;
+  }
+  .filter-block {
+    margin-bottom: 1rem;
+  }
+  .filter-label {
+    display: block;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ink-light);
+    margin-bottom: 0.5rem;
+  }
+  .filter-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+  }
+  .pill {
+    font-size: 0.7rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.45rem 0.75rem;
+    border: 1px solid var(--line);
+    background: var(--paper-light);
+    color: var(--ink-soft);
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+  }
+  .pill:hover {
+    border-color: var(--vermilion);
+    color: var(--ink);
+  }
+  .pill-active {
+    background: var(--vermilion);
+    border-color: var(--vermilion);
+    color: var(--paper);
+  }
+  .graph-wrap {
+    position: relative;
+    border: 1px solid var(--line);
+    background: var(--paper-light);
+    min-height: 800px;
+  }
+  .graph-svg {
+    display: block;
+    width: 100%;
+    height: 800px;
+    background: var(--paper);
+  }
+  .graph-watermark {
+    position: absolute;
+    bottom: 1rem;
+    right: 1.5rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4rem;
+    color: rgba(168, 50, 30, 0.08);
+    font-weight: 700;
+    pointer-events: none;
+    line-height: 1;
+  }
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+  @media (max-width: 900px) {
+    .relations-header {
+      padding: 8rem 1.5rem 2rem;
+    }
+    .relations-body {
+      padding: 1.5rem 1.5rem 3rem;
+    }
+    .graph-wrap {
+      min-height: 560px;
+    }
+    .graph-svg {
+      height: 560px;
+    }
+  }
+</style>

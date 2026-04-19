@@ -85,13 +85,13 @@ status: published
 updated_at: 2026-04-19
 ---
 
-## The Name
+## The _Name_
 
 **Nhất Dạ Trạch** — 一夜澤 — means "Lake of a Single Night." The name explains itself: a lake born in one night. According to _Lĩnh Nam chích quái_, when the palace of Chử Đồng Tử and Tiên Dung flew up to the heavens, the ground beneath collapsed into a large lake. The sandbar was called **Tự Nhiên** — "natural" or "spontaneous" — the same name still carried by a commune across the Red River in Thường Tín, Hanoi. The market that had formed there was called **Hà Thị**. And the lake became Nhất Dạ Trạch.
 
 In _Đại Việt sử ký toàn thư_, the site appears under an older name: **"Màn Trò flats, Chu Diên district"** — an administrative unit from the Chinese occupation period, corresponding roughly to today's Khoái Châu, Hưng Yên.
 
-## Two Stories, One Place
+## Two Stories, One _Place_
 
 Nhất Dạ Trạch is not a purely mythological place-name. It appears in two entirely separate bodies of text, written centuries apart.
 
@@ -103,7 +103,7 @@ In the same entry, Ngô Sĩ Liên adds a footnote: "folk legend holds that a div
 
 He wrote it down anyway. That he felt compelled to rebut it tells you the story was already too widespread to ignore.
 
-## The Lake and Its Disappearance
+## The Lake and Its _Disappearance_
 
 Khoái Châu district sits in the low-lying heart of the Red River's left bank — parts of it below sea level. Phan Huy Chú, writing in the early 19th century, still described Dạ Trạch as reed-choked and boggy on all sides, a landscape that makes Triệu Quang Phục's guerrilla strategy immediately legible.
 
@@ -113,7 +113,7 @@ The dyke system, begun under the Trần dynasty in 1248 and extended by every dy
 
 A small crescent pond survives in front of Đền Hoá Dạ Trạch today. Whether it is a remnant of the original lake or was reshaped later to evoke it is unclear. The lake the texts describe — wide enough to hide an army's boats in its reed beds — is gone.
 
-## Sacred Geography Along the Red River
+## Sacred _Geography_ Along the Red River
 
 Nhất Dạ Trạch is one point in a chain of sacred sites stretching along the Red River, all connected to the Chử Đồng Tử–Tiên Dung story:
 
@@ -124,13 +124,13 @@ Nhất Dạ Trạch is one point in a chain of sacred sites stretching along the
 
 Around 72 villages along both banks of the Red River between Hanoi and Hưng Yên have communal halls or shrines dedicated to Đức Thánh Chử and his two wives. That density of worship reflects something real about how deeply this tradition is woven into the lives of farming, fishing, and trading communities in the northern delta.
 
-## The Festival
+## The _Festival_
 
 The main festival at Đền Hoá Dạ Trạch falls on the **10th–12th of the second lunar month**, coinciding with the festival at Đền Đa Hoà in the neighboring commune. The procession draws participants from Triệu Việt Vương commune and four surrounding communes, with **7 palanquins**: a Dragon Hall palanquin, three Dragon Throne palanquins for Thánh Chử, Tiên Dung, and Princess Tây Sa, and a palanquin carrying the sacred staff and conical hat. The central ritual is the **water-drawing ceremony** — water scooped from mid-river and carried back to bathe the statues and conduct the offerings.
 
 In February 2023, the Ministry of Culture, Sports and Tourism added the festival to the National Intangible Cultural Heritage list (Decision 153). In November 2024, the Đa Hoà–Dạ Trạch Heritage Complex — which includes Đền Hoá Dạ Trạch — was designated a Special National Heritage Site (Decision 1473/QĐ-TTg). From 2026, the festival is being organized at provincial scale for the first time.
 
-## Archaeology — What We Don't Know
+## _Archaeology_ — What We Don't Know
 
 No dedicated archaeological excavation has been published for Nhất Dạ Trạch or Đền Hoá Dạ Trạch. The artifacts recorded in the heritage designation files — three wooden thrones from the late 16th–17th century, 38 imperial edicts, a pair of celadon vases — all date to the Lê–Nguyễn period. No prehistoric cultural layer has been confirmed at the site itself.
 

@@ -44,9 +44,15 @@ z.object({
   coordinates: z.array(z.number()).optional(),    // [lat, lng]
   relations: z.object({
     family: z.array(z.string()).optional(),
+    teachers: z.array(z.string()).optional(),
     allies: z.array(z.string()).optional(),
+    cohabitors: z.array(z.string()).optional(),
+    allied_historical: z.array(z.string()).optional(),
     enemies: z.array(z.string()).optional(),
     artifacts: z.array(z.string()).optional(),
+    mythic_events: z.array(z.string()).optional(),
+    historic_events: z.array(z.string()).optional(),
+    related_sites: z.array(z.string()).optional(),
   }).optional(),
   sources: z.array(z.object({
     title: z.string(),
@@ -80,6 +86,10 @@ File: `src/data/category-labels.ts`
 | `tich-co` | Tích cổ | Ancient Tales |
 
 `CATEGORY_SLUGS` = array of all slug keys. Used for `getStaticPaths()` in category pages.
+
+## relations.* strings and the graph
+
+Each value is a **free-text string** (often with a qualifier in parentheses, e.g. `Lạc Long Quân (chồng)`). At build time, `src/lib/relations-graph.ts` resolves names to entry IDs using normalized `name_vi`, `name_en`, and `aliases` (exact match). Strings that do not match any entry become **ghost nodes** on the relation graph. See [relations-graph.md](./relations-graph.md).
 
 ## Region & gender labels (UI)
 

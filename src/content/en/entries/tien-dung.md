@@ -70,7 +70,7 @@ status: published
 updated_at: 2026-04-19
 ---
 
-## The Story
+## The _Story_
 
 Tiên Dung — Mỵ Nương — reached eighteen without agreeing to any marriage. Her father wanted her wed. She declined. _Lĩnh Nam chích quái_ doesn't record her reasons. It only tells us she liked sailing the Red River, taking in the scenery, and that her father indulged her because he loved her.
 
@@ -82,7 +82,7 @@ She didn't panic. Didn't call the guards. According to _Lĩnh Nam chích quái_,
 
 No ceremony. No parental blessing. No equal standing — he had nothing, not even a loincloth; she was a king's daughter. None of that stopped her.
 
-## Rebel — Or Something Else?
+## _Rebel_ — Or Something Else?
 
 People often read Tiên Dung as a symbol of defiance against feudal convention. That reading isn't wrong, but it may be too tidy.
 
@@ -92,7 +92,7 @@ That's different from rebellion. A rebel knows the rule, breaks it deliberately,
 
 Whether that makes her more radical or less radical than what we usually mean by "resistance" is worth sitting with. We might be importing a category that doesn't quite fit.
 
-## After the Encounter
+## After the _Encounter_
 
 They couldn't return to court. So they stayed. They built the Hà Thị market right there on the riverbank — trading with boat merchants and travelers passing through. Then Chử Đồng Tử sailed off with a merchant, stopped at Quỳnh Viên mountain, met a monk named Phật Quang, and came back with a magic staff and a magic hat.
 
@@ -102,7 +102,7 @@ The last night: they stopped in an open field, planted the staff, inverted the h
 
 The text records no reaction from Tiên Dung when her father's army arrived. No fear, no grief, nothing. Just the events themselves. What she felt in that moment is a gap the reader fills alone.
 
-## The Third Figure — Tây Sa công chúa
+## The Third Figure — Tây Sa _công chúa_
 
 In the shrine records of Khoái Châu, Tiên Dung is worshipped alongside not just Chử Đồng Tử but also **Tây Sa công chúa** (also called Nội Trạch Tây Cung). This triad is a local cult structure. It doesn't exist in the original _Lĩnh Nam chích quái_.
 
@@ -110,7 +110,7 @@ Some shrine records say Tây Sa công chúa joined them later in their journey a
 
 This is what Tạ Chí Đại Trường described: a living tradition. Each community adds to it, adjusts it, expands it according to its own ritual needs. The legend you read today is not the legend as it was written, or as it was told before that.
 
-## Tiên Dung in Ritual and at the Shrines
+## Tiên Dung in _Ritual_ and at the Shrines
 
 At the Chử Đồng Tử – Tiên Dung festival in Khoái Châu (10th–12th of the second lunar month), she is not a secondary figure. Her palanquin is one of three in the main procession. The central ritual — drawing water from the middle of the Red River — directly echoes the water and the sandbank in her story.
 

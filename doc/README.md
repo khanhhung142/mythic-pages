@@ -31,7 +31,8 @@ Read these files in order for full understanding:
 | 6 | [styling.md](./styling.md) | CSS variables (design tokens), Tailwind config, font system, responsive |
 | 7 | [data-flow.md](./data-flow.md) | Build-time content pipeline: MD → Zod → Collection → HTML |
 | 8 | [adding-features.md](./adding-features.md) | AI playbook — how to add pages, components, content, styles |
-| 9 | [known-issues.md](./known-issues.md) | Config drift, unused files, broken configs to be aware of |
+| 9 | [relations-graph.md](./relations-graph.md) | Relation network graph: matcher, D3 island, routes, mini widget |
+| 10 | [known-issues.md](./known-issues.md) | Config drift, unused files, broken configs to be aware of |
 
 ## For AI Agents
 
@@ -43,14 +44,15 @@ When building a new feature:
 4. Read `components.md` if creating/modifying UI
 5. Read `styling.md` for design tokens and CSS conventions
 6. Read `adding-features.md` for step-by-step patterns
-7. Check `known-issues.md` to avoid existing pitfalls
+7. Read `relations-graph.md` if touching `relations.*` graph or `src/lib/relations-graph.ts`
+8. Check `known-issues.md` to avoid existing pitfalls
 
 ## Dynamic-First Rule (Mandatory)
 
 This repository is now **dynamic-first** for i18n and routing.
 
 - Do not create mirrored page trees like `src/pages/en/...`, `src/pages/ja/...`, etc.
-- Add locale-aware behavior by extending shared dynamic paths (`src/pages/[lang]/...`) and shared helpers in `src/i18n/*`.
+- Add locale-aware behavior by extending shared dynamic paths (`src/pages/[...lang]/...`) and shared helpers in `src/i18n/*`.
 - Any new route or feature must work for **all locales in `src/i18n/config.ts`**, not only `vi`/`en`.
 - When adding locale-specific content, add files under `src/content/{locale}/...`; routing must stay generic.
 - If a proposed change introduces locale-specific duplication, it should be considered incorrect and refactored.

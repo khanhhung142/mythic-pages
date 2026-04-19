@@ -1,0 +1,14 @@
+---
+import RelationsPage from '../../components/RelationsPage.astro';
+import { getLocalizedEntries } from '../../i18n/content';
+import { localeStaticPaths } from '../../i18n/paths';
+import type { Locale } from '../../i18n/config';
+
+export function getStaticPaths() {
+  return localeStaticPaths();
+}
+
+const { lang } = Astro.props as { lang: Locale };
+const entries = await getLocalizedEntries(lang);
+---
+<RelationsPage entries={entries} lang={lang} />

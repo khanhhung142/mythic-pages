@@ -61,7 +61,7 @@ Content here...
 ## Adding a New Page
 
 1. Default locale page goes under `src/pages/`.
-2. Non-default locale page must go under `src/pages/[lang]/...` (dynamic), not `src/pages/en/...`.
+2. Non-default locale pages must go under `src/pages/[...lang]/...` (dynamic), not `src/pages/en/...`.
 3. Import and use `BaseLayout` with `title` and `lang` (fixed `'vi'` for root wrappers, dynamic `lang` for `[lang]` routes):
    ```astro
    ---
@@ -70,7 +70,7 @@ Content here...
    ---
    <BaseLayout title="..." lang={lang}>
    ```
-4. For dynamic routes, export `getStaticPaths()` from `[lang]` files using `locales.filter(l => l !== defaultLocale)`
+4. For dynamic routes, export `getStaticPaths()` from `[...lang]` files using `localeStaticPaths()` from `src/i18n/paths.ts`
 5. Use `t(lang, 'key')` for user-visible strings; add keys to every supported locale in `src/i18n/config.ts`
 6. Update `Header.astro` / footer links only if you add a top-level section
 
@@ -84,6 +84,17 @@ Reference: [`src/pages/about.astro`](../src/pages/about.astro) and [`src/pages/[
 - Nav label “Về dự án” / “About” in [`Header.astro`](src/components/Header.astro) uses `localePath(lang, '/about')`
 
 After adding a similar page, update `doc/routing-and-pages.md` and this file if the pattern changes.
+
+## Adding a relation kind (for the graph)
+
+1. Extend `relations` in `src/content.config.ts` (Zod) with a new optional `z.array(z.string())` field.
+2. Add the kind to `RelationKind`, `RELATION_KINDS`, and `RELATION_KEYS` in `src/lib/relations-graph.ts`.
+3. Add stroke styling in `src/scripts/mount-graph.ts` (`STROKE` map).
+4. Add localized label keys under `entry.*` in `src/i18n/config.ts` and map them in `RelationsPage.astro` (`kindUiKey`).
+
+## Tuning the relation matcher
+
+Edit `normalizeForMatch()` and lookup construction in `src/lib/relations-graph.ts`. Prefer exact matching; use `aliases` in frontmatter to disambiguate duplicate names. See [relations-graph.md](./relations-graph.md).
 
 ## Adding a New Component
 

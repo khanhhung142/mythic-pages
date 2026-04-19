@@ -1,0 +1,78 @@
+---
+import { buildLocalSubgraph, type EntryLike } from '../lib/relations-graph';
+import { t } from '../i18n/config';
+import type { Locale } from '../i18n/config';
+
+interface Props {
+  entry: EntryLike;
+  allEntries: EntryLike[];
+  lang: Locale;
+}
+
+const { entry, allEntries, lang } = Astro.props;
+
+const graph = buildLocalSubgraph(allEntries, lang, entry.id, 25);
+const show = graph.edges.length >= 1;
+
+const scriptId = `mini-graph-${entry.id}`;
+const svgId = `${scriptId}-svg`;
+
+const graphPayload = {
+  nodes: graph.nodes,
+  edges: graph.edges,
+  ghostCount: graph.ghostCount,
+  mode: 'local' as const,
+};
+---
+
+{show && (
+  <section class="relation-mini" aria-labelledby={`${scriptId}-title`} data-mini-script={scriptId}>
+    <h2 id={`${scriptId}-title`} class="mini-title">{t(lang, 'relations.mini.title')}</h2>
+    <div class="mini-graph-wrap">
+      <svg id={svgId} class="mini-svg" aria-hidden="true" />
+    </div>
+    <script type="application/json" id={scriptId} set:html={JSON.stringify(graphPayload)} />
+    <script>
+      import { mountGraphWithPayload } from '../scripts/mount-graph.ts';
+      const section = document.querySelector('[data-mini-script]');
+      const sid = section?.getAttribute('data-mini-script');
+      const dataEl = sid ? document.getElementById(sid) : null;
+      const svgId = sid ? `${sid}-svg` : '';
+      if (dataEl?.textContent && svgId) {
+        mountGraphWithPayload(svgId, JSON.parse(dataEl.textContent));
+      }
+    </script>
+  </section>
+)}
+
+<style>
+  .relation-mini {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--line);
+  }
+  .mini-title {
+    font-size: 0.7rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--vermilion);
+    margin-bottom: 1rem;
+    font-weight: 500;
+  }
+  .mini-graph-wrap {
+    border: 1px solid var(--line);
+    background: var(--paper-light);
+    position: relative;
+  }
+  .mini-svg {
+    display: block;
+    width: 100%;
+    height: 420px;
+    background: var(--paper);
+  }
+  @media (max-width: 900px) {
+    .mini-svg {
+      height: 320px;
+    }
+  }
+</style>
