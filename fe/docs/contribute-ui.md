@@ -72,7 +72,8 @@ Make sure these are set for the environments you use (Preview + Production).
 
 ### “Turnstile missing”
 
-- `PUBLIC_TURNSTILE_SITE_KEY` not set in Pages env, or not available in build env.
+- `PUBLIC_TURNSTILE_SITE_KEY` not set in Pages env, or not available to the **build**.
+- After changing env vars in Pages, trigger a **new deployment** (retry build / push a commit).
 
 ### “turnstile_failed”
 
