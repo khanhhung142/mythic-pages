@@ -8,7 +8,8 @@ export const CATEGORY_LABELS: Record<string, Record<Locale, string>> = {
   "dia-danh": { vi: "Địa danh", en: "Places" },
   "vat-pham": { vi: "Vật phẩm", en: "Artifacts" },
   "le-hoi": { vi: "Lễ hội", en: "Festivals" },
-  "tich-co": { vi: "Tích cổ", en: "Ancient Tales" },
+  "tich-co": { vi: "Truyện cổ", en: "Folktales" },
+  "nhan-vat": { vi: "Nhân vật", en: "Figures" },
 };
 
 export const CATEGORY_SLUGS = Object.keys(CATEGORY_LABELS);
