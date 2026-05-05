@@ -97,6 +97,7 @@ async function verifyTurnstile(args: { secret: string; token: string; ip?: strin
     | null
     | { success?: boolean; 'error-codes'?: string[] };
 
+  console.log("json", json);
   return Boolean(json?.success);
 }
 
