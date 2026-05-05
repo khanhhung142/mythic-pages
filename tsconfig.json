@@ -1,4 +1,7 @@
 {
   "extends": "astro/tsconfigs/base",
-  "include": ["src"]
+  "include": [
+    "src",
+    "./worker-configuration.d.ts"
+  ]
 }
