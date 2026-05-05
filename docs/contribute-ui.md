@@ -60,6 +60,13 @@ Make sure these are set for the environments you use (Preview + Production).
 
 Important: deploy via **Cloudflare Pages (Git integration)**. Do not deploy this repo with `wrangler deploy` as a standalone Worker — Pages env/secrets and Pages Functions routing will not apply.
 
+### Build-time vs runtime env (agent gotcha)
+
+- `PUBLIC_TURNSTILE_SITE_KEY` is read in `src/components/ContributePage.astro` via `import.meta.env.PUBLIC_TURNSTILE_SITE_KEY`.
+  - This means it must exist in **Pages build environment** (Pages project settings), then you must **redeploy** for the HTML bundle to include it.
+  - Setting this variable under **Workers → Variables and Secrets** will not affect an Astro static build on Pages.
+- `TURNSTILE_SECRET_KEY`, `GITHUB_TOKEN`, `GITHUB_REPO` are read at **runtime** in Pages Functions via `context.env.*`.
+
 ## 4) How request verification works
 
 `functions/api/contribute.ts` does:
@@ -92,4 +99,3 @@ Important: deploy via **Cloudflare Pages (Git integration)**. Do not deploy this
 
 Issue creation tries to add labels (`contribution`, `new-entry` / `edit-entry`).
 If labels do not exist, GitHub may respond 422; function falls back to creating Issue without labels.
-

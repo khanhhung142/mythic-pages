@@ -1,6 +1,6 @@
 # Mythic Pages — Documentation Index
 
-> Vietnamese mythology wiki built with Astro 6. Static site, no backend.
+> Vietnamese mythology wiki built with Astro 6. Static site, plus optional Cloudflare Pages Functions under `functions/`.
 > This doc system is designed for AI agents to read and build new features.
 
 ## Quick Facts
@@ -12,7 +12,7 @@
 | Styling | CSS variables + Tailwind 3 + scoped `<style>` |
 | Content | Astro Content Collections + Zod schemas (dynamic `entries{Locale}` from `locales`) |
 | i18n | Dynamic-locale routing: default locale at root (`/`), non-default locales under `/{lang}/...`; fallback to default-locale markdown when localized file is missing |
-| Backend | None — pure static site |
+| Backend | None (SSG) + optional Pages Functions (`functions/api/*` → `/api/*`) |
 | Auth | None |
 | State | None — all data resolved at build time |
 | Deploy | Any static host (Netlify, Vercel, Cloudflare Pages, etc.) |

@@ -132,6 +132,7 @@ export default defineConfig({
 - No `vercel.json`, `netlify.toml`, or Dockerfile
 - Compatible with any static hosting
 - SEO: `robots.txt` allows common crawlers, entry pages set `<meta description>`
+- Optional dynamic endpoints on Cloudflare Pages: `functions/api/*` → `/api/*` (Pages Functions)
 
 ### Cloudflare Pages (recommended)
 
