@@ -1,0 +1,572 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getLocalizedEntries } from '../i18n/content';
+import { t } from '../i18n/config';
+import type { Locale } from '../i18n/config';
+
+interface Props {
+  lang: Locale;
+}
+
+const { lang } = Astro.props;
+
+const pageTitle = `${t(lang, 'contribute.title')} — ${t(lang, 'site.title')}`;
+
+const entries = await getLocalizedEntries(lang);
+entries.sort((a, b) => (a.data.name_vi ?? '').localeCompare(b.data.name_vi ?? '', 'vi'));
+
+const entryOptions = entries.map((entry) => ({
+  id: entry.id,
+  label:
+    lang === 'en'
+      ? entry.data.name_en ?? entry.data.name_vi ?? entry.id
+      : entry.data.name_vi ?? entry.id,
+}));
+
+const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY as string | undefined;
+---
+<BaseLayout title={pageTitle} description={t(lang, 'contribute.lead')} lang={lang}>
+  <article class="contribute-page">
+    <header class="contribute-hero">
+      <div class="eyebrow">{t(lang, 'contribute.eyebrow')}</div>
+      <h1 class="title">
+        {t(lang, 'contribute.title1')}<em>{t(lang, 'contribute.title2')}</em>
+      </h1>
+      <p class="lead">{t(lang, 'contribute.lead')}</p>
+    </header>
+
+    <section class="card" aria-labelledby="mode-heading">
+      <h2 id="mode-heading" class="section-title">{t(lang, 'contribute.mode.heading')}</h2>
+      <div class="mode-row" role="tablist" aria-label={t(lang, 'contribute.mode.heading')}>
+        <button type="button" class="mode-tab is-active" data-mode="new" role="tab" aria-selected="true">
+          {t(lang, 'contribute.mode.new')}
+        </button>
+        <button type="button" class="mode-tab" data-mode="edit" role="tab" aria-selected="false">
+          {t(lang, 'contribute.mode.edit')}
+        </button>
+      </div>
+      <p class="mode-note">{t(lang, 'contribute.mode.note')}</p>
+    </section>
+
+    <section class="card" aria-labelledby="form-heading">
+      <h2 id="form-heading" class="section-title">{t(lang, 'contribute.form.heading')}</h2>
+
+      <form id="contribute-form" class="form" novalidate>
+        <input type="hidden" name="mode" id="mode" value="new" />
+
+        <div class="grid2">
+          <label class="field">
+            <span class="label">{t(lang, 'contribute.form.displayName')}</span>
+            <input name="displayName" autocomplete="nickname" />
+          </label>
+
+          <label class="field">
+            <span class="label">{t(lang, 'contribute.form.contactEmail')}</span>
+            <input name="contactEmail" type="email" autocomplete="email" />
+          </label>
+        </div>
+
+        <div class="honeypot" aria-hidden="true">
+          <label>
+            <span>Website</span>
+            <input name="website" tabindex="-1" autocomplete="off" />
+          </label>
+        </div>
+
+        <div id="mode-new" class="mode-panel">
+          <div class="grid2">
+            <label class="field">
+              <span class="label req">{t(lang, 'contribute.form.new.title')}</span>
+              <input name="title" id="new-title" required />
+            </label>
+
+            <label class="field">
+              <span class="label">{t(lang, 'contribute.form.new.slug')}</span>
+              <input name="suggestedSlug" id="new-slug" autocomplete="off" />
+            </label>
+          </div>
+
+          <div class="grid2">
+            <label class="field">
+              <span class="label">{t(lang, 'contribute.form.new.category')}</span>
+              <input name="category" autocomplete="off" />
+            </label>
+
+            <label class="field">
+              <span class="label">{t(lang, 'contribute.form.new.summary')}</span>
+              <input name="summary" />
+            </label>
+          </div>
+
+          <label class="field">
+            <span class="label req">{t(lang, 'contribute.form.new.markdownBody')}</span>
+            <textarea name="markdownBody" id="new-body" rows="12" required></textarea>
+            <span class="hint">{t(lang, 'contribute.form.new.markdownHint')}</span>
+          </label>
+        </div>
+
+        <div id="mode-edit" class="mode-panel is-hidden" hidden>
+          <label class="field">
+            <span class="label req">{t(lang, 'contribute.form.edit.entry')}</span>
+            <select name="entryId" id="edit-entry" required>
+              <option value="">{t(lang, 'contribute.form.edit.entryPlaceholder')}</option>
+              {entryOptions.map((opt) => (
+                <option value={opt.id}>{opt.label} — {opt.id}</option>
+              ))}
+            </select>
+          </label>
+
+          <label class="field">
+            <span class="label req">{t(lang, 'contribute.form.edit.changeSummary')}</span>
+            <textarea name="changeSummary" id="edit-summary" rows="4" required></textarea>
+          </label>
+
+          <label class="field">
+            <span class="label req">{t(lang, 'contribute.form.edit.proposedMarkdown')}</span>
+            <textarea name="proposedMarkdown" id="edit-markdown" rows="12" required></textarea>
+          </label>
+        </div>
+
+        <label class="field">
+          <span class="label">{t(lang, 'contribute.form.sources')}</span>
+          <textarea name="sources" rows="4"></textarea>
+        </label>
+
+        <label class="field">
+          <span class="label">{t(lang, 'contribute.form.notes')}</span>
+          <textarea name="notes" rows="4"></textarea>
+        </label>
+
+        <div class="turnstile-wrap">
+          {siteKey ? (
+            <div class="cf-turnstile" data-sitekey={siteKey}></div>
+          ) : (
+            <div class="turnstile-missing">
+              {t(lang, 'contribute.turnstile.missing')}
+            </div>
+          )}
+        </div>
+
+        <p class="privacy">{t(lang, 'contribute.privacyNote')}</p>
+
+        <div
+          class="actions"
+          data-msg-turnstile-missing={t(lang, 'contribute.msg.turnstileMissing')}
+          data-msg-missing-required={t(lang, 'contribute.msg.missingRequired')}
+          data-msg-content-too-long={t(lang, 'contribute.msg.contentTooLong')}
+          data-msg-submitting={t(lang, 'contribute.msg.submitting')}
+          data-msg-submit-failed={t(lang, 'contribute.msg.submitFailed')}
+          data-msg-submitted={t(lang, 'contribute.msg.submitted')}
+          data-msg-network-error={t(lang, 'contribute.msg.networkError')}
+          data-msg-created-issue={t(lang, 'contribute.msg.createdIssue')}
+        >
+          <button type="submit" class="submit">
+            <span class="submit-label">{t(lang, 'contribute.submit')}</span>
+            <span class="submit-spinner" aria-hidden="true"></span>
+          </button>
+          <div id="form-status" class="status" aria-live="polite"></div>
+        </div>
+      </form>
+    </section>
+  </article>
+
+  <script is:inline>
+    const MAX_TEXT_LENGTH = 30000;
+
+    function slugify(input) {
+      return (input || '')
+        .toString()
+        .normalize('NFKD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, '-')
+        .replace(/(^-|-$)/g, '');
+    }
+
+    function setBusy(isBusy) {
+      const form = document.getElementById('contribute-form');
+      const button = form?.querySelector('button[type="submit"]');
+      if (!button) return;
+      button.toggleAttribute('disabled', isBusy);
+      button.classList.toggle('is-busy', isBusy);
+    }
+
+    function setStatus(message, kind) {
+      const el = document.getElementById('form-status');
+      if (!el) return;
+      el.textContent = message || '';
+      el.dataset.kind = kind || '';
+    }
+
+    function getTurnstileToken() {
+      if (!window.turnstile) return null;
+      try {
+        return window.turnstile.getResponse();
+      } catch {
+        return null;
+      }
+    }
+
+    function setMode(mode) {
+      const modeInput = document.getElementById('mode');
+      const tabs = document.querySelectorAll('.mode-tab');
+      const newPanel = document.getElementById('mode-new');
+      const editPanel = document.getElementById('mode-edit');
+      if (!modeInput || !newPanel || !editPanel) return;
+
+      modeInput.value = mode;
+      const isNew = mode === 'new';
+      newPanel.classList.toggle('is-hidden', !isNew);
+      newPanel.toggleAttribute('hidden', !isNew);
+      editPanel.classList.toggle('is-hidden', isNew);
+      editPanel.toggleAttribute('hidden', isNew);
+
+      tabs.forEach((tab) => {
+        const active = tab.getAttribute('data-mode') === mode;
+        tab.classList.toggle('is-active', active);
+        tab.setAttribute('aria-selected', active ? 'true' : 'false');
+      });
+
+      setStatus('', '');
+    }
+
+    function toJson(form) {
+      const data = new FormData(form);
+      const obj = Object.fromEntries(data.entries());
+      return obj;
+    }
+
+    const titleInput = document.getElementById('new-title');
+    const slugInput = document.getElementById('new-slug');
+    titleInput?.addEventListener('input', () => {
+      if (!slugInput) return;
+      if (slugInput.value && slugInput.dataset.touched === '1') return;
+      slugInput.value = slugify(titleInput.value);
+    });
+    slugInput?.addEventListener('input', () => {
+      slugInput.dataset.touched = '1';
+    });
+
+    document.querySelectorAll('.mode-tab').forEach((tab) => {
+      tab.addEventListener('click', () => setMode(tab.getAttribute('data-mode')));
+    });
+
+    const form = document.getElementById('contribute-form');
+    form?.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      setStatus('', '');
+
+      const actions = document.querySelector('.actions');
+      const msg = (key, fallback) => actions?.dataset?.[key] || fallback;
+
+      const payload = toJson(form);
+      const mode = payload.mode === 'edit' ? 'edit' : 'new';
+      payload.mode = mode;
+
+      if (payload.website) {
+        setStatus('OK.', 'ok');
+        return;
+      }
+
+      const turnstileToken = getTurnstileToken();
+      if (!turnstileToken) {
+        setStatus(msg('msgTurnstileMissing', 'Turnstile missing.'), 'err');
+        return;
+      }
+      payload.turnstileToken = turnstileToken;
+
+      const required = [];
+      if (mode === 'new') {
+        required.push(['title', payload.title], ['markdownBody', payload.markdownBody]);
+      } else {
+        required.push(
+          ['entryId', payload.entryId],
+          ['changeSummary', payload.changeSummary],
+          ['proposedMarkdown', payload.proposedMarkdown]
+        );
+      }
+      const missing = required.filter(([, v]) => !String(v || '').trim()).map(([k]) => k);
+      if (missing.length) {
+        setStatus(msg('msgMissingRequired', 'Missing required fields.'), 'err');
+        return;
+      }
+
+      const textFields = ['markdownBody', 'proposedMarkdown', 'changeSummary', 'sources', 'notes'];
+      for (const key of textFields) {
+        if (payload[key] && String(payload[key]).length > MAX_TEXT_LENGTH) {
+          setStatus(msg('msgContentTooLong', 'Content too long.'), 'err');
+          return;
+        }
+      }
+
+      setBusy(true);
+      setStatus(msg('msgSubmitting', 'Submitting…'), 'busy');
+      try {
+        const res = await fetch('/api/contribute', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        const json = await res.json().catch(() => null);
+        if (!res.ok) {
+          setStatus((json && json.error) ? String(json.error) : msg('msgSubmitFailed', 'Submit failed.'), 'err');
+          return;
+        }
+        if (json && json.issueUrl) {
+          const a = document.createElement('a');
+          a.href = json.issueUrl;
+          a.target = '_blank';
+          a.rel = 'noreferrer';
+          a.textContent = json.issueUrl;
+          const el = document.getElementById('form-status');
+          if (el) {
+            el.dataset.kind = 'ok';
+            el.textContent = '';
+            el.appendChild(document.createTextNode(msg('msgCreatedIssue', 'Created issue: ')));
+            el.appendChild(a);
+          }
+          return;
+        }
+        setStatus(msg('msgSubmitted', 'Submitted.'), 'ok');
+      } catch {
+        setStatus(msg('msgNetworkError', 'Network error.'), 'err');
+      } finally {
+        setBusy(false);
+      }
+    });
+  </script>
+
+  {siteKey && <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>}
+</BaseLayout>
+
+<style>
+  .contribute-page{
+    max-width: 56rem;
+    margin: 0 auto;
+    padding: 6rem 3rem 5rem;
+  }
+
+  .contribute-hero{
+    padding: 2.5rem 0 2rem;
+    border-bottom: 1px solid rgba(26,15,8,.12);
+    margin-bottom: 2.5rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .contribute-hero::before{
+    content:'奉';
+    position:absolute;
+    top: -20px;
+    right: -10px;
+    font-family:'Cormorant Garamond',serif;
+    font-size: 11rem;
+    color: rgba(168,50,30,.06);
+    font-weight: 700;
+    line-height: 1;
+    pointer-events:none;
+    user-select:none;
+  }
+  .eyebrow{
+    font-size:.75rem;
+    letter-spacing:.4em;
+    text-transform:uppercase;
+    color:var(--vermilion);
+    margin-bottom:1.2rem;
+    display:flex;
+    align-items:center;
+    gap:1rem;
+  }
+  .eyebrow::before{content:'';width:40px;height:1px;background:var(--vermilion)}
+
+  .title{
+    font-family:'Cormorant Garamond',serif;
+    font-size: clamp(3rem, 6vw, 5rem);
+    font-weight: 600;
+    line-height: .95;
+    margin: 0 0 1rem;
+  }
+  .title em{
+    font-family:'Playfair Display',serif;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--vermilion);
+  }
+  .lead{
+    font-size:1.05rem;
+    line-height:1.75;
+    color: rgba(26,15,8,.85);
+    max-width: 42rem;
+  }
+
+  .card{
+    background: var(--paper-light);
+    border: 1px solid rgba(26,15,8,.12);
+    padding: 1.5rem 1.5rem 1.25rem;
+    margin-bottom: 1.25rem;
+    box-shadow: 0 10px 30px rgba(26,15,8,.06);
+  }
+
+  .section-title{
+    font-family:'Cormorant Garamond',serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin: 0 0 1rem;
+    padding-bottom: .65rem;
+    border-bottom: 1px solid rgba(26,15,8,.12);
+  }
+
+  .mode-row{
+    display: inline-flex;
+    border: 1px solid rgba(26,15,8,.2);
+    background: rgba(244,234,213,.65);
+    padding: .2rem;
+    gap: .2rem;
+  }
+  .mode-tab{
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: .78rem;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    padding: .6rem .9rem;
+    border: 0;
+    background: transparent;
+    color: rgba(26,15,8,.8);
+    cursor: pointer;
+  }
+  .mode-tab.is-active{
+    background: var(--ink);
+    color: var(--paper);
+  }
+  .mode-note{
+    margin: 1rem 0 0;
+    font-size: .9rem;
+    color: rgba(26,15,8,.7);
+  }
+
+  .form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+  }
+  .grid2{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .field{
+    display:flex;
+    flex-direction:column;
+    gap: .45rem;
+  }
+  .label{
+    font-size: .72rem;
+    letter-spacing: .22em;
+    text-transform: uppercase;
+    color: rgba(26,15,8,.78);
+  }
+  .label.req::after{
+    content:' *';
+    color: var(--vermilion);
+  }
+  input, select, textarea{
+    font-family:'Be Vietnam Pro',sans-serif;
+    font-size: .95rem;
+    color: var(--ink);
+    background: rgba(244,234,213,.55);
+    border: 1px solid rgba(26,15,8,.18);
+    padding: .75rem .85rem;
+    outline: none;
+  }
+  textarea{resize: vertical}
+  input:focus, select:focus, textarea:focus{
+    border-color: var(--vermilion);
+    box-shadow: 0 0 0 3px rgba(168,50,30,.12);
+  }
+
+  .hint{
+    font-size: .82rem;
+    color: rgba(26,15,8,.62);
+  }
+
+  .honeypot{
+    position:absolute;
+    left:-9999px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+  }
+
+  .turnstile-wrap{
+    border-top: 1px solid rgba(26,15,8,.12);
+    padding-top: 1.1rem;
+  }
+  .turnstile-missing{
+    padding: .9rem 1rem;
+    background: rgba(168,50,30,.06);
+    border: 1px dashed rgba(168,50,30,.35);
+    color: rgba(26,15,8,.85);
+    font-size: .9rem;
+  }
+
+  .privacy{
+    margin: 0;
+    font-size: .85rem;
+    color: rgba(26,15,8,.65);
+  }
+
+  .actions{
+    display:flex;
+    align-items:center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .submit{
+    display:inline-flex;
+    align-items:center;
+    gap: .75rem;
+    border: 1px solid rgba(26,15,8,.15);
+    background: var(--vermilion);
+    color: #fff;
+    padding: .85rem 1.2rem;
+    font-family:'Be Vietnam Pro',sans-serif;
+    font-size: .82rem;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  .submit:disabled{
+    opacity: .7;
+    cursor: not-allowed;
+  }
+  .submit-spinner{
+    width: 14px;
+    height: 14px;
+    border: 2px solid rgba(255,255,255,.55);
+    border-top-color: rgba(255,255,255,1);
+    border-radius: 999px;
+    opacity: 0;
+    transition: opacity .15s ease;
+    animation: spin .8s linear infinite;
+  }
+  .submit.is-busy .submit-spinner{opacity: 1}
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .status{
+    font-size: .9rem;
+    color: rgba(26,15,8,.8);
+  }
+  .status[data-kind="err"]{
+    color: rgba(122,30,16,.95);
+  }
+  .status[data-kind="ok"]{
+    color: rgba(45,90,61,.95);
+  }
+  .status a{ color: var(--vermilion); text-decoration: underline; }
+
+  @media (max-width: 900px){
+    .contribute-page{ padding: 5rem 1.5rem 3rem; }
+    .grid2{ grid-template-columns: 1fr; }
+  }
+</style>
+

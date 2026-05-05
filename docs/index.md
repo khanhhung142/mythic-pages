@@ -34,6 +34,12 @@ Read these files in order for full understanding:
 | 9 | [relations-graph.md](./relations-graph.md) | Relation network graph: matcher, D3 island, routes, mini widget |
 | 10 | [known-issues.md](./known-issues.md) | Config drift, unused files, broken configs to be aware of |
 
+## Cloudflare deploy docs (frontend)
+
+Cloudflare Pages / Pages Functions docs live under `fe/docs/`:
+
+- [`fe/docs/contribute-ui.md`](../fe/docs/contribute-ui.md) — Contribute UI + Turnstile + GitHub Issues (private repo)
+
 ## For AI Agents
 
 When building a new feature:

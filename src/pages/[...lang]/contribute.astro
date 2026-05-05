@@ -1,0 +1,13 @@
+---
+import ContributePage from '../../components/ContributePage.astro';
+import { localeStaticPaths } from '../../i18n/paths';
+import type { Locale } from '../../i18n/config';
+
+export function getStaticPaths() {
+  return localeStaticPaths();
+}
+
+const { lang } = Astro.props as { lang: Locale };
+---
+<ContributePage lang={lang} />
+

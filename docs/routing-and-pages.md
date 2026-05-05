@@ -25,6 +25,8 @@ Legacy `/vi` redirects are still supported.
 | `/{lang}/entries/[id]` | `src/pages/[...lang]/entries/[id].astro` | `EntryLayout` | Entry detail (non-default locales) |
 | `/relations` | `src/pages/[...lang]/relations.astro` | `BaseLayout` (via `RelationsPage`) | Full relation graph (default locale) |
 | `/{lang}/relations` | `src/pages/[...lang]/relations.astro` | same | Full relation graph (non-default locales) |
+| `/contribute` | `src/pages/[...lang]/contribute.astro` | `BaseLayout` (via `ContributePage`) | Contribution form (default locale) |
+| `/{lang}/contribute` | `src/pages/[...lang]/contribute.astro` | same | Contribution form (non-default locales) |
 
 ## Request Flow
 

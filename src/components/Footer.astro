@@ -34,7 +34,7 @@ const { lang = 'vi' } = Astro.props;
     <div class="foot-col">
       <h5>{t(lang, 'footer.contact')}</h5>
       <ul>
-        <li><a href="#">{t(lang, 'footer.contribute')}</a></li>
+        <li><a href={localePath(lang, '/contribute')}>{t(lang, 'footer.contribute')}</a></li>
         <li><a href="#">Github</a></li>
         <li><a href="#">Email</a></li>
       </ul>
