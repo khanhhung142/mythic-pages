@@ -1,8 +1,11 @@
 import { defineConfig } from "astro/config";
 import sitemap from "@astrojs/sitemap";
 
+import cloudflare from "@astrojs/cloudflare";
+
 export default defineConfig({
   site: "https://vietmyth.vn",
+
   i18n: {
     defaultLocale: "vi",
     // Keep this list in sync with src/i18n/config.ts -> locales.
@@ -11,6 +14,7 @@ export default defineConfig({
       prefixDefaultLocale: false,
     },
   },
+
   integrations: [
     sitemap({
       i18n: {
@@ -20,11 +24,16 @@ export default defineConfig({
       },
     }),
   ],
+
   trailingSlash: "ignore",
+
   build: {
     format: "directory",
   },
+
   redirects: {
     "/vi": "/",
   },
+
+  adapter: cloudflare(),
 });
