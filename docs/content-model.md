@@ -83,7 +83,8 @@ File: `src/data/category-labels.ts`
 | `dia-danh` | Địa danh | Places |
 | `vat-pham` | Vật phẩm | Artifacts |
 | `le-hoi` | Lễ hội | Festivals |
-| `tich-co` | Tích cổ | Ancient Tales |
+| `tich-co` | Truyện cổ | Folktales |
+| `nhan-vat` | Nhân vật | Figures |
 
 `CATEGORY_SLUGS` = array of all slug keys. Used for `getStaticPaths()` in category pages.
 
