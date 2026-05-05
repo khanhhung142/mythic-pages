@@ -132,3 +132,10 @@ export default defineConfig({
 - No `vercel.json`, `netlify.toml`, or Dockerfile
 - Compatible with any static hosting
 - SEO: `robots.txt` allows common crawlers, entry pages set `<meta description>`
+
+### Cloudflare Pages (recommended)
+
+- Deploy via Cloudflare Pages UI (Git integration)
+- Build command: `npm run build`
+- Build output directory: `dist`
+- Server endpoints (Pages Functions): `functions/api/*` → `/api/*`

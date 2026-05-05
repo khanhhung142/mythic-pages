@@ -3,7 +3,6 @@
   "type": "module",
   "version": "0.0.1",
   "dependencies": {
-    "@astrojs/cloudflare": "^13.3.1",
     "@astrojs/sitemap": "^3.7.2",
     "astro": "^6.1.5",
     "d3-drag": "^3.0.0",
@@ -28,11 +27,9 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
-    "preview": "npm run build && wrangler dev",
+    "preview": "astro preview",
     "check": "astro check",
-    "test": "vitest run",
-    "generate-types": "wrangler types",
-    "deploy": "npm run build && wrangler deploy"
+    "test": "vitest run"
   },
   "overrides": {
     "vite": "^7"

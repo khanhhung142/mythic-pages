@@ -23,13 +23,7 @@ const entryOptions = entries.map((entry) => ({
       : entry.data.name_vi ?? entry.id,
 }));
 
-const siteKey =
-  (import.meta.env.PUBLIC_TURNSTILE_SITE_KEY as string | undefined) ??
-  (process.env.PUBLIC_TURNSTILE_SITE_KEY as string | undefined);
-
-  console.log("siteKey", siteKey);
-  console.log("import.meta.env.PUBLIC_TURNSTILE_SITE_KEY", import.meta.env.PUBLIC_TURNSTILE_SITE_KEY);
-  console.log("process.env.PUBLIC_TURNSTILE_SITE_KEY", process.env.PUBLIC_TURNSTILE_SITE_KEY);
+const siteKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY as string | undefined;
 ---
 <BaseLayout title={pageTitle} description={t(lang, 'contribute.lead')} lang={lang}>
   <article class="contribute-page">

@@ -58,6 +58,8 @@ Add **Secrets**:
 
 Make sure these are set for the environments you use (Preview + Production).
 
+Important: deploy via **Cloudflare Pages (Git integration)**. Do not deploy this repo with `wrangler deploy` as a standalone Worker — Pages env/secrets and Pages Functions routing will not apply.
+
 ## 4) How request verification works
 
 `functions/api/contribute.ts` does:
