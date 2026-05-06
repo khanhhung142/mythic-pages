@@ -79,6 +79,18 @@ Important: deploy via **Cloudflare Pages (Git integration)**. Do not deploy this
 
 ## 5) Troubleshooting
 
+### Click “Submit” but nothing happens (CSP blocks inline script)
+
+Fix options (pick one):
+
+- **Option A (keep CSP, allow specific inline script)**: add hash allowlist to `script-src`
+  - Add this hash (from console) into CSP `script-src`:
+    - `sha256-eJGI0Ik4oYe/PKLDOt4wcN76wYs8h+Ew05pMzdY6xG8=`
+- **Option B (recommended in this repo)**: avoid inline script entirely
+  - Contribute JS shipped as external file: `public/scripts/contribute-form.js`
+  - Page loads it via `<script src="/scripts/contribute-form.js" defer></script>`
+  - This works with CSP setups that allow `script-src 'self'` (common)
+
 ### “Turnstile missing”
 
 - `PUBLIC_TURNSTILE_SITE_KEY` not set in Pages env, or not available to the **build**.
