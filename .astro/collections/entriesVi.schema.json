@@ -45,7 +45,17 @@
       "type": "string"
     },
     "year_approx": {
-      "type": "number"
+      "anyOf": [
+        {
+          "type": "number"
+        },
+        {
+          "type": "string"
+        },
+        {
+          "type": "null"
+        }
+      ]
     },
     "year_note": {
       "type": "string"

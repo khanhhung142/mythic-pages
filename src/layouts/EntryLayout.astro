@@ -41,10 +41,15 @@ function formatApproxYear(y: number, locale: Locale): string {
 }
 
 let approxYearValue: string | undefined;
-if (data.year_approx != null && !Number.isNaN(data.year_approx)) {
-  approxYearValue = formatApproxYear(data.year_approx, lang);
-  if (data.year_note) approxYearValue = `${approxYearValue} — ${data.year_note}`;
+const yearApprox = data.year_approx;
+if (typeof yearApprox === 'number' && Number.isFinite(yearApprox)) {
+  approxYearValue = formatApproxYear(yearApprox, lang);
+} else if (typeof yearApprox === 'string' && yearApprox.trim()) {
+  approxYearValue = yearApprox.trim();
+} else if (yearApprox == null) {
+  approxYearValue = lang === 'vi' ? 'không có dữ liệu' : 'unknown';
 }
+if (approxYearValue && data.year_note) approxYearValue = `${approxYearValue} — ${data.year_note}`;
 
 const genderKey = data.gender ? `gender.${data.gender}` : '';
 const genderLookup = genderKey ? t(lang, genderKey) : '';

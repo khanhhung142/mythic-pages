@@ -37,7 +37,7 @@ z.object({
   subcategories: z.array(z.string()).optional(),
   gender: z.string().optional(),                 // "nam" | "nu" | "khong-xac-dinh"
   era: z.string().optional(),                    // Historical era text
-  year_approx: z.number().optional(),            // Approximate year (negative = BCE)
+  year_approx: z.union([z.number(), z.string(), z.null()]).optional(), // Approximate year (negative = BCE) or free-text when unknown
   year_end: z.number().optional(),
   region: z.string().optional(),                 // "bac" | "trung" | "nam"
   locations: z.array(z.string()).optional(),      // Place names

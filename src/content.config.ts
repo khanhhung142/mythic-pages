@@ -15,7 +15,7 @@ const entrySchema = z.object({
   era: z.string().optional(),
   era_mythic: z.string().optional(),
   era_historic: z.string().optional(),
-  year_approx: z.number().optional(),
+  year_approx: z.union([z.number(), z.string(), z.null()]).optional(),
   year_note: z.string().optional(),
   year_end: z.number().optional(),
   region: z.string().optional(),
