@@ -111,7 +111,7 @@ related: published
 const { Content } = await render(entry);
 ```
 
-The rendered markdown receives typography from `EntryLayout`'s `.entry-content` styles.
+The rendered markdown receives typography from `EntryLayout`'s `.entry-content` styles. GFM pipe tables are parsed to `<table>` (`gfm: true` in `@astrojs/markdown-remark`), then wrapped in `<div class="table-scroll">` by `rehypeWrapTables` in `astro.config.mjs`. Borders, zebra rows, horizontal scroll, and sticky first column are styled in `EntryLayout.astro` (`.entry-content .table-scroll`), not in `global.css` `.prose`.
 
 ## Category Labels Resolution
 

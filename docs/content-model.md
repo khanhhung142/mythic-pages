@@ -150,6 +150,15 @@ Markdown body here...
 
 - **File naming**: `kebab-case.md` matching the entry's ID (e.g. `thanh-giong.md`); use the **same** `id` in `vi` and `en` when both exist
 - **Markdown headings**: Use `## Heading _italic_` style — the italic part gets styled differently via `EntryLayout.astro`
+- **GFM pipe tables**: Supported in the entry body (GitHub Flavored Markdown). Use for tradition/source comparison blocks. Leave a blank line before the table. First column = row label (e.g. `Yếu tố` / `Feature`); following columns = sources or variants.
+
+  ```markdown
+  | Yếu tố | *Việt Điện U Linh* (1329) | *Lĩnh Nam Chích Quái* |
+  |---|---|---|
+  | Tên | Lý Ông Trọng | Lý Thân |
+  ```
+
+  Styled and horizontally scrollable on narrow screens via `EntryLayout.astro` (`.entry-content table`). See `styling.md` § Entry content tables.
 - **Only `status: 'published'`** entries appear on the site
 - **`popularity`** drives sort order (higher = shown first) and "related entries" selection
 - **Relations** are plain text strings, not linked to other entry IDs (yet)

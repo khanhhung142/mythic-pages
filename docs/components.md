@@ -169,6 +169,7 @@ File: `src/layouts/EntryLayout.astro`
 - `relGroups` — filters non-empty relation groups
 - `slugToLabel()` — converts theme slugs to display text
 - Category/region/gender labels use `getCategoryLabel` and `t(lang, ...)`
+- Markdown GFM tables in the article slot are styled under `.entry-content table` (borders, zebra rows, horizontal scroll, sticky first column on small viewports)
 
 **Used by**: `src/pages/[...lang]/entries/[id].astro`
 

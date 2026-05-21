@@ -1,7 +1,11 @@
 import { defineConfig, envField } from "astro/config";
 import sitemap from "@astrojs/sitemap";
+import { rehypeWrapTables } from "./src/lib/rehype-wrap-tables.ts";
 
 export default defineConfig({
+  markdown: {
+    rehypePlugins: [rehypeWrapTables],
+  },
   site: "https://vietmyth.vn",
 
   env: {

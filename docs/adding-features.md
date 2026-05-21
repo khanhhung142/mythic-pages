@@ -11,7 +11,8 @@ Step-by-step patterns for common tasks. Follow these to stay consistent with exi
 5. Set `status: published` to make it visible
 6. Set `popularity` to control sort order (higher = shown first)
 7. Write markdown body with `## Heading _italic_` pattern
-8. No routing code changes needed — collections pick up new `.md` files on build
+8. Optional: add a GFM comparison table (`| col | col |` with `|---|---|`) for cross-tradition summaries — first column = row label; renders with scroll on mobile (see `content-model.md`, `styling.md`)
+9. No routing code changes needed — collections pick up new `.md` files on build
 
 ```yaml
 ---
