@@ -139,22 +139,17 @@ Small uppercase text with vermilion line:
 
 ## Entry content tables
 
-Markdown GFM pipe tables in entry bodies are styled in `EntryLayout.astro` under `.entry-content` (not in `global.css` `.prose`).
+Comparison tables in entry bodies are **not** rendered as scrollable `<table>` elements. At build time, `rehypeComparisonCards` (`src/lib/rehype-comparison-cards.ts`) replaces each multi-column GFM table with `.comp-cards` HTML. Styling lives in `EntryLayout.astro` (not `global.css` `.prose`).
 
 | Behavior | Implementation |
 |----------|----------------|
-| Layout containment | `.entry-content` uses `min-width: 0`, `max-width: 100%`, `overflow-x: clip` so wide tables cannot blow out the grid column |
-| Outer frame | `border` on `.table-scroll` (not on `<table>`), `border-radius: 2px`, `min-width: 0`, horizontal scroll inside wrapper |
-| Table width in scroll | `width: max-content; min-width: 100%` inside `.table-scroll` — scrolls when wider than article column |
-| Cell borders & zebra | `border: 1px solid var(--line)` on `th`/`td`; even rows `var(--paper-light)` |
-| Header row | `th` uses `var(--paper-dark)` background, `Cormorant Garamond` |
-| Italics in cells | `th em` / `td em` reset to body font so headers stay readable |
-| Wide tables (desktop/tablet) | Rehype wraps each `<table>` in `<div class="table-scroll">` (`src/lib/rehype-wrap-tables.ts`); wrapper scrolls horizontally, table keeps `display: table` |
-| Row labels on scroll | First column `position: sticky; left: 0` with matching row background |
-| Mobile comparison view (≤768px) | Inline script in `EntryLayout.astro` reads each table and inserts `.comp-cards` after the wrapper: tab pills per source column (col 2+), one panel with attribute rows (`dt`/`dd`). Table hidden; cards shown. No markdown changes. |
-| Mobile density | `@media (max-width: 600px)` — smaller table cells; `.comp-cards` stacks label above value |
+| All viewports | `.comp-cards` only — no horizontal table scroll |
+| Tabs | CSS-only: hidden `input.comp-radio` + `label.comp-tab`; active tab/panel via `.comp-cards:has(.comp-radio[data-index="N"]:checked)` |
+| Single-source tables | One panel, no tab bar (when only one data column) |
+| Simple tables | Tables with fewer than two columns stay as plain `<table>` (basic borders in `.entry-content table`) |
+| Cache | Rendered HTML is stored in `node_modules/.astro/data-store.json`. After plugin changes, run `npx astro sync` before deploy |
 
-**`.comp-cards` structure** (generated client-side): `.comp-tabs` → `.comp-tab` buttons; `.comp-panels` → `.comp-panel` with `.comp-source-name` + `.comp-rows` / `.comp-row` (`dt` label, `dd` value). Tab label = header text before `(` or truncated to 24 chars.
+**`.comp-cards` structure** (build-time HTML): optional `.comp-tabs` with radio + labels; `.comp-panel[data-panel="N"]` with `.comp-source-name` + `dl.comp-rows` / `.comp-row` (`dt` / `dd`). Tab label = header text before `(` or truncated to 24 chars.
 
 Authoring: see `content-model.md` (GFM pipe tables). First column = row attribute; following columns = sources/variants to compare.
 
@@ -164,8 +159,7 @@ Authoring: see `content-model.md` (GFM pipe tables). First column = row attribut
 |-----------|--------|
 | `max-width: 1024px` | Tablet — entry page goes single column |
 | `max-width: 900px` | Small tablet — hero stacks, nav hides, footer 2-col |
-| `max-width: 768px` | Phone — entry tables hidden; `.comp-cards` source-column view shown |
-| `max-width: 600px` | Small phone — entries grid 1-col; denser table cells and stacked comp-card rows |
+| `max-width: 600px` | Small phone — entries grid 1-col; comp-card rows stack label above value |
 
 ## Tailwind Config Notes
 

@@ -1,10 +1,10 @@
 import { defineConfig, envField } from "astro/config";
 import sitemap from "@astrojs/sitemap";
-import { rehypeWrapTables } from "./src/lib/rehype-wrap-tables.ts";
+import { rehypeComparisonCards } from "./src/lib/rehype-comparison-cards.ts";
 
 export default defineConfig({
   markdown: {
-    rehypePlugins: [rehypeWrapTables],
+    rehypePlugins: [rehypeComparisonCards],
   },
   site: "https://vietmyth.vn",
 

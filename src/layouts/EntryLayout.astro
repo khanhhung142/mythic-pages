@@ -303,123 +303,6 @@ function slugToLabel(slug: string): string {
 
 <Footer lang={lang} />
 
-<script is:inline>
-  document.addEventListener('DOMContentLoaded', () => {
-    const entryContent = document.querySelector('.entry-content');
-    if (!entryContent) return;
-
-    function getShortTabLabel(text) {
-      const trimmed = text.replace(/\s+/g, ' ').trim();
-      const beforeParen = trimmed.split('(')[0].trim();
-      if (beforeParen.length <= 24) return beforeParen;
-      return `${beforeParen.slice(0, 22)}…`;
-    }
-
-    function getHeaderCells(table) {
-      const thead = table.querySelector('thead');
-      if (thead) return Array.from(thead.querySelectorAll('th'));
-      const firstRow = table.querySelector('tr');
-      if (!firstRow) return [];
-      return Array.from(firstRow.querySelectorAll('th, td'));
-    }
-
-    function buildCompCards(table) {
-      const headers = getHeaderCells(table);
-      if (headers.length < 2) return null;
-
-      const sourceHeaders = headers.slice(1);
-      const bodyRows = table.querySelectorAll('tbody tr');
-      const rows = bodyRows.length
-        ? Array.from(bodyRows)
-        : Array.from(table.querySelectorAll('tr')).slice(1);
-      if (!rows.length) return null;
-
-      const cards = document.createElement('div');
-      cards.className = 'comp-cards';
-
-      const tabs = document.createElement('div');
-      tabs.className = 'comp-tabs';
-      tabs.setAttribute('role', 'tablist');
-
-      const panels = document.createElement('div');
-      panels.className = 'comp-panels';
-
-      sourceHeaders.forEach((headerCell, sourceIndex) => {
-        const columnIndex = sourceIndex + 1;
-        const sourceNameHtml = headerCell.innerHTML.trim();
-
-        const tab = document.createElement('button');
-        tab.type = 'button';
-        tab.className = `comp-tab${sourceIndex === 0 ? ' is-active' : ''}`;
-        tab.setAttribute('role', 'tab');
-        tab.setAttribute('aria-selected', sourceIndex === 0 ? 'true' : 'false');
-        tab.textContent = getShortTabLabel(headerCell.textContent ?? '');
-        tabs.appendChild(tab);
-
-        const panel = document.createElement('div');
-        panel.className = `comp-panel${sourceIndex === 0 ? ' is-active' : ''}`;
-        panel.setAttribute('role', 'tabpanel');
-
-        const sourceTitle = document.createElement('div');
-        sourceTitle.className = 'comp-source-name';
-        sourceTitle.innerHTML = sourceNameHtml;
-
-        const rowList = document.createElement('dl');
-        rowList.className = 'comp-rows';
-
-        rows.forEach((row) => {
-          const cells = Array.from(row.querySelectorAll('th, td'));
-          if (cells.length <= columnIndex) return;
-
-          const labelCell = cells[0];
-          const valueCell = cells[columnIndex];
-          if (!labelCell || !valueCell) return;
-
-          const rowEl = document.createElement('div');
-          rowEl.className = 'comp-row';
-
-          const label = document.createElement('dt');
-          label.innerHTML = labelCell.innerHTML.trim();
-
-          const value = document.createElement('dd');
-          value.innerHTML = valueCell.innerHTML.trim();
-
-          rowEl.appendChild(label);
-          rowEl.appendChild(value);
-          rowList.appendChild(rowEl);
-        });
-
-        panel.appendChild(sourceTitle);
-        panel.appendChild(rowList);
-        panels.appendChild(panel);
-
-        tab.addEventListener('click', () => {
-          tabs.querySelectorAll('.comp-tab').forEach((tabEl, index) => {
-            const isActive = index === sourceIndex;
-            tabEl.classList.toggle('is-active', isActive);
-            tabEl.setAttribute('aria-selected', isActive ? 'true' : 'false');
-          });
-          panels.querySelectorAll('.comp-panel').forEach((panelEl, index) => {
-            panelEl.classList.toggle('is-active', index === sourceIndex);
-          });
-        });
-      });
-
-      cards.appendChild(tabs);
-      cards.appendChild(panels);
-      return cards;
-    }
-
-    entryContent.querySelectorAll('table').forEach((table) => {
-      const cards = buildCompCards(table);
-      if (!cards) return;
-
-      const anchor = table.closest('.table-scroll') ?? table;
-      anchor.insertAdjacentElement('afterend', cards);
-    });
-  });
-</script>
-
 </body>
 </html>
 
@@ -650,44 +533,15 @@ header.entry-head::before{
 .entry-content blockquote p::after{content:'"';color:var(--vermilion)}
 .entry-content blockquote > p:first-of-type::first-letter{all:unset}
 
-/* TABLES — scroll inside .table-scroll; never expand page grid */
-.entry-content .table-scroll{
-  width:100%;
-  max-width:100%;
-  min-width:0;
-  margin:2.5rem 0;
-  overflow-x:auto;
-  overflow-y:hidden;
-  -webkit-overflow-scrolling:touch;
-  border:1px solid var(--line);
-  border-radius:2px;
-  scrollbar-gutter:stable;
-  background:
-    linear-gradient(to right,var(--paper-light) 0,transparent 1.25rem) 0 0 / 1.5rem 100% no-repeat local,
-    linear-gradient(to left,var(--paper-light) 0,transparent 1.25rem) 100% 0 / 1.5rem 100% no-repeat local;
-}
+/* Simple GFM tables (fewer than 2 data columns) — not converted to cards */
 .entry-content table{
-  margin:0;
-  border-collapse:separate;
-  border-spacing:0;
+  width:100%;
+  margin:2.5rem 0;
+  border-collapse:collapse;
+  border:1px solid var(--line);
   font-family:'Be Vietnam Pro',sans-serif;
   font-size:1.05rem;
   line-height:1.6;
-  table-layout:auto;
-}
-.entry-content .table-scroll table{
-  width:max-content;
-  min-width:100%;
-  margin:0;
-  border:0;
-}
-.entry-content > table{
-  width:max-content;
-  max-width:100%;
-  min-width:0;
-  margin:2.5rem 0;
-  border:1px solid var(--line);
-  border-radius:2px;
 }
 .entry-content table th,
 .entry-content table td{
@@ -697,8 +551,6 @@ header.entry-head::before{
   text-align:left;
   vertical-align:top;
   font-weight:300;
-  white-space:normal;
-  background-clip:padding-box;
 }
 .entry-content table th{
   font-family:'Cormorant Garamond',serif;
@@ -706,35 +558,49 @@ header.entry-head::before{
   color:var(--ink);
   background-color:var(--paper-dark);
 }
-.entry-content table th em,
-.entry-content table td em{
-  font-family:'Be Vietnam Pro',sans-serif;
-  font-style:italic;
-  font-size:inherit;
-  color:inherit;
-}
-.entry-content table th:first-child,
-.entry-content table td:first-child{
-  position:sticky;
-  left:0;
-  z-index:1;
-}
-.entry-content table thead th:first-child{background-color:var(--paper-dark)}
-.entry-content table tbody tr:nth-child(even) td:first-child{background-color:var(--paper-light)}
-.entry-content table tbody tr:nth-child(odd) td:first-child{background-color:var(--paper)}
-.entry-content table tbody tr:nth-child(odd) td:not(:first-child){
-  background-color:var(--paper);
-}
-.entry-content table tbody tr:nth-child(even) td:not(:first-child){
-  background-color:var(--paper-light);
-}
 
-/* COMPARISON CARDS — mobile source-column view (built from table DOM) */
+/* COMPARISON CARDS — build-time from GFM tables (rehype-comparison-cards) */
 .comp-cards{
-  display:none;
   margin:2.5rem 0;
   border:1px solid var(--line);
   background:var(--paper-light);
+}
+.comp-radio{
+  position:absolute;
+  width:1px;
+  height:1px;
+  padding:0;
+  margin:-1px;
+  overflow:hidden;
+  clip:rect(0,0,0,0);
+  white-space:nowrap;
+  border:0;
+}
+.comp-panel{display:none}
+.comp-cards:has(.comp-radio[data-index="0"]:checked) .comp-panel[data-panel="0"],
+.comp-cards:has(.comp-radio[data-index="1"]:checked) .comp-panel[data-panel="1"],
+.comp-cards:has(.comp-radio[data-index="2"]:checked) .comp-panel[data-panel="2"],
+.comp-cards:has(.comp-radio[data-index="3"]:checked) .comp-panel[data-panel="3"],
+.comp-cards:has(.comp-radio[data-index="4"]:checked) .comp-panel[data-panel="4"],
+.comp-cards:has(.comp-radio[data-index="5"]:checked) .comp-panel[data-panel="5"],
+.comp-cards:has(.comp-radio[data-index="6"]:checked) .comp-panel[data-panel="6"],
+.comp-cards:has(.comp-radio[data-index="7"]:checked) .comp-panel[data-panel="7"],
+.comp-cards:has(.comp-radio[data-index="8"]:checked) .comp-panel[data-panel="8"],
+.comp-cards:not(:has(.comp-radio)) .comp-panel[data-panel="0"]{
+  display:block;
+}
+.comp-cards:has(.comp-radio[data-index="0"]:checked) label[data-index="0"],
+.comp-cards:has(.comp-radio[data-index="1"]:checked) label[data-index="1"],
+.comp-cards:has(.comp-radio[data-index="2"]:checked) label[data-index="2"],
+.comp-cards:has(.comp-radio[data-index="3"]:checked) label[data-index="3"],
+.comp-cards:has(.comp-radio[data-index="4"]:checked) label[data-index="4"],
+.comp-cards:has(.comp-radio[data-index="5"]:checked) label[data-index="5"],
+.comp-cards:has(.comp-radio[data-index="6"]:checked) label[data-index="6"],
+.comp-cards:has(.comp-radio[data-index="7"]:checked) label[data-index="7"],
+.comp-cards:has(.comp-radio[data-index="8"]:checked) label[data-index="8"]{
+  background:var(--vermilion);
+  border-color:var(--vermilion);
+  color:var(--paper);
 }
 .comp-tabs{
   display:flex;
@@ -756,14 +622,9 @@ header.entry-head::before{
   cursor:pointer;
   transition:background .25s,color .25s,border-color .25s;
 }
-.comp-tab.is-active{
-  background:var(--vermilion);
-  border-color:var(--vermilion);
-  color:var(--paper);
+@media (min-width:769px){
+  .comp-tab{font-size:.7rem;padding:.5rem .9rem}
 }
-.comp-panels{position:relative}
-.comp-panel{display:none}
-.comp-panel.is-active{display:block}
 .comp-source-name{
   font-family:'Cormorant Garamond',serif;
   font-size:1.4rem;
@@ -1003,18 +864,7 @@ aside{position:relative}
   .entry-content h2{font-size:2rem}
   .entry-content > p:first-of-type::first-letter{font-size:3.5rem}
 }
-@media (max-width:768px){
-  .entry-content .table-scroll,
-  .entry-content > table{display:none}
-  .comp-cards{display:block}
-}
-@media (min-width:769px){
-  .comp-cards{display:none}
-}
 @media (max-width:600px){
-  .entry-content table{font-size:.9rem}
-  .entry-content table th,
-  .entry-content table td{padding:.55rem .7rem}
   .comp-source-name{font-size:1.25rem;padding:1rem 1rem .5rem}
   .comp-rows{padding:0 1rem 1rem}
   .comp-row{grid-template-columns:1fr;gap:.25rem}
