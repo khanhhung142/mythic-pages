@@ -77,4 +77,3 @@ npm run preview  # preview build
 ## Giấy phép
 
 Nội dung (entries, truyện) thuộc cộng đồng đóng góp — sử dụng tự do với attribution.  
-Code thuộc [MIT License](./LICENSE).
