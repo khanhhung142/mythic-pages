@@ -168,7 +168,7 @@ motifs:
     system: custom
     description: "Họ hàng với motif sinh từ quả bầu của Khmu, Mường, Hmông, Thái, Choang; số 100 song song trăm con Kauravas trong Mahābhārata"
 popularity: 5
-status: draft
+status: published
 updated_at: 2026-07-08
 ---
 

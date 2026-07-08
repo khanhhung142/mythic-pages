@@ -168,7 +168,7 @@ motifs:
     system: custom
     description: "Cognate of the gourd-birth motif of the Khmu, Mường, Hmong, Thái, and Zhuang; the number one hundred parallels the hundred Kauravas of the Mahābhārata"
 popularity: 5
-status: draft
+status: published
 updated_at: 2026-07-08
 ---
 
