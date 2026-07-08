@@ -1,277 +1,299 @@
 ---
 id: au-co
-name_vi: Âu Cơ
-name_han: 甌姬 / 嫗姬
+name_vi: "Âu Cơ (Quốc Mẫu Âu Cơ)"
+name_han: "嫗姬 / 甌姬"
 aliases:
   - Quốc Mẫu Âu Cơ
+  - Mẹ Âu Cơ
   - Tiên Mẫu
-  - Mẹ Âu
-  - Ngu Cơ (biến thể Mường)
-name_en: Âu Cơ — The Mountain Fairy, Mother of the Hundred Việt
-category: than-linh
+  - Ngu Cơ (dị bản Mường)
+name_en: "Âu Cơ, Mother of the Hundred Việt"
+category: tich-co
 subcategories:
-  - quoc-mau
-  - tien-nu
-  - thuy-to
   - than-thoai-khai-nguyen
-gender: nu
-era: Tiền Hùng Vương (thời Lạc Long Quân – Hồng Bàng)
-year_approx: -2879
+  - quoc-mau
+  - truyen-thuyet-lich-su
+type: narrative
+era: "Bối cảnh truyện: thời Hồng Bàng (truyền thống đặt năm 2879 TCN). Bối cảnh sáng tác: cuối TK XIV (Trần Thế Pháp), biên tập 1492-1493 (Vũ Quỳnh, Kiều Phú)"
 region: bac
 locations:
-  - Núi Long Trang (nơi ở cùng Lạc Long Quân)
-  - Phong Châu (kinh đô Hùng Vương, nay thuộc Phú Thọ)
-  - Ngã Ba Hạc (Việt Trì, nơi chia con theo Thiên Nam ngữ lục)
-  - Đền Mẫu Âu Cơ (Hiền Lương, Hạ Hòa, Phú Thọ)
-  - Đền Quốc Mẫu Âu Cơ (trong quần thể Đền Hùng, Núi Vặn)
-  - Núi Tản Viên (vùng Âu Việt)
-coordinates:
-  - 21.3667
-  - 104.9833
-relations:
-  family:
-    - Đế Lai (cha)
-    - Lạc Long Quân (chồng)
-    - 100 con trai (sinh từ bọc trăm trứng)
-    - Hùng Vương đời thứ nhất (con trưởng, theo mẹ lên núi)
-    - Kinh Dương Vương (bố chồng)
-    - Thần Long Nữ / Long Nữ Đồng Đình (mẹ chồng)
-    - Đế Minh (ông nội chồng)
-    - Thần Nông / Shennong (tổ phụ chung, đời thứ 3 trở lên)
-  allies:
-    - Sơn Tinh (theo Thiên Nam ngữ lục, dòng núi của Âu Cơ)
-    - 50 con theo mẹ lên núi
-  enemies: []
-  artifacts:
-    - Bọc trăm trứng (百卵 bách noãn, vật thần kỳ trung tâm)
+  - "Núi Long Trang (nơi Âu Cơ và Lạc Long Quân chung sống, nơi sinh bọc trăm trứng)"
+  - "Phong Châu (kinh đô Hùng Vương, nay thuộc Phú Thọ)"
+  - "Ngã Ba Hạc (Việt Trì, nơi chia con theo Thiên Nam ngữ lục)"
+  - "Đền Mẫu Âu Cơ (xã Hiền Lương, huyện Hạ Hòa, tỉnh Phú Thọ)"
+  - "Đền Quốc Mẫu Âu Cơ (núi Vặn, khu di tích Đền Hùng, Phú Thọ)"
+characters:
+  - id: au-co
+    name: "Âu Cơ (嫗姬 / 甌姬)"
+    role: protagonist
+    notes: "Con gái Đế Lai, giống tiên trên cạn. Sinh bọc trăm trứng, dẫn năm mươi con lên núi. Một số truyền bản LNCQ chép là vợ/thiếp Đế Lai (xem Văn bản học)"
+  - id: lac-long-quan
+    name: "Lạc Long Quân (貉龍君)"
+    role: counterpart
+    notes: "Con Kinh Dương Vương và con gái Long Vương hồ Động Đình. Nòi rồng, đứng đầu thủy tộc. Cha của trăm con trai"
+  - id: de-lai
+    name: "Đế Lai (帝來)"
+    role: supporting
+    notes: "Vua phương Bắc dòng Thần Nông, cha Âu Cơ. Phả hệ khớp với Đế Ai (帝哀), vua thứ bảy họ Thần Nông trong Đế vương thế kỷ của Hoàng Phủ Mật"
+  - id: hung-vuong
+    name: "Hùng Vương (雄王)"
+    role: successor
+    notes: "Con trưởng trong nhóm năm mươi người theo mẹ, được tôn làm vua ở Phong Châu, mở kỷ Hùng Vương nước Văn Lang"
+  - id: kinh-duong-vuong
+    name: "Kinh Dương Vương (涇陽王)"
+    role: ancestor
+    notes: "Con Đế Minh, vua phương Nam, cha Lạc Long Quân"
+contained_in:
+  - title: Lĩnh Nam Chích Quái
+    position: "Truyện họ Hồng Bàng (鴻龐氏傳), truyện thứ 1 quyển thượng (bản 22 truyện của Vũ Quỳnh 1492)"
+    author: Trần Thế Pháp (soạn TK XIV), Vũ Quỳnh và Kiều Phú (biên tập 1492-1493)
+  - title: Đại Việt Sử Ký Toàn Thư
+    position: "Ngoại kỷ Quyển I, Kỷ Hồng Bàng thị. Có ngoặc [tục truyền sinh bách noãn] tách truyền thuyết khỏi chính sử"
+    author: Ngô Sĩ Liên (1479)
+  - title: Thiên Nam ngữ lục
+    position: "Đoạn mở đầu, diễn ca lục bát chữ Nôm"
+    author: Khuyết danh (c. 1682-1709)
+not_contained_in:
+  - title: Việt sử lược
+    author: Khuyết danh (c. 1377)
+    reason: "Sử Việt sớm nhất còn lại. Có Hùng Vương và Văn Lang nhưng không có phả hệ Thần Nông, Kinh Dương Vương, Lạc Long Quân, Âu Cơ"
+  - title: Việt điện u linh tập
+    author: Lý Tế Xuyên (1329)
+    reason: "Chép thần linh được phong sắc; không có mục Âu Cơ"
+  - title: Khâm định Việt sử thông giám cương mục
+    author: Quốc sử quán triều Nguyễn (1856-1881)
+    reason: "Bỏ Kinh Dương Vương và Lạc Long Quân khỏi chính sử, coi các tích Hồng Bàng là chuyện trâu ma rắn thần"
+adaptations: null
 sources:
   - title: Lĩnh Nam Chích Quái
-    author: Trần Thế Pháp (soạn TK XIV), Vũ Quỳnh – Kiều Phú (biên tập 1492–1493)
-    chapter: "Truyện họ Hồng Bàng (鴻龐氏傳), Quyển I, truyện thứ 1"
-    edition: "Đinh Gia Khánh – Nguyễn Ngọc San, NXB Văn học 1960 (tái bản NXB Trẻ 2016, 185 tr.); bản Hán văn A.1200, Việt Nam Hán Văn Tiểu Thuyết tùng san, Học Sinh Thư Cục Đài Bắc 1992; bản Đới Khả Lai – Dương Bảo Quân, NXB Trung Châu Cổ Tịch, Trịnh Châu 1991"
-    notes: "Ít nhất 11 bản thảo còn tồn tại: HV 486, VHV 1473, VHV 2914 tại Viện Nghiên cứu Hán Nôm. Bản VHV 1473 có thêm đoạn về loạn Xī Yóu không thấy ở bản khác."
+    author: Trần Thế Pháp (soạn TK XIV), Vũ Quỳnh và Kiều Phú (biên tập 1492-1493)
+    chapter: "Truyện họ Hồng Bàng (鴻龐氏傳), truyện 1"
+    edition: "Bản dịch Đinh Gia Khánh và Nguyễn Ngọc San, NXB Văn hóa, Hà Nội, 1960. Bản Hán: HV.486 (Việt Nam Hán Văn Tiểu Thuyết Tùng San, Học Sinh Thư Cục Đài Bắc 1992); A.2914"
+  - title: "Lĩnh Nam chích quái (Khảo luận, Dịch chú, Nguyên bản chữ Hán)"
+    author: Nguyễn Thị Oanh
+    chapter: "Truyện họ Hồng Bàng (bản A.2914)"
+    edition: "NXB Khoa học Xã hội, Hà Nội, 2024, 720 tr."
   - title: Lĩnh Nam Chích Quái (bình giải)
     author: Nguyễn Hữu Vinh dịch, Trần Đình Hoành bình
     chapter: Truyện họ Hồng Bàng
-    edition: "dotchuoinon.com 2015 (PDF miễn phí, bản 18/3/2015)"
-  - title: Lĩnh Nam Chích Quái (bản Lê Hữu Mục)
-    author: Lê Hữu Mục dịch
-    edition: "NXB Khai Trí, Sài Gòn 1961; tái bản Trăm Việt 1982"
-  - title: Đại Việt sử ký toàn thư (大越史記全書)
+    edition: "dotchuoinon.com, 2015"
+  - title: Đại Việt Sử Ký Toàn Thư
     author: Ngô Sĩ Liên
-    chapter: "Ngoại kỷ, Cuốn thứ nhất, Kỷ Hồng Bàng thị"
-    edition: "Hoàn thành 1479 dưới triều Lê Thánh Tông. Bản in Chính Hòa (1697). Bản dịch Ngô Đức Thọ chủ biên, NXB Khoa học Xã hội 1993. Bản Hán-Nôm đối chiếu: dvsktt.com"
-    notes: "Ngô Sĩ Liên thêm ngoặc [tục truyền sinh bách noãn] để tách phần chính sử khỏi phần truyền thuyết. Chép Âu Cơ là con gái Đế Lai."
-  - title: Việt sử lược (越史略)
+    chapter: "Ngoại kỷ Quyển I, Kỷ Hồng Bàng thị"
+    edition: "1479. Bản dịch Ngô Đức Thọ chủ biên, NXB Khoa học Xã hội, 1993"
+  - title: Việt sử lược
     author: Khuyết danh
-    chapter: Quyển 1
-    edition: "c. 1377. Bản dịch Trần Quốc Vượng, NXB Văn Sử Địa 1960"
-    notes: "Sử Việt sớm nhất còn tồn tại. Không có phả hệ Thần Nông, Đế Minh, Kinh Dương Vương, Lạc Long Quân, Âu Cơ. Chỉ ghi Hùng Vương ở Gia Ninh dùng phép thuật thu phục các bộ lạc."
-  - title: Việt điện u linh tập (越甸幽靈集)
+    chapter: "Quyển I"
+    edition: "c. 1377. Bản dịch Trần Quốc Vượng, NXB Văn Sử Địa, 1960"
+  - title: Việt điện u linh tập
     author: Lý Tế Xuyên
-    edition: "c. 1329. Bản dịch Lê Hữu Mục, NXB Khai Trí, Sài Gòn 1960"
-    notes: "Không có mục riêng về Âu Cơ. Ghi chép thần linh hộ quốc, gồm Sơn Tinh (Tản Viên Sơn Thánh) nhưng không liên kết trực tiếp với phả hệ Âu Cơ."
-  - title: Thiên Nam ngữ lục (天南語錄)
+    edition: "c. 1329. Bản dịch Lê Hữu Mục, NXB Khai Trí, Sài Gòn, 1960"
+  - title: Thiên Nam ngữ lục
     author: Khuyết danh
-    chapter: "Đoạn mở đầu (trong tổng số 8.136 câu lục bát)"
-    edition: "c. 1682–1709, chữ Nôm. Bản dịch Nguyễn Thị Lâm – Nguyễn Tá Nhí, NXB Văn học 2001"
-    notes: "Ghi Âu Cơ 'trên mười lăm tuổi.' Gắn dòng núi Âu Cơ với Sơn Tinh. Xác định nơi chia con tại Ngã Ba Hạc (Việt Trì)."
-  - title: Khâm định Việt sử thông giám cương mục (欽定越史通鑑綱目)
+    chapter: "Đoạn mở đầu (trong 8.136 câu lục bát)"
+    edition: "c. 1682-1709, chữ Nôm. Bản Nguyễn Thị Lâm, NXB Văn học, 2001"
+  - title: Khâm định Việt sử thông giám cương mục
     author: Quốc sử quán triều Nguyễn
-    edition: "Hoàn thành dưới triều Tự Đức, 1856–1884. Bản dịch Viện Sử học, NXB Giáo dục 1998"
-    notes: "Bác bỏ phả hệ Hồng Bàng, gọi là 'ma trâu thần rắn, hoang đường không có chuẩn tắc.' Xóa Kinh Dương Vương và Lạc Long Quân khỏi chính sử."
+    edition: "1856-1881. Bản dịch Viện Sử học, NXB Giáo dục, 1998"
+  - title: "The Biography of the Hồng Bàng Clan as a Medieval Vietnamese Invented Tradition"
+    author: Liam C. Kelley
+    chapter: "Journal of Vietnamese Studies 7/2 (2012), tr. 87-130"
   - title: The Birth of Vietnam
     author: Keith Weller Taylor
-    chapter: "Chương 1 'Lac Lords' (tr. 1–41), Phụ lục A (tr. 349–359)"
-    edition: "University of California Press, Berkeley 1983"
-    notes: "Taylor đọc cuộc hôn phối dòng biển phương Nam với dòng núi phương Bắc như biểu tượng nền văn hóa Việt hướng biển khẳng định bản sắc riêng trước Trung Hoa. Dẫn Pryzluski: quyền lực phát sinh từ biển đối lập với văn hóa lục địa Hoa Ấn."
+    chapter: "Chương 1 (tr. 1-2) và Phụ lục A (tr. 349-359)"
+    edition: "University of California Press, 1983"
   - title: A History of the Vietnamese
     author: Keith Weller Taylor
     edition: "Cambridge University Press, 2013"
-    notes: "Nhấn mạnh 'sharp discontinuities' trong lịch sử Việt mà thần thoại che lấp."
-  - title: "The Biography of the Hồng Bàng Clan as a Medieval Vietnamese Invented Tradition"
-    author: Liam C. Kelley
-    chapter: "Journal of Vietnamese Studies 7, no. 2 (2012), tr. 87–130"
-    edition: "University of California Press"
-    notes: "Luận điểm chính: phả hệ Hồng Bàng là sáng tạo trung đại, không phải ký ức dân gian từ thiên niên kỷ I TCN. Lời tựa Vũ Quỳnh 1492 viết từ góc nhìn Trung Quốc. Một số yếu tố văn bản 'không có trước thời Đường.'"
-  - title: "What 'Folk' Created the Lĩnh Nam Chích Quái?"
-    author: Liam C. Kelley (Le Minh Khai)
-    edition: "leminhkhai.blog (nhiều bài, 2010–2020)"
   - title: "A Mythographical Journey to Modernity: The Textual and Symbolic Transformations of the Hùng Kings Founding Myths"
     author: Nguyễn Thị Điểu
-    chapter: "Journal of Southeast Asian Studies 44, no. 2 (2013), tr. 315–337"
-    edition: "Cambridge University Press"
-    notes: "Xác định Âu Cơ là 'bird goddess' trong thần thoại Nam Á / Đông Nam Á (dẫn Phan Đăng Nhật, 1981). Phát hiện đảo ngược mẫu hệ sang phụ hệ giữa bản LNCQ gốc và bản Ngô Sĩ Liên 1479. Dẫn khái niệm 'ornithomorphous hierogamy' của Anne Birrell."
-  - title: Postcolonial Vietnam — New Histories of the National Past
+    chapter: "Journal of Southeast Asian Studies 44/2 (2013), tr. 315-337"
+  - title: "Postcolonial Vietnam: New Histories of the National Past"
     author: Patricia Pelley
     edition: "Duke University Press, 2002"
-    notes: "Ghi nhận việc Viện Sử học Hà Nội 'thiết lập' năm lập quốc 2879 TCN, đặt Âu Cơ trước cả nhà Hạ Trung Quốc."
-  - title: "Classical Primordialism and the Historical Agendas of Vietnamese Confucianism"
-    author: Alexander Woodside
-    chapter: "Trong Rethinking Confucianism (Benjamin Elman, John Duncan, Herman Ooms biên), tr. 116–143"
-    edition: "UCLA, 2002"
+  - title: "Études d'histoire d'Annam. IV. Le Royaume de Van-lang"
+    author: Henri Maspero
+    chapter: "BEFEO 18/3 (1918), tr. 1-36"
+  - title: "Première étude sur les sources annamites de l'histoire d'Annam"
+    author: Léopold Cadière và Paul Pelliot
+    chapter: "BEFEO 4 (1904), tr. 617-671"
+  - title: "Notes sur les origines du peuple annamite"
+    author: Léonard Aurousseau
+    chapter: "BEFEO 23 (1923)"
+  - title: "The Flood Myth and the Origin of Ethnic Groups in Southeast Asia"
+    author: Đặng Nghiêm Vạn
+    chapter: "Journal of American Folklore 106 (1993)"
+  - title: "Peoples of the Gourd: Imagined Ethnicities in Highland Southeast Asia"
+    author: Frank Proschan
+    chapter: "Journal of Asian Studies 60/4 (2001)"
+  - title: Việt Nam văn hóa sử cương
+    author: Đào Duy Anh
+    edition: "1938"
   - title: The People between the Rivers
     author: Catherine Churchman
     edition: "Rowman & Littlefield, 2016"
-    notes: "Văn hóa trống đồng biến mất khỏi vùng đất thấp Việt sau chinh phục của Mã Viện (thế kỷ I)."
-  - title: "Études d'histoire d'Annam. IV. Le Royaume de Van-lang"
-    author: Henri Maspero
-    chapter: "BEFEO, Tome 18, no. 3 (1918), tr. 1–36"
-    edition: "Paris: EFEO"
-    notes: "Maspero đọc truyền thuyết Hồng Bàng (gồm Âu Cơ) như huyền thoại không có cơ sở lịch sử. Đề xuất 'Văn Lang' là phiên âm sai của 'Dạ Lang' (夜郎→文郎). Dùng phương pháp euhemeristic."
-  - title: "Première étude sur les sources annamites de l'histoire d'Annam"
-    author: Léopold Cadière, Paul Pelliot
-    chapter: "BEFEO, Tome 4 (1904), tr. 617–671"
-    edition: "Paris: EFEO"
-  - title: "Bibliographie annamite"
-    author: Émile Gaspardone
-    chapter: "BEFEO, Tome 34 (1934), tr. 1–173"
-    edition: "Paris: EFEO"
-  - title: "Notes sur les origines du peuple annamite"
-    author: Léonard Aurousseau
-    chapter: "BEFEO, Tome 23 (1923)"
-    edition: "Paris: EFEO"
-    notes: "Lý thuyết di cư Việt từ Chiết Giang, xây trên Chavannes. Nay đã bị bác bỏ."
-  - title: Lược khảo về thần thoại Việt Nam
-    author: Nguyễn Đổng Chi
-    edition: "Ban Văn Sử Địa, Hà Nội 1956 (185 tr.)"
-  - title: Kho tàng truyện cổ tích Việt Nam
-    author: Nguyễn Đổng Chi
-    edition: "NXB Giáo dục, Hà Nội 1957–1982 (5 tập)"
-  - title: Việt Nam văn hóa sử cương
-    author: Đào Duy Anh
-    edition: "NXB Bốn Phương, Huế 1938. Tái bản NXB Văn hóa Thông tin 2002"
-  - title: "The Flood Myth and the Origin of Ethnic Groups in Southeast Asia"
-    author: Đặng Nghiêm Vân
-    chapter: "Journal of American Folklore 106, no. 421 (1993), tr. 304–337"
-  - title: "Peoples of the Gourd: Imagined Ethnicities in Highland Southeast Asia"
-    author: Frank Proschan
-    chapter: "Journal of Asian Studies 60, no. 4 (2001), tr. 999–1032"
-  - title: "Annals of the Hồng Bàng Clan: From Ancient Legend to Modern Molecular Biology Evidence"
-    author: Nguyễn Hải Hà et al.
-    chapter: "Asia Pacific Social Science Review 20, no. 3 (2020)"
-    edition: "De La Salle University, Manila"
-summary: "Âu Cơ là tiên nữ miền núi, vợ Lạc Long Quân. Sinh bọc trăm trứng, nở trăm con trai. Hai vợ chồng chia con: 50 theo mẹ lên núi, 50 theo cha xuống biển. Con trưởng theo mẹ lập nước Văn Lang, xưng Hùng Vương đời thứ nhất. Trăm con là tổ tiên Bách Việt. Nguồn gốc câu 'con Rồng cháu Tiên' và từ 'đồng bào' (同胞, cùng một bọc). Ghi chép sớm nhất trong Lĩnh Nam Chích Quái (TK XIV), được Đại Việt sử ký toàn thư (1479) đưa vào chính sử. Học giả hiện đại tranh luận: ký ức dân gian cổ đại hay sáng tạo văn chương trung đại."
-group: Thủy tổ dân tộc Việt
+  - title: "Chinese Mythology: An Introduction"
+    author: Anne Birrell
+    edition: "Johns Hopkins University Press, 1999 (bản bìa mềm)"
+  - title: "A Layer of Dongsonian Vocabulary in Vietnamese"
+    author: Michel Ferlus
+    chapter: "Journal of the Southeast Asian Linguistics Society 1 (2009), tr. 95-109"
+  - title: Đế vương thế kỷ (帝王世紀)
+    author: Hoàng Phủ Mật (215-282)
+    chapter: "Phả hệ họ Thần Nông (Đế Ai, vua thứ bảy)"
+summary: |
+  Âu Cơ là nàng tiên trên cạn trong Truyện họ Hồng Bàng, truyện mở đầu Lĩnh Nam Chích Quái. Nàng là con gái Đế Lai, vua phương Bắc dòng Thần Nông, kết duyên với Lạc Long Quân nòi rồng và sinh ra một bọc nở trăm trứng, trăm con trai. Vì rồng tiên thủy hỏa khắc nhau, hai người chia con: năm mươi theo cha xuống biển, năm mươi theo mẹ lên núi; con trưởng theo mẹ được tôn làm Hùng Vương, đóng đô Phong Châu. Trăm con là thủy tổ Bách Việt; từ "đồng bào" (同胞, cùng một bọc) của tiếng Việt bắt nguồn từ hình ảnh này. Việt sử lược (c. 1377) chưa có phả hệ này; truyện định hình ở Lĩnh Nam Chích Quái rồi được Ngô Sĩ Liên đưa vào chính sử năm 1479 kèm ngoặc [tục truyền sinh bách noãn]. Học giới hiện đại tranh luận giữa thuyết "truyền thống được kiến tạo" thời trung đại (Kelley 2012) và các cách đọc tìm lớp lõi bản địa qua dị bản Mường và motif quả bầu Đông Nam Á. Tín ngưỡng thờ Mẫu Âu Cơ ở Hiền Lương (Phú Thọ) được công nhận Di sản văn hóa phi vật thể quốc gia năm 2017.
 themes:
-  - khai-nguyen-dan-toc
-  - mau-he-phu-he
-  - nui-bien-nhi-nguyen
-  - bach-viet
+  - con-rong-chau-tien
   - dong-bao
-  - boc-tram-trung
-  - chinh-tri-hoa-than-thoai
-  - van-lang
-  - hung-vuong
+  - nguon-goc-dan-toc
+  - chia-doi-nui-bien
+  - me-to
+  - bach-viet
+  - kien-tao-ky-uc
+motifs:
+  - code: null
+    system: custom
+    description: "Bọc trăm trứng: một lần sinh cho ra trăm con (một-sinh-trăm), khác trứng vũ trụ Bàn Cổ hay trứng Jumong (một trứng, một cá nhân)"
+  - code: null
+    system: custom
+    description: "Chia đôi 50/50: năm mươi con xuống biển, năm mươi con lên núi; chia ly kèm lời hẹn tương trợ, chia mà không đoạn tuyệt"
+  - code: null
+    system: custom
+    description: "Hôn phối khác cõi: rồng nước lấy tiên núi, cùng họ motif Preah Thong và Neang Neak (Campuchia); đảo ngược quy ước âm dương (nam gắn nước, nữ gắn núi)"
+  - code: null
+    system: custom
+    description: "Đồng bào: trăm con cùng một bọc (同胞) thành từ chỉ người cùng nước trong tiếng Việt"
+  - code: null
+    system: custom
+    description: "Họ hàng với motif sinh từ quả bầu của Khmu, Mường, Hmông, Thái, Choang; số 100 song song trăm con Kauravas trong Mahābhārata"
 popularity: 5
-status: published
-updated_at: 2026-07-03
+status: draft
+updated_at: 2026-07-08
 ---
 
-## Cốt truyện
+## Chuyện kể
 
-Ba đời sau Thần Nông là Đế Minh. Đế Minh tuần du phương Nam, tới núi Ngũ Lĩnh, lấy con gái Vụ Tiên, sinh Kinh Dương Vương. Kinh Dương Vương lấy con gái Long Vương hồ Động Đình, sinh ra một đứa con mang giống rồng, sau cai quản vùng biển phương Nam: Lạc Long Quân.
+Trên cánh đồng dưới chân núi Long Trang có một cái bọc nằm lẫn trong cỏ. Người mẹ sinh ra nó đã tự tay đem nó ra đây. Mang nặng đủ ngày đủ tháng, sinh ra không phải hình người, không tay không chân, chỉ là một bọc tròn trơn nhẵn: nàng cho đó là điềm chẳng lành, nên bỏ. Nhưng bỏ rồi, nàng không đành lòng đi hẳn.
 
-Đế Lai, cháu Đế Minh, cai quản phương Bắc. Con gái ngài là Âu Cơ. Đức Lạc Long Quân gặp Mẹ Âu Cơ ở phương Nam, hai người kết duyên, cùng về ở núi Long Trang.
+Người mẹ ấy là Âu Cơ. Nàng vốn là con gái Đế Lai, một vị vua phương Bắc thuộc dòng dõi Thần Nông. Năm ấy Đế Lai đưa con gái theo chuyến tuần du xuống cõi Nam, rồi mải mê núi sông đất lạ, để nàng ở lại nơi hành tại. Đất Lĩnh Nam bấy giờ có một vị chúa gọi là Lạc Long Quân, con trai Kinh Dương Vương và con gái Long Vương hồ Động Đình. Chàng mang nòi rồng, quen sống dưới nước, lâu lâu mới lên cạn. Một lần từ biển trở về, Lạc Long Quân gặp Âu Cơ, thấy nàng dung mạo đẹp lạ lùng. Hai người phải lòng nhau, kết làm vợ chồng, đưa nhau lên ở núi Long Trang. Một người con gái phương Bắc ở lại phương Nam: tưởng chỉ là chuyện một đời người, về sau mới biết là chuyện mở đầu của cả một giống nòi.
 
-Rồi chuyện lạ xảy ra. Mẹ Âu Cơ sinh ra một bọc trứng. Bảy ngày sau bọc nở trăm trứng, mỗi trứng một con trai, lớn nhanh không cần bú mớm, khỏe mạnh, thông minh khác thường.
+Rồi đến kỳ sinh nở. Và cái bọc ra đời.
 
-Đến lúc rồng tiên chia đường. Đức Lạc Long Quân nói: "Ta là giống Rồng, nàng là giống Tiên, thủy hỏa tương khắc, không thể ở cùng mãi." Nguyên văn chữ Hán: 吾以龍種，汝以仙種，水火相剋. Năm mươi con theo Mẹ lên núi. Năm mươi con theo Cha xuống biển. Hẹn nhau khi có việc thì giúp đỡ, đời đời không quên. Con trưởng theo Mẹ Âu Cơ lên Phong Châu, được tôn làm Hùng Vương đời thứ nhất, đặt tên nước Văn Lang. Trăm con trai trở thành tổ tiên Bách Việt, trăm tộc Việt.
+Sang ngày thứ bảy, Âu Cơ lại ra đồng. Cái bọc trong cỏ đã khác: nó căng lên, lay động, rồi tách ra. Bên trong không phải là thịt, mà là trứng. Một trăm quả trứng trắng nằm xếp bên nhau giữa cỏ dại. Nàng chưa kịp hoàn hồn thì trứng nở. Mỗi quả trứng cho ra một đứa con trai. Một trăm quả trứng, một trăm đứa con, nằm giữa đồng mà không khóc một tiếng. Cái điềm gở nàng sợ hôm nào hóa ra là cái phúc chưa ai từng thấy trên đời.
 
-## Mỗi bản chép một khác, và chỗ sửa nói lên thời đại
+Âu Cơ đem cả trăm con về núi. Lũ trẻ không cần bú mớm, cứ thế tự lớn lên, đứa nào cũng khôi ngô, khỏe mạnh, thông minh khác thường. Trăm đứa trẻ chẳng mấy chốc thành trăm chàng trai. Núi Long Trang chưa bao giờ đông vui đến thế.
 
-Đại Việt sử ký toàn thư (1479) chép Âu Cơ là con gái Đế Lai, đưa Quốc Mẫu vào chính sử theo phả hệ khai quốc chính thống. Chỗ sửa lộ thời đại rõ nhất nằm ở hướng đi của các con. Bản Lĩnh Nam Chích Quái để con trưởng theo Mẹ Âu Cơ lên Phong Châu lập nước, nhấn nét mẫu hệ. Bản Ngô Sĩ Liên nắn lại theo trật tự phụ hệ Nho giáo, cho năm mươi con theo cha xuống biển. Nguyễn Thị Điểu (_JSEAS_ 2013) theo dõi đúng lớp sửa này. Một chỗ nắn nhỏ, lộ nguyên khuôn đạo đức của thời biên soạn.
+Nhưng Lạc Long Quân là nòi rồng, nước mới là nhà. Chàng hay về thủy phủ dưới biển, để Âu Cơ cùng đàn con trên núi. Nàng là giống tiên trên cạn, không theo chồng xuống nước được; chồng nàng cũng không ở mãi trên non được. Cứ thế, người dưới nước, kẻ trên non, gặp nhau thưa dần.
 
-Ngô Sĩ Liên giữ nguyên phả hệ từ Thần Nông, giữ nguyên trăm con trai, nhưng chêm ngoặc vuông: [tục truyền sinh bách noãn]. Ông tách phần mình tin là sử (trăm con) khỏi phần mình coi là truyện kể (trăm trứng). Rồi ông so sánh: nhà Thương sinh từ trứng chim nuốt, nhà Chu sinh từ dấu chân khổng lồ, Việt sinh từ bọc trứng cũng không có gì lạ hơn. Cuối cùng vẫn chêm một câu cảnh cáo: "Tín tận thư bất như vô thư", tin hết sách thì thà đừng có sách. Ông là sử gia, không phải tín đồ.
+Một ngày, Lạc Long Quân nói với Âu Cơ: "Ta là giống rồng, nàng là giống tiên. Thủy hỏa khắc nhau, khó lòng ở với nhau lâu dài. Nay phải chia nhau: năm mươi con theo ta xuống biển, năm mươi con theo nàng lên núi. Kẻ lên non, người xuống bể, có việc thì báo cho nhau biết, đừng bỏ nhau."
 
-Việt sử lược, bộ sử Việt sớm nhất còn tồn tại (c. 1377), nhắc Hùng Vương và Văn Lang, nhưng hoàn toàn không có phả hệ Thần Nông, Đế Minh, Kinh Dương Vương, Lạc Long Quân, Âu Cơ. Sách chỉ ghi thời Chu Trang Vương (697–682 TCN), ở quận Gia Ninh có người dùng phép thuật thu phục các bộ lạc, xưng Hùng Vương. Không tiên, không rồng, không bọc trứng. Phả hệ thần thoại là sản phẩm muộn hơn nhiều.
+Rồi đến ngày chia tay. Một trăm chàng trai chia làm hai ngả. Năm mươi người theo cha xuôi về phía biển, nơi có thủy phủ và những vùng nước không bờ. Năm mươi người theo mẹ ngược lên vùng núi cao. Cha con, mẹ con, anh em nhìn nhau lần cuối, hẹn rằng dù kẻ trên non người dưới bể, hễ bên nào gặp việc thì gọi, bên kia sẽ đến.
 
-Việt điện u linh tập (1329) của Lý Tế Xuyên chép thần linh hộ quốc, có Sơn Tinh (Tản Viên Sơn Thánh), nhưng không có Âu Cơ. Sách này chỉ ghi thần được triều đình phong sắc, không ghi nhân vật thần thoại sáng thế.
+Âu Cơ dẫn năm mươi người con đi về phía núi. Miền đất mẹ con nàng chọn ở về sau mang tên Phong Châu. Những gì họ dựng nên ở đó là một chuyện khác, dài hơn nhiều, và là chỗ bắt đầu cho mọi chuyện còn lại của người Việt.
 
-Thiên Nam ngữ lục (c. 1682–1709), trường ca 8.136 câu lục bát chữ Nôm, thêm hai chi tiết không thấy ở đâu khác: tuổi Âu Cơ ("trên mười lăm"), và mối nối trực tiếp giữa dòng núi của bà với Sơn Tinh, "Sơn Tinh xưng hiệu ở đầu". Cuộc chiến Sơn Tinh, Thủy Tinh hàng năm mùa lũ, theo cách đọc này, chính là phần tiếp nối của cuộc chia ly giữa Âu Cơ (núi) và Lạc Long Quân (biển). Trường ca cũng ghi nơi chia con: Ngã Ba Hạc, hợp lưu ba sông tại Việt Trì, khu vực tâm linh trọng yếu của Phú Thọ.
+---
 
-Khâm định Việt sử thông giám cương mục, soạn dưới triều Tự Đức thế kỷ XIX, quay sang duy lý triệt để: bác bỏ toàn bộ phả hệ Hồng Bàng, gọi là "truyện ma trâu thần rắn, hoang đường không có chuẩn tắc" (ngưu quỷ xà thần), xóa cả Kinh Dương Vương lẫn Lạc Long Quân khỏi chính sử. Âu Cơ mất chỗ đứng theo.
+## Cốt truyện theo _Lĩnh Nam Chích Quái_
 
-Người Mường, nhóm ngôn ngữ gần nhất với người Kinh, giữ một phiên bản khác trong sử thi truyền miệng _Đẻ đất đẻ nước_ và các bài Mo tang lễ (Jeanne Cuisinier thu thập, Trần Quốc Vượng dẫn lại). Nhân vật tương ứng tên Ngu Cơ, hiện thân là một con hươu sao, lấy Long Vương hiện thân cá. Ngu Cơ sinh trăm trứng nở ra năm mươi trai và năm mươi gái, khác bản Kinh chỉ toàn trai. Sử thi Mường còn có motif trứng vũ trụ vuông (Trứng Điếng) nở ra con người đầu tiên. Mường và Việt tách ra từ nhóm Việt-Mường chung, nên biến thể Mường có thể giữ lớp cổ hơn, trước khi giới trí thức Hán học sửa câu chuyện theo khuôn Hán.
+Truyện họ Hồng Bàng (Hồng Bàng thị truyện 鴻龐氏傳) đứng đầu _Lĩnh Nam Chích Quái_, bản 22 truyện do Vũ Quỳnh biên tập năm 1492. Truyện mở bằng phả hệ: cháu ba đời Thần Nông là Đế Minh sinh Kinh Dương Vương với một nàng tiên vùng Ngũ Lĩnh; Kinh Dương Vương làm vua phương Nam, lấy con gái Long Vương hồ Động Đình, sinh Lạc Long Quân.
 
-## Cái tên chưa ngã ngũ
+Đế Lai, vua phương Bắc cùng dòng Thần Nông, tuần du phương Nam, để con gái yêu là Âu Cơ ở lại hành tại. Lạc Long Quân từ biển trở về, thấy Âu Cơ dung mạo đẹp lạ lùng, đưa nàng về núi Long Trang, kết làm vợ chồng.
 
-Tên "Âu Cơ" viết bằng chữ Hán thế nào vẫn là câu hỏi mở, mỗi cách viết kéo theo một cách hiểu khác.
+Âu Cơ sinh ra một bọc. Cho là điềm không lành, nàng đem bỏ ra ngoài đồng: chi tiết này chỉ có ở lớp văn bản sớm nhất. Qua bảy ngày, bọc mở ra trăm trứng, mỗi trứng nở một con trai. Các con không cần bú mớm mà tự lớn, khỏe mạnh và khôn ngoan khác thường.
 
-Hai cách viết chính: 甌姬 (Ōu Jī) và 嫗姬 (Ǒu Jī). Chữ 甌 nghĩa gốc là "bình gốm nhỏ", nhưng cũng là tên tộc người Âu Việt (甌越) trong sử Trung Quốc. Đọc theo hướng này, Âu Cơ là "Bà Chúa của người Âu Việt", và cuộc hôn nhân của bà với Lạc Long Quân trở thành biểu tượng cho sự hợp nhất giữa Âu Việt (vùng núi) và Lạc Việt (vùng đồng bằng) thành nước Âu Lạc dưới thời An Dương Vương. Trần Quốc Vượng đọc theo hướng này, cách đọc mang sức nặng chính trị lớn.
+Lạc Long Quân tuyên bố: "Ngã thị long chủng, nhĩ thị tiên chủng, thủy hỏa tương khắc" (ta là giống rồng, nàng là giống tiên, thủy hỏa khắc nhau). Hai người chia con: năm mươi theo cha xuống biển, năm mươi theo mẹ lên núi, hẹn có việc thì báo cho nhau. Con trưởng trong nhóm theo mẹ được tôn làm vua, hiệu Hùng Vương, đóng đô Phong Châu, dựng nước Văn Lang. Trăm người con trai là thủy tổ của Bách Việt.
 
-Chữ 嫗 nghĩa là "người đàn bà" hoặc "mẹ", cùng chữ trong tên Triệu Ẩu (趙嫗, tức Bà Triệu). Nếu viết 嫗姬 thì "Âu Cơ" chỉ là danh xưng chung, "Bà Lớn" hay "Quý Bà", không phải tên riêng. Thành phần thứ hai, Cơ (姬), vốn là họ hoàng tộc nhà Chu, sau thành từ chỉ "mỹ nữ" hoặc "quý phi" trong văn chương Hán.
+## Cấu trúc tự sự: _một bọc trăm con, một phép chia đôi_
 
-Trương Thái Du đề xuất "Âu" là âm thuần Việt, chữ Hán chỉ là phiên âm, liên kết "Âu" với khái niệm đất, biến Âu Cơ thành "Mẹ Đất" đối xứng với Lạc là Nước. Nguyễn Xuân Quang đi xa hơn: "Âu" và "Oa" (trong Nữ Oa, nữ thần sáng tạo Trung Quốc) là biến thể ngữ âm của cùng một gốc, nghĩa là "bình chứa, đất". Nếu đúng, Âu Cơ và Nữ Oa cùng nguồn gốc khái niệm, nhưng đây vẫn là giả thuyết từ nguyên, chưa có bằng chứng ngôn ngữ học vững.
+**Một-sinh-trăm.** Trứng vũ trụ Bàn Cổ (Từ Chỉnh chép, TK III) nở ra một cá nhân; trứng Jumong của Cao Câu Ly cũng vậy. Bọc trăm trứng đi hướng ngược: một lần sinh mở ra cả một cộng đồng. Con số 100 khớp với danh xưng **Bách Việt**, trăm họ Việt; bọc trăm trứng là lời giải thích bằng tự sự cho cái tên ấy.
 
-## Bọc trăm trứng giữa các dân tộc
+**Chia đôi 50/50.** Núi và biển, tiên và rồng, mẹ và cha. Phép chia tuyệt đối cân: không bên nào hơn, không bên nào là gốc duy nhất. Và chia mà không đoạn tuyệt: lời hẹn "có việc thì báo cho nhau" giữ hai nửa trong cùng một mạng lưới huyết thống. Cấu trúc "chia ly bảo toàn ruột thịt" này về sau thành khung biểu tượng cho thống nhất đất nước (xem Di sản sống).
 
-Bọc trăm trứng (bách noãn) không đứng một mình. Nó thuộc họ lớn các motif sinh từ trứng và sinh từ bình trong thần thoại Á Đông.
+**Đảo cặp phạm trù.** Thông lệ âm dương gán nước cho âm, cho nữ. Ở đây ngược lại: người cha Lạc Long Quân gắn với nước, người mẹ Âu Cơ gắn với núi. Cách gán này tách truyện khỏi khuôn vũ trụ luận Trung Hoa và là một trong những dấu vết khiến hướng truy nguyên motif chỉ về Đông Nam Á thay vì phương Bắc (Đặng Nghiêm Vạn 1993; Nguyễn Thị Điểu 2013; xem Motif và biểu tượng).
 
-Song song gần nhất nằm ở Ấn Độ. Hoàng hậu Gāndhārī trong _Mahābhārata_ sinh một cục thịt, được chia trăm phần đặt vào bình, nở ra một trăm hoàng tử Kaurava. Cùng số lượng, cùng cơ chế một thành nhiều từ một vật hữu cơ duy nhất. Khác biệt: Gāndhārī dùng bình đất nung, Âu Cơ dùng bọc sinh học.
+**Đồng bào.** Trăm con cùng một bọc: chữ **đồng bào** (同胞, cùng một bào thai) của tiếng Việt sinh ra từ hình ảnh này. Một từ thường ngày mang theo cả một huyền thoại khởi nguyên.
 
-Trứng vũ trụ Trung Quốc thì khác cấu trúc. Bàn Cổ (盤古) sinh từ một trứng vũ trụ (ghi chép sớm nhất bởi Từ Chỉnh, TK III SCN), nhưng chỉ một người từ một trứng. Jumong ở Hàn Quốc cũng sinh từ trứng, cũng một cá nhân duy nhất, không phải nhân số đông.
+## _Nguồn gốc_ tên gọi: Âu Việt, Lạc Việt và phả hệ Thần Nông
 
-Chỗ so sánh hiệu quả nhất là motif bầu ở Đông Nam Á lục địa. Đặng Nghiêm Vân thu thập 307 truyện lũ lụt ở Việt Nam (_Journal of American Folklore_ 106, 1993), phát hiện hầu như mọi nhóm dân tộc Đông Nam Á đều kể về đại hồng thủy chỉ còn hai người sống sót, sinh ra một quả bầu hoặc bọc thịt, từ đó nở ra các tộc người. Đây là cấu trúc tương đương của bọc trăm trứng. Trong bản Khmu (Lào), vợ chồng sống sót sinh một quả bầu, khi khoét lỗ người Khmu chui ra trước (dính muội than nên da sẫm), rồi Thái, Lào, cuối cùng Việt và Hán chui ra sau, da sáng vì sạch. Frank Proschan (_Journal of Asian Studies_ 60, no. 4, 2001) đọc thứ tự chui ra bầu như một cách xây dựng thứ bậc dân tộc.
+Chữ Hán ghi tên Âu Cơ chưa thống nhất giữa các truyền bản: **甌姬** hoặc **嫗姬**. Chữ 甌 vừa là "chiếc âu sành" vừa là tên tộc **Âu Việt** (甌越) trong thư tịch Trung Hoa; đọc theo chữ này, Âu Cơ là "bà Cơ người Âu". Chữ 嫗 là "bà, mẹ", cùng chữ với Triệu Ẩu (趙嫗); đọc theo chữ này, Âu Cơ gần với một tôn hiệu, "Bà Mẹ", hơn là tên riêng. Chữ **Cơ** (姬) là họ quốc tính nhà Chu, sau thành mỹ từ chỉ người con gái quý tộc.
 
-Có thể motif trứng của bản Kinh là biến thể Hán hóa của motif bầu cổ hơn. Khi giới trí thức chữ Hán ghi chép truyện kể, bầu thành trứng, hươu thành tiên, cá thành rồng, văn hóa dân gian được mặc áo Hán học.
+Trần Quốc Vượng, trong các công trình thuộc chương trình nghiên cứu thời đại Hùng Vương thập niên 1970, đọc "Âu" trong Âu Cơ là "Âu" của Âu Việt: cuộc hôn phối Lạc Long Quân và Âu Cơ mã hóa cuộc hợp nhất lịch sử giữa người **Lạc Việt** đồng bằng và người **Âu Việt** miền núi, hai khối sau này gộp thành nước Âu Lạc. Đào Duy Anh (_Việt Nam văn hóa sử cương_, 1938) đọc rộng hơn: tích trăm con chia núi chia biển "có lẽ liên quan tới sự phân tán của chủng Việt thành các nhóm Bách Việt ở miền Lĩnh Nam". Một số cách đọc khác (Trương Thái Du coi "Âu" là âm thuần Việt chỉ đất; Nguyễn Xuân Quang nối Âu Cơ với Nữ Oa) còn mang tính suy đoán, chưa có kiểm chứng ngữ học độc lập.
 
-Truyền thuyết lập quốc Khmer kể Preah Thong, hoàng tử Ấn Độ từ đất liền, lấy Neang Neak, công chúa rắn Naga từ nước, sinh ra hoàng tộc Khmer. Cấu trúc hôn nhân liên giới, hai thực thể thuộc lĩnh vực nguyên tố khác nhau kết hợp để sinh ra dân tộc lập quốc, có vẻ là một nguyên mẫu Đông Nam Á. Nhưng thần thoại Việt đảo ngược phân bổ giới tính theo nguyên tố so với truyền thống Đông Á thông thường: Lạc Long Quân (nam) gắn với nước, Âu Cơ (nữ) gắn với núi, ngược với tương quan âm dương quy ước (nước là âm, là nữ).
+Phả hệ Thần Nông là phần vay mượn có chủ đích. Không một thư tịch Trung Hoa độc lập nào chép về Âu Cơ; tên nàng chỉ có trong văn bản do người Việt soạn. Nhưng khung phả hệ thì lấy thẳng từ sử liệu phương Bắc: Đế Lai khớp với Đế Ai (帝哀), vua thứ bảy họ Thần Nông trong _Đế vương thế kỷ_ của Hoàng Phủ Mật. Cả Lạc Long Quân (qua Kinh Dương Vương) lẫn Âu Cơ (qua Đế Lai) đều là hậu duệ Thần Nông, tức hai người có họ với nhau, điểm chính Ngô Sĩ Liên đã nêu ra như một chỗ đáng ngờ. Việc ghép nguồn gốc Việt vào thánh phả phương Bắc làm hai việc cùng lúc: nhận mình ngang hàng với văn minh Trung Hoa, và tuyên bố một dòng dõi riêng, một chủ quyền riêng, không phải nhánh phụ thuộc của ai.
 
-## Từ thuộc địa đến học thuật hiện đại
+## Văn bản học: _truyền bản và dị bản_
 
-Người phương Tây bắt đầu tiếp cận truyền thuyết Âu Cơ từ Léopold Cadière và Paul Pelliot, trong "Première étude sur les sources annamites de l'histoire d'Annam" (BEFEO, Tome 4, 1904, tr. 617–671). Đây là lần đầu hai bộ thư tịch chính, LNCQ và ĐVSKTT, được mô tả và đánh giá phê phán bằng ngôn ngữ châu Âu, dựa trên kiểm kê thư viện hoàng gia Huế.
+Trình tự văn bản cho thấy truyện Âu Cơ định hình muộn và được chỉnh sửa qua từng thời.
 
-Henri Maspero đào sâu hơn trong "Le Royaume de Van-lang" (BEFEO, Tome 18, 1918, tr. 1–36). Ông mở đầu bằng nhận xét rằng những truyền thuyết mà sử gia An Nam dùng để mở đầu lịch sử nước mình kể rằng Bắc Kỳ vốn hình thành một vương quốc tên Vân Lang. Ông coi toàn bộ phả hệ Hồng Bàng, gồm chuyện Âu Cơ sinh trăm trứng, là huyền thoại không có cơ sở lịch sử, gọi phạm vi lãnh thổ mô tả là không đáng tin. Đề xuất gây tranh cãi nhất của ông: "Văn Lang" là chép sai từ "Dạ Lang" (夜→文). Ông dùng phương pháp euhemeristic, tìm hạt nhân lịch sử trong vỏ thần thoại, ảnh hưởng lên mọi nghiên cứu sau đó.
+**Việt điện u linh tập (1329)** chép thần linh được phong sắc, có Sơn Tinh, không có mục Âu Cơ.
 
-Léonard Aurousseau (BEFEO, Tome 23, 1923) xây trên giả thuyết Chavannes: người Việt là hậu duệ nước Việt ở Chiết Giang, di cư xuống nam sau khi Tần thống nhất Trung Quốc. Theo khung này, việc chia con của Âu Cơ phản ánh sự phân hóa giữa các nhóm vùng cao (Thái, Mường) và vùng thấp (Việt). Lý thuyết này nay đã bị bác bỏ nhưng chi phối giới học thuật phương Tây suốt nhiều thập kỷ. Gaspardone (_Bibliographie annamite_, BEFEO 34, 1934, tr. 1–173) cung cấp khung thư mục tham chiếu chuẩn cho văn bản Việt Nam, mô tả chi tiết LNCQ và ĐVSKTT. Không có bản dịch đầy đủ tiếng Pháp nào của LNCQ ra đời thời thuộc địa.
+**Việt sử lược (c. 1377)**, bộ sử Việt sớm nhất còn lại, có Hùng Vương và Văn Lang nhưng hoàn toàn không có phả hệ Thần Nông, Kinh Dương Vương, Lạc Long Quân, Âu Cơ. Sách chỉ chép: đời Trang Vương nhà Chu (697-682 TCN), ở bộ Gia Ninh có dị nhân dùng ảo thuật thu phục các bộ lạc, tự xưng Hùng Vương. Khoảng trống này là bằng chứng âm bản quan trọng nhất: bộ phả hệ thần thoại chưa tồn tại, hoặc chưa được sử gia biết đến, vào cuối thế kỷ XIV.
 
-Liam C. Kelley mang tới cuộc tranh luận quan trọng nhất thế kỷ XXI. Trong "The Biography of the Hồng Bàng Clan as a Medieval Vietnamese Invented Tradition" (_Journal of Vietnamese Studies_ 7, no. 2, 2012, tr. 87–130), Kelley lập luận phả hệ Hồng Bàng, gồm cả Âu Cơ, không phải ký ức dân gian truyền miệng từ thiên niên kỷ I TCN mà là sáng tạo trung đại của giới trí thức Hán học. Bằng chứng: lời tựa Vũ Quỳnh (1492) viết từ góc nhìn Trung Quốc, dùng địa danh và phân kỳ lịch sử Trung Quốc; nếu truyện phản ánh truyền miệng nào, nhiều khả năng là truyền miệng của giới trí thức biết chữ chứ không phải nông dân; một số yếu tố văn bản không có trước thời Đường. Hệ quả trực tiếp: Âu Cơ, ở dạng chúng ta biết, là nhân vật văn chương thế kỷ XIV–XV.
+**Lĩnh Nam Chích Quái (cuối TK XIV, biên tập 1492-1493)** cho bản kể sớm nhất và đầy đủ nhất. Ít nhất 11 truyền bản còn lại, trong đó HV.486, VHv.1473 và A.2914 là các bản nền quen dùng; bản VHv.1473 có thêm một đoạn về loạn phương Bắc không thấy ở bản khác. Đáng chú ý nhất: một số truyền bản chép Âu Cơ là **vợ (thiếp) của Đế Lai**, bị Lạc Long Quân bắt gặp và đem về khi Đế Lai đi tuần. Đây là dị bản đã bị dòng tiếp nhận chính loại bỏ.
 
-Keith Taylor đọc khác. Trong _The Birth of Vietnam_ (1983, chương 1 và Phụ lục A, tr. 349–359), ông đọc truyền thuyết Lạc Long Quân, Âu Cơ như phản ánh một nền văn hóa hướng biển đang thích nghi với môi trường lục địa. Cuộc hôn phối dòng biển phương Nam với dòng núi phương Bắc, theo cách đọc này, là hình ảnh nền văn hóa Việt khẳng định bản sắc riêng, không lệ thuộc Trung Hoa. Taylor dẫn Jean Pryzluski: ý tưởng quyền lực phát sinh từ biển đối lập trực tiếp với văn hóa lục địa Hoa Ấn, và gán nó cho một nền văn minh hàng hải tiền sử Đông Nam Á. Trong _A History of the Vietnamese_ (Cambridge, 2013), ông tiếp tục nhấn mạnh những đứt gãy sắc bén trong quá khứ Việt Nam mà thần thoại che lấp.
+**Đại Việt Sử Ký Toàn Thư (1479)** đưa truyện vào chính sử với hai can thiệp biên tập. Thứ nhất, Ngô Sĩ Liên chép Âu Cơ là **con gái** Đế Lai; Taylor (_The Birth of Vietnam_, 1983, Phụ lục A, tr. 349-359) nhận xét việc sửa này nhằm mục đích luân lý, để Long Quân không mang tiếng lấy vợ người khác. Thứ hai, ông đặt ngoặc **[tục truyền sinh bách noãn]** ("tục truyền sinh trăm trứng") quanh chi tiết kỳ ảo nhất, tách phần cốt lõi (trăm con trai) khỏi phần thêu dệt dân gian (trăm trứng). Lời bàn của ông so tích này với trứng chim huyền điểu sinh nhà Thương, vết chân khổng lồ sinh nhà Chu, và kết bằng câu hoài nghi có phương pháp: "Tin cả sách chẳng thà không sách!"
 
-Nguyễn Thị Điểu (_Journal of Southeast Asian Studies_ 44, no. 2, 2013, tr. 315–337) phân tích Âu Cơ cụ thể hơn ai hết. Bà xác định Âu Cơ là "bird goddess" phổ biến trong thần thoại Nam Á và Đông Nam Á (dẫn Phan Đăng Nhật, 1981). Phát hiện quan trọng nhất: trong bản LNCQ gốc, con trưởng theo mẹ lên Phong Châu thành Hùng Vương, nhấn mạnh mẫu hệ. Trong bản Ngô Sĩ Liên (1479), 50 con theo cha xuống biển, sửa theo chuẩn phụ hệ Nho giáo. Bà dùng khái niệm "ornithomorphous hierogamy" của Anne Birrell (_Chinese Mythology: An Introduction_, 1999) để nối motif sinh trứng với truyền thống hôn nhân thiêng Đông Á.
+Nguyễn Thị Điểu (JSEAS 44/2, 2013, tr. 315-337) chỉ ra một chỉnh hướng thứ ba, ít được để ý: trong _Lĩnh Nam Chích Quái_, nhóm năm mươi con **theo mẹ** về Phong Châu sinh ra vua Hùng đầu tiên, dấu vết trọng mẫu hệ; bản Toàn thư đổi cho năm mươi con theo cha xuống miền biển, một chỉnh sửa theo chuẩn phụ hệ Nho giáo, hạ vai trò Âu Cơ xuống dưới trật tự tông pháp.
 
-Patricia Pelley (_Postcolonial Vietnam_, Duke, 2002) ghi nhận Viện Sử học Hà Nội thiết lập năm lập quốc 2879 TCN, đặt Âu Cơ trước cả nhà Hạ Trung Quốc, khẳng định tính tiên khởi về niên đại. Catherine Churchman (_The People between the Rivers_, 2016) chỉ ra văn hóa trống đồng biến mất khỏi vùng đất thấp Việt sau cuộc chinh phạt của Mã Viện thế kỷ I, gợi ý đứt gãy văn hóa chứ không phải sự liên tục mà truyện Âu Cơ ngụ ý.
+**Thiên Nam ngữ lục (c. 1682-1709)**, diễn ca 8.136 câu lục bát chữ Nôm, thêm những chi tiết không thấy ở đâu khác: Âu Cơ "trên mười lăm tuổi"; dòng núi của các con Âu Cơ được gắn thẳng với Sơn Tinh ("Sơn Tinh xưng hiệu ở đầu"), nối huyền thoại khởi nguyên với truyện Sơn Tinh Thủy Tinh; nơi chia con được định vị ở **Ngã Ba Hạc**, ngã ba sông tại Việt Trì, giữa vùng đất tổ Phú Thọ.
 
-## Núi, biển, và khảo cổ của một thế giới chia đôi
+**Khâm định Việt sử thông giám cương mục (TK XIX)** quay sang thái độ duy lý: coi các tích Hồng Bàng là chuyện "trâu ma rắn thần" không đủ chuẩn mực, bỏ hẳn Kinh Dương Vương và Lạc Long Quân khỏi chính sử.
 
-Truyện Âu Cơ mã hóa một nhị nguyên: núi đối biển, tiên đối rồng, cao nguyên đối đồng bằng. Trần Quốc Vượng đọc thẳng: cuộc hôn nhân Âu Cơ, Lạc Long Quân biểu tượng cho sự hợp nhất lịch sử giữa Lạc Việt (đồng bằng trồng lúa nước) và Âu Việt (vùng núi), dẫn đến nước Âu Lạc (c. 257–207 TCN) dưới thời An Dương Vương. Đào Duy Anh (_Việt Nam văn hóa sử cương_, 1938) giải thích tương tự: truyền thuyết Âu Cơ sinh trăm con chia biển chia núi có lẽ liên quan đến sự phân tán bộ tộc Việt thành các nhóm Bách Việt ở vùng Lĩnh Nam. Học giả Thái Cầm Trọng chỉ ra một hệ nhị nguyên đối xứng nội bộ: Thái Đen là hậu duệ Rồng, Nước (nòi Rồng, ở nước); Thái Trắng là hậu duệ Chim, Cạn (nòi Chim, ở cạn).
+## Motif và biểu tượng: _bọc trăm trứng nhìn so sánh_
 
-Mối liên hệ giữa truyền thuyết và văn hóa Đông Sơn (c. 1000 TCN đến 100 SCN) vẫn gây tranh cãi. Học giả Việt Nam từ lâu đồng nhất triều đại Hùng Vương với Đông Sơn. Bằng chứng vật chất gợi ý nhất: trống đồng Hy Cương (đường kính 93 cm, lớn nhất Việt Nam và Đông Nam Á) được tìm thấy chỉ cách núi Hùng 500 mét, gợi ý mối liên hệ nghi lễ. Michel Ferlus (2009) phân tích ngôn ngữ học cho thấy các đổi mới thời Đông Sơn (chày, mái chèo, chảo xôi) tương ứng với từ vựng mới trong các ngôn ngữ Vietic phía Bắc, từ phái sinh chứ không phải vay mượn, ủng hộ nguồn gốc Vietic của văn hóa này.
+Bọc trăm trứng thuộc một họ motif sinh-từ-vật-chứa trải khắp Đông Á và Đông Nam Á. Nghiên cứu report không gán mã ATU/Thompson chuẩn cho tổ hợp "một bọc, trăm trứng, trăm con"; các đối chiếu dưới đây là đối chiếu cấu trúc.
 
-Nhưng Taylor, Nguyễn Phương, và John D. Phan phản bác: không có bằng chứng thực sự rằng văn hóa Đông Sơn hay các nhân vật thần thoại là người Việt hoặc tổ tiên người Việt. Hiện vật Đông Sơn trải từ Malaysia đến Phúc Kiến, nhiều khả năng thuộc về nhiều nhóm dân khác nhau. Một chi tiết âm thầm nhưng có trọng lượng: không có hình tượng nào liên quan đến bọc trứng hay sinh trứng trên trống đồng Đông Sơn. Hình trang trí trống đồng có chim, ếch, hươu, rồng hay cá sấu, thuyền, nhưng không trứng. Motif bọc trứng, nếu là biểu tượng trung tâm từ thời đồ đồng, lẽ ra phải để lại dấu vết vật chất.
+**Mahābhārata.** Song song số học gần nhất: hoàng hậu Gāndhārī sinh một khối thịt, chia thành một trăm phần đặt trong các chum, nở thành **một trăm anh em Kauravas**. Cùng công thức: một lần sinh, một vật chứa hữu cơ, một trăm con trai.
 
-## Phả hệ Thần Nông: vay mượn và tự khẳng định
+**Vành đai quả bầu Đông Nam Á.** Đặng Nghiêm Vạn (_Journal of American Folklore_ 106, 1993) thu thập 307 truyện hồng thủy riêng ở Việt Nam và nhận thấy hầu như mọi tộc người Đông Nam Á đều kể về hai người sống sót sau lụt, sinh ra một quả bầu hay khối thịt hình bầu, từ đó chui ra các tộc người. Người Khmu ở Lào kể các tộc chui ra theo thứ tự: Khmu ra trước dính nhọ nồi nên da sẫm, rồi tới Thái, Lào, Việt, Hoa. Frank Proschan ("Peoples of the Gourd", _Journal of Asian Studies_ 60/4, 2001) phân tích cách thứ tự chui ra ấy dựng nên tôn ti tộc người. Bọc trứng Việt là anh em cấu trúc của quả bầu này; khả năng bọc trứng là dạng đã được nho hóa của motif bầu/khối thịt cổ hơn vẫn để ngỏ.
 
-Phả hệ nối Hồng Bàng với Thần Nông (神農) là vay mượn có ý thức từ sử học Trung Quốc. LNCQ mở đầu: "Thần Nông thị tam thế tôn Đế Minh", cháu ba đời Thần Nông là Đế Minh. Cả Lạc Long Quân (qua Kinh Dương Vương) và Âu Cơ (qua Đế Lai) đều là hậu duệ Thần Nông, tức là họ có quan hệ huyết thống, điểm mà chính Ngô Sĩ Liên cũng thấy khó xử.
+**Dị bản Mường.** Người Mường, tộc gần người Kinh nhất về ngôn ngữ, giữ một bản kể độc lập có giá trị đối chứng cao. Sử thi _Đẻ đất đẻ nước_ có quả trứng vuông Trứng Điếng nở ra người. Trong tang ca Mo Mường do Jeanne Cuisinier sưu tầm, Trần Quốc Vượng dẫn lại, nhân vật **Ngu Cơ** (tương ứng Âu Cơ) là con hươu sao lấy Long Vương hóa cá, sinh trăm trứng nở **năm mươi trai, năm mươi gái**. Bản Mường vừa xác nhận lõi chung Việt-Mường (trăm trứng, chia đôi) vừa cho thấy bản Kinh đã bị tỉa: mất lớp thú tổ (hươu, cá), mất năm mươi người con gái.
 
-Phả hệ nối Đế Lai với Thần Nông trùng khớp với Đế Vương Thế Kỷ (帝王世紀) của Hoàng Phủ Mật (TK III SCN), trong đó Đế Ai (帝哀, tức Đế Lai) là vị vua thứ bảy trong dòng Thần Nông. Việc ghép gốc Việt vào cây phả hệ Hán phục vụ mục đích kép: khẳng định ngang hàng với văn minh Trung Quốc, đồng thời tuyên bố chủ quyền riêng. Một thao tác chính trị quen thuộc trong thế giới chữ Hán, Nhật Bản, Hàn Quốc, Lưu Cầu đều có các phả hệ tương tự nối vua nội địa với nhân vật thần thoại Hán hoặc chối bỏ mối nối đó.
+**Preah Thong và Neang Neak.** Huyền thoại lập quốc Campuchia: hoàng tử từ đất liền lấy công chúa rắn Naga thủy cung, sinh ra vương triều Khmer. Cùng một nguyên mẫu Đông Nam Á: hôn phối giữa hai cõi khác nguyên tố sinh ra một dân tộc.
 
-Không có văn bản Trung Quốc cổ điển nào ghi nhận Âu Cơ (甌姬) như một nhân vật thần thoại độc lập. Tên này chỉ xuất hiện trong các văn bản do người Việt sáng tác bằng chữ Hán. Điều đó khẳng định một chỗ đứng dứt khoát: người Việt có dòng phả hệ khai nguyên của riêng mình, ngang hàng chứ không phụ thuộc phương Bắc.
+**Nữ thần chim.** Nguyễn Thị Điểu (2013), dẫn Phan Đăng Nhật (1981), đọc Âu Cơ trong hệ nữ thần chim của thần thoại Nam Á và Đông Nam Á; bà dùng khái niệm "hôn phối thiêng dạng chim" (ornithomorphous hierogamy) của Anne Birrell (_Chinese Mythology_, 1999) để đặt trứng Âu Cơ vào truyền thống hôn phối thiêng Đông Á. Đẻ trứng là việc của chim: sau hình dáng tiên nữ có thể là một nữ thần chim cổ hơn.
 
-## Âu Cơ trong đời sống hôm nay
+**Trứng đơn phương Bắc.** Đối chiếu ngược: Bàn Cổ nở từ một trứng vũ trụ thành một người khổng lồ; Jumong nở từ một trứng thành một anh hùng. Cấu trúc một-trứng-một-cá-nhân phục vụ anh hùng ca; cấu trúc một-bọc-trăm-con phục vụ phả hệ cộng đồng. Hai việc khác nhau, hai motif khác nhau.
 
-Từ đồng bào (同胞), cách nói chuẩn cho đồng hương hay công dân cùng nước, nghĩa đen là cùng bào thai, cùng một bọc. Nguồn gốc từ trực tiếp hình ảnh trăm con trong một bọc trứng. Bác Hồ dùng "đồng bào" liên tục trong các bài diễn văn, mỗi lần dùng là một lần nhắc lại truyền thuyết mà không cần kể. Câu "con Rồng cháu Tiên" được dạy từ lớp 6 trong sách giáo khoa Ngữ văn, xuất hiện trong cả môn Lịch sử và Đạo đức. Bài hát của Phạm Tuyên, "Ngày xưa Âu Cơ sinh ra trăm con, năm mươi xuống biển, năm mươi lên non", thuộc loại ai cũng biết.
+## Nghiên cứu _học thuật_ hiện đại
 
-Hầu hết thành phố lớn Việt Nam có đường mang tên Âu Cơ và Lạc Long Quân, thường giao nhau vuông góc, biểu tượng đô thị có chủ đích. Tại Hà Nội, Trung tâm Nghệ thuật Âu Cơ (800 chỗ ngồi, kinh phí khoảng 160 tỷ VND) được xây cho kỷ niệm 1.000 năm Thăng Long Hà Nội.
+**Lớp thuộc địa Pháp.** Cadière và Pelliot (BEFEO 4, 1904, tr. 617-671) lập thư mục phê phán đầu tiên về _Lĩnh Nam Chích Quái_ và _Toàn thư_, mở truyện Âu Cơ cho học giới phương Tây. Maspero ("Le Royaume de Van-lang", BEFEO 18/3, 1918, tr. 1-36) xử lý các tích Hồng Bàng như truyền thuyết không có cơ sở sử, gọi các mô tả cương vực là "khó tin" (invraisemblable), và đề xuất giả thuyết gây tranh cãi rằng "Văn Lang" là chép nhầm từ "Dạ Lang". Aurousseau (BEFEO 23, 1923) dựng thuyết di cư từ nước Việt vùng Chiết Giang xuống, nay đã bị bác. Phương pháp chung của lớp này là duy sử hóa (euhemerism): tìm hạt nhân lịch sử trong vỏ thần thoại.
 
-Đền thờ chính, Đền Mẫu Âu Cơ, tại xã Hiền Lương, huyện Hạ Hòa, Phú Thọ, được công nhận Di tích lịch sử, văn hóa Quốc gia ngày 3/8/1991. Đền xây từ thời Hậu Lê, tu bổ bằng ngân sách triều đình dưới thời Lê Thánh Tông năm 1456 (Quang Thuận thứ 6). Bên trong có tượng gỗ Quốc Mẫu Âu Cơ cao 93 đến 95 cm, ngồi trên ngai rồng, mặc triều phục, đội mũ phượng. Ngày 23/1/2017, tín ngưỡng thờ Mẫu Âu Cơ được công nhận Di sản Văn hóa Phi vật thể Quốc gia. Lễ hội chính vào ngày 7 tháng Giêng âm lịch (Tiên giáng trần). Yêu cầu nghi lễ riêng biệt: cả 11 người trong đội tế phải là phụ nữ chưa chồng, quy định duy trì từ năm 1941.
+**Kelley và thuyết "truyền thống được kiến tạo".** Liam Kelley ("The Biography of the Hồng Bàng Clan as a Medieval Vietnamese Invented Tradition", JVS 7/2, 2012, tr. 87-130) đảo hẳn khung hỏi: không phải truyện được truyền miệng từ thiên niên kỷ I TCN rồi mới chép lại, mà được **tạo ra** sau khi Đại Việt tự chủ, bởi giới trí thức đọc sách Hán. Ông chỉ ra bài tựa 1492 của Vũ Quỳnh dùng địa danh và cách phân kỳ theo lối Trung Hoa, và một số yếu tố văn bản không thể sớm hơn đời Đường. Với Âu Cơ, hệ quả trực tiếp: nàng là sáng tạo văn chương thế kỷ XIV-XV. Khoảng trống trong _Việt sử lược_ đứng về phía lập luận này.
 
-Đền thứ hai, Đền Quốc Mẫu Âu Cơ, xây 2001–2004 trong quần thể Đền Hùng, trên Núi Vặn, kinh phí 25 tỷ VND. Phù điêu đồng dát chạm mô tả cảnh chia con.
+**Taylor và lớp đọc văn hóa.** Keith Taylor (_The Birth of Vietnam_, 1983, tr. 1-2 và Phụ lục A) đọc cụm truyện Lạc Long Quân Âu Cơ như dấu vết "một văn hóa hướng biển đang tìm cách sống với môi trường lục địa", và dẫn ý Jean Przyluski rằng mô hình vương quyền đến từ biển đối nghịch với các nền văn minh lục địa Hoa Ấn. Việc Lạc Long Quân giữ được người con gái phương Bắc, trong cách đọc của Taylor, tượng trưng cho khả năng phương Nam thu nhận rồi giữ lấy cái của mình trước phương Bắc. Sang _A History of the Vietnamese_ (2013), ông vẫn coi các huyền thoại là kiến tạo chính trị, che các đứt gãy của quá khứ Việt.
 
-Nhà nước hiện đại dùng truyền thuyết Âu Cơ để hỗ trợ khung "54 dân tộc anh em", tuyên bố chung tổ tiên cho tất cả các dân tộc trong biên giới Việt Nam. Cấu trúc nội tại của thần thoại, chia ly nhưng hẹn tái hợp, Lạc Long Quân và Âu Cơ hứa giúp nhau khi con cháu gặp nạn, cung cấp khung biểu tượng sẵn cho thống nhất đất nước sau 1975. Ngay cả trong chiến tranh Việt Nam, Mary McCarthy ghi nhận đặc vụ Mỹ dùng truyền thuyết sáng thế này để vận động lòng yêu nước ủng hộ miền Nam.
+**Nguyễn Thị Điểu, Pelley và thế kỷ XX.** Nguyễn Thị Điểu (2013) theo dấu các lần viết lại: từ trọng mẫu sang trọng phụ, từ thần thoại cung đình sang biểu tượng quốc dân. Patricia Pelley (_Postcolonial Vietnam_, 2002) ghi lại quá trình Ủy ban nghiên cứu Văn Sử Địa và Viện Sử học tại Hà Nội xác lập niên đại dựng nước **2879 TCN**, sớm hơn nhà Hạ của Trung Quốc: một thao tác giành quyền đi trước về niên đại. Trong cả hai công trình, điểm chung là motif Âu Cơ được thế kỷ XX huy động cho một khung chính trị rõ: nguồn gốc dân tộc độc lập, ngang hàng phương Bắc, không phụ thuộc.
 
-## Ba trường phái, và chỗ đứng của Âu Cơ giữa chúng
+**Khảo cổ học.** Quan hệ giữa truyện và văn hóa Đông Sơn (c. 1000 TCN đến 100) còn tranh cãi. Ferlus ("A Layer of Dongsonian Vocabulary in Vietnamese", JSEALS 1, 2009, tr. 95-109) chứng minh lớp từ vựng chày, mái chèo, chõ xôi thời Đông Sơn là từ phái sinh nội tại của tiếng Vietic, ủng hộ gốc Vietic cho văn hóa này. Chiều ngược lại, Taylor và John D. Phan lưu ý hiện vật Đông Sơn rải từ Phúc Kiến tới Mã Lai, thuộc nhiều tộc người, chưa thể gán riêng cho tổ tiên người Việt. Catherine Churchman (_The People between the Rivers_, 2016) cho thấy văn hóa trống đồng biến mất khỏi vùng thấp sau cuộc chinh phục của Mã Viện thế kỷ I: một đứt gãy, không phải mạch liên tục như huyền thoại gợi ý. Trống Hy Cương, trống đồng lớn nhất Việt Nam (đường kính 93 cm), được tìm thấy cách núi Hùng 500 mét; nhưng chưa tìm thấy hình khắc nào trên trống Đông Sơn mô tả bọc trăm trứng.
 
-Trường phái dân tộc chủ nghĩa (Nguyễn Đổng Chi, đa số học giả Việt Nam) coi thần thoại là ký ức dân gian cổ xưa, phản ánh, dù qua lăng kính biểu tượng, điều kiện xã hội thực từ thời đại đồ đồng. Đào Duy Anh, Trần Quốc Vượng, và Viện Sử học Hà Nội đều ở phía này, với mức độ hoài nghi khác nhau.
+**Vị trí của entry này.** Về niên đại văn bản, chứng cứ đứng về phía Kelley: không có dấu vết phả hệ Hồng Bàng trước thế kỷ XIV. Nhưng "văn bản định hình muộn" không đồng nghĩa "làm từ không khí": dị bản Mường (Ngu Cơ hươu sao, trăm trứng, chia đôi) và vành đai motif quả bầu Đông Nam Á cho thấy các nhà nho thế kỷ XIV-XV làm việc trên chất liệu kể cổ hơn nhiều, rồi khoác cho nó bộ khung phả hệ Hán văn. Kiến tạo trung đại và lõi bản địa không loại trừ nhau.
 
-Trường phái xét lại (Liam Kelley, Tạ Chí Đại Trường) coi thần thoại là sáng tạo trung đại của trí thức Hán học. "Dân tộc Việt thống nhất" chưa tồn tại vào lúc truyện được viết, hoặc ít nhất không ở dạng truyện mô tả. Phả hệ Thần Nông là vay mượn Hán, các yếu tố "dân gian" có thể là dân gian của giới biết chữ.
+## Di sản _sống_
 
-Trường phái tổng hợp (Taylor, Nguyễn Thị Điểu) cho rằng thần thoại mã hóa quá trình dân tộc hình thành thực sự, nhưng qua lăng kính văn chương trung đại. Có lớp cổ (motif bầu, trứng, hôn nhân liên giới, nhị nguyên núi biển) xưa hơn thời điểm ghi chép, nhưng dạng văn bản chúng ta có là sản phẩm TK XIV–XV.
+**Đồng bào.** Từ chỉ người cùng nước trong tiếng Việt hằng ngày vẫn là "đồng bào", cùng một bọc. Mỗi lần từ này được dùng, huyền thoại Âu Cơ được nhắc lại mà người nói không cần nhớ đến nó.
 
-Trường hợp Âu Cơ phức tạp hơn Hồ Tinh hay Mộc Tinh vì bà không chỉ nằm trong hệ truyền kỳ, bà đã được Ngô Sĩ Liên đưa vào chính sử năm 1479. Hồ Tinh bị ba bộ sử bỏ qua, nhưng Âu Cơ thì có mặt trong bộ sử quan trọng nhất. Ranh giới giữa truyền kỳ và chính sử, rõ ràng đối với Hồ Tinh, mờ đi hoàn toàn đối với Âu Cơ.
+**Đền Hùng và lời dặn năm 1954.** Ngày 19 tháng 9 năm 1954, tại Đền Hùng, Bác nói với cán bộ chiến sĩ Đại đoàn Quân Tiên Phong trước khi về tiếp quản Thủ đô: "Các Vua Hùng đã có công dựng nước, Bác cháu ta phải cùng nhau giữ lấy nước." Câu nói gắn tín ngưỡng đất tổ với nhiệm vụ giữ nước của thời hiện đại; Bác cũng là người dùng chữ "đồng bào" dày đặc trong các bài nói, kéo hình ảnh cái bọc trăm trứng vào ngôn ngữ chính trị thường nhật.
 
-Biến thể Mường gợi ý một lớp nào đó của câu chuyện có trước ảnh hưởng Hán, có thể bắt nguồn từ vũ trụ quan chung Việt-Mường về hôn nhân linh vật và sinh từ trứng hoặc bầu. Các lớp sửa đổi Nho giáo mà Nguyễn Thị Điểu theo dõi, từ mẫu hệ sang phụ hệ, cho thấy truyện là tài liệu sống mà mỗi thế hệ viết lại để mã hóa giá trị riêng. Chuyển biến thế kỷ XX từ truyền thống văn chương cung đình thành biểu tượng vận động quần chúng cho chủ nghĩa dân tộc chống thực dân, xây dựng nhà nước cộng sản, và bản sắc cộng đồng hải ngoại chỉ là lớp mới nhất.
+**Đền Mẫu Âu Cơ ở Hiền Lương.** Trung tâm thờ tự lâu đời nhất của Âu Cơ nằm ở xã Hiền Lương, huyện Hạ Hòa, Phú Thọ, dựng từ thời Hậu Lê, từng được triều đình cấp kinh phí tu sửa dưới đời Lê Thánh Tông niên hiệu Quang Thuận. Đền giữ pho tượng gỗ Quốc Mẫu cao 93-95 cm, ngồi ngai rồng, áo triều phục, mũ phượng. Di tích được xếp hạng quốc gia ngày 3 tháng 8 năm 1991. Lễ chính ngày 7 tháng Giêng, ngày "Tiên giáng"; đội tế gồm 11 cô gái chưa chồng, lệ giữ từ năm 1941. Ngày 23 tháng 1 năm 2017, tín ngưỡng thờ Mẫu Âu Cơ được công nhận Di sản văn hóa phi vật thể quốc gia.
 
-Điều thú vị nhất về truyện Âu Cơ không phải nó cổ hay mới, mà là cấu trúc: chia ly mà vẫn giữ họ hàng, khác nhau mà vẫn cùng gốc. Trăm trứng nở ra không phải trăm bản sao, mà trăm tộc người. Từ đồng bào không xóa sự khác biệt giữa họ, nó đặt tên lại cho sự khác biệt ấy: anh em. Mỗi lần một người Việt gọi người lạ là đồng bào, truyện lại được kể thêm một lần nữa, dù không ai mở sách ra.
+**Đền Quốc Mẫu Âu Cơ trên núi Vặn.** Trong khu di tích Đền Hùng, một ngôi đền mới thờ Âu Cơ được dựng các năm 2001-2004 trên núi Vặn, với phù điêu đồng gò cảnh chia trăm con. Kiến trúc thờ tự thế kỷ XXI vẫn tiếp tục vật chất hóa huyền thoại.
+
+**Trường học, đường phố, sân khấu.** Truyện Con Rồng cháu Tiên là bài mở đầu sách Ngữ văn lớp 6; học sinh phân tích "yếu tố tưởng tượng kì ảo" và "ý nguyện đoàn kết" của truyện. Hầu hết đô thị Việt Nam có đường Âu Cơ và đường Lạc Long Quân. Hà Nội có Trung tâm Nghệ thuật Âu Cơ 800 chỗ, công trình chào nghìn năm Thăng Long.
+
+**Khung "54 dân tộc anh em" và thống nhất.** Nhà nước hiện đại dùng truyện làm nền cho khung 54 dân tộc anh em cùng một cội. Cấu trúc chia-ly-có-hẹn-tương-trợ của truyện cũng cấp sẵn bộ khung biểu tượng cho thống nhất đất nước sau 1975: hai nửa chia ra từ một bọc, tất phải về lại với nhau. Cần đọc lớp sử dụng này đúng như Nguyễn Thị Điểu (2013) và Pelley (2002) đã phân tích: đây là huyền thoại được huy động làm tuyên ngôn về một dân tộc có nguồn gốc riêng, đứng ngang hàng phương Bắc, chứ không phải một tích cổ trung tính tình cờ nổi tiếng.
+
+## Lưu ý _khi sử dụng_
+
+1. **Thi viện ghi sai tác giả LNCQ.** Tác giả gốc là Trần Thế Pháp, Vũ Quỳnh và Kiều Phú nhuận chính; không phải Nguyễn Dữ (tác giả _Truyền kỳ mạn lục_).
+
+2. **Chữ Hán tên Âu Cơ chưa thống nhất.** 嫗姬 và 甌姬 đều có trong truyền bản, và hai cách viết kéo theo hai hướng giải nghĩa khác nhau ("Bà Mẹ" hay "bà Cơ người Âu Việt"). Khi trích chữ Hán cần nói rõ theo bản nào.
+
+3. **Niên đại 2879 TCN không phải niên đại khảo cổ.** Đó là con số sử gia trung đại tính ngược và được thể chế hóa giữa thế kỷ XX (Pelley 2002). Không dùng như dữ kiện khảo cổ học.
+
+4. **Dị bản "vợ Đế Lai".** Một số truyền bản LNCQ chép Âu Cơ là vợ (thiếp) của Đế Lai; dòng tiếp nhận chính, từ Toàn thư trở đi, chép nàng là con gái Đế Lai. Khi dẫn dị bản kia phải ghi rõ xuất xứ truyền bản, không dùng làm khung kể chính.
+
+5. **Ngu Cơ là tư liệu Mường.** Bản Ngu Cơ (hươu sao, năm mươi trai năm mươi gái) thuộc tang ca Mo Mường, do Cuisinier sưu tầm và Trần Quốc Vượng dẫn lại; không gán ngược các chi tiết này cho văn bản LNCQ.
+
+6. **Đông Sơn chưa nối được với truyện.** Chưa có hiện vật Đông Sơn nào khắc họa bọc trăm trứng, và việc đồng nhất văn hóa Đông Sơn với thời Hùng Vương vẫn là giả thuyết đang tranh luận, không phải kết luận.
