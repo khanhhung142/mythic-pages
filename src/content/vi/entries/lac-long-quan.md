@@ -190,29 +190,29 @@ motifs:
     system: custom
     description: "Chia đôi 50/50: năm mươi con xuống biển, năm mươi con lên núi; phân trị hai cõi kèm lời hẹn tương trợ, chia mà không đoạn tuyệt"
 popularity: 5
-status: draft
-updated_at: 2026-07-08
+status: published
+updated_at: 2026-07-09
 ---
 
 ## Chuyện kể
 
-Dưới đáy Biển Đông có một tòa thủy phủ. Chủ nhân của nó là Đức Long Quân, tên thật Sùng Lãm, con trai Kinh Dương Vương, vị vua mở cõi phương Nam; mẹ ngài là Thần Long, con gái Long Vương hồ Động Đình. Nửa dòng máu trong người ngài là máu rồng, mà rồng thì thuộc về nước: ngài lấy thủy phủ làm nhà, mặt đất chỉ là nơi lui tới.
+Chuyện người Việt kể về tổ tiên mình không bắt đầu ở đất Việt. Nó bắt đầu từ một cái hồ ở phương Bắc, hồ Động Đình, nước rộng mênh mông như biển. Người quanh vùng nói dưới đáy hồ có một cõi riêng, cõi của Long Vương, vua các loài dưới nước. Long Vương có một người con gái, tên là Thần Long.
 
-Nhưng người trên cạn không lúc nào quên ngài. Chính ngài dạy dân cày cấy, dạy cơm ăn áo mặc, đặt ra trật tự vua tôi, đạo nghĩa cha con vợ chồng. Chính ngài trừ những giống yêu quái hại người. Con Ngư Tinh, quái cá khổng lồ chắn ngang đường biển, vừa bị ngài chém ngoài khơi; trước đó, con cáo chín đuôi đất Long Biên đã đền tội, cái cây cổ thụ thành tinh trên đất Phong Châu đã bị đánh đuổi. Xong việc, ngài lại về nước. Dân không gọi ngài là vua. Dân gọi ngài là Bố. Và lệ đã thành từ lâu: hễ trên cạn có việc, cứ ra bờ nước mà gọi "Bố ơi, sao không lại cứu chúng con", ngài sẽ hiện về.
+Thuở ấy, ở phương Nam có một vị vua trẻ tên là Kinh Dương Vương. Ông là dòng dõi Thần Nông, vị thần dạy người trồng lúa: ông nội ông là Đế Minh, cháu ba đời Thần Nông, nhân chuyến tuần du phương Nam đến vùng núi Ngũ Lĩnh, lấy một nàng tiên ở đó mà sinh ra ông. Đế Minh chia thiên hạ làm hai: con trưởng là Đế Nghi giữ phương Bắc, còn Kinh Dương Vương được phong làm vua phương Nam. Vị vua phương Nam ấy lấy Thần Long, con gái Long Vương hồ Động Đình. Hai người sinh được một con trai, đặt tên là Sùng Lãm.
 
-Lần ấy, tiếng gọi vọng xuống tận đáy nước. Trên cạn có biến: người phương Bắc kéo xuống. Đế Lai, vua phương Bắc thuộc dòng Thần Nông, đem cả đoàn tùy tùng tuần du cõi Nam, đóng hành tại giữa đất người, và dân phương Nam không còn được yên sống như xưa. Tiếng kêu dồn về phía biển. Đức Long Quân rẽ nước lên bờ.
+Đứa trẻ ấy mang trong mình hai dòng máu. Bên nội là dòng vua trên cạn, dòng của những người dạy dân trồng trọt. Bên ngoại là dòng rồng dưới nước, dòng của cõi thủy phủ. Sùng Lãm lớn lên, và dòng máu bên ngoại tỏ ra đậm hơn: chàng quen nước như người thường quen đất, coi thủy phủ là nhà, mặt cạn chỉ là nơi lui tới. Người phương Nam gọi chàng bằng hiệu: Lạc Long Quân, vua rồng của đất Lạc.
 
-Ở hành tại, ngài không gặp ông vua phương Bắc. Núi sông đất lạ đã níu chân Đế Lai: ông vua mải mê đi từ ngọn núi này sang khúc sông khác, mỗi ngày một xa, để người con gái yêu ở lại một mình. Người con gái ấy là Âu Cơ, giống tiên trên cạn, lạc giữa một vùng đất không quen.
+Nhưng vị chúa của nước lại làm những việc lớn nhất của mình ở trên cạn. Dân phương Nam thuở ấy chưa biết cày cấy, ngài dạy cho biết cày cấy. Chưa thành nếp cơm ăn áo mặc, ngài bày cho nếp ấy. Chưa có tôn ti, ngài đặt ra đạo vua tôi, đạo cha con, đạo vợ chồng. Đất còn ba giống yêu tinh: con cá già ngoài biển thành tinh gọi là Ngư Tinh, con cáo chín đuôi gọi là Hồ Tinh, cái cây cổ thụ hóa tinh gọi là Mộc Tinh. Ngài trừ cả ba, lần lượt, con này xong đến con khác, cho dân được ở yên. Rồi xong việc, ngài về nước, không ở lại nhận ơn, không lên ngôi trị vì. Dân thương ngài như thương người trong nhà, không gọi là vua mà gọi là Bố. Lệ thành từ đó: trên cạn có việc, cứ ra bờ nước gọi "Bố ơi, sao không lại cứu chúng con", ngài lại hiện về.
 
-Đức Long Quân gặp nàng ở đó. Ngài thấy nàng dung mạo đẹp lạ lùng; nàng thấy vị chúa từ biển lên, lạ lùng mà không đáng sợ. Hai người phải lòng nhau, kết làm vợ chồng, đưa nhau lên núi Long Trang. Kẻ đứng đầu thủy tộc, vì một người con gái trên cạn, ở lại trên non.
+Một thuở, có người con gái phương Bắc xuống cõi Nam. Nàng là Âu Cơ, con gái Đế Lai, vua phương Bắc cùng dòng dõi Thần Nông, theo cha trong chuyến đi dài xuống đất phương Nam. Nàng vốn giống tiên trên cạn, dung mạo đẹp lạ lùng. Lạc Long Quân gặp nàng, hai người phải lòng nhau, kết làm vợ chồng, đưa nhau về ở núi Long Trang. Dòng rồng của hồ Động Đình, qua ba đời, gặp dòng tiên trên cạn: chưa cuộc hôn nhân nào trên đất Lĩnh Nam lạ lùng đến thế.
 
-Rồi Âu Cơ sinh. Không phải hình người: một cái bọc tròn, trơn nhẵn, không tay không chân. Bảy ngày sau, bọc tách ra thành một trăm quả trứng, mỗi quả trứng nở một đứa con trai. Lũ trẻ không cần bú mớm, cứ thế tự lớn, đứa nào cũng khôi ngô, khỏe mạnh, khôn ngoan khác thường. Núi Long Trang thành cõi đông vui. Nhưng đêm đêm, nghe gió thổi qua đỉnh non, Đức Long Quân lại nhớ tiếng sóng.
+Đứa con của cuộc hôn nhân ấy cũng lạ lùng không kém. Âu Cơ có mang, đủ ngày đủ tháng sinh ra không phải hình người mà là một cái bọc tròn, trơn nhẵn, không tay không chân. Cho là điềm chẳng lành, người ta đem bỏ cái bọc ra ngoài đồng. Bảy ngày sau, cái bọc tách ra thành một trăm quả trứng, mỗi quả trứng nở một đứa con trai. Lũ trẻ không cần bú mớm, cứ thế tự lớn, đứa nào cũng khôi ngô, khỏe mạnh, trí dũng hơn người. Núi Long Trang thành cõi đông vui nhất phương Nam.
 
-Nước vẫn là nhà. Ngài xuống biển, rồi lên, rồi lại xuống, mỗi chuyến đi một dài hơn. Vợ ngài là giống tiên, không theo chồng xuống nước được; ngài là giống rồng, không bỏ nước mà ở hẳn trên non được. Trăm đứa con lớn lên giữa hai cõi của cha và mẹ, nửa quen non, nửa nhớ biển.
+Nhưng dòng máu không cho người cha ở yên trên non. Lạc Long Quân ở ít lâu lại nhớ nước, xuống thủy phủ, rồi lên, rồi lại xuống. Âu Cơ là tiên trên cạn, không theo chồng xuống nước được; chồng nàng là rồng dưới nước, không bỏ biển mà ở hẳn trên non được. Một ngày, ngài nói với vợ: "Ta là nòi rồng, đứng đầu thủy tộc; nàng là giống tiên, sống ở trên đất. Khí âm dương hợp lại mà sinh con, nhưng thủy hỏa khắc nhau, khó lòng ở với nhau lâu dài. Nay phải chia nhau: năm mươi con theo nàng lên núi, năm mươi con theo ta xuống biển. Kẻ lên non, người xuống bể, có việc thì báo cho nhau biết, đừng quên nhau."
 
-Một ngày, ngài nói với Âu Cơ điều đã nghĩ suốt những chuyến đi về: "Ta là nòi rồng, đứng đầu thủy tộc; nàng là giống tiên, sống ở trên đất. Tuy khí âm dương hợp lại mà sinh con, nhưng thủy hỏa khắc nhau, khó lòng ở với nhau lâu dài. Nay phải chia nhau: năm mươi con theo nàng lên núi, năm mươi con theo ta xuống biển. Kẻ lên non, người xuống bể, chia nhau mà cai quản các phương. Có việc thì báo cho nhau biết, đừng bỏ nhau. Khi nào cần, cứ gọi, ta sẽ về."
+Ngày chia tay, một trăm chàng trai chia làm hai ngả. Năm mươi người theo mẹ ngược lên miền núi, về đất Phong Châu; người con trưởng được anh em tôn lên làm vua, hiệu là Hùng Vương, dựng nước Văn Lang, nước đầu tiên của người Việt. Năm mươi người theo cha xuôi ra biển, về cõi thủy phủ, giữ các vùng sông nước.
 
-Ngày chia tay, một trăm chàng trai chia làm hai ngả. Năm mươi người theo mẹ ngược lên miền núi cao, về phía đất Phong Châu. Năm mươi người theo cha xuôi ra phía biển. Đến mép nước, Đức Long Quân dừng lại, ngoảnh nhìn: đoàn người phía non đã xa, chỉ còn là một vệt nhỏ men theo chân núi. Rồi ngài quay ra khơi, dẫn các con rẽ sóng. Biển Đông mở ra trước mặt cha con, rộng không bờ, và dưới đáy nước, tòa thủy phủ đã sáng đèn chờ sẵn.
+Vậy là dòng nước khởi từ hồ Động Đình phương Bắc, qua ba đời, đổ về Biển Đông phương Nam. Người Việt sau này tự nhận mình là con Rồng cháu Tiên: vế Tiên là người mẹ trên non, còn vế Rồng, tính ngược lên, là chàng Sùng Lãm, là Thần Long, là cái hồ nước rộng như biển nơi câu chuyện bắt đầu.
 
 ---
 
