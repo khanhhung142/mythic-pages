@@ -19,6 +19,7 @@ const entrySchema = z.object({
   year_note: z.string().optional(),
   year_end: z.number().optional(),
   region: z.string().optional(),
+  sovereignty_relevant: z.boolean().optional(),
   locations: z.array(z.string()).optional(),
   location_modern: z.string().optional(),
   coordinates: z.array(z.number()).optional(),

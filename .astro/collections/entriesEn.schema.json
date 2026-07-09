@@ -66,6 +66,9 @@
     "region": {
       "type": "string"
     },
+    "sovereignty_relevant": {
+      "type": "boolean"
+    },
     "locations": {
       "type": "array",
       "items": {
