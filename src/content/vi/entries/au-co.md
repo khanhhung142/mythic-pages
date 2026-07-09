@@ -1,6 +1,6 @@
 ---
 id: au-co
-name_vi: "Âu Cơ (Quốc Mẫu Âu Cơ)"
+name_vi: "Âu Cơ"
 name_han: "嫗姬 / 甌姬"
 aliases:
   - Quốc Mẫu Âu Cơ

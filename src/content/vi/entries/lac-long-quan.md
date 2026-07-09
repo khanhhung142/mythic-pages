@@ -1,6 +1,6 @@
 ---
 id: lac-long-quan
-name_vi: "Lạc Long Quân (Quốc Tổ Lạc Long Quân)"
+name_vi: "Lạc Long Quân"
 name_han: "貉龍君"
 aliases:
   - Sùng Lãm (崇纜, tên thật theo Lĩnh Nam Chích Quái)
