@@ -169,7 +169,7 @@ motifs:
     description: "Họ hàng với motif sinh từ quả bầu của Khmu, Mường, Hmông, Thái, Choang; số 100 song song trăm con Kauravas trong Mahābhārata"
 popularity: 5
 status: published
-updated_at: 2026-07-08
+updated_at: 2026-07-10
 ---
 
 ## Chuyện kể
@@ -266,7 +266,7 @@ Bọc trăm trứng thuộc một họ motif sinh-từ-vật-chứa trải khắ
 
 **Khảo cổ học.** Quan hệ giữa truyện và văn hóa Đông Sơn (c. 1000 TCN đến 100) còn tranh cãi. Ferlus ("A Layer of Dongsonian Vocabulary in Vietnamese", JSEALS 1, 2009, tr. 95-109) chứng minh lớp từ vựng chày, mái chèo, chõ xôi thời Đông Sơn là từ phái sinh nội tại của tiếng Vietic, ủng hộ gốc Vietic cho văn hóa này. Chiều ngược lại, Taylor và John D. Phan lưu ý hiện vật Đông Sơn rải từ Phúc Kiến tới Mã Lai, thuộc nhiều tộc người, chưa thể gán riêng cho tổ tiên người Việt. Catherine Churchman (_The People between the Rivers_, 2016) cho thấy văn hóa trống đồng biến mất khỏi vùng thấp sau cuộc chinh phục của Mã Viện thế kỷ I: một đứt gãy, không phải mạch liên tục như huyền thoại gợi ý. Trống Hy Cương, trống đồng lớn nhất Việt Nam (đường kính 93 cm), được tìm thấy cách núi Hùng 500 mét; nhưng chưa tìm thấy hình khắc nào trên trống Đông Sơn mô tả bọc trăm trứng.
 
-**Vị trí của entry này.** Về niên đại văn bản, chứng cứ đứng về phía Kelley: không có dấu vết phả hệ Hồng Bàng trước thế kỷ XIV. Nhưng "văn bản định hình muộn" không đồng nghĩa "làm từ không khí": dị bản Mường (Ngu Cơ hươu sao, trăm trứng, chia đôi) và vành đai motif quả bầu Đông Nam Á cho thấy các nhà nho thế kỷ XIV-XV làm việc trên chất liệu kể cổ hơn nhiều, rồi khoác cho nó bộ khung phả hệ Hán văn. Kiến tạo trung đại và lõi bản địa không loại trừ nhau.
+**Điểm chưa ngã ngũ.** Hai loại dữ kiện đứng cạnh nhau. Một bên là khoảng trống văn bản: không có dấu vết phả hệ Hồng Bàng trước thế kỷ XIV, luận cứ chính của Kelley. Bên kia là dị bản Mường (Ngu Cơ hươu sao, trăm trứng, chia đôi) và vành đai motif quả bầu Đông Nam Á, luận cứ chính của hướng tìm lớp kể cổ hơn nằm dưới văn bản. Trong học giới có cả cách đọc coi hai loại dữ kiện này loại trừ nhau lẫn cách đọc coi chúng bổ sung nhau (nhà nho thế kỷ XIV-XV khoác khung phả hệ Hán văn lên chất liệu bản địa có sẵn); tranh luận chưa khép. Dù theo hướng nào, chức năng của truyện thì các nghiên cứu đều ghi nhận: một tuyên ngôn rằng người Việt có nguồn gốc riêng, đứng ngang hàng phương Bắc.
 
 ## Di sản _sống_
 

@@ -169,7 +169,7 @@ motifs:
     description: "Cognate of the gourd-birth motif of the Khmu, Mường, Hmong, Thái, and Zhuang; the number one hundred parallels the hundred Kauravas of the Mahābhārata"
 popularity: 5
 status: published
-updated_at: 2026-07-08
+updated_at: 2026-07-10
 ---
 
 ## The Story
@@ -266,7 +266,7 @@ The sac of one hundred eggs belongs to a family of birth-from-a-vessel myths spr
 
 **Archaeology.** The relation between the tale and the Đông Sơn culture (c. 1000 BCE to 100 CE) is contested. Ferlus ("A Layer of Dongsonian Vocabulary in Vietnamese," JSEALS 1, 2009, pp. 95-109) showed that the Đông Sơn-era vocabulary for pestle, oar, and sticky-rice steamer derives internally within Vietic, supporting a Vietic identity for the culture. Against this, Taylor and John D. Phan note that Đông Sơn artifacts occur from Fujian to Malaysia and belonged to several peoples, so the culture cannot simply be assigned to Vietnamese ancestors. Catherine Churchman (_The People between the Rivers_, 2016) shows that bronze drum culture disappeared from the lowlands after Ma Yuan's first-century conquest: a rupture, not the continuity the myth implies. The Hy Cương drum, Vietnam's largest at 93 cm in diameter, was found 500 meters from Hùng Mountain; but no Đông Sơn drum scene depicting the egg sac has ever been identified.
 
-**Where this entry stands.** On textual chronology the evidence favors Kelley: nothing attests the Hồng Bàng genealogy before the fourteenth century. But "textually late" is not "made from nothing." The Mường variant (Ngu Cơ the doe, the hundred eggs, the even division) and the Southeast Asian gourd belt show the fourteenth- and fifteenth-century literati working over much older narrative material and dressing it in a classical genealogical frame. Medieval construction and an indigenous core do not exclude each other.
+**What remains open.** Two bodies of evidence sit side by side. One is textual silence: nothing attests the Hồng Bàng genealogy before the fourteenth century, Kelley's central argument. The other is the Mường variant (Ngu Cơ the doe, the hundred eggs, the even division) and the Southeast Asian gourd belt, the central argument of the line that looks for an older narrative core beneath the text. Scholarship contains both a reading that treats the two as mutually exclusive and a reading that treats medieval construction as a classical frame laid over existing indigenous material; the debate is not closed. On the tale's function, though, the studies converge: a declaration that the Vietnamese are a people with their own origin, standing level with the North.
 
 ## Living _Legacy_
 

@@ -114,7 +114,7 @@ motifs:
     description: "Object-origin aetiology (Nguyễn Đổng Chi groups it with the areca and watermelon tales)"
 popularity: 5
 status: published
-updated_at: 2026-07-09
+updated_at: 2026-07-10
 ---
 
 ## The Story
@@ -246,7 +246,7 @@ Chưng Bính Truyện sits inside the larger dispute over the whole Hùng-king c
 
 **Tạ Chí Đại Trường** (reply in the same JVS issue, pp. 139-162) accepts that the text is layered but rejects the conclusion: he argues for an older folk substratum beneath the literary surface.
 
-Neither side disputes that the textual form we have is a product of the 1492-1493 redaction. What no one has settled is the age of the oral layer beneath it. The story of a poor son taught by a god to make cakes from rice may be old; the full package of heaven, earth, filial piety, and royal succession in its present form is medieval editorial work. The Mường parallel and the wider Southeast Asian rice-origin corpus give the sacred-grain stratum a claim to age that the geometric frame does not have. This entry reads the tale accordingly: with Tạ Chí Đại Trường on the substratum, while granting Kelley the dating of the literary form.
+Neither side disputes that the textual form we have is a product of the 1492-1493 redaction. What no one has settled is the age of the oral layer beneath it. The Mường parallel and the wider Southeast Asian rice-origin corpus are the main argument of the line that treats the sacred-grain stratum as old; Kelley's line treats the whole package, sacred grain and cosmological frame alike, as medieval work built from Chinese books. The debate stays open at exactly that point.
 
 Nguyễn Thị Điểu ("A mythographical journey to modernity," Journal of Southeast Asian Studies, 2013/2014) follows the Hùng-king myths through their transformations from LNCQ through the colonial-era pamphlets to the postwar state cult; Chưng Bính Truyện travels the whole route.
 

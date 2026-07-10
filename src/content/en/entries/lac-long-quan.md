@@ -191,7 +191,7 @@ motifs:
     description: "The fifty-fifty division: fifty sons to the sea, fifty to the mountains; joint rule over two realms with a pledge of mutual aid, parting without severance"
 popularity: 5
 status: published
-updated_at: 2026-07-09
+updated_at: 2026-07-10
 ---
 
 ## The Story
@@ -302,7 +302,7 @@ The three blanks at the top of the table are the negative evidence: at the end o
 
 **The indigenous rejoinder.** Nguyễn Mạnh Tiến (_Khai nguyên rồng tiên_, NXB Tao Đàn) answers Kelley with ethnography: fieldwork in Thanh Hóa shows the Việt, Mường, Tày, and Thái sharing a single mythic consciousness of the Dragon Father and Fairy Mother and a set of common deities, which argues for an indigenous Southeast Asian root that cannot be reduced to a few literati reading Chinese books.
 
-**Where this entry stands.** On textual chronology the evidence favors Kelley: nothing attests the Hồng Bàng genealogy before the fourteenth century, and the Động Đình dragon-bride motif carries the stamp of Tang literature plainly enough that Emperor Tự Đức himself pointed it out. But "textually late" is not "fabricated from nothing." The portrait of Lạc Long Quân has features no Chinese book supplies: a water god addressed as Father, a demon-slaying cycle mapped precisely onto the habitats of the northern river plain, and a dragon-and-fairy structure shared by the neighboring Việt, Mường, Tày, and Thái. The most defensible reading: the fourteenth- and fifteenth-century literati took an existing indigenous layer of water-spirit cult and ethnic memory and dressed it in a classical genealogical frame, to claim a separate lineage standing level with the North. Medieval construction and an indigenous core do not exclude each other.
+**What remains open.** On textual chronology, nothing attests the Hồng Bàng genealogy before the fourteenth century, and the Động Đình dragon-bride motif carries the stamp of Tang literature plainly enough that Emperor Tự Đức himself pointed it out; that is the evidence on Kelley's side. On the other side, the portrait of Lạc Long Quân has features no Chinese book supplies: a water god addressed as Father, a demon-slaying cycle mapped precisely onto the habitats of the northern river plain, and a dragon-and-fairy structure shared by the neighboring Việt, Mường, Tày, and Thái; that is the evidence of the indigenous-core line (Nguyễn Mạnh Tiến). The two lines are still arguing, and neither has produced the evidence that would close the file; between the poles stands a reading that treats the medieval construction as a classical frame laid over existing indigenous material. What every side records: whenever it took shape, the genealogy was built to claim a separate lineage, standing level with the North, dependent on no one.
 
 ## Living _Legacy_
 

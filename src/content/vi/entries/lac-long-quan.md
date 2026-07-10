@@ -191,7 +191,7 @@ motifs:
     description: "Chia đôi 50/50: năm mươi con xuống biển, năm mươi con lên núi; phân trị hai cõi kèm lời hẹn tương trợ, chia mà không đoạn tuyệt"
 popularity: 5
 status: published
-updated_at: 2026-07-09
+updated_at: 2026-07-10
 ---
 
 ## Chuyện kể
@@ -302,7 +302,7 @@ Ba khoảng trống đầu bảng là bằng chứng âm bản: đến cuối th
 
 **Phản biện từ hướng bản địa.** Nguyễn Mạnh Tiến (_Khai nguyên rồng tiên_, NXB Tao Đàn) phản bác Kelley bằng dân tộc học: khảo sát tại Thanh Hóa cho thấy người Việt, Mường, Tày, Thái chia sẻ cùng một ý thức thần thoại Cha Rồng Mẹ Tiên và các vị thần chung, tức motif có gốc rễ bản địa Đông Nam Á, không thể chỉ là sản phẩm đọc sách Hán của vài nhà nho.
 
-**Vị trí của entry này.** Về niên đại văn bản, chứng cứ đứng về phía Kelley: không gì chứng thực phả hệ Hồng Bàng trước thế kỷ XIV, và mô típ Động Đình Long Nữ mang dấu văn liệu Đường rõ đến mức chính vua Tự Đức đã chỉ ra. Nhưng "văn bản định hình muộn" không đồng nghĩa "bịa từ không khí". Chân dung Lạc Long Quân mang những nét không lấy được từ sách Hán: một thủy thần được gọi là Bố, một hệ ba truyện diệt yêu bám sát sinh cảnh sông nước đồng bằng Bắc Bộ, một cấu trúc rồng tiên mà các tộc lân cận Việt, Mường, Tày, Thái cùng chia sẻ. Cách đọc hợp lý nhất: các nhà nho thế kỷ XIV-XV đã lấy một lớp thủy thần và ký ức tộc người bản địa có sẵn, rồi khoác cho nó bộ khung phả hệ Hán văn để tuyên bố một dòng dõi riêng, ngang hàng phương Bắc. Kiến tạo trung đại và lõi bản địa không loại trừ nhau.
+**Điểm chưa ngã ngũ.** Về niên đại văn bản, không gì chứng thực phả hệ Hồng Bàng trước thế kỷ XIV, và mô típ Động Đình Long Nữ mang dấu văn liệu Đường rõ đến mức chính vua Tự Đức đã chỉ ra; đó là các dữ kiện phía Kelley. Phía kia, chân dung Lạc Long Quân mang những nét không lấy được từ sách Hán: một thủy thần được gọi là Bố, một hệ ba truyện diệt yêu bám sát sinh cảnh sông nước đồng bằng Bắc Bộ, một cấu trúc rồng tiên mà các tộc lân cận Việt, Mường, Tày, Thái cùng chia sẻ; đó là dữ kiện của hướng tìm lõi bản địa (Nguyễn Mạnh Tiến). Hai hướng vẫn tranh luận, và chưa bên nào đưa ra được bằng chứng khép hồ sơ; giữa hai cực còn có cách đọc coi kiến tạo trung đại là bộ khung Hán văn khoác lên chất liệu bản địa có sẵn. Điều các phía đều ghi nhận: dù định hình lúc nào, bộ phả hệ được dựng để tuyên bố một dòng dõi riêng, ngang hàng phương Bắc, không phụ thuộc ai.
 
 ## Di sản _sống_
 

@@ -83,7 +83,7 @@ scholarly_debates:
   - "Lớp lịch sử Triệu Quang Phục có trước hay sau lớp huyền thoại Hùng Vương trong văn bản?"
 popularity: 4
 status: draft
-updated_at: 2026-07-09
+updated_at: 2026-07-10
 ---
 
 ## Chuyện kể
@@ -126,7 +126,7 @@ Nhất Dạ Trạch không phải địa danh thuần tuý huyền thoại. Nó 
 
 Cũng trong mục này, Ngô Sĩ Liên ghi lời chú: "tục truyền rằng thần nhân trong đầm là Chử Đồng Tử cưỡi rồng vàng từ trên trời rơi xuống, rút móng rồng trao cho vua" để đánh giặc. Đây là **lần đầu tiên Chử Đồng Tử xuất hiện trong chính sử**, không phải ở phần Hùng Vương mà ở phần Triệu Việt Vương. Ngô Sĩ Liên ghi xong phê ngay: những chuyện như vậy là "mượn lời để cho vật trở thành thiêng mà thôi."
 
-Phê vậy nhưng vẫn ghi vào. Câu phê chứng minh truyện đã đủ phổ biến đến mức sử gia chính thức phải đối phó.
+Phê vậy nhưng vẫn ghi vào. Câu phê cho thấy truyện đã đủ phổ biến đến mức sử gia chính thức phải đối phó.
 
 ## Địa lý và sự _biến mất_ của đầm
 

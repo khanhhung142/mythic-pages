@@ -115,7 +115,7 @@ motifs:
     description: "Sự tích nguồn gốc sự vật (Nguyễn Đổng Chi xếp cùng loại với Trầu cau, Dưa hấu)"
 popularity: 5
 status: published
-updated_at: 2026-07-09
+updated_at: 2026-07-10
 ---
 
 ## Chuyện kể
@@ -256,7 +256,7 @@ Chưng Bính truyện nằm trong cuộc tranh luận lớn hơn về toàn bộ
 
 **Tạ Chí Đại Trường** (phúc đáp cùng số JVS, tr. 139-162) chấp nhận tính phân tầng của văn bản nhưng bác kết luận: ông lập luận có nền dân gian cũ hơn nằm dưới lớp văn bản Hán học.
 
-Điều hai bên không tranh cãi: hình thức văn bản của Chưng Bính truyện như ta có hôm nay là sản phẩm biên tập 1492-1493. Điều chưa ai chứng minh được dứt điểm: lớp truyền miệng bên dưới cũ đến đâu. Câu chuyện một người con nghèo được thần dạy làm bánh từ gạo có thể rất cũ; bộ khung thiên địa, hiếu đạo, kế vị trong hình thức hiện tại là sản phẩm trung đại. Đối chiếu với sử thi Mường và các thần thoại gạo Đông Nam Á (mục trên), phần nền gạo thiêng có cơ sở để coi là lớp cũ; entry này đọc theo hướng đó, cùng phía với Tạ Chí Đại Trường về tầng nền, trong khi ghi nhận Kelley đúng về niên đại của hình thức văn bản.
+Điều hai bên không tranh cãi: hình thức văn bản của Chưng Bính truyện như ta có hôm nay là sản phẩm biên tập 1492-1493. Điều chưa ai chứng minh được dứt điểm: lớp truyền miệng bên dưới cũ đến đâu. Đối chiếu với sử thi Mường và các thần thoại gạo Đông Nam Á (mục trên) là luận cứ chính của hướng coi phần nền gạo thiêng là lớp cũ; phía Kelley coi cả gói, từ gạo thiêng đến khung thiên địa hiếu đạo, là sản phẩm đọc sách Hán thời trung đại. Tranh luận để ngỏ ở đúng chỗ đó.
 
 Nguyễn Thị Điểu ("A mythographical journey to modernity", _Journal of Southeast Asian Studies_, 2013/2014) theo dõi các biến hình của truyền thuyết Hùng Vương từ LNCQ qua tập sách phổ biến thời thuộc địa đến hệ thống tín ngưỡng nhà nước sau 1945; Chưng Bính truyện đi trọn hành trình đó.
 
