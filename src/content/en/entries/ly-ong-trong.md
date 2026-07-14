@@ -112,7 +112,7 @@ themes:
   - thanh-hoang
   - kien-tao-ky-uc
 popularity: 4
-status: draft
+status: published
 updated_at: 2026-07-13
 ---
 
