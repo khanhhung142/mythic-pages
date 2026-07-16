@@ -225,7 +225,7 @@ Hồ Tinh là mắt xích giữa của bộ ba diệt yêu mở đầu _Lĩnh Na
 
 | Yêu quái | Chữ Hán | Sinh thái | Địa bàn | Cách diệt | Kết cục |
 |----------|---------|-----------|---------|-----------|---------|
-| Ngư Tinh | 魚精 | Biển | Bờ biển phía Đông | Cột sắt nung đỏ | Chết, xác thành đảo |
+| Ngư Tinh | 魚精 | Biển | Bờ biển phía Đông | Khối sắt nung đỏ | Chết, xác thành đảo |
 | Hồ Tinh | 狐精 | Đồng bằng, hồ đầm | Long Biên / Hồ Tây | Thủy quân dâng nước phá hang | Chết, hang thành hồ |
 | Mộc Tinh | 木精 | Rừng núi | Phong Châu | Thuật pháp, rồi mưu kế | Sống dai đến đời Đinh |
 

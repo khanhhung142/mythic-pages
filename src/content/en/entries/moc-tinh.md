@@ -245,7 +245,7 @@ Mộc Tinh is the final link of the demon-slaying trio that opens the _Lĩnh Nam
 
 | Demon | Hán | Ecology | Territory | Method | Outcome |
 |-------|-----|---------|-----------|--------|---------|
-| Ngư Tinh | 魚精 | Sea | The eastern coast | Red-hot iron bar | Dies; corpse becomes an island |
+| Ngư Tinh | 魚精 | Sea | The eastern coast | Red-hot iron block | Dies; corpse becomes an island |
 | Hồ Tinh | 狐精 | Plain, lakes and marshes | Long Biên / West Lake | Water Palace legions flood the den | Dies; den becomes a lake |
 | Mộc Tinh | 木精 | Forest and mountains | Phong Châu | Magic, then stratagem | Survives until the Đinh dynasty |
 

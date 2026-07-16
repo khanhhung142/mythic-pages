@@ -224,7 +224,7 @@ Hồ Tinh is the middle link of the demon-slaying trio that opens the _Lĩnh Nam
 
 | Demon | Hán | Ecology | Territory | Method | Outcome |
 |-------|-----|---------|-----------|--------|---------|
-| Ngư Tinh | 魚精 | Sea | Eastern seaboard | Red-hot iron pillar | Killed; corpse becomes an island |
+| Ngư Tinh | 魚精 | Sea | Eastern seaboard | Red-hot iron block | Killed; corpse becomes an island |
 | Hồ Tinh | 狐精 | Plains and lakes | Long Biên / West Lake | Water Palace troops flood the den | Killed; den becomes a lake |
 | Mộc Tinh | 木精 | Forest and mountains | Phong Châu | Arts of power, then a ruse | Survives until the Đinh dynasty |
 

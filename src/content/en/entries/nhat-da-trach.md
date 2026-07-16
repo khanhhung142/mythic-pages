@@ -82,7 +82,7 @@ scholarly_debates:
   - "Was the Chử Đồng Tử legend attached to this location from the beginning, or grafted on later? Tạ Chí Đại Trường's analytical approach suggests the latter."
   - "In the texts, which came first: the 6th-century historical layer involving Triệu Quang Phục, or the Hùng Vương mythological layer?"
 popularity: 4
-status: draft
+status: published
 updated_at: 2026-07-09
 ---
 

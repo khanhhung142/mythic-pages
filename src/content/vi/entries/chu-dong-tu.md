@@ -97,7 +97,7 @@ scholarly_debates:
   - "Hùng Vương thứ 3 hay thứ 18? Dị bản giữa Lĩnh Nam chích quái và thần tích đền Đa Hoà"
   - "Tứ bất tử có phải truyền thống cổ? Chu Xuân Giao phủ nhận tính cổ xưa của bảng này"
 popularity: 5
-status: draft
+status: published
 updated_at: 2026-07-10
 ---
 

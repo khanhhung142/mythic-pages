@@ -66,7 +66,7 @@ scholarly_debates:
   - "Tây Sa công chúa in local temple records: when was she added, and why? No dedicated research yet"
   - "Reign 3 or 18? Variant between text and shrine tradition"
 popularity: 4
-status: draft
+status: published
 updated_at: 2026-07-09
 ---
 

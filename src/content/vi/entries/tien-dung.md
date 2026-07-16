@@ -66,7 +66,7 @@ scholarly_debates:
   - "Tây Sa công chúa trong thần tích địa phương: thêm vào lúc nào, lý do gì? Chưa có nghiên cứu chuyên biệt"
   - "Hùng Vương thứ 3 hay thứ 18? Dị bản giữa văn bản và thần tích"
 popularity: 4
-status: draft
+status: published
 updated_at: 2026-07-09
 ---
 

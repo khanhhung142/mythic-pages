@@ -82,7 +82,7 @@ scholarly_debates:
   - "Truyền thuyết Chử Đồng Tử có gắn với không gian này từ đầu hay được gán vào sau? Hướng phân tích của Tạ Chí Đại Trường gợi ý gắn sau"
   - "Lớp lịch sử Triệu Quang Phục có trước hay sau lớp huyền thoại Hùng Vương trong văn bản?"
 popularity: 4
-status: draft
+status: published
 updated_at: 2026-07-10
 ---
 
