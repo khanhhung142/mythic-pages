@@ -35,9 +35,9 @@ type claudeResponse struct {
 }
 
 func callClaude(system, prompt string, maxTokens int) (string, error) {
-	apiKey := os.Getenv("ANTHROPIC_API_KEY")
+	apiKey := os.Getenv("ANTHROPIC_API_KEY_API_PLATFORM")
 	if apiKey == "" {
-		return "", fmt.Errorf("ANTHROPIC_API_KEY not set")
+		return "", fmt.Errorf("ANTHROPIC_API_KEY_API_PLATFORM not set")
 	}
 
 	req := claudeRequest{

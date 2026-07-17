@@ -34,7 +34,7 @@ characters:
   - id: de-lai
     name: "Đế Lai (帝來)"
     role: supporting
-    notes: "Northern ruler of the Thần Nông line, father of Âu Cơ. Matches Đế Ai (帝哀), seventh ruler of the Shennong clan in Huangfu Mi's Diwang Shiji"
+    notes: "Northern ruler of the Thần Nông line, father of Âu Cơ. Matches Đế Lai (帝來/帝釐), sixth ruler of the Shennong clan and father of Đế Ai (帝哀), in Huangfu Mi's Diwang Shiji"
   - id: hung-vuong
     name: "Hùng Vương (雄王)"
     role: successor
@@ -59,10 +59,10 @@ not_contained_in:
     reason: "The earliest surviving Vietnamese history. It knows the Hùng kings and Văn Lang but has no genealogy of Thần Nông, Kinh Dương Vương, Lạc Long Quân, or Âu Cơ"
   - title: Việt điện u linh tập
     author: Lý Tế Xuyên (1329)
-    reason: "A catalog of enfeoffed tutelary spirits; no entry for Âu Cơ"
+    reason: "A catalog of enfeoffed tutelary spirits including Sơn Tinh (Tản Viên); the original 27-tale core has no entry for Âu Cơ"
   - title: Khâm định Việt sử thông giám cương mục
     author: Nguyễn-dynasty History Office (1856-1881)
-    reason: "Removed Kinh Dương Vương and Lạc Long Quân from official history, dismissing the Hồng Bàng tales as stories of buffalo ghosts and snake gods"
+    reason: "Dropped Kinh Dương Vương and Lạc Long Quân from the main annals, relegating the Hồng Bàng tale to a footnote under the Hùng Vương era on the principle of transmitting doubt as doubt, with a comment dismissing the tales as stories of buffalo ghosts and snake gods"
 adaptations: null
 sources:
   - title: Lĩnh Nam Chích Quái
@@ -140,7 +140,7 @@ sources:
     chapter: "Journal of the Southeast Asian Linguistics Society 1 (2009), pp. 95-109"
   - title: Diwang Shiji (帝王世紀)
     author: Huangfu Mi (215-282)
-    chapter: "Genealogy of the Shennong clan (Đế Ai, seventh ruler)"
+    chapter: "Genealogy of the Shennong clan (Đế Lai, sixth ruler, father of Đế Ai)"
 summary: |
   Âu Cơ is the fairy of the dry land in the Story of the Hồng Bàng Clan, the opening tale of the Lĩnh Nam Chích Quái. Daughter of the northern ruler Đế Lai of the Thần Nông line, she married the dragon lord Lạc Long Quân and gave birth to a sac that opened into one hundred eggs and one hundred sons. Because dragon and fairy are as water and fire, the couple divided the children: fifty followed the father to the sea, fifty followed the mother into the mountains, and the eldest of the mountain group was enthroned at Phong Châu as the first Hùng king. The hundred sons are the ancestors of the Hundred Việt, and the Vietnamese word for compatriot, đồng bào ("same womb"), comes from the image of the shared sac. The earliest surviving Vietnamese history, the Việt sử lược (c. 1377), knows nothing of this genealogy; the tale takes shape in the Lĩnh Nam Chích Quái and entered official history in 1479, where Ngô Sĩ Liên bracketed the hundred eggs as popular tradition. Modern scholarship debates a medieval "invented tradition" reading (Kelley 2012) against readings that find an older indigenous core in the Mường variant and the Southeast Asian gourd-birth motif. The cult of Mother Âu Cơ at Hiền Lương, Phú Thọ, was recognized as National Intangible Cultural Heritage in 2017.
 themes:
@@ -169,7 +169,7 @@ motifs:
     description: "Cognate of the gourd-birth motif of the Khmu, Mường, Hmong, Thái, and Zhuang; the number one hundred parallels the hundred Kauravas of the Mahābhārata"
 popularity: 5
 status: published
-updated_at: 2026-07-10
+updated_at: 2026-07-17
 ---
 
 ## The Story
@@ -218,15 +218,15 @@ The Chinese characters for the name Âu Cơ vary across manuscripts: **甌姬** 
 
 Trần Quốc Vượng, writing within the Hùng Vương research program of the 1970s, read the "Âu" of Âu Cơ as the "Âu" of Âu Việt: the marriage of Lạc Long Quân and Âu Cơ encodes the historical merger of the lowland **Lạc Việt** and the highland **Âu Việt**, the two blocs later joined in the kingdom of Âu Lạc. Đào Duy Anh (_Việt Nam văn hóa sử cương_, 1938) read more broadly: the hundred sons divided between sea and mountain "is perhaps related to the dispersal of the Việt into the Bách Việt groups of the Lĩnh Nam region." Other readings (Trương Thái Du takes "Âu" as a native Vietnamese sound for earth; Nguyễn Xuân Quang connects Âu Cơ to Nüwa) remain speculative, without independent linguistic support.
 
-The Shennong genealogy is a deliberate borrowing. No independent Chinese text mentions Âu Cơ; her name exists only in Vietnamese-composed works. The genealogical frame, however, comes straight from northern historiography: Đế Lai matches Đế Ai (帝哀), seventh ruler of the Shennong clan in Huangfu Mi's _Diwang Shiji_. Both Lạc Long Quân (through Kinh Dương Vương) and Âu Cơ (through Đế Lai) descend from Shennong, which makes the couple kin, a difficulty Ngô Sĩ Liên himself pointed out. Grafting Vietnamese origins onto the northern sacred genealogy did two things at once: it claimed parity with Chinese civilization, and it claimed a separate line and a separate sovereignty, not a branch office of anyone else's.
+The Shennong genealogy is a deliberate borrowing. No independent Chinese text mentions Âu Cơ; her name exists only in Vietnamese-composed works. The genealogical frame, however, comes straight from northern historiography: Đế Lai matches the Đế Lai (帝來, also written 帝釐) of Huangfu Mi's _Diwang Shiji_, sixth ruler of the Shennong clan and father of the seventh, Đế Ai (帝哀). Both Lạc Long Quân (through Kinh Dương Vương) and Âu Cơ (through Đế Lai) descend from Shennong, which makes the couple kin, a difficulty Ngô Sĩ Liên himself pointed out. Grafting Vietnamese origins onto the northern sacred genealogy did two things at once: it claimed parity with Chinese civilization, and it claimed a separate line and a separate sovereignty, not a branch office of anyone else's.
 
 ## Textual History: _recensions and variants_
 
 The textual record shows a tale that took shape late and was revised in every era that received it.
 
-**Việt điện u linh tập (1329)** catalogs enfeoffed spirits, includes Sơn Tinh, and has no entry for Âu Cơ.
+**Việt điện u linh tập (1329)** catalogs enfeoffed spirits and includes Sơn Tinh (Tản Viên), but its original 27-tale core has no entry for Âu Cơ.
 
-**Việt sử lược (c. 1377)**, the earliest surviving Vietnamese history, knows the Hùng kings and Văn Lang but has no trace of the genealogy of Thần Nông, Kinh Dương Vương, Lạc Long Quân, or Âu Cơ. It records only that in the time of King Zhuang of Zhou (697-682 BCE), a strange man (dị nhân) in Gia Ninh subdued the tribes by sorcery and called himself Hùng Vương. This silence is the single most important negative finding: at the end of the fourteenth century the mythological genealogy either did not exist or was unknown to historians.
+**Việt sử lược (c. 1377)**, the earliest surviving Vietnamese history, knows the Hùng kings and Văn Lang but has no trace of the genealogy of Thần Nông, Kinh Dương Vương, Lạc Long Quân, or Âu Cơ. It records only that in the time of King Zhuang of Zhou (696-682 BCE), a strange man (dị nhân) in Gia Ninh subdued the tribes by sorcery and called himself Hùng Vương. This silence is the single most important negative finding: at the end of the fourteenth century the mythological genealogy either did not exist or was unknown to historians.
 
 **Lĩnh Nam Chích Quái (late 14th century, edited 1492-1493)** gives the earliest full telling. At least eleven manuscripts survive, among them HV.486, VHv.1473, and A.2914; VHv.1473 carries an extra passage on a northern rebellion absent elsewhere. The manuscripts also differ on who Âu Cơ was. The main line of the text, and the line the tradition received, makes her **Đế Lai's daughter**; a few stray recensions make her his wife (consort), carried off by Lạc Long Quân while Đế Lai was away on his tour. That variant dropped out of the tradition early.
 
@@ -236,7 +236,7 @@ Nguyễn Thị Điểu (JSEAS 44/2, 2013, pp. 315-337) identifies a third, less 
 
 **Thiên Nam ngữ lục (c. 1682-1709)**, a verse chronicle of 8,136 lục bát lines in Nôm script, adds details found nowhere else: Âu Cơ is "over fifteen"; the mountain line of her sons is identified with Sơn Tinh ("Sơn Tinh xưng hiệu ở đầu"), tying the origin myth to the Sơn Tinh and Thủy Tinh flood legend; and the parting is located at **Ngã Ba Hạc**, the river confluence at Việt Trì in the ancestral Phú Thọ region.
 
-**Khâm định Việt sử thông giám cương mục (19th century)** took a rationalist turn: it dismissed the Hồng Bàng narratives as stories of buffalo ghosts and snake gods without standards, and removed Kinh Dương Vương and Lạc Long Quân from official history altogether.
+**Khâm định Việt sử thông giám cương mục (19th century)** took a rationalist turn: it dropped Kinh Dương Vương and Lạc Long Quân from the main annals and kept the Hồng Bàng tale only as a footnote under the Hùng Vương era, on the principle of transmitting doubt as doubt, with a royal comment dismissing the tales as stories of "buffalo ghosts and snake gods."
 
 ## Motifs and Symbols: _the hundred-egg sac in comparative view_
 

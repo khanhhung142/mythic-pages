@@ -1,23 +1,33 @@
 package main
 
-// Claim extracted from entry by Claude
+// EntryBlock is one parsed entry section.
+type EntryBlock struct {
+	Kind    string
+	Section string
+	Content string
+}
+
+// Claim extracted from a specific block.
 type Claim struct {
 	ID     int    `json:"id"`
-	Text   string `json:"text"`   // the claim as stated in the entry
-	Source string `json:"source"` // citation the entry gave, empty if none
-	Type   string `json:"type"`   // person | date | event | quote | motif | place
+	Text   string `json:"text"`
+	Source string `json:"source"`
+	Type   string `json:"type"`
+	Block  string `json:"block"`
+	Field  string `json:"field"`
+	Risk   string `json:"risk"`
 }
 
-// VerificationResult for one claim
+// VerificationResult for one claim.
 type VerificationResult struct {
 	Claim      Claim  `json:"claim"`
-	Status     string `json:"status"` // verified | wrong | not_found | suspicious
+	Status     string `json:"status"`
 	Evidence   string `json:"evidence"`
 	SourceURL  string `json:"source_url"`
-	Confidence string `json:"confidence"` // high | medium | low
+	Confidence string `json:"confidence"`
 }
 
-// PatternIssue from AI writing pattern scan
+// PatternIssue from regex scan.
 type PatternIssue struct {
 	Pass    int    `json:"pass"`
 	Line    int    `json:"line"`
@@ -26,13 +36,29 @@ type PatternIssue struct {
 	Fix     string `json:"fix"`
 }
 
-// AuditReport final output
+// BlockAudit stores the audit result for one block.
+type BlockAudit struct {
+	Block   EntryBlock
+	Claims  []Claim
+	Results []VerificationResult
+}
+
+// AuditReport final output.
 type AuditReport struct {
-	EntryPath   string               `json:"entry_path"`
-	EntryTitle  string               `json:"entry_title"`
-	Claims      []Claim              `json:"claims"`
-	Results     []VerificationResult `json:"results"`
-	Patterns    []PatternIssue       `json:"patterns"`
-	Verdict     string               `json:"verdict"` // PASS | REVISE | REJECT
-	Summary     string               `json:"summary"`
+	EntryPath    string         `json:"entry_path"`
+	EntryTitle   string         `json:"entry_title"`
+	EntryType    string         `json:"entry_type"`
+	BlockAudits  []BlockAudit   `json:"block_audits"`
+	Patterns     []PatternIssue `json:"patterns"`
+	Verdict      string         `json:"verdict"`
+	RejectReason string         `json:"reject_reason,omitempty"`
+	Summary      string         `json:"summary"`
+}
+
+func (r *AuditReport) AllResults() []VerificationResult {
+	var out []VerificationResult
+	for _, ba := range r.BlockAudits {
+		out = append(out, ba.Results...)
+	}
+	return out
 }

@@ -26,7 +26,7 @@ func auditCmd() *cobra.Command {
 	var verbose bool
 
 	cmd := &cobra.Command{
-		Use:   "audit <entry.md>",
+		Use:   "audit <entry|entry.md>",
 		Short: "Run full audit pipeline on an entry",
 		Args:  cobra.ExactArgs(1),
 		RunE: func(cmd *cobra.Command, args []string) error {
@@ -34,7 +34,7 @@ func auditCmd() *cobra.Command {
 		},
 	}
 
-	cmd.Flags().StringVarP(&outputPath, "output", "o", "", "Output file (default: <entry>-audit.md)")
+	cmd.Flags().StringVarP(&outputPath, "output", "o", "", "Output filename under audit/ (default: <slug>-audit.md)")
 	cmd.Flags().BoolVarP(&verbose, "verbose", "v", false, "Print progress to stderr")
 
 	return cmd

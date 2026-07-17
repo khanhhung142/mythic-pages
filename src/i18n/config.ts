@@ -17,7 +17,7 @@ export const ui: Record<Locale, Record<string, string>> = {
     "hero.cta.featured": "Xem nổi bật ↓",
     "hero.caption": "— Hồng Bàng thị, khởi nguyên dân tộc",
     "hero.lead":
-      "Nơi ghi lại Lạc Long Quân, Âu Cơ, Thánh Gióng và muôn vàn nhân vật — những câu chuyện đã nuôi dưỡng trí tưởng tượng và ký ức văn hóa của người Việt.",
+      "Nơi lưu trữ ký ức văn hóa của người Việt.",
     "featured.title1": "Nhân vật ",
     "featured.title2": "nổi bật",
     "featured.viewAll": "Xem tất cả →",

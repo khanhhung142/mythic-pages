@@ -10,49 +10,79 @@ import (
 )
 
 func runAudit(entryPath, outputPath string, verbose bool) error {
-	// Read entry
+	entryPath, err := resolveEntryPath(entryPath)
+	if err != nil {
+		return err
+	}
+
 	content, err := os.ReadFile(entryPath)
 	if err != nil {
 		return fmt.Errorf("read entry: %w", err)
 	}
+	raw := string(content)
 
-	entryTitle := extractTitle(string(content), entryPath)
-	logf(verbose, "Auditing: %s\n", entryTitle)
+	entryTitle := extractTitle(raw, entryPath)
+	entryType := detectEntryType(raw)
+	logf(verbose, "Entry: %s (type: %s)\n", entryTitle, entryType)
 
-	// Pass 1 — extract claims
-	logf(verbose, "Pass 1: extracting claims...\n")
-	claims, err := extractClaims(string(content))
-	if err != nil {
-		return fmt.Errorf("extract claims: %w", err)
+	logf(verbose, "Parsing blocks...\n")
+	blocks := parseEntry(raw)
+	logf(verbose, "  %d blocks found\n", len(blocks))
+	for _, b := range blocks {
+		logf(verbose, "    [%s] %s\n", b.Kind, truncate(b.Section, 40))
 	}
-	logf(verbose, "  %d claims found\n", len(claims))
 
-	// Pass 3 — verify claims (concurrent, max 5 at a time)
-	logf(verbose, "Pass 3: verifying claims...\n")
-	results := verifyClaims(claims, verbose)
+	logf(verbose, "Extracting claims per block...\n")
+	var blockAudits []BlockAudit
+	claimID := 1
+	for _, block := range blocks {
+		logf(verbose, "  extracting [%s/%s]...\n", block.Kind, truncate(block.Section, 30))
 
-	// Pass 5+6 — pattern scan
-	logf(verbose, "Pass 5+6: scanning patterns...\n")
-	patterns := scanPatterns(string(content))
+		claims, err := extractFromBlock(block, entryType, claimID)
+		if err != nil {
+			logf(verbose, "  WARN: %v\n", err)
+			blockAudits = append(blockAudits, BlockAudit{Block: block})
+			continue
+		}
+		claimID += len(claims)
+		logf(verbose, "    %d claims\n", len(claims))
+		blockAudits = append(blockAudits, BlockAudit{
+			Block:  block,
+			Claims: claims,
+		})
+
+		time.Sleep(300 * time.Millisecond)
+	}
+
+	logf(verbose, "Verifying claims...\n")
+	totalClaims := 0
+	for _, ba := range blockAudits {
+		totalClaims += len(ba.Claims)
+	}
+	logf(verbose, "  total claims to verify: %d\n", totalClaims)
+	blockAudits = verifyAllBlocks(blockAudits, verbose)
+
+	logf(verbose, "Scanning patterns...\n")
+	patterns := scanPatterns(raw)
 	logf(verbose, "  %d pattern issues\n", len(patterns))
 
-	// Derive verdict
-	verdict, summary := deriveVerdict(results, patterns)
+	allResults := flattenResults(blockAudits)
+	verdict, rejectReason, summary := deriveVerdict(allResults, patterns, blockAudits)
 
 	report := AuditReport{
-		EntryPath:  entryPath,
-		EntryTitle: entryTitle,
-		Claims:     claims,
-		Results:    results,
-		Patterns:   patterns,
-		Verdict:    verdict,
-		Summary:    summary,
+		EntryPath:    entryPath,
+		EntryTitle:   entryTitle,
+		EntryType:    entryType,
+		BlockAudits:  blockAudits,
+		Patterns:     patterns,
+		Verdict:      verdict,
+		RejectReason: rejectReason,
+		Summary:      summary,
 	}
 
-	// Output path
-	if outputPath == "" {
-		base := strings.TrimSuffix(entryPath, filepath.Ext(entryPath))
-		outputPath = base + "-audit.md"
+	outputPath, err = resolveAuditOutput(entryPath, outputPath)
+	if err != nil {
+		return err
 	}
 
 	rendered := renderReport(report)
@@ -61,30 +91,101 @@ func runAudit(entryPath, outputPath string, verbose bool) error {
 	}
 
 	fmt.Printf("\nVerdict: %s\n", verdict)
+	if rejectReason != "" {
+		fmt.Printf("Reason:  %s\n", rejectReason)
+	}
 	fmt.Printf("Summary: %s\n", summary)
 	fmt.Printf("Report:  %s\n", outputPath)
 
 	return nil
 }
 
-func verifyClaims(claims []Claim, verbose bool) []VerificationResult {
-	results := make([]VerificationResult, len(claims))
-	sem := make(chan struct{}, 5) // max 5 concurrent
+func resolveEntryPath(arg string) (string, error) {
+	if _, err := os.Stat(arg); err == nil {
+		return arg, nil
+	}
+
+	if filepath.Ext(arg) != "" || strings.ContainsRune(arg, os.PathSeparator) {
+		return arg, nil
+	}
+
+	// ponytail: support the two common launch dirs now; switch to executable-relative
+	// lookup later if the tool needs to be run from arbitrary directories.
+	candidates := []string{
+		filepath.Join("src", "content", "vi", "entries", arg+".md"),
+		filepath.Join("..", "src", "content", "vi", "entries", arg+".md"),
+	}
+
+	for _, candidate := range candidates {
+		if _, err := os.Stat(candidate); err == nil {
+			return candidate, nil
+		}
+	}
+
+	return arg, nil
+}
+
+// resolveAuditOutput always writes under audit/<slug>-audit.md (or -o basename).
+func resolveAuditOutput(entryPath, custom string) (string, error) {
+	slug := strings.TrimSuffix(filepath.Base(entryPath), filepath.Ext(entryPath))
+	name := slug + "-audit.md"
+	if custom != "" {
+		name = filepath.Base(custom)
+	}
+
+	dir := resolveAuditDir()
+	if err := os.MkdirAll(dir, 0755); err != nil {
+		return "", fmt.Errorf("create audit dir: %w", err)
+	}
+	return filepath.Join(dir, name), nil
+}
+
+func resolveAuditDir() string {
+	for _, d := range []string{"audit", filepath.Join("..", "audit")} {
+		if st, err := os.Stat(d); err == nil && st.IsDir() {
+			return d
+		}
+	}
+	if _, err := os.Stat(filepath.Join("..", "src", "content")); err == nil {
+		return filepath.Join("..", "audit")
+	}
+	return "audit"
+}
+
+func verifyAllBlocks(blockAudits []BlockAudit, verbose bool) []BlockAudit {
+	type indexedClaim struct {
+		blockIdx int
+		claimIdx int
+		claim    Claim
+	}
+
+	var all []indexedClaim
+	for bi, ba := range blockAudits {
+		for ci, c := range ba.Claims {
+			all = append(all, indexedClaim{bi, ci, c})
+		}
+	}
+
+	results := make([]VerificationResult, len(all))
+	sem := make(chan struct{}, 5)
 	var wg sync.WaitGroup
 
-	for i, claim := range claims {
+	for i, ic := range all {
 		wg.Add(1)
-		go func(idx int, c Claim) {
+		go func(idx int, ic indexedClaim) {
 			defer wg.Done()
 			sem <- struct{}{}
 			defer func() { <-sem }()
 
-			logf(verbose, "  [%d/%d] %s\n", idx+1, len(claims), truncate(c.Text, 60))
+			logf(verbose, "  [%d/%d] [%s] %s\n",
+				idx+1, len(all),
+				ic.claim.Block,
+				truncate(ic.claim.Text, 55))
 
-			res, err := verifyClaim(c, verbose)
+			res, err := verifyClaim(ic.claim, verbose)
 			if err != nil {
 				res = VerificationResult{
-					Claim:      c,
+					Claim:      ic.claim,
 					Status:     "not_found",
 					Evidence:   fmt.Sprintf("Error: %v", err),
 					Confidence: "low",
@@ -92,13 +193,97 @@ func verifyClaims(claims []Claim, verbose bool) []VerificationResult {
 			}
 			results[idx] = res
 
-			// Rate limit: avoid hammering APIs
 			time.Sleep(200 * time.Millisecond)
-		}(i, claim)
+		}(i, ic)
 	}
 
 	wg.Wait()
-	return results
+
+	for i, ic := range all {
+		blockAudits[ic.blockIdx].Results = ensureSize(blockAudits[ic.blockIdx].Results, ic.claimIdx+1)
+		blockAudits[ic.blockIdx].Results[ic.claimIdx] = results[i]
+	}
+
+	return blockAudits
+}
+
+func ensureSize(s []VerificationResult, n int) []VerificationResult {
+	for len(s) < n {
+		s = append(s, VerificationResult{})
+	}
+	return s
+}
+
+func flattenResults(blockAudits []BlockAudit) []VerificationResult {
+	var out []VerificationResult
+	for _, ba := range blockAudits {
+		out = append(out, ba.Results...)
+	}
+	return out
+}
+
+func deriveVerdict(results []VerificationResult, patterns []PatternIssue, blockAudits []BlockAudit) (verdict, rejectReason, summary string) {
+	total := len(results)
+	if total == 0 {
+		return "REVISE", "No claims extracted", "Entry may be empty or unparseable."
+	}
+
+	counts := map[string]int{}
+	highRiskWrong := 0
+	inventedCount := 0
+	chuyenKeInvented := 0
+
+	for _, r := range results {
+		counts[r.Status]++
+		if r.Status == "invented" {
+			inventedCount++
+			if r.Claim.Block == "chuyen-ke" {
+				chuyenKeInvented++
+			}
+		}
+		if (r.Status == "wrong" || r.Status == "invented") && r.Claim.Risk == "high" {
+			highRiskWrong++
+		}
+	}
+
+	wrongPct := float64(counts["wrong"]+counts["invented"]) / float64(total) * 100
+	suspPct := float64(counts["suspicious"]) / float64(total) * 100
+
+	stanceIssues := 0
+	for _, p := range patterns {
+		if p.Pass == 5 {
+			stanceIssues++
+		}
+	}
+
+	switch {
+	case chuyenKeInvented >= 1:
+		verdict = "REJECT"
+		rejectReason = fmt.Sprintf("Invented plot event(s) in Chuyện kể (%d detected)", chuyenKeInvented)
+	case inventedCount >= 2:
+		verdict = "REJECT"
+		rejectReason = fmt.Sprintf("Multiple invented claims (%d): fabricated sources or ATU codes", inventedCount)
+	case highRiskWrong >= 3:
+		verdict = "REJECT"
+		rejectReason = fmt.Sprintf("%d high-risk claims wrong (dates, sources, Hán tự)", highRiskWrong)
+	case wrongPct >= 15:
+		verdict = "REJECT"
+		rejectReason = fmt.Sprintf("%.0f%% of claims wrong or invented", wrongPct)
+	case counts["wrong"]+counts["invented"] >= 1 || suspPct >= 20 || stanceIssues > 0 || len(patterns) >= 5:
+		verdict = "REVISE"
+	default:
+		verdict = "PASS"
+	}
+
+	summary = fmt.Sprintf(
+		"%d claims across %d blocks. verified=%d wrong=%d invented=%d suspicious=%d not_found=%d (wrong+invented=%.0f%%). Patterns=%d (stance=%d).",
+		total, len(blockAudits),
+		counts["verified"], counts["wrong"], counts["invented"],
+		counts["suspicious"], counts["not_found"],
+		wrongPct, len(patterns), stanceIssues,
+	)
+
+	return verdict, rejectReason, summary
 }
 
 func extractTitle(content, path string) string {

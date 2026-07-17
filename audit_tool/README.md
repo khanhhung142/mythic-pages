@@ -5,7 +5,7 @@ CLI tool tự động audit entries vietmyth.vn.
 ## Setup
 
 ```bash
-export ANTHROPIC_API_KEY=sk-ant-...
+export ANTHROPIC_API_KEY_API_PLATFORM=sk-ant-...
 export PERPLEXITY_API_KEY=pplx-...
 ```
 
@@ -17,19 +17,20 @@ go build -o vietmyth-auditor .
 ## Dùng
 
 ```bash
-# Audit 1 entry, output mặc định: <entry>-audit.md
-./vietmyth-auditor audit entries/thanh-giong.md
+# Audit 1 entry theo slug, tự đọc từ src/content/vi/entries/<slug>.md
+# Output luôn vào audit/<slug>-audit.md
+./vietmyth-auditor audit thanh-giong
 
-# Chỉ định output
-./vietmyth-auditor audit entries/thanh-giong.md -o reports/thanh-giong-audit.md
+# Đổi tên file trong audit/ (vẫn luôn ghi vào folder audit/)
+./vietmyth-auditor audit thanh-giong -o thanh-giong-v2.md
 
 # Verbose (xem progress)
-./vietmyth-auditor audit entries/thanh-giong.md -v
+./vietmyth-auditor audit thanh-giong -v
 ```
 
 ## Output
 
-File `<entry>-audit.md` gồm:
+File `audit/<entry>-audit.md` gồm:
 
 - **Verdict:** PASS / REVISE / REJECT
 - **Claim table:** từng claim → verified / wrong / suspicious / not_found
