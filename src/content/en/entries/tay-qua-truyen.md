@@ -84,44 +84,57 @@ sources:
     author: Trần Thế Pháp, Vũ Quỳnh and Kiều Phú
     chapter: "Tây Qua truyện (西瓜傳)"
     edition: "Chinese text: Trần Khánh Hạo ed., Việt Nam Hán Văn Tiểu Thuyết Tùng San, Taipei 1992 (base text HV 486). Translations: Đinh Gia Khánh and Nguyễn Ngọc San, 1960; Lê Hữu Mục, 1960/1961; Bùi Văn Nguyên, 1993; Nguyễn Hữu Vinh trans., Trần Đình Hoành comm., 2015; Nguyễn Thị Oanh, 2025."
+    url: "https://dotchuoinon.com/wp-content/uploads/2010/11/linhnamchichquai_march18_2015.pdf"
   - title: Kho tàng truyện cổ tích Việt Nam
     author: Nguyễn Đổng Chi
     chapter: "Vol. II, 'The Origin of the Watermelon'"
     edition: "Hanoi, 1957-1982 (5 vols.)"
+    url: "https://archive.org/details/khotangtruyencotichvietnam_quyen1"
   - title: "Études d'histoire d'Annam. IV. Le Royaume de Văn-lang"
     author: Henri Maspero
     chapter: "BEFEO 18/3 (1918), pp. 1-36"
+    url: "https://www.persee.fr/doc/befeo_0336-1519_1918_num_18_1_5888"
   - title: "Bibliographie annamite"
     author: Émile Gaspardone
     chapter: "BEFEO 34 (1934), pp. 1-174"
+    url: "https://www.persee.fr/issue/befeo_0336-1519_1934_num_34_1"
   - title: "The Biography of the Hồng Bàng Clan as a Medieval Vietnamese Invented Tradition"
     author: Liam C. Kelley
     chapter: "Journal of Vietnamese Studies 7/2 (2012), pp. 87-130"
+    url: "https://online.ucpress.edu/jvs/article/7/2/87/60674/The-Biography-of-the-H-ng-Bang-Clan-as-a-Medieval"
   - title: "Comments on Liam Kelley"
     author: Keith Weller Taylor
     chapter: "JVS 7/2 (2012)"
+    url: "http://vs.ucpress.edu/content/7/2/139"
   - title: "Truyện ngắn Việt Nam"
     author: Bùi Duy Tân
     chapter: "p. 127"
     edition: "NXB Giáo dục, 2007"
+    url: "https://search.worldcat.org/title/Truyen-ngan-Viet-Nam-:-lich-su-thi-phap-chan-dung/oclc/270117200"
   - title: "Lĩnh Nam chích quái (Khảo luận)"
     author: Nguyễn Thị Oanh
     edition: "NXB KHXH 2025"
+    url: "https://nxbkhxh.vass.gov.vn/tin-tuc-su-kien/linh-nam-chich-quai-hanh-trinh-gan-25-nam-phuc-dung-mot-di-san-van-hoa-561342"
   - title: "Origin and emergence of the sweet dessert watermelon"
     author: Susanne S. Renner et al.
     chapter: "Annals of Botany 116/2 (2015), pp. 133-148"
+    url: "https://doi.org/10.1093/aob/mcv077"
   - title: "An archaeobotanical contribution to the history of watermelon"
     author: M. van der Veen & K. Wasylikowa
     chapter: "Vegetation History and Archaeobotany 13 (2004)"
+    url: "https://doi.org/10.1007/s00334-004-0039-6"
   - title: Bản Thảo Cương Mục (本草綱目)
     author: Lǐ Shízhēn
     edition: "1578"
+    url: "https://ctext.org/wiki.pl?if=en&res=588089"
   - title: Hãm Lỗ Ký (陷虜記)
     author: Hú Qiáo (胡嶠)
     edition: "947-953; cited in Ōuyáng Xiū, Xīn Wǔdài Shǐ"
+    url: "https://ctext.org/wiki.pl?if=gb&chapter=158998&remap=gb"
   - title: Tùng Mạc Kỷ Văn (松漠紀聞)
     author: Hóng Hào (洪皓)
     edition: "1156 (written after 15 years of Jin captivity, 1129-1143)"
+    url: "https://ctext.org/wiki.pl?if=en&res=799108"
 summary: "Tây Qua truyện (Tale of the Western Melon) is story no. 8/9 in the Lĩnh Nam Chích Quái, recounting how Mai An Tiêm, a foreign-born slave at the Hùng King's court, was exiled with his family to a deserted island off Nga Sơn for claiming his wealth came from a past life. On the island, a white bird from the west dropped seeds that grew into watermelons (Tây Qua). An Tiêm traded the fruit, regained the king's favor, and was restored. The tale is an etiological myth explaining the origin of watermelons in Vietnam, encoding values of self-reliance and labor. Botanically, the story is entirely anachronistic: Citrullus lanatus originated in northeastern Africa, reached China only in the 10th century CE via the Khitans and Uyghurs, and arrived in Đại Việt no earlier than the 12th-13th century. The tale appears in none of the three major Vietnamese dynastic histories. It was novelized by Nguyễn Trọng Thuật (The Red Melon, 1925) and Tô Hoài (The Deserted Island, 1970)."
 themes:
   - origin-of-things

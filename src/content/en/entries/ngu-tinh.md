@@ -57,49 +57,62 @@ sources:
     author: Trần Thế Pháp (compiled 14th c.), Vũ Quỳnh and Kiều Phú (edited 1492-1493)
     chapter: "Ngư Tinh truyện (魚精傳), book I, tale 2"
     edition: "Chinese text: Trần Khánh Hạo (ed.), Việt Nam Hán Văn Tiểu Thuyết Tùng San, Học Sinh Thư Cục, Taipei 1992 (base manuscript HV.486); manuscripts VHV.1473 and VHV.2914 (Institute of Hán-Nôm Studies), NLVNPF-0652 / R.6 (National Library of Vietnam, 39 folios, attributed to Vũ Quỳnh and Kiều Phú, listing 38 tales). Vietnamese translations: Đinh Gia Khánh and Nguyễn Ngọc San, NXB Văn học 1960; Lê Hữu Mục, Khai Trí 1960 (repr. Trăm Việt 1982); Nguyễn Hữu Vinh (tr.), Trần Đình Hoành (comm.), dotchuoinon.com 2015"
+    url: "https://dotchuoinon.com/2010/03/05/linh-nam-chich-quai-ca-tinh-ch%E1%BB%93n-tinh-va-cay-tinh/"
   - title: Tân đính Lĩnh Nam Chích Quái
     author: Đoàn Vĩnh Phúc
     chapter: Ngư Tinh
     edition: "Manuscript A.2914 / VHV.2914, Institute of Hán-Nôm Studies; compiled 1554, copied in the Later Lê and Tây Sơn periods"
+    url: "https://lib.nomfoundation.org/collection/1/volume/819/"
   - title: "Lĩnh Nam chích quái (Khảo luận, Dịch chú, Nguyên bản chữ Hán)"
     author: Nguyễn Thị Oanh
     edition: "NXB Khoa học Xã hội, 2024, 720 pp."
+    url: "https://nxbkhxh.vass.gov.vn/tin-tuc-su-kien/linh-nam-chich-quai-hanh-trinh-gan-25-nam-phuc-dung-mot-di-san-van-hoa-561342"
   - title: "Lĩnh Nam chích quái khảo luận, dịch chú (manuscript A.2914)"
     author: Nguyên Vũ
     chapter: "Truyện Thần ngư tinh, upper book, tale 2, p. 390"
     edition: "Study, annotated translation, and Chinese text, based on manuscript A.2914"
+    url: "https://nxbkhxh.vass.gov.vn/tin-tuc-su-kien/linh-nam-chich-quai-hanh-trinh-gan-25-nam-phuc-dung-mot-di-san-van-hoa-561342"
   - title: "Lĩnh Nam Chích Quái Đẳng Sử Liệu Tam Chủng (嶺南摭怪等史料三種)"
     author: Đới Khả Lai (戴可來) and Dương Bảo Quân (楊保筠), eds.
     edition: "Zhongzhou Guji Press (中州古籍出版社), 1991"
+    url: "https://books.google.com/books/about/%E5%B2%AD%E5%8D%97%E6%91%AD%E6%80%AA%E7%AD%89%E5%8F%B2%E6%96%99%E4%B8%89%E7%A7%8D.html?id=2WeAvQEACAAJ"
   - title: Đại Việt Sử Ký Toàn Thư
     author: Ngô Sĩ Liên
     chapter: "Outer annals, book I, Hồng Bàng annal"
     edition: "1479. Translation: Institute of History, NXB KHXH 1993"
+    url: "https://viensuhoc.vass.gov.vn/cong-trinh-tieu-bieu/dai-viet-su-ky-toan-thu-434956"
   - title: Khâm Định Việt Sử Thông Giám Cương Mục
     author: Nguyễn-dynasty Bureau of History
     edition: "Compiled 1856-1884, under Emperor Tự Đức"
+    url: "https://lib.nomfoundation.org/collection/1/volume/251/"
   - title: Lược khảo về thần thoại Việt Nam
     author: Nguyễn Đổng Chi
     chapter: "Chapter VII, on the transition from myth to legend"
     edition: "Ban Văn Sử Địa, Hanoi 1956, 185 pp."
+    url: "https://books.google.com/books/about/L%C6%B0%E1%BB%A3c_kh%E1%BA%A3o_v%E1%BB%81_th%E1%BA%A7n_tho%E1%BA%A1i_Vi%E1%BB%87.html?id=IeRCnQEACAAJ"
   - title: "Review of Nguyễn Đổng Chi, Lược khảo về thần thoại Việt Nam"
     author: Lê Văn Hảo
     chapter: "BEFEO, Tome 52, N.1 (1964), pp. 253-256"
     edition: "École française d'Extrême-Orient, 1964"
+    url: "https://www.persee.fr/issue/befeo_0336-1519_1964_num_52_1"
   - title: Tìm hiểu tiến trình văn học dân gian Việt Nam
     author: Cao Huy Đỉnh
     edition: "NXB Khoa học Xã hội, Hanoi 1974"
+    url: "https://www.sachbaokhang.vn/sach-van-hoc-viet-nam/tim-hieu-tien-trinh-van-hoc-dan-gian-viet-nam"
   - title: The Birth of Vietnam
     author: Keith Weller Taylor
     chapter: "Chapter 1 'Lac Lords', pp. 1-41"
     edition: "University of California Press, 1983"
+    url: "https://www.ucpress.edu/books/the-birth-of-vietnam/paper"
   - title: "The Biography of the Hồng Bàng Clan as a Medieval Vietnamese Invented Tradition"
     author: Liam C. Kelley
     chapter: "Journal of Vietnamese Studies, vol. 7, no. 2 (2012), pp. 87-130"
     edition: "DOI 10.1525/vs.2012.7.2.87"
+    url: "https://doi.org/10.1525/vs.2012.7.2.87"
   - title: Những bài dã sử Việt
     author: Tạ Chí Đại Trường
     edition: "NXB Tri Thức, 2009"
+    url: "https://sachnhanam.com/doc-thu/doc-thu-nhung-bai-da-su-viet-ta-chi-dai-truong/"
 summary: |
   Ngư Tinh truyện (魚精傳) is tale 2 of book I of the Lĩnh Nam Chích Quái, standing immediately after the Hồng Bàng clan tale and opening the demon-slaying trio. A fish-snake spirit over fifty trượng long, many-legged like a centipede, lived in a cave beneath a rock reef in the East Sea, devouring seafarers and cutting the coastal shipping route. Lạc Long Quân took the form of a commoner's boat, had the Dạ Xoa of the water palace forbid the sea gods to raise storms, baited the demon into opening its mouth, and threw a red-hot iron block down its throat before cutting it apart. The carcass left three place names: Bạch Long Vĩ, Cẩu Đầu Sơn, and Mạn Cầu Thủy; only Bạch Long Vĩ still attaches to a real island, and that attachment is recent (the island received the name officially in 1937). The tale is absent from every official history: the Toàn Thư drops it, the Cương Mục rejects the whole layer, the Việt Điện U Linh excludes demons on principle. With Hồ Tinh and Mộc Tinh it forms Lạc Long Quân's three-ecology civilizing cycle, and Ngư Tinh is the opening battle: the menace of the sea is dealt with first.
 themes:

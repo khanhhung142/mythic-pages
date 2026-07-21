@@ -42,54 +42,69 @@ sources:
     chapter: "Tây Qua truyện (西瓜傳, Tale of the Western Melon), story no. 8 or 9 depending on recension"
     edition: "Đinh Gia Khánh and Nguyễn Ngọc San, NXB Văn hóa 1960 (137 pp.), reprinted NXB Kim Đồng 2017 (illus. Tạ Huy Long); Classical Chinese text: Trần Khánh Hạo ed., Việt Nam Hán Văn Tiểu Thuyết Tùng San, Học Sinh Thư Cục, Taipei 1992 (base text HV 486, collated with VHV 1473 and VHV 2914)"
     notes: "At least 11 manuscript copies survive. Recension A.2914 is longer than the base text, adding the 'possessions from a past life' detail and specifying the Nga Sơn locale. The island name varies: Nham Sơn 岩山, Giáp Sơn 莢山, or unnamed."
+    url: "https://www.worldcat.org/title/linh-nam-chich-quai/oclc/663721773"
   - title: Kho tàng truyện cổ tích Việt Nam (Treasury of Vietnamese Folktales)
     author: Nguyễn Đổng Chi
     chapter: "Vol. II, 'The Origin of the Watermelon', tale no. 1, section 'I. Origins of Things'"
     edition: "NXB Sử học/KHXH, Hanoi, 1957-1982 (5 vols.); 10th printing NXB Trẻ and NXB Giáo dục 2023, ~1,550 pp."
     notes: "Oral-tradition version adds: wife named Nàng Ba, the proverb 'Gifts are worries, favors are debts,' crows pecking at strange fruit, An Tiêm carving his name on rinds and floating them out to sea."
+    url: "https://archive.org/details/khotangtruyencotichvietnam_quyen1"
   - title: Việt Điện U Linh Tập (粵甸幽靈集)
     author: Lý Tế Xuyên
     edition: "c. 1329"
     notes: "Does NOT contain the Mai An Tiêm story. Notable coincidence: Lý Tế Xuyên held the post of 'Transport Commissioner of An Tiêm circuit', a place-name in Trần-era Nam Định that shares the character's name."
+    url: "https://quangduc.com/a4657/viet-dien-u-linh-tap-pdf"
   - title: Đại Việt Sử Ký Toàn Thư (大越史記全書)
     author: Ngô Sĩ Liên
     edition: "Completed 1479. Nội các quan bản 1697."
     notes: "Does NOT mention Mai An Tiêm. Outer Annals vol. 1 covers the Hùng Vương period only in general terms."
+    url: "https://www.nomfoundation.org/nom-project/History-of-Greater-Vietnam"
   - title: Khâm Định Việt Sử Thông Giám Cương Mục (欽定越史通鑑綱目)
     author: Quốc Sử Quán, Nguyễn dynasty
     edition: "1856-1881"
     notes: "Does NOT mention Mai An Tiêm."
+    url: "https://archive.org/details/KhmnhVihtSThNgGiTmCngngMc"
   - title: "Études d'histoire d'Annam. IV. Le Royaume de Văn-lang"
     author: Henri Maspero
     chapter: "BEFEO 18/3 (1918), pp. 1-36"
+    url: "https://www.persee.fr/doc/befeo_0336-1519_1918_num_18_1_5888"
   - title: "Bibliographie annamite"
     author: Émile Gaspardone
     chapter: "BEFEO 34 (1934), pp. 1-174"
+    url: "https://www.persee.fr/doc/befeo_0336-1519_1934_num_34_1_4960"
   - title: "The Biography of the Hồng Bàng Clan as a Medieval Vietnamese Invented Tradition"
     author: Liam C. Kelley
     chapter: "Journal of Vietnamese Studies 7, no. 2 (2012), pp. 87-130"
+    url: "https://doi.org/10.1525/vs.2012.7.2.87"
   - title: "Comments on Liam Kelley's article"
     author: Keith Weller Taylor
     chapter: "JVS 7/2 (2012)"
+    url: "https://doi.org/10.1525/vs.2012.7.2.139"
   - title: Quả dưa đỏ (The Red Melon)
     author: Nguyễn Trọng Thuật
     edition: "Hanoi, 1925 (serialized in Nam Phong tạp chí; book edition 1927). Prize, Hội Khai Trí Tiến Đức, 1925."
+    url: "https://sachdonga.vn/products/qua-dua-do"
   - title: Đảo hoang (The Deserted Island)
     author: Tô Hoài
     edition: "NXB Kim Đồng, Hanoi 1970"
+    url: "https://nxbkimdong.com.vn/products/dao-hoang"
   - title: "Origin and emergence of the sweet dessert watermelon, Citrullus lanatus"
     author: Susanne S. Renner et al.
     chapter: "Annals of Botany 116/2 (2015), pp. 133-148"
+    url: "https://doi.org/10.1093/aob/mcv077"
   - title: "An archaeobotanical contribution to the history of watermelon"
     author: M. van der Veen & K. Wasylikowa
     chapter: "Vegetation History and Archaeobotany 13 (2004)"
+    url: "https://doi.org/10.1007/s00334-004-0039-6"
   - title: Bản Thảo Cương Mục (本草綱目)
     author: Lý Thời Trân (Li Shizhen)
     edition: "1578"
+    url: "https://ctext.org/wiki.pl?if=en&res=161524"
   - title: "Truyện ngắn Việt Nam: Lịch sử, Thi pháp, Chân dung"
     author: Bùi Duy Tân
     chapter: "p. 127"
     edition: "NXB Giáo dục, 2007"
+    url: "https://search.worldcat.org/title/Truyen-ngan-Viet-Nam-:-lich-su-thi-phap-chan-dung/oclc/270117200"
 summary: "Mai An Tiêm is a legendary figure from the Hùng Vương era, protagonist of the Tây Qua truyện (Tale of the Western Melon) in the Lĩnh Nam Chích Quái. Originally a foreign-born slave raised at court, he was exiled with his family to a deserted island off Nga Sơn for claiming his wealth came from a past life. On the island, a white bird from the west dropped seeds that grew into watermelons (Tây Qua). He traded the fruit, regained the king's favor, and was restored to his position. The tale is an etiological myth about the origin of watermelons in Vietnam, but is anachronistic: Citrullus lanatus only reached East Asia in the 10th century CE. The story does not appear in any of the three major Vietnamese dynastic histories. His temple at Nga Sơn (Thanh Hóa) holds national heritage status."
 group: Etiological folktales (Hùng Vương period)
 themes:

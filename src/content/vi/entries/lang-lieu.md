@@ -52,41 +52,52 @@ sources:
     author: Trần Thế Pháp (soạn TK XIV), Vũ Quỳnh và Kiều Phú (biên tập 1492-1493)
     chapter: "Chưng Bính truyện (蒸餅傳), quyển I, truyện thứ 8"
     edition: "Bản Hán: Trần Khánh Hạo chủ biên, Việt Nam Hán Văn Tiểu Thuyết Tùng San, Học Sinh Thư Cục Đài Bắc 1992; Wikisource 嶺南摭怪/蒸餅傳. Bản dịch: Đinh Gia Khánh và Nguyễn Ngọc San, NXB Văn hóa 1960 (tái bản NXB Văn học 1990, NXB Kim Đồng 2017); Lê Hữu Mục, NXB Khai Trí Sài Gòn 1960"
+    url: "https://www.worldcat.org/title/linh-nam-chich-quai/oclc/663721773"
   - title: "Lĩnh Nam Chích Quái (Khảo luận, Dịch chú, Nguyên bản chữ Hán)"
     author: Nguyễn Thị Oanh (chủ biên)
     chapter: "Chưng Bính truyện, bản nền A.2914 Viện Hán Nôm"
     edition: "NXB Khoa học Xã hội (tái bản Đinh Tị Books)"
+    url: "https://nxbkhxh.vass.gov.vn/tin-tuc-su-kien/linh-nam-chich-quai-hanh-trinh-gan-25-nam-phuc-dung-mot-di-san-van-hoa-561342"
   - title: Lĩnh Nam Chích Quái Bình giải
     author: Nguyễn Hữu Vinh dịch, Trần Đình Hoành bình
     chapter: "Truyện Chưng Bính"
     edition: "dotchuoinon.com 2015 (PDF 18/3/2015)"
+    url: "https://dotchuoinon.com/2010/04/02/linh-nam-chich-quai-truy%E1%BB%87n-banh-ch%C6%B0ng/"
   - title: Hùng Đồ Thập Bát Diệp Thánh Vương Ngọc Phả Cổ Truyền
     author: Khuyết danh (cấp phát triều Lê Thánh Tông, 1472)
     chapter: "Đời thứ bảy: Hùng Chiêu Vương Minh Tông hoàng đế"
     edition: "Lưu tại Viện Hán Nôm và đền làng Phú Thọ; nhắc trong Henri Maspero, BEFEO 18 (1918), tr. 1, chú thích 2"
+    url: "https://thuvientinh.quangngai.gov.vn/hung-vuong-thanh-to-ngoc-pha/"
   - title: Kho tàng truyện cổ tích Việt Nam
     author: Nguyễn Đổng Chi
     chapter: "Gốc tích bánh chưng và bánh dày (tập I, số 1, mục Sự tích đất nước)"
     edition: "5 tập, 1957-1982"
+    url: "https://archive.org/details/khotangtruyencotichvietnam_quyen1"
   - title: Lược khảo về thần thoại Việt Nam
     author: Nguyễn Đổng Chi
     edition: "Ban Văn Sử Địa, Hà Nội 1956, 185 tr."
+    url: "http://www.thuvienmythuat.vn/cgi-bin/koha/opac-detail.pl?biblionumber=6937"
   - title: Tìm hiểu tiến trình văn học dân gian Việt Nam
     author: Cao Huy Đỉnh
     edition: "NXB Khoa học Xã hội, 1974"
+    url: "https://archive.org/details/vh.caohuydinhtuyentaptacpham"
   - title: "The Biography of the Hồng Bàng Clan as a Medieval Vietnamese Invented Tradition"
     author: Liam C. Kelley
     chapter: "Journal of Vietnamese Studies 7/2 (2012), tr. 87-130"
+    url: "https://doi.org/10.1525/vs.2012.7.2.87"
   - title: "Comments on Liam Kelley's article"
     author: Tạ Chí Đại Trường
     chapter: "Journal of Vietnamese Studies 7/2 (2012), tr. 139-162"
+    url: "https://doi.org/10.1525/vs.2012.7.2.139"
   - title: "Bibliographie annamite"
     author: Émile Gaspardone
     chapter: "Mục LNCQ, tr. 128-129"
     edition: "BEFEO tập XXXIV, 1934"
+    url: "https://www.persee.fr/doc/befeo_0336-1519_1934_num_34_1_5032"
   - title: "A mythographical journey to modernity: The textual and symbolic transformations of the Hùng Kings founding myths"
     author: Nguyễn Thị Điểu
     edition: "Journal of Southeast Asian Studies, Cambridge University Press, 2013/2014"
+    url: "https://doi.org/10.1017/S002246341300009X"
 summary: |
   Lang Liêu là hoàng tử thứ mười tám của Hùng Vương thứ sáu trong Chưng Bính truyện của Lĩnh Nam Chích Quái: người duy nhất trong hai mươi hai quan lang không có gì để dâng trong cuộc thi kế vị, vì mẹ ông phận thấp và đã mất, tả hữu ít người. Một đêm thần nhân hiện trong mộng, chỉ cho ông cách lấy gạo nếp làm hai thứ bánh vuông và tròn tượng hình đất trời. Ông làm theo và thắng cuộc, được truyền ngôi. Nhân vật xuất hiện thành văn bản lần đầu trong bản LNCQ biên tập 1492-1493; nhánh ngọc phả 1472 phong ông làm Hùng Vương thứ bảy hiệu Hùng Chiêu Vương; nhánh dân gian gọi ông là Tiết Liêu. Từ một nhân vật truyện, ông trở thành khuôn mặt của đạo hiếu và nền văn minh lúa nước trong ký ức phổ thông Việt Nam.
 themes:

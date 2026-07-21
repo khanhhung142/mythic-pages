@@ -47,45 +47,55 @@ sources:
     chapter: "Truyện Đổng Thiên Vương"
     edition: "Bản Đinh Gia Khánh và Nguyễn Ngọc San (NXB Văn hoá, 1960); bản Nguyễn Thị Oanh khảo luận dịch chú (2024)"
     notes: "Văn bản hoàn chỉnh cốt truyện sớm nhất. KHÔNG có motif mẹ ướm vết chân, mười hai tháng mang thai, roi sắt, áo giáp sắt, tre đằng ngà; các motif đó là bồi đắp muộn."
+    url: "https://lib.nomfoundation.org/collection/1/volume/820/"
   - title: Việt điện u linh tập
     author: Lý Tế Xuyên
     edition: "c. 1329"
     notes: "Dẫn Báo Cực truyện (đã mất), chép thần Phù Đổng là 'thần thổ địa của chùa Kiến Sơ giáng sinh'. Lớp văn bản sớm nhất: nhiên thần cây đá, chưa phải anh hùng đánh giặc."
+    url: "https://quangduc.com/a4657/viet-dien-u-linh-tap-pdf"
   - title: An Nam chí lược
     author: Lê Tắc
     edition: "c. 1335"
     notes: "Tài liệu thành văn cổ nhất nhắc 'Xung Thiên Thần Vương'. Chứng tỏ cốt truyện hình thành trước 1285."
+    url: "https://quangduc.com/a4705/an-nam-chi-luoc-pdf"
   - title: Đại Việt sử ký toàn thư
     author: Ngô Sĩ Liên
     chapter: "Ngoại kỷ, Kỷ Hồng Bàng thị"
     edition: "Hoàn thành 1479, in Chính Hoà 1697. Bản dịch Ngô Đức Thọ và Hoàng Văn Lâu, NXB Khoa học Xã hội."
     notes: "Đưa truyện vào chính sử, ấn định niên đại Hùng Vương thứ 6, giản lược yếu tố hoang đường: bỏ Long Quân, chỉ còn 'một thanh gươm, một con ngựa', không nhắc 'giặc Ân' mà chỉ ghi 'trong nước có tin nguy cấp'."
+    url: "https://www.nomfoundation.org/nom-project/history-of-greater-vietnam/Fulltext/102-Ngoai-ky-toan-thu?uiLang=en"
   - title: Việt điện u linh tục bổ
     author: Nguyễn Văn Chất
     chapter: "Sóc Thiên Vương sự tích ký"
     edition: "TK XV"
     notes: "Hai dị bản: anh hùng trẻ con diệt giặc bay lên trời ở núi Vệ Linh; và bản từ Thiền uyển tập anh về Tỳ Sa Môn Thiên Vương giúp Lê Đại Hành chống Tống 981. Nguyên bản Thiền uyển tập anh không đồng nhất Tỳ Sa Môn với Phù Đổng."
+    url: "https://quangduc.com/a4657/viet-dien-u-linh-tap-pdf"
   - title: Người anh hùng làng Dóng
     author: Cao Huy Đỉnh
     edition: "NXB Khoa học Xã hội, 1969 (truy tặng Giải thưởng Hồ Chí Minh)"
     notes: "Công trình kinh điển về Thánh Gióng. Đề xuất Gióng nguyên thuỷ là thần Sấm, Dông, Bão, Mưa của tín ngưỡng nông nghiệp, căn cứ liên hệ ngữ âm đổng, dóng, dông và hình tượng Ông Đổng ghi được khi điền dã."
+    url: "https://archive.org/details/vh.caohuydinhtuyentaptacpham"
   - title: "Căn bản triết lý người anh hùng Phù Đổng và hội Gióng"
     author: Trần Quốc Vượng
     edition: "In trong Lễ hội Thánh Gióng, NXB Văn hoá Thông tin, 2009, tr. 435-438"
     notes: "Luận điểm Gióng là huyền tích Mặt Trời; ngựa sắt phi từ Đông sang Tây mô phỏng vận động biểu kiến của mặt trời; 28 nữ tướng giặc Ân ứng với Nhị thập bát tú."
+    url: "https://web.archive.org/web/20250516200443/http://vicas.org.vn/pages/an-pham/290/Le-hoi-Thanh-Giong..html"
   - title: Thần, Người và Đất Việt
     author: Tạ Chí Đại Trường
     chapter: "Bài 'Thần Phù Đổng'"
     edition: "Đường Mới, Paris, số 5/1986; in lại trong Những bài dã sử Việt, Thanh Văn, 1996, tr. 75-99"
     notes: "Sơ đồ tiến hoá sáu bước: thần cây đá thổ địa, thoả hiệp với Phật giáo thời chùa Kiến Sơ, sắc phong Lý, gia phong Trần thời kháng Nguyên, hội nhập Sóc Thiên Vương, hoàn chỉnh thần tích trong Lĩnh Nam chích quái."
+    url: "https://web.archive.org/web/20140609234651/http://www.smashwords.com/books/view/75497"
   - title: Les Fêtes de Phù Đổng (Une Bataille Céleste dans la Tradition Annamite)
     author: Nguyễn Văn Huyên
     edition: "Cahier de la Société de Géographie de Hanoi, XXIV, 1938"
     notes: "Phân tích Hội Gióng như lễ hội nông nghiệp mang tính phồn thực, không đơn thuần tái diễn trận đánh. Cùng tác giả: Les chants et les danses d'Ai-Lao aux Fêtes de Phù Đổng, EFEO, XXXIX/2, 1941."
+    url: "https://books.openedition.org/pup/22214?lang=en"
   - title: Hội Gióng ở đền Phù Đổng và đền Sóc
     author: Nguyễn Chí Bền
     edition: "NXB Thế giới, 2010, tr. 202"
     notes: "Giả thuyết bổ sung: Gióng mang bóng dáng vị tổ nghề rèn sắt."
+    url: "https://ich.unesco.org/en/RL/giong-festival-of-phu-djong-and-soc-temples-00443"
 summary: "Thánh Gióng, tức Phù Đổng Thiên Vương, là vị thứ hai trong Tứ bất tử: đứa trẻ làng Phù Đổng ba năm không nói, bật dậy khi nghe tin giặc Ân, được cả làng góp cơm nuôi lớn, vươn vai thành tráng sĩ cưỡi ngựa sắt phá giặc rồi bay về trời ở núi Sóc. Nghiên cứu hiện đại đọc hình tượng này như một cấu trúc nhiều lớp: nhiên thần cây đá ở chùa Kiến Sơ, thần sấm mưa của nghi lễ nông nghiệp, huyền tích Mặt Trời Đông Sơn, thần hộ pháp Phật giáo ở núi Vệ Linh, rồi anh hùng chống ngoại xâm qua các đợt sắc phong Lý, Trần, Lê, Nguyễn. 'Giặc Ân' trong truyện không có thực thể lịch sử tương ứng đã xác minh; đây là một câu hỏi học thuật còn mở. Hội Gióng ở đền Phù Đổng và đền Sóc được UNESCO ghi danh Di sản văn hoá phi vật thể đại diện của nhân loại ngày 16/11/2010."
 themes:
   - tu-bat-tu

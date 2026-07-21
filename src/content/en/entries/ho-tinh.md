@@ -56,47 +56,60 @@ sources:
     author: Trần Thế Pháp (composed late 14th c.), Vũ Quỳnh and Kiều Phú (redacted 1492-1493)
     chapter: "Hồ Tinh truyện (狐精傳), fascicle I, story no. 3"
     edition: "Hán text: Trần Khánh Hạo ed., Việt Nam Hán Văn Tiểu Thuyết Tùng San, Học Sinh Thư Cục, Taipei 1992; ms. A.1200 published with English translation by Liam C. Kelley, 2010. Translations: Đinh Gia Khánh and Nguyễn Ngọc San, NXB Văn học 1960 (reissued NXB Trẻ 2016); Lê Hữu Mục, NXB Khai Trí 1960-1961 (reissued Trăm Việt 1982); Nguyễn Hữu Vinh tr., Trần Đình Hoành comm., dotchuoinon.com 2015"
+    url: "https://lib.nomfoundation.org/collection/1/volume/819/"
   - title: "Lĩnh Nam Chích Quái Đẳng Sử Liệu Tam Chủng (嶺南摭怪等史料三種)"
     author: Dài Kělái (戴可來) and Yáng Bǎojūn (楊保筠) eds.
     edition: "Zhongzhou Guji Press (中州古籍出版社), 1991"
+    url: "https://books.google.com/books/about/%E5%B2%AD%E5%8D%97%E6%91%AD%E6%80%AA%E7%AD%89%E5%8F%B2%E6%96%99%E4%B8%89%E7%A7%8D.html?id=2WeAvQEACAAJ"
   - title: Đại Việt Sử Ký Toàn Thư
     author: Ngô Sĩ Liên
     chapter: "Ngoại kỷ vol. I, Hồng Bàng annals (fols. 1a-5b)"
     edition: "1479. Translation: Institute of History, NXB KHXH 1993"
+    url: "https://lib.nomfoundation.org/collection/1/volume/962/"
   - title: "A Fox Corpse, West Lake, and the Divided Population of Medieval Vietnam"
     author: Liam C. Kelley (Le Minh Khai)
     edition: "leminhkhai.wordpress.com, 13 August 2010, with the full Hán text of ms. A.1200 and an English translation"
+    url: "https://leminhkhai.wordpress.com/2010/08/13/a-fox-corpse-west-lake-and-the-divided-population-of-medieval-vietnam/"
   - title: The Birth of Vietnam
     author: Keith Weller Taylor
     chapter: "Ch. 1 'Lac Lords', pp. 1-41; Appendix A, pp. 303-305"
     edition: "University of California Press, 1983"
+    url: "https://www.ucpress.edu/books/the-birth-of-vietnam/paper"
   - title: Lược khảo về thần thoại Việt Nam
     author: Nguyễn Đổng Chi
     edition: "Ban Văn Sử Địa, Hà Nội 1956, 185 pp."
+    url: "https://books.google.com/books/about/L%C6%B0%E1%BB%A3c_kh%E1%BA%A3o_v%E1%BB%81_th%E1%BA%A7n_tho%E1%BA%A1i_Vi%E1%BB%87.html?id=IeRCnQEACAAJ"
   - title: Những bài dã sử Việt
     author: Tạ Chí Đại Trường
     edition: "NXB Tri Thức, 2009"
+    url: "https://sachnhanam.com/doc-thu/doc-thu-nhung-bai-da-su-viet-ta-chi-dai-truong/"
   - title: Sử Việt đọc vài quyển
     author: Tạ Chí Đại Trường
     edition: "NXB Văn Mới, 2004"
+    url: "https://archive.org/details/SuVietDocVaiCuonPrc"
   - title: "Review of Nguyễn Đổng Chi, Lược khảo về thần thoại Việt Nam"
     author: Lê Văn Hảo
     chapter: "BEFEO, Tome 52, No. 1 (1964), pp. 253-256"
     edition: "École française d'Extrême-Orient, 1964"
+    url: "https://www.persee.fr/issue/befeo_0336-1519_1964_num_52_1"
   - title: Shān Hǎi Jīng (山海經)
     author: Anonymous (compiled 4th c. BCE - 1st c. CE)
     chapter: "Classic of the Southern Mountains, Qīngqiū (青丘) section: a beast shaped like a fox with nine tails"
     edition: "With the commentary of Guō Pú (276-324)"
+    url: "https://ctext.org/shan-hai-jing/nan-shan-jing/zh"
   - title: Cảnh trí Hồ Tây
     author: Bùi Văn Nguyên
     edition: "1978. On the historical names of West Lake and the 1573 renaming"
+    url: "https://web.archive.org/web/2024/https://thuviennguyenvanhuong.vn/lich-su-ho-tay-va-ho-truc-bach.html"
   - title: Mặt gương Tây Hồ
     author: Nguyễn Vinh Phúc
     edition: "Survey of the history and monuments of the West Lake area"
+    url: "https://web.archive.org/web/20240425040943/https://tracuu.thuvienhanoi.org.vn/tai-lieu-chi-tiet/mat-guong-tay-ho--nguyen-vinh-phuc-123103.html"
   - title: Lĩnh Nam Chích Quái Bình giải
     author: Nguyễn Hữu Vinh tr., Trần Đình Hoành comm.
     chapter: "The fox spirit (story no. 3)"
     edition: "dotchuoinon.com, PDF of 18 March 2015, from the Học Sinh Thư Cục Taipei 1992 edition"
+    url: "https://dotchuoinon.com/2010/03/05/linh-nam-chich-quai-ca-tinh-ch%E1%BB%93n-tinh-va-cay-tinh/"
 summary: |
   Hồ Tinh truyện (狐精傳), the third story in fascicle I of the Lĩnh Nam Chích Quái, tells of a white nine-tailed fox, over a thousand years old, that lived in a rock cave west of the ancient land of Long Biên. Disguised as a white-clothed villager, it mingled with the Bạch y man people at the foot of Mount Tản Viên and lured young men and women into its den. Lạc Long Quân sent the six legions of the Water Palace to flood and destroy the cave; the collapsed den became a deep marsh called the Fox Corpse Marsh, today's Hồ Tây (West Lake) in Hà Nội. The tale is absent from every official history: the Đại Việt Sử Ký Toàn Thư omits it, the Cương Mục rejects the whole stratum, and the Việt Điện U Linh excludes demons on principle. Together with Ngư Tinh and Mộc Tinh it forms the three-demon cycle that opens Lạc Long Quân's civilizing program, one demon per ecological zone. The central scholarly debate: ancient folk memory, or the invention of a Hán-literate medieval scholar, as Liam C. Kelley's analysis of the "hồ" wordplay suggests.
 themes:

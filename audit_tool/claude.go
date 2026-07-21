@@ -12,10 +12,25 @@ import (
 const claudeModel = "claude-sonnet-4-6"
 const claudeEndpoint = "https://api.anthropic.com/v1/messages"
 
+// Explicit cache on the system block (static across calls). Do NOT use
+// top-level automatic cache_control — that breakpoints on the last user
+// message, which changes every claim and never reuses the system prefix.
+// https://platform.claude.com/docs/en/build-with-claude/prompt-caching
+type cacheControl struct {
+	Type string `json:"type"`
+	TTL  string `json:"ttl,omitempty"` // "5m" (default) or "1h"
+}
+
+type systemBlock struct {
+	Type         string        `json:"type"`
+	Text         string        `json:"text"`
+	CacheControl *cacheControl `json:"cache_control,omitempty"`
+}
+
 type claudeRequest struct {
 	Model     string          `json:"model"`
 	MaxTokens int             `json:"max_tokens"`
-	System    string          `json:"system,omitempty"`
+	System    []systemBlock   `json:"system,omitempty"`
 	Messages  []claudeMessage `json:"messages"`
 }
 
@@ -43,7 +58,12 @@ func callClaude(system, prompt string, maxTokens int) (string, error) {
 	req := claudeRequest{
 		Model:     claudeModel,
 		MaxTokens: maxTokens,
-		System:    system,
+		System: []systemBlock{{
+			Type: "text",
+			Text: system,
+			// 1h: audit runs can exceed the default 5m TTL across many claims.
+			CacheControl: &cacheControl{Type: "ephemeral", TTL: "1h"},
+		}},
 		Messages: []claudeMessage{
 			{Role: "user", Content: prompt},
 		},

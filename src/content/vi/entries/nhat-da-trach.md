@@ -47,24 +47,29 @@ sources:
     chapter: "Nhất Dạ Trạch truyện (一夜澤傳), Quyển I"
     edition: "Bản Nguyễn Hữu Vinh và Trần Đình Hoành bình giải (dotchuoinon.com, 2015); bản Nguyễn Thị Oanh (2020)"
     notes: "Văn bản duy nhất giải thích tên gọi và nguồn gốc của đầm. Chi tiết 'thành quách một đêm' chỉ xuất hiện ở đây, không có trong chính sử hay Việt điện u linh."
+    url: "https://dotchuoinon.com/2010/03/19/linh-nam-chich-quai-truy%E1%BB%87n-d%E1%BA%A7m-m%E1%BB%99t-dem-nh%E1%BA%A5t-d%E1%BA%A1-tr%E1%BA%A1ch/"
   - title: Đại Việt sử ký toàn thư
     author: Ngô Sĩ Liên
     chapter: "Ngoại kỷ, mục Triệu Việt Vương, năm Kỷ Tỵ thứ 2 (549)"
     edition: "Bản dịch Ngô Đức Thọ và Hoàng Văn Lâu, Hà Văn Tấn hiệu đính, NXB Khoa học Xã hội"
     notes: "Ghi địa danh là 'bãi Màn Trò, huyện Chu Diên'. Chử Đồng Tử xuất hiện trong lời chú 'tục truyền' ở mục này, không ở mục Hùng Vương, kèm lời phê của Ngô Sĩ Liên rằng đó là mượn lời để cho vật trở thành thiêng."
+    url: "https://www.nomfoundation.org/nom-project/history-of-greater-vietnam/Fulltext/102-Ngoai-ky-toan-thu?uiLang=vn"
   - title: Khâm định Việt sử thông giám cương mục
     author: Quốc sử quán triều Nguyễn
     chapter: "Mục Triệu Việt Vương, lời chua về đầm Dạ Trạch"
     edition: "Bản dịch Viện Sử học, NXB Giáo dục"
     notes: "Ghi: 'tục truyền trong chằm Dạ Trạch có người tiên là Chử Đồng Tử cưỡi rồng vàng từ trên trời bay xuống trút cái móng rồng trao cho Quang Phục.'"
+    url: "https://lib.nomfoundation.org/collection/1/volume/251/"
   - title: Lịch triều hiến chương loại chí
     author: Phan Huy Chú
     chapter: "Dư địa chí, phủ Khoái Châu"
     notes: "Mô tả đầm Dạ Trạch đầu thế kỷ XIX: vùng lau sậy um tùm, bùn lầy bốn bề. Tư liệu quan trọng cho thấy cảnh quan chưa bị lấp lúc đó."
+    url: "https://catalog.hathitrust.org/Record/002121357"
   - title: Thần, Người và Đất Việt
     author: Tạ Chí Đại Trường
     edition: "California 1989; tái bản Nhã Nam, NXB Tri Thức"
     notes: "Khung lý thuyết phân tầng truyền thuyết, hữu ích để đọc Nhất Dạ Trạch như một không gian thiêng được chồng thêm các lớp tín ngưỡng qua các thế kỷ."
+    url: "https://damau.org/20814/than-nguoi-va-dat-viet"
 summary: "Nhất Dạ Trạch, Đầm Một Đêm, là địa danh tồn tại ở cả hai lớp: huyền thoại và lịch sử. Trong huyền thoại, đây là nơi thành quách Chử Đồng Tử và Tiên Dung hiện lên một đêm rồi cùng chủ nhân bay về trời, đất sụt thành đầm. Trong lịch sử thế kỷ VI, đây là căn cứ kháng chiến của Triệu Quang Phục chống quân Lương, và cũng tại đây Chử Đồng Tử được ghi nhận lần đầu trong chính sử, không phải ở phần Hùng Vương mà ở phần Triệu Việt Vương. Đầm ngày nay gần như không còn, bị phù sa và canh tác lấp dần, nhưng địa điểm vẫn là trung tâm của khu di tích quốc gia đặc biệt (2024) và hệ thống lễ hội lớn vùng sông Hồng."
 themes:
   - dia-danh-linh-thieng

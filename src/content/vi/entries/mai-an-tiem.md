@@ -42,83 +42,103 @@ sources:
     chapter: "Tây Qua truyện (西瓜傳, Truyện dưa hấu), truyện thứ 8 hoặc 9 tùy bản"
     edition: "Đinh Gia Khánh và Nguyễn Ngọc San, NXB Văn hóa 1960 (137 tr.), tái bản NXB Kim Đồng 2017 (minh họa Tạ Huy Long); bản Hán văn A.1200: Trần Khánh Hạo chủ biên, Việt Nam Hán Văn Tiểu Thuyết Tùng San, Học Sinh Thư Cục Đài Bắc 1992 (bản nền HV 486, phụ VHV 1473, VHV 2914); bản Đới Khả Lai và Dương Bảo Quân, NXB Trung Châu Cổ Tịch, Trịnh Châu 1991"
     notes: "Ít nhất 11 truyền bản còn tồn tại. Bản A.2914 dài hơn bản nền, có thêm chi tiết 'vật của tiền kiếp' và xác định rõ địa danh Nga Sơn. Tên đảo có ba dị bản chữ Hán: Nham Sơn 岩山, Giáp Sơn 莢山, hoặc không nêu."
+    url: "https://www.worldcat.org/title/linh-nam-chich-quai/oclc/663721773"
   - title: Lĩnh Nam Chích Quái (bình giải)
     author: Nguyễn Hữu Vinh dịch, Trần Đình Hoành bình
     chapter: Truyện dưa hấu
     edition: "dotchuoinon.com 2015 (PDF miễn phí, bản 18/3/2015); dịch từ bản Việt Nam Hán Văn Tiểu Thuyết Tùng San 1992"
+    url: "https://dotchuoinon.com/2020/01/22/truyen-dua-hau/"
   - title: Lĩnh Nam Chích Quái (bản Lê Hữu Mục)
     author: Lê Hữu Mục dịch
     edition: "NXB Khai Trí, Sài Gòn 1960 (in lại 1961)"
     notes: "Bản dịch hiện đại đầu tiên, dựa trên bản chép tay do Phạm Quỳnh thuê viết lại. Lê Hữu Mục nhấn mạnh tính 'truyền thuyết giải thích hiện tượng địa lý' và diễn giải truyện là biểu trưng 'lòng tin ở Trời và ở cần lao.'"
+    url: "https://www.worldcat.org/title/linh-nam-chich-quai/oclc/663721773"
   - title: Tân đính Lĩnh Nam Chích Quái
     author: Bùi Văn Nguyên dịch, chú, dẫn nhập
     edition: "NXB Khoa học Xã hội, Hà Nội 1993"
+    url: "https://www.worldcat.org/title/linh-nam-chich-quai/oclc/663721773"
   - title: "Lĩnh Nam chích quái (Khảo luận, Dịch chú, Nguyên bản chữ Hán)"
     author: Nguyễn Thị Oanh
     edition: "NXB KHXH (VASS) 2025; gốc từ luận án TS Ngữ văn ĐHSP Hà Nội (bảo vệ 22/10/2005, hướng dẫn GS.TS Nguyễn Ngọc San và cố PGS Đặng Đức Siêu)"
     notes: "Công trình khảo cứu văn bản học công phu nhất; căn cứ chủ yếu trên bản A.2914; kèm so sánh với Nhật Bản linh dị ký (Nihon ryōiki)."
+    url: "https://nxbkhxh.vass.gov.vn/tin-tuc-su-kien/linh-nam-chich-quai-hanh-trinh-gan-25-nam-phuc-dung-mot-di-san-van-hoa-561342"
   - title: Kho tàng truyện cổ tích Việt Nam
     author: Nguyễn Đổng Chi
     chapter: "Tập II, 'Sự tích dưa hấu', truyện số 1, mục 'I. Nguồn gốc sự vật'"
     edition: "NXB Sử học/Khoa học Xã hội, Hà Nội, 1957-1982 (5 tập); in lần thứ 10 NXB Trẻ và NXB Giáo dục 2023, ~1.550 tr."
     notes: "Bản truyền khẩu dân gian bổ sung: vợ tên nàng Ba, câu 'Của biếu là của lo, của cho là của nợ,' đàn quạ mổ quả lạ, An Tiêm khắc dấu vỏ dưa thả biển."
+    url: "https://archive.org/details/khotangtruyencotichvietnam_quyen1"
   - title: Việt Điện U Linh Tập (粵甸幽靈集)
     author: Lý Tế Xuyên
     edition: "c. 1329. Bản dịch Lê Hữu Mục, NXB Khai Trí, Sài Gòn 1960"
     notes: "KHÔNG chứa truyện Mai An Tiêm. Sách chỉ chép 27 thiên về thần linh được triều đình phong sắc. Chi tiết đáng chú ý: Lý Tế Xuyên có chức 'Chuyển vận sứ An Tiêm lộ' (theo Aurousseau, An Tiêm lộ thời Trần thuộc Nam Định ngày nay); địa danh trùng tên nhân vật nhưng không phải nguồn gốc truyện."
+    url: "https://quangduc.com/a4657/viet-dien-u-linh-tap-pdf"
   - title: Đại Việt Sử Ký Toàn Thư (大越史記全書)
     author: Ngô Sĩ Liên
     edition: "Hoàn thành 1479. Bản Nội các quan bản Chính Hòa 1697. Bản dịch Viện Sử học/Cao Huy Giu, NXB KHXH, Hà Nội 1972"
     notes: "KHÔNG có mục riêng về Mai An Tiêm. Phần Ngoại kỷ Quyển I (Hồng Bàng, Hùng Vương) chỉ ghi tổng quát."
+    url: "https://www.nomfoundation.org/nom-project/History-of-Greater-Vietnam"
   - title: Khâm Định Việt Sử Thông Giám Cương Mục (欽定越史通鑑綱目)
     author: Quốc Sử Quán triều Nguyễn
     edition: "1856-1881. Bản dịch Viện Sử học, NXB Giáo Dục 1998"
     notes: "KHÔNG có Mai An Tiêm. Phần Tiền biên Quyển I (Hùng Vương) ghi tổng quát."
+    url: "https://archive.org/details/KhmnhVihtSThNgGiTmCngngMc"
   - title: "Études d'histoire d'Annam. IV. Le Royaume de Văn-lang"
     author: Henri Maspero
     chapter: "BEFEO, Tome 18, fasc. 3 (1918), tr. 1-36"
     notes: "Coi truyện LNCQ là huyền thoại không cơ sở lịch sử, gọi phạm vi lãnh thổ là 'invraisemblable.' Không bình luận trực tiếp Tây Qua truyện nhưng đặt khung phương pháp luận cho mọi nghiên cứu sau."
+    url: "https://www.persee.fr/doc/befeo_0336-1519_1918_num_18_1_5888"
   - title: "Bibliographie annamite"
     author: Émile Gaspardone
     chapter: "BEFEO, Tome 34 (1934), tr. 1-174"
     notes: "Liệt kê bản chép tay LNCQ (A.33, A.749, A.750...); đính chính tác giả không phải Vũ Quỳnh hay Kiều Phú."
+    url: "https://www.persee.fr/doc/befeo_0336-1519_1934_num_34_1_4960"
   - title: "The Biography of the Hồng Bàng Clan as a Medieval Vietnamese Invented Tradition"
     author: Liam C. Kelley
     chapter: "Journal of Vietnamese Studies 7, no. 2 (2012), tr. 87-130"
     notes: "Đặt khung 'truyền thống được kiến tạo' (Hobsbawm) cho toàn bộ LNCQ; nhiều truyện là sản phẩm tri thức cuối thế kỷ XV."
+    url: "https://doi.org/10.1525/vs.2012.7.2.87"
   - title: "Comments on Liam Kelley's 'The Biography of the Hồng Bàng Clan...'"
     author: Keith Weller Taylor
     chapter: "JVS 7/2 (2012)"
     notes: "Đồng ý truyện là kiến tạo nhưng nhấn mạnh có lõi truyền khẩu phi-tinh hoa."
+    url: "https://doi.org/10.1525/vs.2012.7.2.139"
   - title: "Trao đổi với Liam Kelley"
     author: Tạ Chí Đại Trường
     edition: "2016 (dcvonline.net, 29/3/2016)"
     notes: "Đính chính niên điểm Vũ Quỳnh phải là 1492 (Hồng Đức 23, Nhâm Tý) chứ không phải 1482."
+    url: "https://dcvonline.net/2016/03/29/ta-chi-dai-truong-gop-y-ve-bai-tale-of-hong-bang-clan-hong-bang-thi-truyen/"
   - title: Quả dưa đỏ
     author: Nguyễn Trọng Thuật (bút danh Đồ Nam Tử)
     edition: "Hà Nội, 1925 (đăng Nam Phong tạp chí; in sách 1927); giải thưởng Hội Khai Trí Tiến Đức 1925; tái bản NXB Đông A và NXB Dân Trí (2020s)"
     notes: "Một trong những tiểu thuyết quốc ngữ đầu tiên miền Bắc. Phụ đề 'phiêu lưu tiểu thuyết.' Ý thức cảm hứng từ Robinson Crusoe."
+    url: "https://sachdonga.vn/products/qua-dua-do"
   - title: Đảo hoang
     author: Tô Hoài
     edition: "NXB Kim Đồng, Hà Nội 1970; tái bản nhiều lần"
     notes: "Thay đổi: vợ tên Nàng Hoa, hai con tên Mon (trai) và Gái, thêm con Mai Li; chính Mon phát hiện hạt dưa do chim trĩ thả."
+    url: "https://nxbkimdong.com.vn/products/dao-hoang"
   - title: "Origin and emergence of the sweet dessert watermelon, Citrullus lanatus"
     author: Susanne S. Renner et al.
     chapter: "Annals of Botany 116/2 (2015), tr. 133-148"
     notes: "Tổ tiên gần nhất là dưa Kordofan (C. lanatus subsp. cordophanus) vùng Sudan."
+    url: "https://doi.org/10.1093/aob/mcv077"
   - title: "An archaeobotanical contribution to the history of watermelon"
     author: M. van der Veen & K. Wasylikowa
     chapter: "Vegetation History and Archaeobotany 13 (2004)"
     notes: "Hạt dưa hấu hoang dã 5.000 năm tuổi tại Uan Muhuggiag, Libya."
+    url: "https://doi.org/10.1007/s00334-004-0039-6"
   - title: Bản Thảo Cương Mục (本草綱目)
     author: Lý Thời Trân
     edition: "1578"
     notes: "'Theo Hồ Kiều, được giống dưa từ Hồi Cốt nên đặt tên Tây qua. Vậy dưa hấu vào Trung Quốc từ đời Ngũ Đại.'"
+    url: "https://ctext.org/wiki.pl?if=en&res=161524"
   - title: "Truyện ngắn Việt Nam: Lịch sử, Thi pháp, Chân dung"
     author: Bùi Duy Tân
     chapter: "tr. 127"
     edition: "NXB Giáo dục, 2007"
     notes: "Gọi Tây Qua truyện là 'cổ mẫu' về sự ra đời văn hóa vật chất, tiếp cận theo phương pháp Géo-Culture."
+    url: "https://search.worldcat.org/title/Truyen-ngan-Viet-Nam-:-lich-su-thi-phap-chan-dung/oclc/270117200"
 summary: "Mai An Tiêm là nhân vật truyền thuyết thời Hùng Vương, xuất hiện trong Tây Qua truyện (Truyện dưa hấu) thuộc Lĩnh Nam Chích Quái. Vốn là nô bộc ngoại quốc được vua nuôi từ nhỏ, ông bị đày ra đảo hoang Nga Sơn vì tuyên bố của cải là vật tiền kiếp. Trên đảo, chim từ phương Tây mang hạt dưa đến, ông trồng thành quả dưa hấu (Tây Qua), dùng trao đổi với thuyền chài thuyền buôn rồi được vua gọi về phục chức. Truyện là huyền thoại nguyên nhân luận về nguồn gốc dưa hấu ở Việt Nam và mang tính anachronism: dưa hấu (Citrullus lanatus) chỉ đến Đông Á thế kỷ X. Không xuất hiện trong Đại Việt Sử Ký Toàn Thư hay Khâm Định Việt Sử Thông Giám Cương Mục. Đền thờ tại Nga Sơn (Thanh Hóa) được xếp hạng Di tích Quốc gia."
 group: Truyện cổ tích nguồn gốc sự vật (thời Hùng Vương)
 themes:

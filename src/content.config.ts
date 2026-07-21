@@ -46,6 +46,9 @@ const entrySchema = z.object({
         chapter: z.string().optional(),
         edition: z.string().optional(),
         notes: z.string().optional(),
+        // Required for new entries (skill §2.7). Optional in schema so older
+        // entries without urls still build; writing phase must always set it.
+        url: z.string().url().optional(),
       })
     )
     .optional(),

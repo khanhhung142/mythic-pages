@@ -48,49 +48,62 @@ sources:
     author: Trần Thế Pháp (compiled 14th c.), Vũ Quỳnh and Kiều Phú (redacted 1492-1493)
     chapter: "Chưng Bính Truyện (蒸餅傳), juan I, tale 8"
     edition: "Classical Chinese text: Trần Khánh Hạo, ed., Việt Nam Hán Văn Tiểu Thuyết Tùng San, Học Sinh Thư Cục, Taipei 1992; Wikisource 嶺南摭怪/蒸餅傳; Chinese Text Project. Translations: Đinh Gia Khánh and Nguyễn Ngọc San, NXB Văn hóa 1960 (repr. NXB Văn học 1990, NXB Kim Đồng 2017); Lê Hữu Mục, Khai Trí, Saigon 1960"
+    url: "https://ctext.org/wiki.pl?chapter=414213&if=en"
   - title: "Lĩnh Nam Chích Quái: Khảo luận, Dịch chú, Nguyên bản chữ Hán"
     author: Nguyễn Thị Oanh (ed.)
     chapter: "Chưng Bính Truyện; base manuscript A.2914, Institute of Hán Nôm Studies, with critical apparatus"
     edition: "NXB Khoa học Xã hội (repr. Đinh Tị Books)"
+    url: "https://nxbkhxh.vass.gov.vn/tin-tuc-su-kien/linh-nam-chich-quai-hanh-trinh-gan-25-nam-phuc-dung-mot-di-san-van-hoa-561342"
   - title: Lĩnh Nam Chích Quái Bình giải
     author: Trans. Nguyễn Hữu Vinh, commentary Trần Đình Hoành
     chapter: "The Steamed Cake Tale"
     edition: "dotchuoinon.com, 2015 (PDF 18 Mar 2015), from the 1992 Taipei edition"
+    url: "https://dotchuoinon.com/2010/02/15/linh-nam-chich-quai-i/"
   - title: "Bibliographie annamite"
     author: Émile Gaspardone
     chapter: "LNCQ entry, pp. 128-129; describes manuscripts A.33, A.749, A.750, A.1200, A.1300, A.1897, A.1920, A.2914"
     edition: "BEFEO vol. XXXIV, 1934"
+    url: "https://www.persee.fr/doc/befeo_0336-1519_1934_num_34_1_4960"
   - title: "Études d'histoire d'Annam. IV. Le Royaume de Van-lang"
     author: Henri Maspero
     chapter: "BEFEO vol. 18 (1918), pp. 1-36; fn. 2 on the popular Hùng-king pamphlet"
     edition: "EFEO, 1918"
+    url: "https://www.persee.fr/doc/befeo_0336-1519_1918_num_18_1_5888"
   - title: Lược Khảo về Thần Thoại Việt Nam (Survey of Vietnamese Mythology)
     author: Nguyễn Đổng Chi
     edition: "Ban Văn Sử Địa, Hanoi 1956, 185 pp."
+    url: "http://www.thuvienmythuat.vn/cgi-bin/koha/opac-detail.pl?biblionumber=6937"
   - title: Kho Tàng Truyện Cổ Tích Việt Nam (Treasury of Vietnamese Folktales)
     author: Nguyễn Đổng Chi
     chapter: "The Origin of Bánh Chưng and Bánh Dày (vol. I, no. 1, Origins of the Land section)"
     edition: "5 vols., 1957-1982"
+    url: "https://opac.nlv.gov.vn/chi-tiet-tai-lieu/kho-tang-truyen-co-tich-viet-nam.-t.2-20251142790518142931"
   - title: Tìm Hiểu Tiến Trình Văn Học Dân Gian Việt Nam
     author: Cao Huy Đỉnh
     edition: "NXB Khoa học Xã hội, 1974"
+    url: "https://archive.org/details/vh.caohuydinhtuyentaptacpham"
   - title: "The Biography of the Hồng Bàng Clan as a Medieval Vietnamese Invented Tradition"
     author: Liam C. Kelley
     chapter: "Journal of Vietnamese Studies 7/2 (2012), pp. 87-130"
+    url: "https://doi.org/10.1525/vs.2012.7.2.87"
   - title: "Comments on Liam Kelley's article"
     author: Tạ Chí Đại Trường
     chapter: "Journal of Vietnamese Studies 7/2 (2012), pp. 139-162"
+    url: "https://doi.org/10.1525/vs.2012.7.2.139"
   - title: "A mythographical journey to modernity: The textual and symbolic transformations of the Hùng Kings founding myths"
     author: Nguyễn Thị Điểu
     edition: "Journal of Southeast Asian Studies, Cambridge University Press, 2013/2014"
+    url: "https://www.cambridge.org/core/journals/journal-of-southeast-asian-studies/article/abs/mythographical-journey-to-modernity-the-textual-and-symbolic-transformations-of-the-hung-kings-founding-myths/4444E56BF953F891ADB9FB2FC4E790CE"
   - title: The Birth of Vietnam
     author: Keith Weller Taylor
     chapter: "pp. 1-44; Appendix A, pp. 303-305"
     edition: "University of California Press, 1983"
+    url: "https://www.ucpress.edu/books/the-birth-of-vietnam/paper"
   - title: Hùng Đồ Thập Bát Diệp Thánh Vương Ngọc Phả Cổ Truyền (Royal Genealogy of the Eighteen Hùng Reigns)
     author: Anonymous (issued under Lê Thánh Tông, 1472)
     chapter: "Seventh reign: Hùng Chiêu Vương / Lang Liêu"
     edition: "Held at the Institute of Hán Nôm Studies and village temples, Phú Thọ; noted in Maspero, BEFEO 18 (1918), p. 1, fn. 2"
+    url: "https://web.archive.org/web/20260521114333/http://www.ngotoc.vn/Nghien-cuu-Trao-doi/gioi-thieu-toan-van-ban-dich-ngoc-pha-hung-vuong-353.html"
 summary: |
   Chưng Bính Truyện (蒸餅傳, "The Tale of the Steamed Cake") is the eighth tale in juan I of Lĩnh Nam Chích Quái. It explains the origin of bánh chưng and bánh giầy through a succession contest under the sixth Hùng king: twenty-two princes are sent to find the finest offering for the royal ancestors, and the winner is the eighteenth, Lang Liêu, an orphaned son with nothing but rice, whom a divine figure instructs in a dream to make one square cake for earth and one round cake for heaven. The text as it survives is the product of the 1492-1493 redaction by Vũ Quỳnh and Kiều Phú, working from a draft attributed to Trần Thế Pháp (14th c.). The tale binds cosmology, filial piety, and royal legitimacy into a single edible object, and it remains the first legend Vietnamese students meet in the national literature curriculum.
 themes:

@@ -51,31 +51,38 @@ sources:
     chapter: "Nhất Dạ Trạch truyện (一夜澤傳), Quyển I"
     edition: "Bản Đinh Gia Khánh và Nguyễn Ngọc San (NXB Văn hoá/Văn học, 1960); bản Nguyễn Hữu Vinh và Trần Đình Hoành bình giải (dotchuoinon.com, 2015); bản Nguyễn Thị Oanh khảo luận dịch chú (2020). Lưu tại Viện Nghiên cứu Hán Nôm: A.2914, HV 486, VHV 1473."
     notes: "Đây là văn bản duy nhất ghi đầy đủ cốt truyện. Lĩnh Nam chích quái không phải Việt điện u linh tập, hay bị nhầm."
+    url: "https://lib.nomfoundation.org/collection/1/volume/819/"
   - title: Đại Việt sử ký toàn thư
     author: Ngô Sĩ Liên
     chapter: "Ngoại kỷ, mục Triệu Việt Vương, năm Kỷ Tỵ thứ 2 (549)"
     edition: "Hoàn thành 1479; bản Nội các quan bản 1697. Bản dịch Ngô Đức Thọ và Hoàng Văn Lâu, Hà Văn Tấn hiệu đính, NXB Khoa học Xã hội."
     notes: "Chính sử không chép truyện Chử Đồng Tử như một thiên riêng. Ông chỉ xuất hiện trong lời chú 'tục truyền' ở mục Triệu Quang Phục, kèm lời phê của Ngô Sĩ Liên rằng đó là mượn lời để cho vật trở thành thiêng."
+    url: "https://lib.nomfoundation.org/collection/1/volume/962/"
   - title: Khâm định Việt sử thông giám cương mục
     author: Quốc sử quán triều Nguyễn
     chapter: "Mục Triệu Việt Vương, lời chua 'Sử cũ chua rằng tục truyền...'"
     edition: "Hoàn thành 1856-1884. Bản dịch Viện Sử học, NXB Giáo dục."
     notes: "Lặp lại mô thức của Toàn thư: Chử Đồng Tử chỉ xuất hiện trong lời chú về Triệu Quang Phục, không có thiên riêng."
+    url: "https://lib.nomfoundation.org/collection/1/volume/251/"
   - title: Lịch sử Phật giáo Việt Nam, tập 1
     author: Lê Mạnh Thát
     edition: "NXB Thuận Hoá, 1999; tái bản 2023"
     notes: "Luận điểm: Chử Đồng Tử là 'Phật tử Việt Nam đầu tiên'. Quỳnh Viên là núi Nam Giới, cửa Sót, Hà Tĩnh. Còn tranh luận, chưa có khai quật khảo cổ xác nhận."
+    url: "https://thuvienhoasen.org/images/file/EM3D0rMP2AgQAHpp/lich-su-phat-giao-viet-nam-tap-1-le-manh-that.pdf"
   - title: Thần, Người và Đất Việt
     author: Tạ Chí Đại Trường
     edition: "California 1989; tái bản Nhã Nam, NXB Tri Thức"
     notes: "Khung phân tầng 'nhân thần chồng lên thiên thần, thiên thần chồng lên nhiên thần' là công cụ lý thuyết hữu ích nhất để đọc nhân vật Chử Đồng Tử."
+    url: "https://damau.org/20814/than-nguoi-va-dat-viet"
   - title: Tứ bất tử
     author: Vũ Ngọc Khánh và Ngô Đức Thịnh
     edition: "NXB Văn hoá Dân tộc, 1990/1991; tái bản NXB Tri Thức 2025"
     notes: "Phổ biến hoá bảng 'Tứ bất tử' gồm Chử Đồng Tử trong folklore học hiện đại. Chu Xuân Giao (Tạp chí Nghiên cứu Tôn giáo, 1/2014) chỉ rõ bảng này không có trong Hội Chân Biên như lâu nay vẫn tưởng."
+    url: "https://thuvientinh.quangngai.gov.vn/tu-bat-tu-bon-vi-thanh-bat-tu-cua-viet-nam/"
   - title: Đạo giáo với văn hoá Việt Nam
     author: Nguyễn Đăng Duy
     notes: "Luận điểm 'Chử Đạo Tổ', ông tổ Đạo giáo Việt Nam. Nguyễn Duy Hinh phản bác: chỉ nên gọi là nhân vật của 'Tiên đạo', không phải Đạo giáo thần tiên chính thức."
+    url: "http://web.archive.org/web/20240519060748/https://timtailieu.vn/tai-lieu/dao-giao-va-van-hoa-viet-nam-29373/"
 summary: "Chử Đồng Tử là chàng trai nghèo làng Chử Xá, nghèo đến mức nhường chiếc khố duy nhất liệm cha, lại lấy được công chúa Tiên Dung trong một cuộc kỳ ngộ bất ngờ trên bãi sông Hồng. Hai vợ chồng bỏ cung đình, mở chợ buôn bán, rồi Chử Đồng Tử gặp sư Phật Quang tại núi Quỳnh Viên và được trao gậy thần, nón thần. Đêm dựng lên cả thành quách, lâu đài. Sáng hôm sau, thành quách và cả hai người bay về trời, để lại đầm Nhất Dạ Trạch. Nhiều thế kỷ sau theo khung truyện, ông hiển linh trao móng rồng cho Triệu Quang Phục đánh giặc Lương. Là một trong Tứ bất tử, được thờ trong hệ thống hơn 70 làng ven sông Hồng. Được coi là ông tổ nghề buôn và nhân vật tổng hợp Phật giáo và Đạo giáo sớm nhất trong thần thoại Việt Nam."
 themes:
   - tu-bat-tu

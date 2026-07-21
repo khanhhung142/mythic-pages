@@ -57,47 +57,60 @@ sources:
     author: Trần Thế Pháp (soạn TK XIV), Vũ Quỳnh và Kiều Phú (biên tập 1492-1493)
     chapter: "Hồ Tinh truyện (狐精傳), quyển I, truyện thứ 3"
     edition: "Bản Hán: Trần Khánh Hạo chủ biên, Việt Nam Hán Văn Tiểu Thuyết Tùng San, Học Sinh Thư Cục Đài Bắc 1992; bản A.1200 do Liam C. Kelley công bố 2010. Bản dịch: Đinh Gia Khánh và Nguyễn Ngọc San, NXB Văn học 1960 (tái bản NXB Trẻ 2016); Lê Hữu Mục, NXB Khai Trí 1960-1961 (tái bản Trăm Việt 1982); Nguyễn Hữu Vinh dịch, Trần Đình Hoành bình, dotchuoinon.com 2015"
+    url: "https://lib.nomfoundation.org/collection/1/volume/819/"
   - title: "Lĩnh Nam Chích Quái Đẳng Sử Liệu Tam Chủng (嶺南摭怪等史料三種)"
     author: Đới Khả Lai (戴可來) và Dương Bảo Quân (楊保筠) chủ biên
     edition: "NXB Trung Châu Cổ Tịch (中州古籍出版社), 1991"
+    url: "https://books.google.com/books/about/%E5%B2%AD%E5%8D%97%E6%91%AD%E6%80%AA%E7%AD%89%E5%8F%B2%E6%96%99%E4%B8%89%E7%A7%8D.html?id=2WeAvQEACAAJ"
   - title: Đại Việt Sử Ký Toàn Thư
     author: Ngô Sĩ Liên
     chapter: "Ngoại kỷ Quyển I, Kỷ Hồng Bàng (tờ 1a-5b)"
     edition: "1479. Bản dịch: Viện Sử học, NXB KHXH 1993"
+    url: "https://lib.nomfoundation.org/collection/1/volume/962/"
   - title: "A Fox Corpse, West Lake, and the Divided Population of Medieval Vietnam"
     author: Liam C. Kelley (Le Minh Khai)
     edition: "leminhkhai.wordpress.com, 13/8/2010, kèm toàn văn Hán bản A.1200 và bản dịch tiếng Anh"
+    url: "https://leminhkhai.wordpress.com/2010/08/13/a-fox-corpse-west-lake-and-the-divided-population-of-medieval-vietnam/"
   - title: The Birth of Vietnam
     author: Keith Weller Taylor
     chapter: "Chương 1 'Lac Lords', tr. 1-41; Phụ lục A, tr. 303-305"
     edition: "University of California Press, 1983"
+    url: "https://www.ucpress.edu/books/the-birth-of-vietnam/paper"
   - title: Lược khảo về thần thoại Việt Nam
     author: Nguyễn Đổng Chi
     edition: "Ban Văn Sử Địa, Hà Nội 1956, 185 tr."
+    url: "https://books.google.com/books/about/L%C6%B0%E1%BB%A3c_kh%E1%BA%A3o_v%E1%BB%81_th%E1%BA%A7n_tho%E1%BA%A1i_Vi%E1%BB%87.html?id=IeRCnQEACAAJ"
   - title: Những bài dã sử Việt
     author: Tạ Chí Đại Trường
     edition: "NXB Tri Thức, 2009"
+    url: "https://sachnhanam.com/doc-thu/doc-thu-nhung-bai-da-su-viet-ta-chi-dai-truong/"
   - title: Sử Việt đọc vài quyển
     author: Tạ Chí Đại Trường
     edition: "NXB Văn Mới, 2004"
+    url: "https://archive.org/details/SuVietDocVaiCuonPrc"
   - title: "Điểm sách Lược khảo về thần thoại Việt Nam của Nguyễn Đổng Chi"
     author: Lê Văn Hảo
     chapter: "BEFEO, Tome 52, N.1 (1964), tr. 253-256"
     edition: "École française d'Extrême-Orient, 1964"
+    url: "https://www.persee.fr/issue/befeo_0336-1519_1964_num_52_1"
   - title: Sơn Hải Kinh (山海經)
     author: Khuyết danh (biên soạn TK IV TCN - I SCN)
     chapter: "Nam Sơn Kinh, đoạn núi Thanh Khâu (青丘): thú như cáo mà chín đuôi"
     edition: "Chú giải Quách Phác (276-324)"
+    url: "https://ctext.org/shan-hai-jing/nan-shan-jing/zh"
   - title: Cảnh trí Hồ Tây
     author: Bùi Văn Nguyên
     edition: "1978. Khảo về các tên gọi Hồ Tây, mốc đổi tên Dâm Đàm năm 1573"
+    url: "https://web.archive.org/web/2024/https://thuviennguyenvanhuong.vn/lich-su-ho-tay-va-ho-truc-bach.html"
   - title: Mặt gương Tây Hồ
     author: Nguyễn Vinh Phúc
     edition: "Khảo cứu lịch sử và di tích vùng Hồ Tây"
+    url: "https://web.archive.org/web/20240425040943/https://tracuu.thuvienhanoi.org.vn/tai-lieu-chi-tiet/mat-guong-tay-ho--nguyen-vinh-phuc-123103.html"
   - title: Lĩnh Nam Chích Quái Bình giải
     author: Nguyễn Hữu Vinh dịch, Trần Đình Hoành bình
     chapter: "Truyện chồn tinh (truyện thứ 3)"
     edition: "dotchuoinon.com, PDF 18/3/2015, từ bản Học Sinh Thư Cục Đài Bắc 1992"
+    url: "https://dotchuoinon.com/2010/03/05/linh-nam-chich-quai-ca-tinh-ch%E1%BB%93n-tinh-va-cay-tinh/"
 summary: |
   Hồ Tinh truyện (狐精傳) là truyện thứ 3 trong quyển I của Lĩnh Nam Chích Quái, kể về con cáo trắng chín đuôi sống hơn nghìn năm trong hang đá phía tây đất Long Biên. Cáo biến thành người áo trắng, trà trộn vào dân Bạch y man dưới chân núi Tản Viên, dụ bắt trai gái giấu vào hang. Lạc Long Quân sai sáu đạo quân thủy phủ dâng nước phá hang, bắt cáo ăn thịt; chỗ hang sụp thành đầm sâu gọi là đầm Xác Cáo, tức Hồ Tây (Hà Nội) ngày nay. Truyện hoàn toàn vắng mặt trong chính sử: Đại Việt Sử Ký Toàn Thư lược bỏ, Cương Mục bác bỏ, Việt Điện U Linh loại trừ theo nguyên tắc. Cùng Ngư Tinh và Mộc Tinh, truyện thuộc bộ ba diệt yêu mở đầu chu kỳ khai hóa của Lạc Long Quân, mỗi con yêu ứng với một vùng sinh thái. Tranh luận học thuật trọng tâm: đây là ký ức dân gian cổ hay sáng tác của trí thức Hán học trung đại, mà trò chơi chữ "hồ" (cáo/hồ nước) do Liam C. Kelley chỉ ra là bằng chứng trung tâm.
 themes:

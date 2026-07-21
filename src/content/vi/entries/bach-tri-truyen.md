@@ -59,73 +59,94 @@ sources:
     author: Trần Thế Pháp (soạn TK XIV), Vũ Quỳnh và Kiều Phú (biên tập 1492-1493)
     chapter: "Bạch Trĩ truyện (白雉傳)"
     edition: "Bản Hán: Trần Khánh Hạo chủ biên, Việt Nam Hán Văn Tiểu Thuyết Tùng San, Học Sinh Thư Cục Đài Bắc 1992 (bản nền HV.486). Bản dịch: Đinh Gia Khánh và Nguyễn Ngọc San, NXB Văn hóa 1960; Lê Hữu Mục, NXB Khai Trí 1961; Bùi Văn Nguyên, NXB KHXH 1993; Nguyễn Hữu Vinh dịch, Trần Đình Hoành bình, dotchuoinon.com 2015; Nguyễn Thị Oanh, NXB KHXH (A.2914)."
+    url: "https://lib.nomfoundation.org/collection/1/volume/819/"
   - title: Đại Việt Sử Ký Toàn Thư
     author: Ngô Sĩ Liên
     chapter: "Ngoại kỷ Quyển I, Hùng Vương kỷ"
     edition: "1479. Bản dịch: Viện Sử học, NXB KHXH 1993"
+    url: "https://lib.nomfoundation.org/collection/1/volume/962/"
   - title: Việt Sử Lược
     author: Khuyết danh
     chapter: "Phần Hùng Vương"
     edition: "c. 1377. Bản dịch: Trần Quốc Vượng, NXB Thuận Hóa 2005"
+    url: "https://ctext.org/wiki.pl?if=en&res=785349"
   - title: Thượng Thư Đại Truyện (尚書大傳)
     author: Phục Sinh (伏勝)
     chapter: "Quyển 4, thiên Gia Hoà (嘉禾)"
     edition: "Đầu Tây Hán. Nguồn cổ nhất về tích Việt Thường hiến bạch trĩ"
+    url: "https://ctext.org/wiki.pl?if=en&res=602273"
   - title: Hậu Hán Thư, Nam Man Tây Nam Di Liệt Truyện
     author: Phạm Việp (范曄)
     chapter: "Q. 86"
     edition: "c. 445. Nguồn Trung Hoa mà LNCQ bám theo gần nhất"
+    url: "https://ctext.org/hou-han-shu/nan-man-xi-nan-yi-lie-zhuan"
   - title: Sử Ký, Chu Bản Kỷ
     author: Tư Mã Thiên
     edition: "c. 91 TCN"
+    url: "https://ctext.org/shiji/zhou-ben-ji"
   - title: Cầm Thao (琴操)
     author: Sái Ung (蔡邕)
     chapter: "Việt Thường Thao (越裳操)"
     edition: "Đông Hán. Ghi Chu Công soạn khúc cầm nhân sự kiện"
+    url: "https://ctext.org/wiki.pl?if=en&res=847447"
   - title: Văn Tuyển, Đông Kinh Phú
     author: Trương Hành (張衡)
     edition: "78-139"
+    url: "https://ctext.org/datawiki.pl?if=en&res=447174"
   - title: "Beyond the Bronze Pillars: Envoy Poetry and the Sino-Vietnamese Relationship"
     author: Liam C. Kelley
     edition: "University of Hawai'i Press, 2005"
+    url: "https://uhpress.hawaii.edu/title/beyond-the-bronze-pillars-envoy-poetry-and-the-sino-vietnamese-relationship/"
   - title: "The Biography of the Hồng Bàng Clan as a Medieval Vietnamese Invented Tradition"
     author: Liam C. Kelley
     chapter: "Journal of Vietnamese Studies 7/2 (2012), tr. 87-130"
+    url: "https://online.ucpress.edu/jvs/article/7/2/87/60674/The-Biography-of-the-H-ng-Bang-Clan-as-a-Medieval"
   - title: "Comments on Liam Kelley"
     author: Keith Weller Taylor
     chapter: "JVS 7/2 (2012), tr. 131-138"
+    url: "https://doi.org/10.1525/vs.2012.7.2.131"
   - title: The Birth of Vietnam
     author: Keith Weller Taylor
     chapter: "tr. 186"
     edition: "University of California Press, 1983"
+    url: "https://www.ucpress.edu/books/the-birth-of-vietnam/paper"
   - title: A History of the Vietnamese
     author: Keith Weller Taylor
     edition: "Cambridge University Press, 2013"
+    url: "https://doi.org/10.1017/CBO9781139021210"
   - title: "Études d'histoire d'Annam I"
     author: Henri Maspero
     chapter: "BEFEO 16 (1916), tr. 26 (chú thích)"
+    url: "https://www.persee.fr/doc/befeo_0336-1519_1916_num_16_1_5270"
   - title: "Le Royaume de Văn-lang"
     author: Henri Maspero
     chapter: "BEFEO 18/3 (1918)"
+    url: "https://www.persee.fr/doc/befeo_0336-1519_1918_num_18_1_5888"
   - title: "Bibliographie annamite"
     author: Émile Gaspardone
     chapter: "BEFEO 34 (1934), tr. 1-174, đặc biệt tr. 128-130"
+    url: "https://www.persee.fr/doc/befeo_0336-1519_1934_num_34_1_4960"
   - title: "Ming China and Vietnam: Negotiating Borders in Early Modern Asia"
     author: Kathlene Baldanza
     edition: "Cambridge University Press, 2016"
+    url: "https://www.cambridge.org/core/books/ming-china-and-vietnam/2113FB7FA7F2C110BE11AC3008B388BE"
   - title: Tìm hiểu kho sách Hán Nôm
     author: Trần Văn Giáp
     chapter: "Tập II, tr. 186-192"
     edition: "NXB KHXH, 1990"
+    url: "https://nlv.gov.vn/nghiep-vu-thu-vien/tim-hieu-kho-sach-han-nom-mot-bo-thu-muc-co-gia-tri-cao.html"
   - title: Lĩnh Nam Chích Quái (bình giải)
     author: Nguyễn Hữu Vinh dịch, Trần Đình Hoành bình
     edition: "dotchuoinon.com, 2015"
+    url: "https://dotchuoinon.com/wp-content/uploads/2010/11/linhnamchichquai_march18_2015.pdf"
   - title: "Lĩnh Nam chích quái (Khảo luận, Dịch chú, Nguyên bản chữ Hán)"
     author: Nguyễn Thị Oanh
     edition: "NXB KHXH (bản A.2914)"
+    url: "https://nxbkhxh.vass.gov.vn/tin-tuc-su-kien/linh-nam-chich-quai-hanh-trinh-gan-25-nam-phuc-dung-mot-di-san-van-hoa-561342"
   - title: "經學史上的千古公案：周公稱王"
     author: Trương Uyển Oánh (張琬瑩)
     chapter: "Bản tin Văn Triết Sở, Sinica, kỳ 127 (2009)"
+    url: "https://www.litphil.sinica.edu.tw/newsletter/127/127-7-32.pdf"
 summary: |
   Bạch Trĩ truyện (Truyện chim trĩ trắng) là truyện thứ 10 trong Lĩnh Nam Chích Quái, kể việc Hùng Vương sai bề tôi xưng Việt Thường thị mang chim trĩ trắng sang nhà Tây Chu thời Chu Thành Vương. Truyện chưa tới 200 chữ Hán nhưng mỗi chi tiết đều mang ý hệ về nguồn gốc và vị thế của người Việt. Cốt truyện gốc có trong cổ tịch Trung Hoa (Thượng thư đại truyện, Hậu Hán thư), nhưng tác giả Việt đã Việt hoá triệt để: gắn Việt Thường vào hệ Hùng Vương, thêm lời Chu Công từ chối vị trí bề trên ("đức trạch không ban cho người thì quân tử không hưởng lễ"), thêm lời Hoàng Đế cấm xâm phạm Giao Chỉ. Tồn tại hai cách đọc đối trọng: (1) lăng kính Trung Hoa coi đây là triều cống (Kelley 2012); (2) cách đọc nội tại coi đây là tìm đạo để học, trao đổi văn hoá ngang hàng giữa hai quốc gia độc lập (Nguyễn Hữu Vinh, Trần Đình Hoành 2015). Chính những chi tiết tác giả Việt thêm vào so với nguồn Trung Hoa (Chu Công từ chối nhận lễ, Hoàng Đế cấm xâm phạm, ngôn ngữ hai bên hoàn toàn bất đồng) đều xoay quanh một điểm: người Việt là một quốc gia độc lập, ngoài cõi Trung Hoa, bất khả xâm phạm.
 themes:

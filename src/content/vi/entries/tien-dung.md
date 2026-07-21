@@ -38,16 +38,20 @@ sources:
     chapter: "Nhất Dạ Trạch truyện (一夜澤傳), Quyển I"
     edition: "Bản Đinh Gia Khánh và Nguyễn Ngọc San; bản Nguyễn Hữu Vinh và Trần Đình Hoành bình giải (dotchuoinon.com, 2015); bản Nguyễn Thị Oanh (2020)"
     notes: "Nguồn duy nhất có cốt truyện đầy đủ về Tiên Dung. Nhân vật không xuất hiện trong chính sử như một thiên riêng."
+    url: "https://dotchuoinon.com/2010/03/19/linh-nam-chich-quai-truy%E1%BB%87n-d%E1%BA%A7m-m%E1%BB%99t-dem-nh%E1%BA%A5t-d%E1%BA%A1-tr%E1%BA%A1ch/"
   - title: Thần tích đền Đa Hoà và đền Hoá Dạ Trạch
     notes: "Thần tích bổ sung nhân vật Tây Sa công chúa thành bộ 'tam vị', chi tiết không có trong Lĩnh Nam chích quái. Thần phả Nguyễn Bính (đầu TK XVI, niên đại học thuật chưa xác minh chính xác) ghi Hùng Duệ Vương sau lập đền thờ."
+    url: "https://dsvh.gov.vn/them-06-di-tich-duoc-xep-hang-di-tich-quoc-gia-dac-biet-nam-2024-22189"
   - title: Thần, Người và Đất Việt
     author: Tạ Chí Đại Trường
     edition: "California 1989; tái bản Nhã Nam, NXB Tri Thức"
     notes: "Khung phân tầng hữu ích để đọc Tiên Dung như nhân vật được nhân hoá từ tín ngưỡng địa phương, không phải nhân vật lịch sử."
+    url: "https://www.khaitam.com/lich-su-1/than-nguoi-va-dat-viet-1"
   - title: Tứ bất tử
     author: Vũ Ngọc Khánh và Ngô Đức Thịnh
     edition: "NXB Văn hoá Dân tộc, 1990/1991"
     notes: "Mô tả Tiên Dung như biểu tượng của tình yêu tự do và hôn nhân bình đẳng trong hệ giá trị văn hoá Việt."
+    url: "https://nxbhcm.com.vn/73/tu-bat-tu-bon-vi-thanh-bat-tu-cua-viet-nam-5977"
 summary: "Tiên Dung là công chúa Hùng Vương, nổi tiếng vì không chịu lấy chồng khi vua cha sắp xếp. Trong một chuyến đi chơi trên sông Hồng, bà tình cờ phát hiện Chử Đồng Tử, chàng trai nghèo đang nằm vùi trong cát, và quyết định lấy chàng ngay hôm đó, không qua phép tắc nào. Vua cha tức giận, không cho về cung. Hai vợ chồng ở lại bãi sông, mở chợ buôn bán, rồi cùng theo Chử Đồng Tử học đạo. Một đêm thành quách hiện ra, sáng hôm sau bay về trời, đất sụt thành đầm Nhất Dạ Trạch. Tiên Dung không phải nhân vật được thờ riêng trong Tứ bất tử. Bà được thờ cùng Chử Đồng Tử như một cặp không thể tách rời."
 themes:
   - tinh-yeu-vuot-giai-cap

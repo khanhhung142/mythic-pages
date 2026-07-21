@@ -47,24 +47,29 @@ sources:
     chapter: "Nhất Dạ Trạch truyện (一夜澤傳), Book I"
     edition: "Nguyễn Hữu Vinh and Trần Đình Hoành annotated edition (dotchuoinon.com, 2015); Nguyễn Thị Oanh edition (2020)"
     notes: "The only source that explains the lake's name and origin. The 'overnight palace' detail appears here alone, not in the official histories or Việt điện u linh."
+    url: "https://dotchuoinon.com/2010/03/19/linh-nam-chich-quai-truy%E1%BB%87n-d%E1%BA%A7m-m%E1%BB%99t-dem-nh%E1%BA%A5t-d%E1%BA%A1-tr%E1%BA%A1ch/"
   - title: Đại Việt sử ký toàn thư
     author: Ngô Sĩ Liên
     chapter: "Ngoại kỷ, entry for Triệu Việt Vương, year Kỷ Tỵ 2 (549 CE)"
     edition: "Translation by Ngô Đức Thọ and Hoàng Văn Lâu, edited by Hà Văn Tấn, Social Sciences Publishing House"
     notes: "Records the site as 'Màn Trò flats, Chu Diên district.' Chử Đồng Tử appears in a gloss marked 'popular legend' under the Triệu Việt Vương entry, not under the Hùng Vương section, followed by Ngô Sĩ Liên's comment that such stories are words borrowed to make objects seem sacred."
+    url: "https://www.nomfoundation.org/nom-project/history-of-greater-vietnam/Fulltext/102-Ngoai-ky-toan-thu?uiLang=vn"
   - title: Khâm định Việt sử thông giám cương mục
     author: National History Office, Nguyễn dynasty
     chapter: "Entry for Triệu Việt Vương, gloss on Dạ Trạch marsh"
     edition: "Translation by the Institute of History, Education Publishing House"
     notes: "Records: 'folk tradition holds that in Dạ Trạch marsh, an immortal named Chử Đồng Tử rode a golden dragon down from the sky and handed a dragon claw to Quang Phục.'"
+    url: "https://lib.nomfoundation.org/collection/1/volume/251/"
   - title: Lịch triều hiến chương loại chí
     author: Phan Huy Chú
     chapter: "Geography, Khoái Châu prefecture"
     notes: "Describes Dạ Trạch marsh in the early 19th century as dense with reeds, boggy on all sides. Useful evidence that the landscape was still intact at that point."
+    url: "https://catalog.hathitrust.org/Record/002121357"
   - title: Thần, Người và Đất Việt
     author: Tạ Chí Đại Trường
     edition: "California 1989; reprinted by Nhã Nam, Tri Thức Publishing House"
     notes: "Theoretical framework for reading legends as layered; useful for understanding Nhất Dạ Trạch as a sacred space with successive strata of belief added across centuries."
+    url: "https://damau.org/20814/than-nguoi-va-dat-viet"
 summary: "Nhất Dạ Trạch, the Overnight Lake, exists in both myth and history. In myth, it is where the palace of Chử Đồng Tử and Tiên Dung appeared, then vanished into the sky, and the ground sank into a lake. In 6th-century history, it was the stronghold where Triệu Quang Phục resisted the Liang invasion, and also where Chử Đồng Tử first enters the official record, not in the Hùng Vương section but under Triệu Việt Vương. The lake itself has almost vanished, buried by silt and reclaimed as farmland, but the site now sits at the heart of a Special National Heritage Zone (2024) and one of the major festival networks along the Red River."
 themes:
   - dia-danh-linh-thieng

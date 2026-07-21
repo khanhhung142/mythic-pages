@@ -69,78 +69,101 @@ sources:
     author: Trần Thế Pháp (soạn TK XIV), Vũ Quỳnh và Kiều Phú (biên tập 1492-1493)
     chapter: "Truyện họ Hồng Bàng (鴻龐氏傳), truyện 1"
     edition: "Bản dịch Đinh Gia Khánh và Nguyễn Ngọc San, NXB Văn hóa, Hà Nội, 1960. Bản Hán: HV.486 (Việt Nam Hán Văn Tiểu Thuyết Tùng San, Học Sinh Thư Cục Đài Bắc 1992); A.2914"
+    url: "https://lib.nomfoundation.org/collection/1/volume/819/"
   - title: "Lĩnh Nam chích quái (Khảo luận, Dịch chú, Nguyên bản chữ Hán)"
     author: Nguyễn Thị Oanh
     chapter: "Truyện họ Hồng Bàng (bản A.2914)"
     edition: "NXB Khoa học Xã hội, Hà Nội, 2024, 720 tr."
+    url: "https://nxbkhxh.vass.gov.vn/tin-tuc-su-kien/linh-nam-chich-quai-hanh-trinh-gan-25-nam-phuc-dung-mot-di-san-van-hoa-561342"
   - title: Lĩnh Nam Chích Quái (bình giải)
     author: Nguyễn Hữu Vinh dịch, Trần Đình Hoành bình
     chapter: Truyện họ Hồng Bàng
     edition: "dotchuoinon.com, 2015"
+    url: "https://dotchuoinon.com/2010/02/26/linh-nam-chich-quai-truy%E1%BB%87n-h%E1%BB%8D-h%E1%BB%93ng-bang/"
   - title: Đại Việt Sử Ký Toàn Thư
     author: Ngô Sĩ Liên
     chapter: "Ngoại kỷ Quyển I, Kỷ Hồng Bàng thị"
     edition: "1479. Bản dịch Ngô Đức Thọ chủ biên, NXB Khoa học Xã hội, 1993"
+    url: "https://lib.nomfoundation.org/collection/1/volume/962/"
   - title: Việt sử lược
     author: Khuyết danh
     chapter: "Quyển I"
     edition: "c. 1377. Bản dịch Trần Quốc Vượng, NXB Văn Sử Địa, 1960"
+    url: "https://ctext.org/wiki.pl?if=en&res=785349"
   - title: Việt điện u linh tập
     author: Lý Tế Xuyên
     edition: "c. 1329. Bản dịch Lê Hữu Mục, NXB Khai Trí, Sài Gòn, 1960"
+    url: "https://www.worldcat.org/title/viet-ien-u-linh-tap/oclc/586456544"
   - title: Thiên Nam ngữ lục
     author: Khuyết danh
     chapter: "Đoạn mở đầu (trong 8.136 câu lục bát)"
     edition: "c. 1682-1709, chữ Nôm. Bản Nguyễn Thị Lâm, NXB Văn học, 2001"
+    url: "http://www.hannom.org.vn/detail.asp?param=419&Catid=366"
   - title: Khâm định Việt sử thông giám cương mục
     author: Quốc sử quán triều Nguyễn
     edition: "1856-1881. Bản dịch Viện Sử học, NXB Giáo dục, 1998"
+    url: "https://lib.nomfoundation.org/collection/1/volume/251/"
   - title: "The Biography of the Hồng Bàng Clan as a Medieval Vietnamese Invented Tradition"
     author: Liam C. Kelley
     chapter: "Journal of Vietnamese Studies 7/2 (2012), tr. 87-130"
+    url: "https://doi.org/10.1525/vs.2012.7.2.87"
   - title: The Birth of Vietnam
     author: Keith Weller Taylor
     chapter: "Chương 1 (tr. 1-2) và Phụ lục A (tr. 349-359)"
     edition: "University of California Press, 1983"
+    url: "https://www.ucpress.edu/books/the-birth-of-vietnam/paper"
   - title: A History of the Vietnamese
     author: Keith Weller Taylor
     edition: "Cambridge University Press, 2013"
+    url: "https://www.cambridge.org/9781107239852"
   - title: "A Mythographical Journey to Modernity: The Textual and Symbolic Transformations of the Hùng Kings Founding Myths"
     author: Nguyễn Thị Điểu
     chapter: "Journal of Southeast Asian Studies 44/2 (2013), tr. 315-337"
+    url: "https://doi.org/10.1017/S002246341300009X"
   - title: "Postcolonial Vietnam: New Histories of the National Past"
     author: Patricia Pelley
     edition: "Duke University Press, 2002"
+    url: "https://www.dukeupress.edu/Postcolonial-Vietnam"
   - title: "Études d'histoire d'Annam. IV. Le Royaume de Van-lang"
     author: Henri Maspero
     chapter: "BEFEO 18/3 (1918), tr. 1-36"
+    url: "https://www.persee.fr/doc/befeo_0336-1519_1918_num_18_1_5888"
   - title: "Première étude sur les sources annamites de l'histoire d'Annam"
     author: Léopold Cadière và Paul Pelliot
     chapter: "BEFEO 4 (1904), tr. 617-671"
+    url: "https://www.persee.fr/doc/befeo_0336-1519_1904_num_4_1_1360"
   - title: "Notes sur les origines du peuple annamite"
     author: Léonard Aurousseau
     chapter: "BEFEO 23 (1923)"
+    url: "https://www.persee.fr/doc/befeo_0336-1519_1923_num_23_1_5933"
   - title: "The Flood Myth and the Origin of Ethnic Groups in Southeast Asia"
     author: Đặng Nghiêm Vạn
     chapter: "Journal of American Folklore 106 (1993)"
+    url: "https://doi.org/10.2307/541423"
   - title: "Peoples of the Gourd: Imagined Ethnicities in Highland Southeast Asia"
     author: Frank Proschan
     chapter: "Journal of Asian Studies 60/4 (2001)"
+    url: "https://www.cambridge.org/core/journals/journal-of-asian-studies/article/abs/peoples-of-the-gourd-imagined-ethnicities-in-highland-southeast-asia/9D7C872602C5540E20AC69FAAE0079A9"
   - title: Việt Nam văn hóa sử cương
     author: Đào Duy Anh
     edition: "1938"
+    url: "https://thuvien.qui.edu.vn/Ebook-Viet-Nam-van-hoa-su-cuong-Tai-ban-theo-nguyen-ban-Quan-hai-tung-thu-1938-Phan-1-Dao-Duy-Anh-2419.html"
   - title: The People between the Rivers
     author: Catherine Churchman
     edition: "Rowman & Littlefield, 2016"
+    url: "https://www.cambridge.org/core/journals/journal-of-asian-studies/article/abs/the-people-between-the-rivers-the-rise-and-fall-of-a-bronze-drum-culture-200750-ce-by-catherine-churchman-lanham-md-rowman-littlefield-2016-266-pp-isbn-9781442258600-cloth-also-available-as-ebook/49D65B94F3FB22DCB78CD74A8BD5C9FC"
   - title: "Chinese Mythology: An Introduction"
     author: Anne Birrell
     edition: "Johns Hopkins University Press, 1999 (bản bìa mềm)"
+    url: "https://www.press.jhu.edu/books/title/1295/chinese-mythology"
   - title: "A Layer of Dongsonian Vocabulary in Vietnamese"
     author: Michel Ferlus
     chapter: "Journal of the Southeast Asian Linguistics Society 1 (2009), tr. 95-109"
+    url: "http://jseals.org/JSEALS-1.pdf"
   - title: Đế vương thế kỷ (帝王世紀)
     author: Hoàng Phủ Mật (215-282)
     chapter: "Phả hệ họ Thần Nông (Đế Lai, vua thứ sáu, cha Đế Ai)"
+    url: "https://ctext.org/wiki.pl?if=en&res=842605"
 summary: |
   Âu Cơ là nàng tiên trên cạn trong Truyện họ Hồng Bàng, truyện mở đầu Lĩnh Nam Chích Quái. Nàng là con gái Đế Lai, vua phương Bắc dòng Thần Nông, kết duyên với Lạc Long Quân nòi rồng và sinh ra một bọc nở trăm trứng, trăm con trai. Vì rồng tiên thủy hỏa khắc nhau, hai người chia con: năm mươi theo cha xuống biển, năm mươi theo mẹ lên núi; con trưởng theo mẹ được tôn làm Hùng Vương, đóng đô Phong Châu. Trăm con là thủy tổ Bách Việt; từ "đồng bào" (同胞, cùng một bọc) của tiếng Việt bắt nguồn từ hình ảnh này. Việt sử lược (c. 1377) chưa có phả hệ này; truyện định hình ở Lĩnh Nam Chích Quái rồi được Ngô Sĩ Liên đưa vào chính sử năm 1479 kèm ngoặc [tục truyền sinh bách noãn]. Học giới hiện đại tranh luận giữa thuyết "truyền thống được kiến tạo" thời trung đại (Kelley 2012) và các cách đọc tìm lớp lõi bản địa qua dị bản Mường và motif quả bầu Đông Nam Á. Tín ngưỡng thờ Mẫu Âu Cơ ở Hiền Lương (Phú Thọ) được công nhận Di sản văn hóa phi vật thể quốc gia năm 2017.
 themes:

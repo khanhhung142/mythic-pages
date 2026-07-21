@@ -47,45 +47,55 @@ sources:
     chapter: "Tale of Đổng Thiên Vương"
     edition: "Đinh Gia Khánh and Nguyễn Ngọc San edition (1960); Nguyễn Thị Oanh annotated edition (2024)"
     notes: "Earliest complete narrative. Does NOT contain the footprint conception, the twelve-month pregnancy, the iron rod, the iron armor, or the bamboo weapon; all are later accretions."
+    url: "https://lib.nomfoundation.org/collection/1/volume/820/"
   - title: Việt điện u linh tập
     author: Lý Tế Xuyên
     edition: "c. 1329"
     notes: "Citing the lost Báo Cực truyện, records the Phù Đổng deity as 'the earth god of Kiến Sơ Pagoda reincarnated'. In this earliest textual layer the figure is a nature deity, not a warrior."
+    url: "https://quangduc.com/a4657/viet-dien-u-linh-tap-pdf"
   - title: An Nam chí lược
     author: Lê Tắc
     edition: "c. 1335"
     notes: "Oldest surviving text to mention 'Xung Thiên Thần Vương', showing the story existed before 1285."
+    url: "https://quangduc.com/a4705/an-nam-chi-luoc-pdf"
   - title: Đại Việt sử ký toàn thư
     author: Ngô Sĩ Liên
     chapter: "Outer Annals, Hồng Bàng section"
     edition: "Completed 1479, printed 1697 (Chính Hòa edition)"
     notes: "Admitted the legend into official history and fixed it to the 6th Hùng King. Heavily rationalized: no Long Quân, only 'one sword, one horse', and no mention of 'Ân invaders', only 'urgent news within the country'."
+    url: "https://www.nomfoundation.org/nom-project/history-of-greater-vietnam/Fulltext/102-Ngoai-ky-toan-thu?uiLang=en"
   - title: Việt điện u linh tục bổ
     author: Nguyễn Văn Chất
     chapter: "Sóc Thiên Vương sự tích ký"
     edition: "15th century"
     notes: "Two variants: a child hero who defeats invaders and ascends at Vệ Linh; and, from Thiền uyển tập anh, Vaiśravaṇa aiding Lê Đại Hành against the Song in 981. Thiền uyển tập anh itself never identifies Vaiśravaṇa with Phù Đổng."
+    url: "https://quangduc.com/a4657/viet-dien-u-linh-tap-pdf"
   - title: Người anh hùng làng Dóng (The Hero of Dóng Village)
     author: Cao Huy Đỉnh
     edition: "Social Sciences Publishing House, 1969 (posthumously awarded the Hồ Chí Minh Prize)"
     notes: "The classic study. Argues Gióng was originally a god of thunder, storm, and rain, on the phonetic chain đổng, dóng, dông and the Ông Đổng figure recorded in fieldwork."
+    url: "https://archive.org/details/vh.caohuydinhtuyentaptacpham"
   - title: "Căn bản triết lý người anh hùng Phù Đổng và hội Gióng"
     author: Trần Quốc Vượng
     edition: "In Lễ hội Thánh Gióng, Culture and Information Publishing House, 2009, pp. 435-438"
     notes: "Reads Gióng as a solar myth: the iron horse's east-to-west flight traces the sun's apparent path; the 28 female Ân generals correspond to the Twenty-Eight Lunar Mansions."
+    url: "https://web.archive.org/web/20250516200443/http://vicas.org.vn/pages/an-pham/290/Le-hoi-Thanh-Giong..html"
   - title: Thần, Người và Đất Việt (Gods, People, and the Land of Việt)
     author: Tạ Chí Đại Trường
     chapter: "'Thần Phù Đổng'"
     edition: "Đường Mới, Paris, no. 5/1986; reprinted in Những bài dã sử Việt, Thanh Văn, 1996, pp. 75-99"
     notes: "Six-step evolutionary schema from local tree-and-stone deity to national resistance hero; dates the familiar figure to roughly seven centuries ago."
+    url: "https://web.archive.org/web/20140609234651/http://www.smashwords.com/books/view/75497"
   - title: Les Fêtes de Phù Đổng (Une Bataille Céleste dans la Tradition Annamite)
     author: Nguyễn Văn Huyên
     edition: "Cahier de la Société de Géographie de Hanoi, XXIV, 1938"
     notes: "First analysis of the Gióng Festival as an agrarian fertility rite. See also his Les chants et les danses d'Ai-Lao aux Fêtes de Phù Đổng, EFEO, XXXIX/2, 1941."
+    url: "https://books.openedition.org/pup/22214?lang=en"
   - title: Hội Gióng ở đền Phù Đổng và đền Sóc
     author: Nguyễn Chí Bền
     edition: "Thế Giới Publishers, 2010, p. 202"
     notes: "Adds the hypothesis that Gióng also carries traces of a patron deity of ironsmiths."
+    url: "https://ich.unesco.org/en/RL/giong-festival-of-phu-djong-and-soc-temples-00443"
 summary: "Thánh Gióng, also titled Phù Đổng Thiên Vương, is the second of Vietnam's Four Immortals: the child of Phù Đổng village who did not speak for three years, rose at the news of the Ân invasion, was fed into a giant by his whole village, shattered the enemy on an iron horse, and ascended to heaven from Sóc Mountain. Modern scholarship reads the figure as a layered construction: a tree-and-stone deity at Kiến Sơ Pagoda, a thunder-and-rain god of agrarian ritual, a Đông Sơn solar myth, a Buddhist guardian at Vệ Linh Mountain, and finally a hero of national resistance consecrated by Lý, Trần, Lê, and Nguyễn investitures. The 'Ân invaders' of the tale have no verified historical counterpart; the question remains open. The Gióng Festival at Phù Đổng and Sóc temples was inscribed by UNESCO as Intangible Cultural Heritage of Humanity on November 16, 2010."
 themes:
   - tu-bat-tu

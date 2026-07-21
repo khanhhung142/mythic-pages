@@ -83,47 +83,61 @@ sources:
     author: Trần Thế Pháp (soạn TK XIV), Vũ Quỳnh và Kiều Phú (biên tập 1492-1493)
     chapter: "Tây Qua truyện (西瓜傳)"
     edition: "Bản Hán: Trần Khánh Hạo chủ biên, Việt Nam Hán Văn Tiểu Thuyết Tùng San, Học Sinh Thư Cục Đài Bắc 1992 (bản nền HV 486). Bản dịch: Đinh Gia Khánh và Nguyễn Ngọc San, NXB Văn hóa 1960; Lê Hữu Mục, NXB Khai Trí 1960/1961; Bùi Văn Nguyên, NXB KHXH 1993; Nguyễn Hữu Vinh dịch, Trần Đình Hoành bình, dotchuoinon.com 2015; Nguyễn Thị Oanh, NXB KHXH 2025."
+    url: "https://dotchuoinon.com/wp-content/uploads/2010/11/linhnamchichquai_march18_2015.pdf"
   - title: Kho tàng truyện cổ tích Việt Nam
     author: Nguyễn Đổng Chi
     chapter: "Tập II, 'Sự tích dưa hấu'"
     edition: "NXB Sử học/KHXH, Hà Nội, 1957-1982 (5 tập)"
+    url: "https://archive.org/details/khotangtruyencotichvietnam_quyen1"
   - title: "Études d'histoire d'Annam. IV. Le Royaume de Văn-lang"
     author: Henri Maspero
     chapter: "BEFEO 18/3 (1918), tr. 1-36"
+    url: "https://www.persee.fr/doc/befeo_0336-1519_1918_num_18_1_5888"
   - title: "Bibliographie annamite"
     author: Émile Gaspardone
     chapter: "BEFEO 34 (1934), tr. 1-174"
+    url: "https://www.persee.fr/issue/befeo_0336-1519_1934_num_34_1"
   - title: "The Biography of the Hồng Bàng Clan as a Medieval Vietnamese Invented Tradition"
     author: Liam C. Kelley
     chapter: "Journal of Vietnamese Studies 7/2 (2012), tr. 87-130"
+    url: "https://online.ucpress.edu/jvs/article/7/2/87/60674/The-Biography-of-the-H-ng-Bang-Clan-as-a-Medieval"
   - title: "Comments on Liam Kelley"
     author: Keith Weller Taylor
     chapter: "JVS 7/2 (2012)"
+    url: "http://vs.ucpress.edu/content/7/2/139"
   - title: "Trao đổi với Liam Kelley"
     author: Tạ Chí Đại Trường
     edition: "2016 (dcvonline.net)"
+    url: "https://dcvonline.net/2016/03/29/ta-chi-dai-truong-gop-y-ve-bai-tale-of-hong-bang-clan-hong-bang-thi-truyen/"
   - title: "Truyện ngắn Việt Nam: Lịch sử, Thi pháp, Chân dung"
     author: Bùi Duy Tân
     chapter: "tr. 127"
     edition: "NXB Giáo dục, 2007"
+    url: "https://search.worldcat.org/title/Truyen-ngan-Viet-Nam-:-lich-su-thi-phap-chan-dung/oclc/270117200"
   - title: "Lĩnh Nam chích quái (Khảo luận, Dịch chú, Nguyên bản chữ Hán)"
     author: Nguyễn Thị Oanh
     edition: "NXB KHXH 2025"
+    url: "https://nxbkhxh.vass.gov.vn/tin-tuc-su-kien/linh-nam-chich-quai-hanh-trinh-gan-25-nam-phuc-dung-mot-di-san-van-hoa-561342"
   - title: "Origin and emergence of the sweet dessert watermelon, Citrullus lanatus"
     author: Susanne S. Renner et al.
     chapter: "Annals of Botany 116/2 (2015), tr. 133-148"
+    url: "https://doi.org/10.1093/aob/mcv077"
   - title: "An archaeobotanical contribution to the history of watermelon"
     author: M. van der Veen & K. Wasylikowa
     chapter: "Vegetation History and Archaeobotany 13 (2004)"
+    url: "https://doi.org/10.1007/s00334-004-0039-6"
   - title: Bản Thảo Cương Mục (本草綱目)
     author: Lý Thời Trân
     edition: "1578"
+    url: "https://ctext.org/wiki.pl?if=en&res=588089"
   - title: Hãm Lỗ Ký (陷虜記)
     author: Hồ Kiều (胡嶠)
     edition: "947-953, dẫn trong Âu Dương Tu, Tân Ngũ Đại Sử 新五代史"
+    url: "https://ctext.org/wiki.pl?if=gb&chapter=158998&remap=gb"
   - title: Tùng Mạc Kỷ Văn (松漠紀聞)
     author: Hồng Hạo (洪皓)
     edition: "1156 (viết sau khi bị Kim giữ 15 năm, 1129-1143)"
+    url: "https://ctext.org/wiki.pl?if=en&res=799108"
 summary: "Tây Qua truyện (Truyện dưa hấu) là truyện thứ 8/9 trong Lĩnh Nam Chích Quái, kể về Mai An Tiêm, nô bộc ngoại quốc thời Hùng Vương bị đày ra đảo hoang Nga Sơn vì tuyên bố của cải là vật tiền kiếp. Trên đảo, chim từ phương Tây mang hạt dưa đến, An Tiêm trồng thành Tây Qua (dưa hấu), trao đổi với thuyền chài thuyền buôn rồi được vua gọi về. Truyện là huyền thoại nguyên nhân luận (etiological myth) giải thích nguồn gốc dưa hấu ở Việt Nam, đồng thời mã hóa giá trị tự lực và cần lao. Về mặt thực vật học, truyện hoàn toàn anachronistic: Citrullus lanatus có nguồn gốc Đông Bắc Phi, chỉ đến Trung Quốc TK X qua Khiết Đan và Hồi Cốt, đến Đại Việt sớm nhất TK XII-XIII. Truyện không xuất hiện trong ba bộ chính sử Việt Nam. Được tiểu thuyết hóa bởi Nguyễn Trọng Thuật (Quả dưa đỏ, 1925) và Tô Hoài (Đảo hoang, 1970)."
 themes:
   - nguon-goc-su-vat

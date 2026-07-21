@@ -97,71 +97,87 @@ sources:
     author: Trần Thế Pháp (14th c.), edited by Vũ Quỳnh and Kiều Phú (1492-1493)
     chapter: "Truyện họ Hồng Bàng (鴻龐氏傳), tale 1; the Ngư Tinh, Hồ Tinh, and Mộc Tinh tales"
     edition: "Đinh Gia Khánh and Nguyễn Ngọc San translation, NXB Văn hóa, Hanoi, 1960. Chinese text: HV.486 (Việt Nam Hán Văn Tiểu Thuyết Tùng San, Taipei 1992); A.2914"
+    url: "https://lib.nomfoundation.org/collection/1/volume/819/"
   - title: "Lĩnh Nam chích quái (Khảo luận, Dịch chú, Nguyên bản chữ Hán)"
     author: Nguyễn Thị Oanh
     chapter: "Truyện họ Hồng Bàng (manuscript A.2914)"
     edition: "NXB Khoa học Xã hội, Hanoi, 2024, 720 pp."
+    url: "https://nxbkhxh.vass.gov.vn/tin-tuc-su-kien/linh-nam-chich-quai-hanh-trinh-gan-25-nam-phuc-dung-mot-di-san-van-hoa-561342"
   - title: Đại Việt Sử Ký Toàn Thư
     author: Ngô Sĩ Liên
     chapter: "Outer Annals, Book I, Hồng Bàng chapter, folios 2a-3a"
     edition: "1479. Ngô Đức Thọ (ed.) translation, NXB Khoa học Xã hội, 1993"
+    url: "https://lib.nomfoundation.org/collection/1/volume/962/"
   - title: Việt sử lược
     author: Anonymous
     chapter: "Book I"
     edition: "c. 1377. Trần Quốc Vượng translation, NXB Văn Sử Địa, 1960"
+    url: "https://quangduc.com/a4699/dai-viet-su-luoc-pdf"
   - title: An Nam chí lược
     author: Lê Tắc
     chapter: "Passages citing the Jiaozhou Waiyu Ji on the Lạc fields, Lạc people, Lạc kings, and Lạc lords"
     edition: "c. 1335. Việt Nam Historical Sources Translation Committee, Huế University, 1961"
+    url: "https://cvdvn.net/wp-content/uploads/2018/03/annam-chiluoc.pdf"
   - title: Việt điện u linh tập
     author: Lý Tế Xuyên
     edition: "c. 1329. Lê Hữu Mục translation, NXB Khai Trí, Saigon, 1960"
+    url: "https://quangduc.com/a4657/viet-dien-u-linh-tap-pdf"
   - title: Thiên Nam ngữ lục
     author: Anonymous
     chapter: "Opening section (of 8,136 lục bát lines)"
     edition: "c. 1682-1709, Nôm script. Nguyễn Thị Lâm edition, NXB Văn học, 2001"
+    url: "http://www.hannom.org.vn/detail.asp?param=419&Catid=366"
   - title: Khâm định Việt sử thông giám cương mục
     author: Nguyễn-dynasty History Office
     chapter: "Emperor Tự Đức's verdict on the Hồng Bàng chapter"
     edition: "1856-1881. Institute of History translation, NXB Giáo dục, 1998"
+    url: "https://lib.nomfoundation.org/collection/1/volume/251/"
   - title: "The Biography of the Hồng Bàng Clan as a Medieval Vietnamese Invented Tradition"
     author: Liam C. Kelley
     chapter: "Journal of Vietnamese Studies 7/2 (2012), pp. 87-130"
+    url: "https://doi.org/10.1525/vs.2012.7.2.87"
   - title: "Comments on Liam Kelley's 'The Biography of the Hồng Bàng Clan as a Medieval Vietnamese Invented Tradition'"
     author: Tạ Chí Đại Trường
     chapter: "Journal of Vietnamese Studies 7/2 (2012), pp. 139-162"
+    url: "https://doi.org/10.1525/vs.2012.7.2.139"
   - title: Thần, Người và Đất Việt
     author: Tạ Chí Đại Trường
     chapter: "On the title Hùng and the ethnonym Lạc (p. 76)"
     edition: "Electronic edition, 2011"
+    url: "https://damau.org/20814/than-nguoi-va-dat-viet"
   - title: The Birth of Vietnam
     author: Keith Weller Taylor
     chapter: "Chapter 1, 'Lac Lords' (pp. 1-44), and Appendix A, 'The Legend of Lac Long Quan and Au Co' (pp. 303-305)"
     edition: "University of California Press, 1983"
+    url: "https://www.ucpress.edu/books/the-birth-of-vietnam/paper"
   - title: A History of the Vietnamese
     author: Keith Weller Taylor
     edition: "Cambridge University Press, 2013"
+    url: "https://doi.org/10.1017/CBO9781139021210"
   - title: "Études d'histoire d'Annam. IV. Le Royaume de Van-lang"
     author: Henri Maspero
     chapter: "BEFEO 18/3 (1918), pp. 1-36"
+    url: "https://www.persee.fr/doc/befeo_0336-1519_1918_num_18_1_5888"
   - title: "Notes sur les origines du peuple annamite"
     author: Léonard Aurousseau
     chapter: "BEFEO 23 (1923)"
+    url: "https://www.persee.fr/doc/befeo_0336-1519_1923_num_23_1_5933"
   - title: "A Mythographical Journey to Modernity: The Textual and Symbolic Transformations of the Hùng Kings Founding Myths"
     author: Nguyễn Thị Điểu
     chapter: "Journal of Southeast Asian Studies 44/2 (2013), pp. 315-337"
+    url: "https://doi.org/10.1017/S002246341300009X"
   - title: "Postcolonial Vietnam: New Histories of the National Past"
     author: Patricia Pelley
     edition: "Duke University Press, 2002"
-  - title: "Vấn đề người Lạc Việt"
-    author: Trần Quốc Vượng
-    chapter: "Thông báo khoa học Sử học, Hanoi University, vol. II (1966), pp. 47-73"
+    url: "https://doi.org/10.1215/9780822384205"
   - title: Khai nguyên rồng tiên
     author: Nguyễn Mạnh Tiến
     edition: "NXB Tao Đàn"
+    url: "https://sachtaodan.vn/khai-nguyen-rong-tien"
   - title: "A Layer of Dongsonian Vocabulary in Vietnamese"
     author: Michel Ferlus
     chapter: "Journal of the Southeast Asian Linguistics Society 1 (2009), pp. 95-109"
+    url: "https://shs.hal.science/halshs-00932218"
 summary: |
   Lạc Long Quân, given name Sùng Lãm, is the dragon lord of the Story of the Hồng Bàng Clan, the opening tale of the Lĩnh Nam Chích Quái: son of Kinh Dương Vương, ruler of the South, and of Thần Long, daughter of the Dragon King of Lake Động Đình. He taught the people to farm, eat, and dress, set the bonds of ruler and subject and parent and child, slew the three demons Ngư Tinh, Hồ Tinh, and Mộc Tinh, and was called Bố, Father, by his people. With the fairy Âu Cơ he fathered a sac of one hundred eggs that hatched one hundred sons, the ancestors of the Hundred Việt; because dragon and fairy are as water and fire, the couple divided the sons, fifty to the sea with him and fifty to the mountains with her, and the eldest of the mountain group became the first Hùng king. The earliest Vietnamese histories, the Việt sử lược (c. 1377) and the An Nam chí lược, do not know him; the tale takes shape in the Lĩnh Nam Chích Quái, enters official history in the Đại Việt Sử Ký Toàn Thư (1479), and is struck from it again by the Nguyễn-dynasty Cương Mục. Modern scholarship debates a medieval "invented tradition" reading (Kelley 2012) against readings that find an indigenous water-spirit core beneath the classical genealogy. Today Lạc Long Quân is venerated as Quốc Tổ, the National Ancestor, at Bình Đà, the Hùng Temple complex, and elsewhere; his memorial day falls on the sixth day of the third lunar month, four days before the Hùng Kings Commemoration.
 themes:
@@ -248,7 +264,7 @@ Taylor reads this whole cluster of images as the trace of "a sea-oriented cultur
 
 ## Narrative Structure: _the mismatched pair and the even division_
 
-**The mismatched pair.** Dragon weds fairy, water weds mountain, South weds North. Conventional yin-yang cosmology assigns water to the feminine; here the father belongs to the water and the mother to the mountain, a reversal that sets the tale apart from the Sinitic cosmological mold (analyzed in full in the Âu Cơ entry). Trần Quốc Vượng, working within the Hùng Vương research program and from his survey of the sources on the Lạc Việt ("Vấn đề người Lạc Việt," 1966, pp. 47-73), read the marriage as encoding the historical merger of the lowland **Lạc Việt** and the highland **Âu Việt**, the two blocs later joined in the kingdom of Âu Lạc. On that reading Lạc Long Quân personifies the river-plain bloc, and the marriage is an alliance of two peoples standing as equals, not a conquest by either.
+**The mismatched pair.** Dragon weds fairy, water weds mountain, South weds North. Conventional yin-yang cosmology assigns water to the feminine; here the father belongs to the water and the mother to the mountain, a reversal that sets the tale apart from the Sinitic cosmological mold (analyzed in full in the Âu Cơ entry).
 
 **The even division.** The parting is the most commonly misread moment in the tale. Read through the frame of a modern family, it is a divorce and a father walking out. The text does not permit that reading, for three reasons. First, the division is exactly even: fifty and fifty, and neither half is the half left behind. Second, the pledge of mutual aid sits inside the parting speech itself: whoever meets trouble sends word, no one abandons the others; and the mechanism of calling Father has already been established earlier in the text as a working one, a call that is answered. Third, the _Thiên Nam ngữ lục_ spells out what the sea branch does: "The father and his sons went down to the water palace / spreading order and administration, guarding the southeast / a hundred channels and a thousand streams flowing forth / with water for a world and waves for majesty." The sea branch does not vanish; the sea branch governs a realm. The division is a **division of rule**: two territories, two heads, one web of kinship. Tạ Chí Đại Trường (JVS 7/2, 2012, pp. 139-162) analyzes how the Hùng Vương legend served successive eras as a frame for ordering the community and legitimating power; within that frame, the parting of mountain and sea reads as the Việt community's first charter of territorial administration, not a family tragedy.
 

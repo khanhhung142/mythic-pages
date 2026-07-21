@@ -57,49 +57,62 @@ sources:
     author: Trần Thế Pháp (soạn TK XIV), Vũ Quỳnh và Kiều Phú (biên tập 1492-1493)
     chapter: "Ngư Tinh truyện (魚精傳), quyển I, truyện thứ 2"
     edition: "Bản Hán: Trần Khánh Hạo chủ biên, Việt Nam Hán Văn Tiểu Thuyết Tùng San, Học Sinh Thư Cục Đài Bắc 1992 (bản nền HV.486); bản chép tay VHV.1473 và VHV.2914 (Viện Hán Nôm), NLVNPF-0652 / R.6 (Thư viện Quốc gia, 39 tờ, đề tên Vũ Quỳnh và Kiều Phú, 38 truyện). Bản dịch: Đinh Gia Khánh và Nguyễn Ngọc San, NXB Văn học 1960; Lê Hữu Mục, Khai Trí 1960 (tái bản Trăm Việt 1982); Nguyễn Hữu Vinh dịch, Trần Đình Hoành bình, dotchuoinon.com 2015"
+    url: "https://dotchuoinon.com/2010/03/05/linh-nam-chich-quai-ca-tinh-ch%E1%BB%93n-tinh-va-cay-tinh/"
   - title: Tân đính Lĩnh Nam Chích Quái
     author: Đoàn Vĩnh Phúc
     chapter: Ngư Tinh
     edition: "Bản A.2914 / VHV.2914, Viện Hán Nôm; biên soạn 1554, sao chép thời Hậu Lê và Tây Sơn"
+    url: "https://lib.nomfoundation.org/collection/1/volume/819/"
   - title: "Lĩnh Nam chích quái (Khảo luận, Dịch chú, Nguyên bản chữ Hán)"
     author: Nguyễn Thị Oanh
     edition: "NXB Khoa học Xã hội, 2024, 720 trang"
+    url: "https://nxbkhxh.vass.gov.vn/tin-tuc-su-kien/linh-nam-chich-quai-hanh-trinh-gan-25-nam-phuc-dung-mot-di-san-van-hoa-561342"
   - title: "Lĩnh Nam chích quái khảo luận, dịch chú (bản A.2914)"
     author: Nguyên Vũ
     chapter: "Truyện Thần ngư tinh, Quyển Thượng, truyện thứ 2, tr. 390"
     edition: "Khảo luận, dịch chú, nguyên bản chữ Hán, dựa trên bản A.2914"
+    url: "https://nxbkhxh.vass.gov.vn/tin-tuc-su-kien/linh-nam-chich-quai-hanh-trinh-gan-25-nam-phuc-dung-mot-di-san-van-hoa-561342"
   - title: "Lĩnh Nam Chích Quái Đẳng Sử Liệu Tam Chủng (嶺南摭怪等史料三種)"
     author: Đới Khả Lai (戴可來) và Dương Bảo Quân (楊保筠) chủ biên
     edition: "NXB Trung Châu Cổ Tịch (中州古籍出版社), 1991"
+    url: "https://books.google.com/books/about/%E5%B2%AD%E5%8D%97%E6%91%AD%E6%80%AA%E7%AD%89%E5%8F%B2%E6%96%99%E4%B8%89%E7%A7%8D.html?id=2WeAvQEACAAJ"
   - title: Đại Việt Sử Ký Toàn Thư
     author: Ngô Sĩ Liên
     chapter: "Ngoại kỷ Quyển I, Kỷ Hồng Bàng"
     edition: "1479. Bản dịch: Viện Sử học, NXB KHXH 1993"
+    url: "https://viensuhoc.vass.gov.vn/cong-trinh-tieu-bieu/dai-viet-su-ky-toan-thu-434956"
   - title: Khâm Định Việt Sử Thông Giám Cương Mục
     author: Quốc Sử Quán triều Nguyễn
     edition: "Biên soạn 1856-1884, thời Tự Đức"
+    url: "https://lib.nomfoundation.org/collection/1/volume/251/"
   - title: Lược khảo về thần thoại Việt Nam
     author: Nguyễn Đổng Chi
     chapter: "Chương VII, phân tích bước chuyển từ thần thoại sang truyền thuyết"
     edition: "Ban Văn Sử Địa, Hà Nội 1956, 185 tr."
+    url: "https://books.google.com/books/about/L%C6%B0%E1%BB%A3c_kh%E1%BA%A3o_v%E1%BB%81_th%E1%BA%A7n_tho%E1%BA%A1i_Vi%E1%BB%87.html?id=IeRCnQEACAAJ"
   - title: "Điểm sách Lược khảo về thần thoại Việt Nam của Nguyễn Đổng Chi"
     author: Lê Văn Hảo
     chapter: "BEFEO, Tome 52, N.1 (1964), tr. 253-256"
     edition: "École française d'Extrême-Orient, 1964"
+    url: "https://www.persee.fr/issue/befeo_0336-1519_1964_num_52_1"
   - title: Tìm hiểu tiến trình văn học dân gian Việt Nam
     author: Cao Huy Đỉnh
     edition: "NXB Khoa học Xã hội, Hà Nội 1974"
+    url: "https://www.sachbaokhang.vn/sach-van-hoc-viet-nam/tim-hieu-tien-trinh-van-hoc-dan-gian-viet-nam"
   - title: The Birth of Vietnam
     author: Keith Weller Taylor
     chapter: "Chương 1 'Lac Lords', tr. 1-41"
     edition: "University of California Press, 1983"
+    url: "https://www.ucpress.edu/books/the-birth-of-vietnam/paper"
   - title: "The Biography of the Hồng Bàng Clan as a Medieval Vietnamese Invented Tradition"
     author: Liam C. Kelley
     chapter: "Journal of Vietnamese Studies, tập 7, số 2 (2012), tr. 87-130"
     edition: "DOI 10.1525/vs.2012.7.2.87"
+    url: "https://doi.org/10.1525/vs.2012.7.2.87"
   - title: Những bài dã sử Việt
     author: Tạ Chí Đại Trường
     edition: "NXB Tri Thức, 2009"
+    url: "https://sachnhanam.com/doc-thu/doc-thu-nhung-bai-da-su-viet-ta-chi-dai-truong/"
 summary: |
   Ngư Tinh truyện (魚精傳) là truyện thứ 2 trong quyển I của Lĩnh Nam Chích Quái, đứng ngay sau Hồng Bàng thị truyện và mở đầu bộ ba diệt yêu. Con tinh ngư xà dài hơn năm mươi trượng, nhiều chân như rết, sống trong hang đá giữa Biển Đông, ăn thịt người đi biển và chặn đứt đường thuyền bè. Lạc Long Quân hóa thành thuyền dân, sai quỷ Dạ Xoa thủy phủ cấm hải thần nổi sóng, nhử cho quái há miệng rồi ném khối sắt nung đỏ vào họng nó, chém đứt đuôi, chém đầu, để thân trôi dạt. Xác quái để lại ba địa danh: Bạch Long Vĩ, Cẩu Đầu Sơn, Mạn Cầu Thủy; trong đó chỉ Bạch Long Vĩ còn được gán cho một hòn đảo có thật, và việc gán này là chuyện muộn (đảo mang tên chính thức từ 1937). Truyện vắng mặt trong chính sử: Toàn Thư lược bỏ, Cương Mục bác bỏ, Việt Điện U Linh loại trừ theo nguyên tắc. Cùng Hồ Tinh và Mộc Tinh, truyện thuộc chu kỳ khai hóa tam sinh thái của Lạc Long Quân, và Ngư Tinh là trận mở đầu: mối họa của biển được dẹp trước tiên.
 themes:

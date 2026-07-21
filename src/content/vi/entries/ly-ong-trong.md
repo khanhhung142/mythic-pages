@@ -52,56 +52,70 @@ sources:
     author: Lý Tế Xuyên
     chapter: "Hiệu úy Uy mãnh Anh liệt Phụ tín Đại Vương (phần Lịch đại phụ thần)"
     edition: "1329. Bản dịch Lê Hữu Mục, NXB Khai Trí, Sài Gòn 1961, tr. 44"
+    url: "https://catalog.hathitrust.org/Record/003603221"
   - title: Lĩnh Nam Chích Quái
     author: Trần Thế Pháp (soạn TK XIV), Vũ Quỳnh và Kiều Phú (biên tập 1492-1493)
     chapter: "Truyện Lý Ông Trọng (truyện thứ 11 trong bản 22 truyện)"
     edition: "Bản dịch Đinh Gia Khánh và Nguyễn Ngọc San, Viện Văn học 1960; tái bản NXB Văn học 2001"
+    url: "https://lib.nomfoundation.org/collection/1/volume/819/"
   - title: Đại Việt Sử Ký Toàn Thư
     author: Ngô Sĩ Liên
     chapter: "Ngoại kỷ toàn thư, quyển 1, kỷ nhà Thục (phụ chép sau bản kỷ An Dương Vương)"
     edition: "1479, bản Nội các quan bản 1697. Bản dịch Viện Sử học, NXB KHXH 1993"
+    url: "https://lib.nomfoundation.org/collection/1/volume/962/"
   - title: Khâm Định Việt Sử Thông Giám Cương Mục
     author: Quốc Sử Quán triều Nguyễn
     chapter: "Tiền biên, quyển I, tr. 9 (phụ lục mục Thục An Dương Vương, kèm lời chua)"
     edition: "1856-1881. Bản dịch Viện Sử học, NXB Giáo Dục 1998"
+    url: "https://lib.nomfoundation.org/collection/1/volume/251/"
   - title: An Nam Chí Lược
     author: Lê Tắc
     chapter: "Ghi việc nhà Trần bắt họ Lý đổi sang họ Nguyễn"
     edition: "1335. Bản dịch Ủy ban phiên dịch sử liệu Việt Nam, Viện Đại học Huế 1961"
+    url: "https://ctext.org/wiki.pl?if=gb&res=588578&remap=gb"
   - title: Sử Ký, Tần Thủy Hoàng bản kỷ
     author: Tư Mã Thiên
     chapter: "Quyển 6, việc đúc kim nhân thập nhị (金人十二) năm 221 TCN; Sách ẩn của Tư Mã Trinh chú: mỗi pho gọi là Ông Trọng"
     edition: "c. 91 TCN; Sách ẩn soạn thời Đường"
+    url: "https://ctext.org/shiji/qin-shi-huang-ben-ji/zh"
   - title: Hoài Nam Tử, thiên Phiếm luận huấn
     author: chú giải của Cao Dụ (高誘, đầu TK III CN)
     chapter: "Quyển 13: người khổng lồ hiện ở Lâm Thao năm 221 TCN, Tần đúc tượng đồng đặt tên Ông Trọng, Quân Hà"
     edition: "Dẫn theo Liam C. Kelley, leminhkhai.blog 2016"
+    url: "https://ctext.org/huainanzi/fan-lun-xun/zh"
   - title: Tống Thư, Ngũ hành chí
     author: Thẩm Ước
     chapter: "Chí 1: năm 237 CN Ngụy Minh Đế đúc cự nhân, hiệu là Ông Trọng"
     edition: "c. 488"
+    url: "https://ctext.org/wiki.pl?if=en&res=973033"
   - title: "Constructing Local Narratives: Spirits, Dreams, and Prophecies in the Medieval Red River Delta"
     author: Liam C. Kelley
     chapter: "trong China's Encounters on the South and Southwest, ed. James A. Anderson và John K. Whitmore, tr. 78-105"
     edition: "Brill, 2015"
+    url: "https://brill.com/display/title/20935"
   - title: "The Real Ông Trọng"
     author: Liam C. Kelley (Le Minh Khai)
     edition: "leminhkhai.blog, 5/6/2016"
+    url: "https://leminhkhai.blog/the-real-ong-tr%E1%BB%8Dng/"
   - title: A Dictionary of Official Titles in Imperial China
     author: Charles O. Hucker
     chapter: "tr. 451, 544 (niên đại các chức Tư lệ Hiệu úy, Đô đốc)"
     edition: "Stanford University Press, 1985"
+    url: "https://www.worldcat.org/title/dictionary-of-official-titles-in-imperial-china/oclc/839297762"
   - title: Kho Tàng Truyện Cổ Tích Việt Nam
     author: Nguyễn Đổng Chi
     chapter: "Lý Ông Trọng hay là sự tích Thánh Chèm (kèm khảo dị)"
     edition: "Biên soạn 1957-1982; NXB Giáo Dục 2000"
+    url: "https://archive.org/details/khotangtruyencotichvietnam_quyen1"
   - title: Bách Việt Tiên Hiền Chí
     author: Âu Đại Nhậm
     chapter: "Mục viên quan Giao Chỉ cuối Hán tự Ông Trọng"
     edition: "Thế kỷ XVI. Dẫn theo Kelley 2016"
+    url: "https://ctext.org/wiki.pl?if=en&res=333701"
   - title: "Hồ sơ Di sản văn hóa phi vật thể quốc gia: Lễ hội đình Chèm"
     author: Bộ Văn hóa, Thể thao và Du lịch
     edition: "Quyết định 2067/QĐ-BVHTTDL, 13/6/2016"
+    url: "https://dsvh.gov.vn/le-hoi-dinh-chem-1274"
 summary: |
   Lý Ông Trọng, tên truyện chép là Lý Thân, người xã Thụy Hương (làng Chèm, Từ Liêm, Hà Nội), là nhân vật khổng lồ trong truyền thuyết Việt Nam, được đặt vào khung niên đại cuối Hùng Vương đến An Dương Vương. Theo Việt điện u linh, Lĩnh Nam chích quái và phần phụ chép của Đại Việt sử ký toàn thư, ông sang Tần làm quan đến chức Tư lệ Hiệu úy, trấn thủ Lâm Thao khiến Hung Nô không dám phạm ải; khi ông mất, Tần Thủy Hoàng đúc tượng đồng rỗng ruột đặt ở cửa Tư Mã thành Hàm Dương, người nấp trong tượng lay cho tượng cử động, Hung Nô tưởng ông còn sống. Từ tích này, "ông trọng" thành danh từ chung chỉ tượng lớn canh lăng mộ ở cả Trung Quốc và Việt Nam. Sử liệu Trung Quốc (chú Cao Dụ cho Hoài Nam Tử, Sách ẩn của Tư Mã Trinh) chỉ chép việc Tần đúc tượng theo hình người khổng lồ hiện ở Lâm Thao, không có nhân vật người Giao Chỉ nào. Giới nghiên cứu chia hai hướng: Nguyễn Đổng Chi, Đinh Gia Khánh, Trần Quốc Vượng đọc ông như anh hùng truyền thuyết của dân gian Việt; Liam Kelley và Tạ Chí Đại Trường coi truyện là kiến tạo thời thuộc Đường, do quan đô hộ Triệu Xương hoặc Tăng Cổn ghép từ các mảnh có sẵn. Ông được thờ làm Đức Thánh Chèm tại đình Chèm, Di tích Quốc gia đặc biệt (2017), với lễ hội 14-16 tháng Năm âm lịch đã vào Danh mục Di sản văn hóa phi vật thể quốc gia (2016).
 themes:

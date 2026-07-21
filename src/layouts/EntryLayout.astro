@@ -183,7 +183,13 @@ function slugToLabel(slug: string): string {
           {data.sources.map((src: any) => (
             <li>
               {src.author && <Fragment>{src.author}. </Fragment>}
-              <em>{src.title}</em>
+              {src.url ? (
+                <a href={src.url} target="_blank" rel="noopener noreferrer">
+                  <em>{src.title}</em>
+                </a>
+              ) : (
+                <em>{src.title}</em>
+              )}
               {src.chapter && <Fragment>. {src.chapter}</Fragment>}
               {src.edition && <Fragment>. {src.edition}</Fragment>}.
               {src.notes && <p class="source-note">{src.notes}</p>}
@@ -712,6 +718,13 @@ header.entry-head::before{
   font-style:italic;
   color:var(--ink);
 }
+.sources a{
+  color:inherit;
+  text-decoration:underline;
+  text-decoration-color:var(--vermilion);
+  text-underline-offset:.2em;
+}
+.sources a:hover em{color:var(--vermilion)}
 .source-note{
   margin:.5rem 0 0;
   font-size:.8rem;

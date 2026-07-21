@@ -51,31 +51,38 @@ sources:
     chapter: "Nhất Dạ Trạch truyện (一夜澤傳), Volume I"
     edition: "Đinh Gia Khánh and Nguyễn Ngọc San ed. (NXB Văn hoá/Văn học, 1960); Nguyễn Hữu Vinh and Trần Đình Hoành annotated ed. (dotchuoinon.com, 2015); Nguyễn Thị Oanh critical ed. (2020). Manuscripts held at the Institute of Hán-Nôm Studies: A.2914, HV 486, VHV 1473."
     notes: "The only source that preserves the complete narrative. Lĩnh Nam chích quái is frequently confused with Việt điện u linh tập; they are different texts."
+    url: "https://lib.nomfoundation.org/collection/1/volume/819/"
   - title: Đại Việt sử ký toàn thư
     author: Ngô Sĩ Liên
     chapter: "Ngoại kỷ, entry on Triệu Việt Vương, year Kỷ Tỵ 2 (549 CE)"
     edition: "Completed 1479; Nội các quan bản edition 1697. Translation by Ngô Đức Thọ and Hoàng Văn Lâu, edited by Hà Văn Tấn, NXB Khoa học Xã hội."
     notes: "The official history does not devote a separate entry to Chử Đồng Tử. He appears only in a gloss marked 'popular tradition' under the Triệu Quang Phục entry, followed by Ngô Sĩ Liên's own criticism that such stories were invented to lend sanctity to objects."
+    url: "https://lib.nomfoundation.org/collection/1/volume/962/"
   - title: Khâm định Việt sử thông giám cương mục
     author: National History Office, Nguyễn dynasty
     chapter: "Entry on Triệu Việt Vương, gloss reading 'Old histories note that popular tradition holds...'"
     edition: "Completed 1856-1884. Translation by the Institute of History, NXB Giáo dục."
     notes: "Follows the Toàn thư pattern: Chử Đồng Tử appears only as a gloss on the Triệu Quang Phục story, with no independent entry."
+    url: "https://lib.nomfoundation.org/collection/1/volume/251/"
   - title: Lịch sử Phật giáo Việt Nam, vol. 1
     author: Lê Mạnh Thát
     edition: "NXB Thuận Hoá, 1999; repr. 2023"
     notes: "Argues Chử Đồng Tử was 'Vietnam's first Buddhist.' Identifies Quỳnh Viên as Nam Giới Mountain, Sót estuary, Hà Tĩnh. Contested; no archaeological excavation has confirmed this."
+    url: "https://thuvienhoasen.org/images/file/EM3D0rMP2AgQAHpp/lich-su-phat-giao-viet-nam-tap-1-le-manh-that.pdf"
   - title: Thần, Người và Đất Việt
     author: Tạ Chí Đại Trường
     edition: "California 1989; repr. Nhã Nam, NXB Tri Thức"
     notes: "Introduces the layering framework of 'human deity overlaid on celestial deity, celestial deity overlaid on nature deity', still the most useful theoretical lens for reading Chử Đồng Tử."
+    url: "https://damau.org/20814/than-nguoi-va-dat-viet"
   - title: Tứ bất tử
     author: Vũ Ngọc Khánh and Ngô Đức Thịnh
     edition: "NXB Văn hoá Dân tộc, 1990/1991; repr. NXB Tri Thức 2025"
     notes: "The work that popularized the 'Four Immortals' pantheon including Chử Đồng Tử in modern Vietnamese folklore studies. Chu Xuân Giao (Journal of Religious Studies, 1/2014) shows that this fixed four-figure list does not actually appear in Hội Chân Biên as previously claimed."
+    url: "https://thuvientinh.quangngai.gov.vn/tu-bat-tu-bon-vi-thanh-bat-tu-cua-viet-nam/"
   - title: Đạo giáo với văn hoá Việt Nam
     author: Nguyễn Đăng Duy
     notes: "Argues the 'Chử Đạo Tổ' title, founder-patriarch of Vietnamese Daoism. Nguyễn Duy Hinh counters: the figure belongs to 'immortal religion,' not formal Daoist tradition."
+    url: "http://web.archive.org/web/20240519060748/https://timtailieu.vn/tai-lieu/dao-giao-va-van-hoa-viet-nam-29373/"
 summary: "Chử Đồng Tử started with nothing: so poor he gave his father the only loincloth they owned for burial, then lived naked on the Red River banks. A chance encounter with Princess Tiên Dung on a sandbar led to an impromptu marriage, exile from court, and an unlikely merchant career. After receiving a magic staff and hat from a Buddhist monk at Quỳnh Viên, the couple raised a palace overnight, then vanished into the sky as the king's army approached, leaving behind the marsh called Nhất Dạ Trạch. Centuries later in the legend's chronology, he appeared to give the resistance leader Triệu Quang Phục a dragon's claw for fighting off the Liang invaders. He is counted among the Four Immortals (Tứ bất tử) and worshipped across more than seventy Red River villages. He is also claimed as both Vietnam's first Buddhist and its founding Daoist patriarch, a contradiction nobody has resolved."
 themes:
   - tu-bat-tu

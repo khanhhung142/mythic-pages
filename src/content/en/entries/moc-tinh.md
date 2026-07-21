@@ -58,50 +58,63 @@ sources:
     author: Trần Thế Pháp (14th c.), Vũ Quỳnh and Kiều Phú (eds., 1492-1493)
     chapter: "Mộc Tinh truyện (木精傳), fascicle I, story 4"
     edition: "Translations: Đinh Gia Khánh and Nguyễn Ngọc San, NXB Văn học 1960 (repr. 1990); Lê Hữu Mục, Khai Trí 1960"
+    url: "https://www.nxbtre.com.vn/sach/cao-thom-truoc-den-linh-nam-chich-quai-11777.html"
   - title: "Lĩnh Nam Chích Quái (scholarly Hán edition)"
     author: Trần Khánh Hạo (ed.)
     chapter: 木精傳
     edition: "Việt Nam Hán Văn Tiểu Thuyết Tùng San, Học Sinh Thư Cục, Taipei 1992 (base ms. HV.486)"
+    url: "https://ndlsearch.ndl.go.jp/en/books/R100000002-Ia0000034633"
   - title: Tân đính Lĩnh Nam Chích Quái
     author: Đoàn Vĩnh Phúc
     chapter: Mộc Tinh
     edition: "Ms. A.2914 / VHV.2914, Institute of Hán-Nôm Studies; compiled 1554, copied in the Later Lê and Tây Sơn periods"
+    url: "https://hannom.vass.gov.vn/"
   - title: Lĩnh Nam Chích Quái Bình giải
     author: Nguyễn Hữu Vinh (trans.), Trần Đình Hoành (comm.)
     chapter: "The Tree Spirit"
     edition: "dotchuoinon.com, 2015, from the Taipei 1992 edition"
+    url: "https://dotchuoinon.com/2010/03/05/linh-nam-chich-quai-ca-tinh-ch%E1%BB%93n-tinh-va-cay-tinh/"
   - title: "Lĩnh Nam chích quái (Khảo luận, Dịch chú, Nguyên bản chữ Hán)"
     author: Nguyễn Thị Oanh
     edition: "NXB Khoa học Xã hội, 2024, 720 pp. (expanded from her 2005 doctoral dissertation, Hanoi National University of Education)"
+    url: "https://nxbkhxh.vass.gov.vn/tin-tuc-su-kien/linh-nam-chich-quai-hanh-trinh-gan-25-nam-phuc-dung-mot-di-san-van-hoa-561342"
   - title: Đại Việt Sử Ký Toàn Thư
     author: Ngô Sĩ Liên
     chapter: "Outer Annals, Hồng Bàng Era"
     edition: "1479. Translation: Institute of History, NXB KHXH 1993"
+    url: "https://lib.nomfoundation.org/collection/1/volume/962/"
   - title: Thiên Nam Vân Lục Liệt Truyện
     author: Nguyễn Hãng (Nại Hiên)
     chapter: "The Tale of the Demon Xương Cuồng"
     edition: "Reign of Lê Thánh Tông (1460-1479); variant naming the exorcist Vân Du"
+    url: "https://hannom.vass.gov.vn/"
   - title: Vũ Trung Tùy Bút
     author: Phạm Đình Hổ
     chapter: "Record of the tiger-demon cult at Ngọc Cục village, Đường An, Hải Dương"
     edition: "18th century; the cult lasted until 1800 and is compared directly to the Xương Cuồng sacrifice"
+    url: "https://lib.nomfoundation.org/collection/1/volume/447/"
   - title: The Birth of Vietnam
     author: Keith Weller Taylor
     chapter: "p. 5 (n. 15), pp. 9-10"
     edition: "University of California Press, 1983"
+    url: "https://www.ucpress.edu/books/the-birth-of-vietnam/paper"
   - title: "The Biography of the Hồng Bàng Clan as a Medieval Vietnamese Invented Tradition"
     author: Liam C. Kelley
     chapter: "Journal of Vietnamese Studies 7, no. 2 (2012), pp. 87-130"
     edition: "DOI 10.1525/vs.2012.7.2.87"
+    url: "https://doi.org/10.1525/vs.2012.7.2.87"
   - title: "Comments on Liam Kelley's 'The Biography of the Hồng Bàng Clan as a Medieval Invented Tradition'"
     author: Tạ Chí Đại Trường (trans. Trần Hạnh)
     chapter: "Journal of Vietnamese Studies 7, no. 2 (2012), pp. 139-162"
+    url: "https://online.ucpress.edu/jvs/article-abstract/7/2/139/60659/Comments-on-Liam-Kelley-s-The-Biography-of-the-H"
   - title: "Cọp, từ Mộc Tinh đến ông Ba Mươi"
     author: Đặng Tiến
     edition: "2010; the Xương Cuồng as Tiger God argument"
+    url: "https://www.diendan.org/phe-binh-nghien-cuu/cop-tu-moc-tinh-111en-ong-ba-muoi"
   - title: Thần, Người và Đất Việt
     author: Tạ Chí Đại Trường
     edition: "California 1989; Vietnamese reprints 2006 and 2014"
+    url: "https://www.khaitam.com/lich-su-1/than-nguoi-va-dat-viet-1"
 summary: |
   Mộc Tinh truyện (木精傳) tells of a millennial chiên đàn tree in the land of Phong Châu, over a thousand arm-spans tall, its canopy covering thousands of leagues, which withered and turned into a man-eating demon. The first battle only subdued the demon without killing it; the people had to build a shrine and offer one living person every year on the 30th day of the 12th lunar month, calling the demon Thần Xương Cuồng. Under the Qin, the magistrate Nhâm Ngao tried to abolish the sacrifice and was killed. Only in the reign of Đinh Tiên Hoàng did the Taoist Văn Du Tường lure Xương Cuồng out with a six-man acrobatic troupe, then kill it with a secret incantation and a sword, ending a sacrifice tradition that the tale stretches across thousands of years. The story carries the sharpest textual problem of the demon-slaying trio: the Hán original credits the first victory to Kinh Dương Vương, while folk tradition assigns it to Lạc Long Quân. The main analytical layers: the three meanings of the tree's name (Buddhist, vernacular Nôm, World Tree), Đặng Tiến's hypothesis that Xương Cuồng is the Tiger God, and the Sinification paradox of a native demon finished off by a northern Taoist.
 themes:

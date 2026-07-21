@@ -49,49 +49,62 @@ sources:
     author: Trần Thế Pháp (soạn TK XIV), Vũ Quỳnh và Kiều Phú (biên tập 1492-1493)
     chapter: "Chưng Bính truyện (蒸餅傳), quyển I, truyện thứ 8"
     edition: "Bản Hán: Trần Khánh Hạo chủ biên, Việt Nam Hán Văn Tiểu Thuyết Tùng San, Học Sinh Thư Cục Đài Bắc 1992; Wikisource 嶺南摭怪/蒸餅傳; Chinese Text Project. Bản dịch: Đinh Gia Khánh và Nguyễn Ngọc San, NXB Văn hóa 1960 (tái bản NXB Văn học 1990, NXB Kim Đồng 2017); Lê Hữu Mục, NXB Khai Trí Sài Gòn 1960"
+    url: "https://ctext.org/wiki.pl?chapter=414213&if=en"
   - title: "Lĩnh Nam Chích Quái (Khảo luận, Dịch chú, Nguyên bản chữ Hán)"
     author: Nguyễn Thị Oanh (chủ biên)
     chapter: "Chưng Bính truyện, bản nền A.2914 Viện Hán Nôm, có bộ máy khảo dị"
     edition: "NXB Khoa học Xã hội (tái bản Đinh Tị Books)"
+    url: "https://nxbkhxh.vass.gov.vn/tin-tuc-su-kien/linh-nam-chich-quai-hanh-trinh-gan-25-nam-phuc-dung-mot-di-san-van-hoa-561342"
   - title: Lĩnh Nam Chích Quái Bình giải
     author: Nguyễn Hữu Vinh dịch, Trần Đình Hoành bình
     chapter: "Truyện Chưng Bính"
     edition: "dotchuoinon.com 2015 (PDF 18/3/2015), từ bản Học Sinh Thư Cục Đài Bắc 1992"
+    url: "https://dotchuoinon.com/2010/02/15/linh-nam-chich-quai-i/"
   - title: "Bibliographie annamite"
     author: Émile Gaspardone
     chapter: "Mục LNCQ, tr. 128-129; mô tả các bản A.33, A.749, A.750, A.1200, A.1300, A.1897, A.1920, A.2914"
     edition: "BEFEO tập XXXIV, 1934"
+    url: "https://www.persee.fr/doc/befeo_0336-1519_1934_num_34_1_4960"
   - title: "Études d'histoire d'Annam. IV. Le Royaume de Van-lang"
     author: Henri Maspero
     chapter: "BEFEO tập 18 (1918), tr. 1-36; chú thích 2 về tập sách phổ biến 18 đời Hùng Vương"
     edition: "EFEO, 1918"
+    url: "https://www.persee.fr/doc/befeo_0336-1519_1918_num_18_1_5888"
   - title: Lược khảo về thần thoại Việt Nam
     author: Nguyễn Đổng Chi
     edition: "Ban Văn Sử Địa, Hà Nội 1956, 185 tr."
+    url: "http://www.thuvienmythuat.vn/cgi-bin/koha/opac-detail.pl?biblionumber=6937"
   - title: Kho tàng truyện cổ tích Việt Nam
     author: Nguyễn Đổng Chi
     chapter: "Gốc tích bánh chưng và bánh dày (tập I, số 1, mục Sự tích đất nước)"
     edition: "5 tập, 1957-1982"
+    url: "https://opac.nlv.gov.vn/chi-tiet-tai-lieu/kho-tang-truyen-co-tich-viet-nam.-t.2-20251142790518142931"
   - title: Tìm hiểu tiến trình văn học dân gian Việt Nam
     author: Cao Huy Đỉnh
     edition: "NXB Khoa học Xã hội, 1974"
+    url: "https://archive.org/details/vh.caohuydinhtuyentaptacpham"
   - title: "The Biography of the Hồng Bàng Clan as a Medieval Vietnamese Invented Tradition"
     author: Liam C. Kelley
     chapter: "Journal of Vietnamese Studies 7/2 (2012), tr. 87-130"
+    url: "https://doi.org/10.1525/vs.2012.7.2.87"
   - title: "Comments on Liam Kelley's article"
     author: Tạ Chí Đại Trường
     chapter: "Journal of Vietnamese Studies 7/2 (2012), tr. 139-162"
+    url: "https://doi.org/10.1525/vs.2012.7.2.139"
   - title: "A mythographical journey to modernity: The textual and symbolic transformations of the Hùng Kings founding myths"
     author: Nguyễn Thị Điểu
     edition: "Journal of Southeast Asian Studies, Cambridge University Press, 2013/2014"
+    url: "https://www.cambridge.org/core/journals/journal-of-southeast-asian-studies/article/abs/mythographical-journey-to-modernity-the-textual-and-symbolic-transformations-of-the-hung-kings-founding-myths/4444E56BF953F891ADB9FB2FC4E790CE"
   - title: The Birth of Vietnam
     author: Keith Weller Taylor
     chapter: "tr. 1-44; Phụ lục A tr. 303-305"
     edition: "University of California Press, 1983"
+    url: "https://www.ucpress.edu/books/the-birth-of-vietnam/paper"
   - title: Hùng Đồ Thập Bát Diệp Thánh Vương Ngọc Phả Cổ Truyền
     author: Khuyết danh (cấp phát triều Lê Thánh Tông, 1472)
     chapter: "Đời thứ bảy: Hùng Chiêu Vương / Lang Liêu"
     edition: "Lưu tại Viện Hán Nôm và đền làng Phú Thọ; nhắc trong Maspero, BEFEO 18 (1918), tr. 1, chú thích 2"
+    url: "https://web.archive.org/web/20260521114333/http://www.ngotoc.vn/Nghien-cuu-Trao-doi/gioi-thieu-toan-van-ban-dich-ngoc-pha-hung-vuong-353.html"
 summary: |
   Chưng Bính truyện (蒸餅傳) là truyện thứ tám trong quyển I của Lĩnh Nam Chích Quái, giải thích nguồn gốc bánh chưng và bánh giầy qua cuộc thi kế vị đời Hùng Vương thứ sáu: hai mươi hai hoàng tử đi tìm của ngon vật lạ dâng cúng tiên vương, riêng người con thứ mười tám là Lang Liêu, mẹ mất sớm, không có gì ngoài gạo nếp, được thần nhân báo mộng chỉ cách làm hai thứ bánh vuông và tròn tượng hình đất trời. Vua chấm bánh của Lang Liêu đúng nhất và truyền ngôi cho ông. Văn bản hiện còn là sản phẩm của lần biên tập 1492-1493 (Vũ Quỳnh, Kiều Phú), trên nguyên cảo gán cho Trần Thế Pháp (TK XIV). Truyện gắn ba tầng nghĩa vào một vật thực: vũ trụ quan vuông tròn, đạo hiếu, và tính chính danh của ngôi vua; đến nay vẫn là truyền thuyết được dạy đầu tiên trong chương trình Ngữ Văn phổ thông.
 themes:

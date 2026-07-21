@@ -97,71 +97,87 @@ sources:
     author: Trần Thế Pháp (soạn TK XIV), Vũ Quỳnh và Kiều Phú (biên tập 1492-1493)
     chapter: "Truyện họ Hồng Bàng (鴻龐氏傳), truyện 1; các truyện Ngư Tinh, Hồ Tinh, Mộc Tinh"
     edition: "Bản dịch Đinh Gia Khánh và Nguyễn Ngọc San, NXB Văn hóa, Hà Nội, 1960. Bản Hán: HV.486 (Việt Nam Hán Văn Tiểu Thuyết Tùng San, Học Sinh Thư Cục Đài Bắc 1992); A.2914"
+    url: "https://lib.nomfoundation.org/collection/1/volume/819/"
   - title: "Lĩnh Nam chích quái (Khảo luận, Dịch chú, Nguyên bản chữ Hán)"
     author: Nguyễn Thị Oanh
     chapter: "Truyện họ Hồng Bàng (bản A.2914)"
     edition: "NXB Khoa học Xã hội, Hà Nội, 2024, 720 tr."
+    url: "https://nxbkhxh.vass.gov.vn/tin-tuc-su-kien/linh-nam-chich-quai-hanh-trinh-gan-25-nam-phuc-dung-mot-di-san-van-hoa-561342"
   - title: Đại Việt Sử Ký Toàn Thư
     author: Ngô Sĩ Liên
     chapter: "Ngoại kỷ Quyển I, Kỷ Hồng Bàng thị, tờ 2a-3a"
     edition: "1479. Bản dịch Ngô Đức Thọ chủ biên, NXB Khoa học Xã hội, 1993"
+    url: "https://lib.nomfoundation.org/collection/1/volume/962/"
   - title: Việt sử lược
     author: Khuyết danh
     chapter: "Quyển I, Quốc sơ diên cách"
     edition: "c. 1377. Bản dịch Trần Quốc Vượng, NXB Văn Sử Địa, 1960"
+    url: "https://quangduc.com/a4699/dai-viet-su-luoc-pdf"
   - title: An Nam chí lược
     author: Lê Tắc
     chapter: "Phần dẫn Giao Châu Ngoại Vực Ký về Lạc điền, Lạc Dân, Lạc Vương, Lạc Tướng"
     edition: "c. 1335. Bản dịch Ủy ban Phiên Dịch Sử Liệu Việt Nam, Viện Đại Học Huế, 1961"
+    url: "https://cvdvn.net/wp-content/uploads/2018/03/annam-chiluoc.pdf"
   - title: Việt điện u linh tập
     author: Lý Tế Xuyên
     edition: "c. 1329. Bản dịch Lê Hữu Mục, NXB Khai Trí, Sài Gòn, 1960"
+    url: "https://quangduc.com/a4657/viet-dien-u-linh-tap-pdf"
   - title: Thiên Nam ngữ lục
     author: Khuyết danh
     chapter: "Đoạn mở đầu (trong 8.136 câu lục bát)"
     edition: "c. 1682-1709, chữ Nôm. Bản Nguyễn Thị Lâm, NXB Văn học, 2001"
+    url: "http://www.hannom.org.vn/detail.asp?param=419&Catid=366"
   - title: Khâm định Việt sử thông giám cương mục
     author: Quốc sử quán triều Nguyễn
     chapter: "Lời phê của vua Tự Đức về Kỷ Hồng Bàng"
     edition: "1856-1881. Bản dịch Viện Sử học, NXB Giáo dục, 1998"
+    url: "https://lib.nomfoundation.org/collection/1/volume/251/"
   - title: "The Biography of the Hồng Bàng Clan as a Medieval Vietnamese Invented Tradition"
     author: Liam C. Kelley
     chapter: "Journal of Vietnamese Studies 7/2 (2012), tr. 87-130"
+    url: "https://doi.org/10.1525/vs.2012.7.2.87"
   - title: "Comments on Liam Kelley's 'The Biography of the Hồng Bàng Clan as a Medieval Vietnamese Invented Tradition'"
     author: Tạ Chí Đại Trường
     chapter: "Journal of Vietnamese Studies 7/2 (2012), tr. 139-162"
+    url: "https://doi.org/10.1525/vs.2012.7.2.139"
   - title: Thần, Người và Đất Việt
     author: Tạ Chí Đại Trường
     chapter: "Phần về danh xưng Hùng và tộc danh Lạc (tr. 76)"
     edition: "Bản điện tử 2011"
+    url: "https://damau.org/20814/than-nguoi-va-dat-viet"
   - title: The Birth of Vietnam
     author: Keith Weller Taylor
     chapter: "Chương 1 'Lac Lords' (tr. 1-44) và Phụ lục A 'The Legend of Lac Long Quan and Au Co' (tr. 303-305)"
     edition: "University of California Press, 1983"
+    url: "https://www.ucpress.edu/books/the-birth-of-vietnam/paper"
   - title: A History of the Vietnamese
     author: Keith Weller Taylor
     edition: "Cambridge University Press, 2013"
+    url: "https://doi.org/10.1017/CBO9781139021210"
   - title: "Études d'histoire d'Annam. IV. Le Royaume de Van-lang"
     author: Henri Maspero
     chapter: "BEFEO 18/3 (1918), tr. 1-36"
+    url: "https://www.persee.fr/doc/befeo_0336-1519_1918_num_18_1_5888"
   - title: "Notes sur les origines du peuple annamite"
     author: Léonard Aurousseau
     chapter: "BEFEO 23 (1923)"
+    url: "https://www.persee.fr/doc/befeo_0336-1519_1923_num_23_1_5933"
   - title: "A Mythographical Journey to Modernity: The Textual and Symbolic Transformations of the Hùng Kings Founding Myths"
     author: Nguyễn Thị Điểu
     chapter: "Journal of Southeast Asian Studies 44/2 (2013), tr. 315-337"
+    url: "https://doi.org/10.1017/S002246341300009X"
   - title: "Postcolonial Vietnam: New Histories of the National Past"
     author: Patricia Pelley
     edition: "Duke University Press, 2002"
-  - title: "Vấn đề người Lạc Việt"
-    author: Trần Quốc Vượng
-    chapter: "Thông báo khoa học Sử học, Đại học Tổng hợp Hà Nội, tập II (1966), tr. 47-73"
+    url: "https://doi.org/10.1215/9780822384205"
   - title: Khai nguyên rồng tiên
     author: Nguyễn Mạnh Tiến
     edition: "NXB Tao Đàn"
+    url: "https://sachtaodan.vn/khai-nguyen-rong-tien"
   - title: "A Layer of Dongsonian Vocabulary in Vietnamese"
     author: Michel Ferlus
     chapter: "Journal of the Southeast Asian Linguistics Society 1 (2009), tr. 95-109"
+    url: "https://shs.hal.science/halshs-00932218"
 summary: |
   Lạc Long Quân, tên thật Sùng Lãm, là vị chúa nòi rồng trong Truyện họ Hồng Bàng mở đầu Lĩnh Nam Chích Quái, con của Kinh Dương Vương và Thần Long con gái Long Vương hồ Động Đình. Ngài dạy dân cày cấy, đặt trật tự vua tôi cha con, trừ ba loài yêu quái Ngư Tinh, Hồ Tinh, Mộc Tinh, và được dân gọi là Bố. Ngài kết duyên với nàng tiên Âu Cơ, sinh bọc trăm trứng nở trăm con trai, thủy tổ Bách Việt; vì rồng tiên thủy hỏa khắc nhau, hai người chia con, năm mươi theo cha xuống biển, năm mươi theo mẹ lên núi, con trưởng nhóm theo mẹ thành Hùng Vương thứ nhất. Việt sử lược (c. 1377) và An Nam chí lược chưa có nhân vật này; truyện định hình ở Lĩnh Nam Chích Quái rồi vào chính sử qua Đại Việt Sử Ký Toàn Thư (1479), đến triều Nguyễn lại bị Cương Mục loại khỏi chính sử. Học giới tranh luận giữa thuyết "truyền thống được kiến tạo" trung đại (Kelley 2012) và các cách đọc tìm lõi thủy thần bản địa. Ngày nay Lạc Long Quân được thờ với tư cách Quốc Tổ tại Bình Đà, Đền Hùng và nhiều nơi khác; giỗ ngài ngày 6 tháng 3 âm lịch, bốn ngày trước Giỗ Tổ Hùng Vương.
 themes:
@@ -248,7 +264,7 @@ Taylor đọc cả cụm hình tượng này như dấu vết "một nền văn 
 
 ## Cấu trúc tự sự: _cặp đôi dị chủng và phép chia đôi_
 
-**Cặp đôi dị chủng.** Rồng lấy tiên, nước lấy non, phương Nam lấy phương Bắc. Thông lệ âm dương gán nước cho âm, cho nữ; ở đây người cha gắn với nước, người mẹ gắn với núi. Cách gán ngược này tách truyện khỏi khuôn vũ trụ luận Trung Hoa (phân tích đầy đủ ở entry Âu Cơ). Trần Quốc Vượng, trong chương trình nghiên cứu thời đại Hùng Vương và từ khảo sát sử liệu về địa bàn người Lạc Việt ("Vấn đề người Lạc Việt", 1966, tr. 47-73), đọc cuộc hôn phối như mã hóa cuộc hợp nhất giữa người **Lạc Việt** đồng bằng và người **Âu Việt** miền núi, hai khối sau này gộp thành nước Âu Lạc. Đọc theo hướng ấy, Lạc Long Quân là nhân cách hóa của khối đồng bằng sông nước, và cuộc hôn nhân là một liên minh giữa hai tộc ngang hàng, không phải cuộc chinh phục của bên nào.
+**Cặp đôi dị chủng.** Rồng lấy tiên, nước lấy non, phương Nam lấy phương Bắc. Thông lệ âm dương gán nước cho âm, cho nữ; ở đây người cha gắn với nước, người mẹ gắn với núi. Cách gán ngược này tách truyện khỏi khuôn vũ trụ luận Trung Hoa (phân tích đầy đủ ở entry Âu Cơ).
 
 **Phép chia đôi 50/50.** Điểm dễ đọc sai nhất của tích là khoảnh khắc chia tay. Đọc bằng khung gia đình hiện đại, đó là một cuộc ly hôn và một người cha bỏ đi. Văn bản không cho phép cách đọc ấy, vì ba lẽ. Thứ nhất, phép chia tuyệt đối cân: năm mươi và năm mươi, không bên nào là bên bị bỏ lại. Thứ hai, lời hẹn tương trợ nằm ngay trong lời chia: có việc thì báo cho nhau, đừng bỏ nhau; và cơ chế "gọi Bố" đã được văn bản xác lập từ trước đó như một cơ chế vận hành thật, gọi là đến. Thứ ba, _Thiên Nam ngữ lục_ chép rõ nhánh xuống biển làm gì: "Cha con xuống ở thủy cung / Mở mang chế độ, quan phòng đông nam / Trăm ngòi ngàn lạch tuôn đem / Nước làm thế giới, sóng làm uy linh". Nhánh biển không biến mất; nhánh biển cai quản một cõi. Phép chia là phép **phân trị**: hai vùng lãnh thổ, hai người đứng đầu, một mạng lưới huyết thống. Tạ Chí Đại Trường (JVS 7/2, 2012, tr. 139-162) phân tích cách truyền thuyết Hùng Vương được các đời dùng làm khung sắp xếp trật tự cộng đồng và hợp thức hóa quyền lực; trong khung ấy, cuộc chia non nước đọc như một bản phân công cai quản đầu tiên của cộng đồng Việt, không phải một bi kịch gia đình.
 

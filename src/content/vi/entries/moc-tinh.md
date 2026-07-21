@@ -59,50 +59,63 @@ sources:
     author: Trần Thế Pháp (soạn TK XIV), Vũ Quỳnh và Kiều Phú (biên tập 1492-1493)
     chapter: "Mộc Tinh truyện (木精傳), quyển I, truyện thứ 4"
     edition: "Bản dịch: Đinh Gia Khánh và Nguyễn Ngọc San, NXB Văn học 1960 (tái bản 1990); Lê Hữu Mục, Khai Trí 1960"
+    url: "https://www.nxbtre.com.vn/sach/cao-thom-truoc-den-linh-nam-chich-quai-11777.html"
   - title: "Lĩnh Nam Chích Quái (bản Hán văn học thuật)"
     author: Trần Khánh Hạo chủ biên
     chapter: 木精傳
     edition: "Việt Nam Hán Văn Tiểu Thuyết Tùng San, Học Sinh Thư Cục, Đài Bắc 1992 (bản nền HV.486)"
+    url: "https://ndlsearch.ndl.go.jp/en/books/R100000002-Ia0000034633"
   - title: Tân đính Lĩnh Nam Chích Quái
     author: Đoàn Vĩnh Phúc
     chapter: Mộc Tinh
     edition: "Bản A.2914 / VHV.2914, Viện Hán Nôm; biên soạn 1554, sao chép thời Hậu Lê và Tây Sơn"
+    url: "https://hannom.vass.gov.vn/"
   - title: Lĩnh Nam Chích Quái Bình giải
     author: Nguyễn Hữu Vinh dịch, Trần Đình Hoành bình
     chapter: "Truyện cây tinh"
     edition: "dotchuoinon.com, 2015, từ bản Học Sinh Thư Cục Đài Bắc 1992"
+    url: "https://dotchuoinon.com/2010/03/05/linh-nam-chich-quai-ca-tinh-ch%E1%BB%93n-tinh-va-cay-tinh/"
   - title: "Lĩnh Nam chích quái (Khảo luận, Dịch chú, Nguyên bản chữ Hán)"
     author: Nguyễn Thị Oanh
     edition: "NXB Khoa học Xã hội, 2024, 720 trang (mở rộng từ luận án tiến sĩ ĐH Sư phạm Hà Nội 2005)"
+    url: "https://nxbkhxh.vass.gov.vn/tin-tuc-su-kien/linh-nam-chich-quai-hanh-trinh-gan-25-nam-phuc-dung-mot-di-san-van-hoa-561342"
   - title: Đại Việt Sử Ký Toàn Thư
     author: Ngô Sĩ Liên
     chapter: "Ngoại kỷ, Kỷ Hồng Bàng"
     edition: "1479. Bản dịch: Viện Sử học, NXB KHXH 1993"
+    url: "https://lib.nomfoundation.org/collection/1/volume/962/"
   - title: Thiên Nam Vân Lục Liệt Truyện
     author: Nguyễn Hãng (Nại Hiên tiên sinh)
     chapter: "Truyện Quỷ Xương Cuồng"
     edition: "Thời Lê Thánh Tông (1460-1479); dị bản gọi pháp sư là Vân Du"
+    url: "https://hannom.vass.gov.vn/"
   - title: Vũ Trung Tùy Bút
     author: Phạm Đình Hổ
     chapter: "Ghi chép tục thờ yêu hổ ở làng Ngọc Cục, Đường An, Hải Dương"
     edition: "Thế kỷ 18; tục kéo dài tới năm 1800, được so sánh trực tiếp với tục tế Xương Cuồng"
+    url: "https://lib.nomfoundation.org/collection/1/volume/447/"
   - title: The Birth of Vietnam
     author: Keith Weller Taylor
     chapter: "tr. 5 (chú thích 15), tr. 9-10"
     edition: "University of California Press, 1983"
+    url: "https://www.ucpress.edu/books/the-birth-of-vietnam/paper"
   - title: "The Biography of the Hồng Bàng Clan as a Medieval Vietnamese Invented Tradition"
     author: Liam C. Kelley
     chapter: "Journal of Vietnamese Studies, tập 7, số 2 (2012), tr. 87-130"
     edition: "DOI 10.1525/vs.2012.7.2.87"
+    url: "https://doi.org/10.1525/vs.2012.7.2.87"
   - title: "Comments on Liam Kelley's 'The Biography of the Hồng Bàng Clan as a Medieval Invented Tradition'"
     author: Tạ Chí Đại Trường (Trần Hạnh dịch)
     chapter: "Journal of Vietnamese Studies, tập 7, số 2 (2012), tr. 139-162"
+    url: "https://online.ucpress.edu/jvs/article-abstract/7/2/139/60659/Comments-on-Liam-Kelley-s-The-Biography-of-the-H"
   - title: "Cọp, từ Mộc Tinh đến ông Ba Mươi"
     author: Đặng Tiến
     edition: "2010; luận điểm Xương Cuồng là Thần Hổ"
+    url: "https://www.diendan.org/phe-binh-nghien-cuu/cop-tu-moc-tinh-111en-ong-ba-muoi"
   - title: Thần, Người và Đất Việt
     author: Tạ Chí Đại Trường
     edition: "California 1989; tái bản trong nước 2006 và 2014"
+    url: "https://www.khaitam.com/lich-su-1/than-nguoi-va-dat-viet-1"
 summary: |
   Mộc Tinh truyện (木精傳) kể về cây chiên đàn ngàn năm ở đất Phong Châu, cao hơn ngàn nhẫn, cành lá che rợp mấy ngàn dặm, khô mục rồi hóa yêu tinh ăn thịt người. Trận đánh đầu chỉ khuất phục được yêu chứ không giết được; dân phải lập đền, mỗi năm ngày 30 tháng Chạp dâng một người sống, gọi yêu là Thần Xương Cuồng. Thời Tần, Nhâm Ngao muốn bỏ tục hiến tế thì bị giết. Mãi đến đời Đinh Tiên Hoàng, đạo sĩ Văn Du Tường mới dùng đoàn tạp kỹ sáu người dụ Xương Cuồng đến xem rồi đọc mật chú chém chết, chấm dứt tục hiến tế người kéo dài hàng nghìn năm. Truyện mang vấn đề văn bản học đáng chú ý nhất của bộ ba diệt yêu: nguyên bản Hán văn chép người thắng trận đầu là Kinh Dương Vương, trong khi truyền thống dân gian quy công cho Lạc Long Quân. Các tầng phân tích chính: ba lớp nghĩa của tên cây chiên đàn (Phật giáo, Nôm, Cây Vũ Trụ), giả thuyết Xương Cuồng là Thần Hổ của Đặng Tiến, và nghịch lý Hán hóa khi yêu quái bản địa cuối cùng bị một đạo sĩ phương Bắc tiêu diệt.
 themes:

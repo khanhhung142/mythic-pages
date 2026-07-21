@@ -38,16 +38,20 @@ sources:
     chapter: "Nhất Dạ Trạch truyện (一夜澤傳), Vol. I"
     edition: "Đinh Gia Khánh and Nguyễn Ngọc San edition; Nguyễn Hữu Vinh and Trần Đình Hoành annotated edition (dotchuoinon.com, 2015); Nguyễn Thị Oanh edition (2020)"
     notes: "The only source with a complete narrative of Tiên Dung. She does not appear as an independent entry in official histories."
+    url: "https://dotchuoinon.com/2010/03/19/linh-nam-chich-quai-truy%E1%BB%87n-d%E1%BA%A7m-m%E1%BB%99t-dem-nh%E1%BA%A5t-d%E1%BA%A1-tr%E1%BA%A1ch/"
   - title: Thần tích of Đền Đa Hoà and Đền Hoá Dạ Trạch
     notes: "Local temple records add Tây Sa công chúa to form a 'triad', not present in Lĩnh Nam chích quái. The Nguyễn Bính thần phả (early 16th c., exact date unverified by scholars) records that Hùng Duệ Vương later established a shrine."
+    url: "https://dsvh.gov.vn/them-06-di-tich-duoc-xep-hang-di-tich-quoc-gia-dac-biet-nam-2024-22189"
   - title: Thần, Người và Đất Việt
     author: Tạ Chí Đại Trường
     edition: "California 1989; reprinted by Nhã Nam, NXB Tri Thức"
     notes: "Useful framework for reading Tiên Dung as a figure humanized from local cult worship, not a historical person."
+    url: "https://www.khaitam.com/lich-su-1/than-nguoi-va-dat-viet-1"
   - title: Tứ bất tử
     author: Vũ Ngọc Khánh and Ngô Đức Thịnh
     edition: "NXB Văn hoá Dân tộc, 1990/1991"
     notes: "Presents Tiên Dung as a symbol of free love and egalitarian marriage in Vietnamese cultural values."
+    url: "https://nxbhcm.com.vn/73/tu-bat-tu-bon-vi-thanh-bat-tu-cua-viet-nam-5977"
 summary: "Tiên Dung was a Hùng Vương princess famous for refusing every match her father arranged. On a pleasure trip down the Red River, she accidentally uncovered Chử Đồng Tử, a penniless young man who had buried himself in the sand to avoid being seen, and decided on the spot to marry him. No permission asked. No ceremony. Her father was furious and barred her from the palace. She and her husband stayed on the riverbank, opened a market, then both left to study the Dao. One night, a citadel appeared from nothing. By morning it was gone, lifted into the sky along with them, and the ground where it stood sank into the lake now called Nhất Dạ Trạch. Tiên Dung is not among the Tứ bất tử in her own right. She is worshipped alongside Chử Đồng Tử, always as a pair."
 themes:
   - tinh-yeu-vuot-giai-cap

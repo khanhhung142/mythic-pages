@@ -52,56 +52,70 @@ sources:
     author: Lý Tế Xuyên
     chapter: "Hiệu úy Uy mãnh Anh liệt Phụ tín Đại Vương (Spirits of Successive Eras section)"
     edition: "1329. Lê Hữu Mục translation, NXB Khai Trí, Sài Gòn 1961, p. 44"
+    url: "https://catalog.hathitrust.org/Record/003603221"
   - title: Lĩnh Nam Chích Quái
     author: Trần Thế Pháp (14th c.), Vũ Quỳnh and Kiều Phú (redacted 1492-1493)
     chapter: "The Tale of Lý Ông Trọng (story no. 11 of the 22-story recension)"
     edition: "Đinh Gia Khánh and Nguyễn Ngọc San translation, Institute of Literature 1960; reprint NXB Văn học 2001"
+    url: "https://lib.nomfoundation.org/collection/1/volume/819/"
   - title: Đại Việt Sử Ký Toàn Thư
     author: Ngô Sĩ Liên
     chapter: "Ngoại kỷ vol. 1, Thục dynasty annals (appendix after the An Dương Vương chronicle)"
     edition: "1479, Nội các quan bản woodblock of 1697. Institute of History translation, NXB KHXH 1993"
+    url: "https://lib.nomfoundation.org/collection/1/volume/962/"
   - title: Khâm Định Việt Sử Thông Giám Cương Mục
     author: Imperial Historiography Office, Nguyễn dynasty
     chapter: "Tiền biên vol. I, p. 9 (appendix to the Thục An Dương Vương section, with editorial note)"
     edition: "1856-1881. Institute of History translation, NXB Giáo Dục 1998"
+    url: "https://lib.nomfoundation.org/collection/1/volume/251/"
   - title: An Nam Chí Lược
     author: Lê Tắc
     chapter: "On the Trần order changing the Lý surname to Nguyễn"
     edition: "1335. Huế University translation committee, 1961"
+    url: "https://ctext.org/wiki.pl?if=gb&res=588578&remap=gb"
   - title: Shiji, Basic Annals of Qin Shi Huang
     author: Sima Qian
     chapter: "Vol. 6, the casting of the twelve metal men (金人十二) in 221 BCE; Sima Zhen's Suoyin commentary: each statue was called Wengzhong (翁仲)"
     edition: "c. 91 BCE; Suoyin composed under the Tang"
+    url: "https://ctext.org/shiji/qin-shi-huang-ben-ji/zh"
   - title: Huainanzi, Fanlun chapter
     author: commentary by Gao You (高誘, early 3rd c. CE)
     chapter: "Vol. 13: a giant appears at Lintao in 221 BCE; Qin casts bronze men named Wengzhong and Junhe"
     edition: "Cited per Liam C. Kelley, leminhkhai.blog 2016"
+    url: "https://ctext.org/huainanzi/fan-lun-xun/zh"
   - title: Songshu, Treatise on the Five Phases
     author: Shen Yue
     chapter: "Treatise 1: in 237 CE Emperor Ming of Wei cast two colossi, also named Wengzhong"
     edition: "c. 488"
+    url: "https://ctext.org/wiki.pl?if=en&res=973033"
   - title: "Constructing Local Narratives: Spirits, Dreams, and Prophecies in the Medieval Red River Delta"
     author: Liam C. Kelley
     chapter: "in China's Encounters on the South and Southwest, ed. James A. Anderson and John K. Whitmore, pp. 78-105"
     edition: "Brill, 2015"
+    url: "https://brill.com/display/title/20935"
   - title: "The Real Ông Trọng"
     author: Liam C. Kelley (Le Minh Khai)
     edition: "leminhkhai.blog, June 5, 2016"
+    url: "https://leminhkhai.blog/the-real-ong-tr%E1%BB%8Dng/"
   - title: A Dictionary of Official Titles in Imperial China
     author: Charles O. Hucker
     chapter: "pp. 451, 544 (dating of the offices of Metropolitan Commandant and Area Commander)"
     edition: "Stanford University Press, 1985"
+    url: "https://www.worldcat.org/title/dictionary-of-official-titles-in-imperial-china/oclc/839297762"
   - title: Kho Tàng Truyện Cổ Tích Việt Nam
     author: Nguyễn Đổng Chi
     chapter: "Lý Ông Trọng, or the Origin of the Saint of Chèm (with variant notes)"
     edition: "Compiled 1957-1982; NXB Giáo Dục 2000"
+    url: "https://archive.org/details/khotangtruyencotichvietnam_quyen1"
   - title: Bách Việt Tiên Hiền Chí
     author: Ou Daren
     chapter: "Entry on a late-Han official of Giao Chỉ styled Wengzhong"
     edition: "16th century. Cited per Kelley 2016"
+    url: "https://ctext.org/wiki.pl?if=en&res=333701"
   - title: "National Intangible Cultural Heritage dossier: the Đình Chèm festival"
     author: Ministry of Culture, Sports and Tourism
     edition: "Decision 2067/QĐ-BVHTTDL, June 13, 2016"
+    url: "https://dsvh.gov.vn/le-hoi-dinh-chem-1274"
 summary: |
   Lý Ông Trọng, given in the tales as Lý Thân, a native of Thụy Hương village (Chèm, on the Red River just north of Hà Nội), is the great giant of Vietnamese legend, placed by the texts between the late Hùng Vương period and the reign of An Dương Vương. According to Việt điện u linh, Lĩnh Nam chích quái, and an appendix in the Đại Việt sử ký toàn thư, he entered Qin service, rose to Metropolitan Commandant, and garrisoned Lintao so effectively that the Xiongnu dared not cross the border; after his death Qin Shi Huang cast a hollow bronze statue of him at the Sima Gate of Xianyang, worked from inside by hidden men, and the Xiongnu believed him still alive. From this tale, "ông trọng" (wengzhong 翁仲) became the common noun for the guardian statues of East Asian royal tombs. Chinese sources (Gao You's commentary on the Huainanzi, Sima Zhen's Suoyin) record only bronze colossi modeled on a giant seen at Lintao; they know no man from Giao Chỉ. Scholarship divides over him: Nguyễn Đổng Chi, Đinh Gia Khánh, and Trần Quốc Vượng read a folk hero; Liam Kelley and Tạ Chí Đại Trường read a tradition constructed under Tang rule. He is worshipped as Đức Thánh Chèm at đình Chèm, a Special National Relic (2017), whose festival on the 14th-16th of the fifth lunar month is national intangible heritage (2016).
 themes:

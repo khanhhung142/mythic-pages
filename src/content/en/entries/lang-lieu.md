@@ -52,41 +52,52 @@ sources:
     author: Trần Thế Pháp (compiled 14th c.), Vũ Quỳnh and Kiều Phú (redacted 1492-1493)
     chapter: "Chưng Bính Truyện (蒸餅傳), juan I, tale 8"
     edition: "Classical Chinese text: Trần Khánh Hạo, ed., Việt Nam Hán Văn Tiểu Thuyết Tùng San, Học Sinh Thư Cục, Taipei 1992; Wikisource 嶺南摭怪/蒸餅傳. Translations: Đinh Gia Khánh and Nguyễn Ngọc San, NXB Văn hóa 1960 (repr. NXB Văn học 1990, NXB Kim Đồng 2017); Lê Hữu Mục, Khai Trí, Saigon 1960"
+    url: "https://www.worldcat.org/title/linh-nam-chich-quai/oclc/663721773"
   - title: "Lĩnh Nam Chích Quái: Khảo luận, Dịch chú, Nguyên bản chữ Hán"
     author: Nguyễn Thị Oanh (ed.)
     chapter: "Chưng Bính Truyện, base manuscript A.2914, Institute of Hán Nôm Studies"
     edition: "NXB Khoa học Xã hội (repr. Đinh Tị Books)"
+    url: "https://nxbkhxh.vass.gov.vn/tin-tuc-su-kien/linh-nam-chich-quai-hanh-trinh-gan-25-nam-phuc-dung-mot-di-san-van-hoa-561342"
   - title: Lĩnh Nam Chích Quái Bình giải
     author: Trans. Nguyễn Hữu Vinh, commentary Trần Đình Hoành
     chapter: "The Steamed Cake Tale"
     edition: "dotchuoinon.com, 2015 (PDF 18 Mar 2015)"
+    url: "https://dotchuoinon.com/2010/04/02/linh-nam-chich-quai-truy%E1%BB%87n-banh-ch%C6%B0ng/"
   - title: Hùng Đồ Thập Bát Diệp Thánh Vương Ngọc Phả Cổ Truyền (Royal Genealogy of the Eighteen Hùng Reigns)
     author: Anonymous (issued under Lê Thánh Tông, 1472)
     chapter: "Seventh reign: Hùng Chiêu Vương Minh Tông hoàng đế"
     edition: "Held at the Institute of Hán Nôm Studies and village temples, Phú Thọ; noted in Henri Maspero, BEFEO 18 (1918), p. 1, fn. 2"
+    url: "https://thuvientinh.quangngai.gov.vn/hung-vuong-thanh-to-ngoc-pha/"
   - title: Kho Tàng Truyện Cổ Tích Việt Nam (Treasury of Vietnamese Folktales)
     author: Nguyễn Đổng Chi
     chapter: "The Origin of Bánh Chưng and Bánh Dày (vol. I, no. 1, Origins of the Land section)"
     edition: "5 vols., 1957-1982"
+    url: "https://archive.org/details/khotangtruyencotichvietnam_quyen1"
   - title: Lược Khảo về Thần Thoại Việt Nam (Survey of Vietnamese Mythology)
     author: Nguyễn Đổng Chi
     edition: "Ban Văn Sử Địa, Hanoi 1956, 185 pp."
+    url: "http://www.thuvienmythuat.vn/cgi-bin/koha/opac-detail.pl?biblionumber=6937"
   - title: Tìm Hiểu Tiến Trình Văn Học Dân Gian Việt Nam
     author: Cao Huy Đỉnh
     edition: "NXB Khoa học Xã hội, 1974"
+    url: "https://archive.org/details/vh.caohuydinhtuyentaptacpham"
   - title: "The Biography of the Hồng Bàng Clan as a Medieval Vietnamese Invented Tradition"
     author: Liam C. Kelley
     chapter: "Journal of Vietnamese Studies 7/2 (2012), pp. 87-130"
+    url: "https://doi.org/10.1525/vs.2012.7.2.87"
   - title: "Comments on Liam Kelley's article"
     author: Tạ Chí Đại Trường
     chapter: "Journal of Vietnamese Studies 7/2 (2012), pp. 139-162"
+    url: "https://doi.org/10.1525/vs.2012.7.2.139"
   - title: "Bibliographie annamite"
     author: Émile Gaspardone
     chapter: "LNCQ entry, pp. 128-129"
     edition: "BEFEO vol. XXXIV, 1934"
+    url: "https://www.persee.fr/doc/befeo_0336-1519_1934_num_34_1_5032"
   - title: "A mythographical journey to modernity: The textual and symbolic transformations of the Hùng Kings founding myths"
     author: Nguyễn Thị Điểu
     edition: "Journal of Southeast Asian Studies, Cambridge University Press, 2013/2014"
+    url: "https://doi.org/10.1017/S002246341300009X"
 summary: |
   Lang Liêu is the eighteenth son of the sixth Hùng king in the Chưng Bính Truyện of Lĩnh Nam Chích Quái: the one prince among twenty-two with nothing to offer in the succession contest, his mother having died low-ranked and out of favor. A divine figure comes to him in a dream and teaches him to make two cakes of glutinous rice, one square for earth and one round for heaven. He makes them, wins the contest, and inherits the throne. The character first appears in writing in the 1492-1493 redaction of LNCQ; the 1472 ngọc phả registers promote him to seventh Hùng king under the title Hùng Chiêu Vương; the folk branch calls him Tiết Liêu. From a figure in a tale he became the standing face of filial piety and wet-rice civilization in Vietnamese popular memory.
 themes:

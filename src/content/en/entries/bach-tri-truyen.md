@@ -58,73 +58,94 @@ sources:
     author: Trần Thế Pháp (composed late 14th c.), Vũ Quỳnh and Kiều Phú (redacted 1492-1493)
     chapter: "Bạch Trĩ truyện (白雉傳)"
     edition: "Hán text: Trần Khánh Hạo ed., Việt Nam Hán Văn Tiểu Thuyết Tùng San, Học Sinh Thư Cục, Taipei 1992 (base ms. HV.486). Translations: Đinh Gia Khánh and Nguyễn Ngọc San, NXB Văn hóa 1960; Lê Hữu Mục, NXB Khai Trí 1961; Bùi Văn Nguyên, NXB KHXH 1993; Nguyễn Hữu Vinh tr., Trần Đình Hoành comm., dotchuoinon.com 2015; Nguyễn Thị Oanh, NXB KHXH (ms. A.2914)."
+    url: "https://lib.nomfoundation.org/collection/1/volume/819/"
   - title: Đại Việt Sử Ký Toàn Thư
     author: Ngô Sĩ Liên
     chapter: "Ngoại kỷ vol. I, Hùng Vương era"
     edition: "1479. Translation: Institute of History, NXB KHXH 1993"
+    url: "https://lib.nomfoundation.org/collection/1/volume/962/"
   - title: Việt Sử Lược
     author: Anonymous
     chapter: "Hùng Vương section"
     edition: "c. 1377. Translation: Trần Quốc Vượng, NXB Thuận Hóa 2005"
+    url: "https://ctext.org/wiki.pl?if=en&res=785349"
   - title: Thượng Thư Đại Truyện (尚書大傳)
     author: Fú Shēng (伏勝)
     chapter: "Vol. 4, Jiā Hé chapter (嘉禾)"
     edition: "Early Western Han. Oldest source for the Việt Thường white-pheasant episode."
+    url: "https://ctext.org/wiki.pl?if=en&res=602273"
   - title: Hậu Hán Thư, Nán Mán Xī Nán Yí Liè Zhuàn
     author: Fàn Yè (范曄)
     chapter: "Q. 86"
     edition: "c. 445. The Chinese source closest to the LNCQ version."
+    url: "https://ctext.org/hou-han-shu/nan-man-xi-nan-yi-lie-zhuan"
   - title: Shǐ Jì, Zhōu Běn Jì
     author: Sīmǎ Qiān
     edition: "c. 91 BCE"
+    url: "https://ctext.org/shiji/zhou-ben-ji"
   - title: Qín Cāo (琴操)
     author: Cài Yōng (蔡邕)
     chapter: "Yuè Cháng Cāo (越裳操)"
     edition: "Eastern Han. Records that the Duke of Zhou composed a qín piece on the occasion."
+    url: "https://ctext.org/wiki.pl?if=en&res=847447"
   - title: Wén Xuǎn, Dōng Jīng Fù
     author: Zhāng Héng (張衡)
     edition: "78-139"
+    url: "https://ctext.org/datawiki.pl?if=en&res=447174"
   - title: "Beyond the Bronze Pillars: Envoy Poetry and the Sino-Vietnamese Relationship"
     author: Liam C. Kelley
     edition: "University of Hawai'i Press, 2005"
+    url: "https://uhpress.hawaii.edu/title/beyond-the-bronze-pillars-envoy-poetry-and-the-sino-vietnamese-relationship/"
   - title: "The Biography of the Hồng Bàng Clan as a Medieval Vietnamese Invented Tradition"
     author: Liam C. Kelley
     chapter: "Journal of Vietnamese Studies 7/2 (2012), pp. 87-130"
+    url: "https://online.ucpress.edu/jvs/article/7/2/87/60674/The-Biography-of-the-H-ng-Bang-Clan-as-a-Medieval"
   - title: "Comments on Liam Kelley"
     author: Keith Weller Taylor
     chapter: "JVS 7/2 (2012), pp. 131-138"
+    url: "https://doi.org/10.1525/vs.2012.7.2.131"
   - title: The Birth of Vietnam
     author: Keith Weller Taylor
     chapter: "p. 186"
     edition: "University of California Press, 1983"
+    url: "https://www.ucpress.edu/books/the-birth-of-vietnam/paper"
   - title: A History of the Vietnamese
     author: Keith Weller Taylor
     edition: "Cambridge University Press, 2013"
+    url: "https://doi.org/10.1017/CBO9781139021210"
   - title: "Études d'histoire d'Annam I"
     author: Henri Maspero
     chapter: "BEFEO 16 (1916), p. 26 (note)"
+    url: "https://www.persee.fr/doc/befeo_0336-1519_1916_num_16_1_5270"
   - title: "Le Royaume de Văn-lang"
     author: Henri Maspero
     chapter: "BEFEO 18/3 (1918)"
+    url: "https://www.persee.fr/doc/befeo_0336-1519_1918_num_18_1_5888"
   - title: "Bibliographie annamite"
     author: Émile Gaspardone
     chapter: "BEFEO 34 (1934), pp. 1-174, esp. pp. 128-130"
+    url: "https://www.persee.fr/doc/befeo_0336-1519_1934_num_34_1_4960"
   - title: "Ming China and Vietnam: Negotiating Borders in Early Modern Asia"
     author: Kathlene Baldanza
     edition: "Cambridge University Press, 2016"
+    url: "https://www.cambridge.org/core/books/ming-china-and-vietnam/2113FB7FA7F2C110BE11AC3008B388BE"
   - title: Tìm hiểu kho sách Hán Nôm
     author: Trần Văn Giáp
     chapter: "Vol. II, pp. 186-192"
     edition: "NXB KHXH, 1990"
+    url: "https://nlv.gov.vn/nghiep-vu-thu-vien/tim-hieu-kho-sach-han-nom-mot-bo-thu-muc-co-gia-tri-cao.html"
   - title: Lĩnh Nam Chích Quái (annotated translation and commentary)
     author: Nguyễn Hữu Vinh (tr.), Trần Đình Hoành (comm.)
     edition: "dotchuoinon.com, 2015"
+    url: "https://dotchuoinon.com/wp-content/uploads/2010/11/linhnamchichquai_march18_2015.pdf"
   - title: "Lĩnh Nam chích quái (Khảo luận, Dịch chú, Nguyên bản chữ Hán)"
     author: Nguyễn Thị Oanh
     edition: "NXB KHXH (ms. A.2914)"
+    url: "https://nxbkhxh.vass.gov.vn/tin-tuc-su-kien/linh-nam-chich-quai-hanh-trinh-gan-25-nam-phuc-dung-mot-di-san-van-hoa-561342"
   - title: "經學史上的千古公案：周公稱王"
     author: Zhāng Wǎnyíng (張琬瑩)
     chapter: "Bulletin of the Institute of Chinese Literature and Philosophy, Academia Sinica, no. 127 (2009)"
+    url: "https://www.litphil.sinica.edu.tw/newsletter/127/127-7-32.pdf"
 summary: |
   Bạch Trĩ truyện (The Tale of the White Pheasant) is story no. 10 in the Lĩnh Nam Chích Quái. In fewer than 200 characters of classical Chinese, it tells how Hùng Vương sent a minister, styling himself "Việt Thường thị," to bring a white pheasant to the Western Zhou court of King Chéng. The core plot already existed in Chinese classics (Shàngshū Dàzhuàn, Hòu Hànshū), but the Vietnamese authors rewrote it: they attached Việt Thường to the Hùng Vương lineage, added the Duke of Zhou's refusal to accept the position of overlord ("Where we have bestowed no virtue, a gentleman does not accept offerings"), and inserted the Yellow Emperor's injunction that Giao Chỉ lies beyond the realm and must not be violated. Two rival readings exist: (1) Kelley (2012) treats it as tributary diplomacy within the Sinitic tianxia order; (2) Nguyễn Hữu Vinh and Trần Đình Hoành (2015) read it as a quest for learning and an exchange between equals. The details the Vietnamese authors added to their Chinese sources (the Duke's disclaimer, the Yellow Emperor's prohibition, the total mutual incomprehension) all converge on one point: the Việt were an independent nation, outside the Chinese realm, and inviolable.
 themes:
