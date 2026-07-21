@@ -50,7 +50,7 @@ not_contained_in:
 adaptations:
   - "Popular modern retelling: Lạc Long Quân fights the fox sword in hand for three days and nights (not in the original)"
   - "Quán Thánh temple variant: the Daoist god Huyền Thiên Trấn Vũ, not Lạc Long Quân, kills the fox"
-  - "Trích Sài legend: two princesses, Vạn Phúc and Vạn Lộc, destroy fox demons around the lake under Lý Nam Đế (6th c.)"
+  - "Trích Sài legend: three princesses, Vạn Thọ, Vạn Phúc, and Vạn Lộc, destroy fox demons around the lake under Lý Nam Đế (6th c.)"
 sources:
   - title: Lĩnh Nam Chích Quái
     author: Trần Thế Pháp (composed late 14th c.), Vũ Quỳnh and Kiều Phú (redacted 1492-1493)
@@ -191,7 +191,7 @@ The methodological point: Hồ Tinh belongs purely to the _Lĩnh Nam Chích Quá
 
 ## Geography: _West Lake and Its Seven Names_
 
-Hồ Tây covers about 500 hectares with a 17 km shoreline, the largest lake inside Hà Nội. It has carried at least seven names, and the oldest, by legend, is the one the fox left behind:
+Hồ Tây covers about 500 hectares with a 17 km shoreline, the largest lake inside Hà Nội. It has carried at least six main names across history, plus a few rarer variants, and the oldest, by legend, is the one the fox left behind:
 
 | Name | Hán | Period | Note |
 |------|-----|--------|------|
@@ -213,7 +213,7 @@ The most consequential modern finding about this tale belongs to Liam C. Kelley 
 
 In Sino-Vietnamese, **hồ 狐 (fox)** and **hồ 湖 (lake)** are perfect homophones. The tale's entire toponymic system runs on that sound: Fox Grotto (Hồ Động), Fox Hamlet (Hồ Thôn), Lỗ Khước, and at the summit the pair **Hồ Thi** (狐屍, fox corpse) set against **Hồ Tây** (西湖, western lake). "Fox Corpse Marsh" and "West Lake" sound nearly identical in Vietnamese, but only a reader who knows both characters can see why.
 
-Kelley's argument: Hồ Động and Hồ Thôn were probably existing place names whose original sense had been lost. A Hán-literate scholar composed the fox story to string every "Hồ" toponym onto a single thread. The pun works only in writing: "only someone who was literate could have understood this story, so it is not a story of 'the people.'" He also flags two loaded terms in the original, "man" (蠻, "savage") for the Tản Viên villagers and "động" (洞, a frontier administrative unit under Chinese rule), as fingerprints of medieval ethnic stratification rather than of primeval memory.
+Kelley's argument: Hồ Động and Hồ Thôn were probably existing place names whose original sense had been lost. A Hán-literate scholar composed the fox story to string every "Hồ" toponym onto a single thread. The pun works only in writing: "only someone who was literate could have understood this story, so it is not a story of 'the people.'" He also flags two loaded terms in the original, "man" (蠻, "savage") for the Tản Viên villagers and "động" (洞, a frontier and highland administrative unit in medieval Vietnamese administrative history), as fingerprints of medieval ethnic stratification rather than of primeval memory.
 
 The argument's scope: it concerns the **surviving text**, the work of a literate elite. Whether an older layer of tales or cult practice lies beneath the text is a separate question, and an open one (see Modern Scholarship below).
 
@@ -229,7 +229,7 @@ Set side by side, the Vietnamese fox stands apart:
 
 Etymology tells the same story. Vietnamese "hồ ly tinh" is a direct borrowing of Chinese "húlí jīng" (狐狸精); the native word for the animal is "cáo," while "hồ" appears only in supernatural and literary contexts. The motif is imported. The function is thoroughly naturalized: it explains land, it does not admonish kings.
 
-One absence is telling: **there are no foxes on Đông Sơn bronze drums**. Birds, deer, frogs, crocodiles abound; foxes never appear. The Xuân La site (Tây Hồ district) confirms Đông Sơn era settlement on the very shore of the lake, yet no native fox iconography has surfaced. The nine-tailed fox most likely arrived by book, not from the soil.
+One point worth noting: fox imagery is rare on Đông Sơn bronze drums next to birds, deer, frogs, and crocodiles, the most common animal motifs. The Phú Xuyên drum is an exception, engraved with four foxes running around its face. No archaeological site in the West Lake area has produced a native fox iconography tied to Đông Sơn era lakeside settlement. The nine-tailed fox most likely arrived by book, not from the soil.
 
 ## The Three-Demon Cycle: _Three Demons, Three Ecologies_
 
@@ -255,7 +255,7 @@ For the other two battles and the full career of the dragon lord, see the entrie
 
 **The Trấn Vũ variant** at Quán Thánh temple: according to temple custodian Bùi Hồng Sơn, in the temple's own tradition the fox is destroyed by Huyền Thiên Trấn Vũ (玄天鎮武), the Daoist guardian of the north, not by Lạc Long Quân. The fox-slaying motif was transferred to another deity, a layering that likely reflects Daoist influence in the Lý and Trần periods.
 
-**The Trích Sài legend**: the Phúc Lộc temple in Trích Sài village, on the lake's shore, venerates the princesses Vạn Phúc and Vạn Lộc, said to have destroyed fox demons around the lake in the time of Lý Nam Đế (6th c.) with the aid of Vạn Thọ Phu Nhân. One body of water, and the fox-killing motif retold at least three times with three different slayers.
+**The Trích Sài legend**: the Thọ Phúc Lộc temple in Trích Sài village, on the lake's shore, venerates three princesses, Vạn Thọ, Vạn Phúc, and Vạn Lộc, said to have destroyed fox demons around the lake together in the time of Lý Nam Đế (6th c.). One body of water, and the fox-killing motif retold at least three times with different slayers.
 
 One textual slip worth recording: the table of contents of the Đinh Gia Khánh - Nguyễn Ngọc San translation (1960) prints "Truyện **Hổ** tinh," the Tiger Spirit, almost certainly confusing the characters 狐 (fox) and 虎 (tiger); the content is unmistakably the nine-tailed fox.
 
@@ -275,13 +275,13 @@ What remains open: the three lines of reading answer three different questions, 
 
 Of the three demon tales, Hồ Tinh has the most visible physical remainder, because its "evidence" is 500 hectares of water in the middle of the capital.
 
-**Kim Ngưu pagoda** (Quảng An ward, Tây Hồ district): the only shrine the LNCQ text itself names as the suppression site. Destroyed by French artillery in 1947, rebuilt in 2000; it preserves ten royal certificates of investiture.
+**Đền Kim Ngưu** (Quảng An ward, Tây Hồ district): the site now identified with the suppression shrine that the LNCQ text glosses as "now the Kim Ngưu pagoda" (今金牛寺, a period-specific term). Destroyed by French artillery in 1947, rebuilt in 2000; it preserves ten royal certificates of investiture.
 
-**Quán Thánh temple**: at the lake's southeastern corner, one of the Four Guardian Temples of Thăng Long, recognized as a Special National Monument (2024), and keeper of the Trấn Vũ variant of the fox slaying.
+**Quán Thánh temple**: at the lake's southwestern corner, one of the Four Guardian Temples of Thăng Long, recognized as a Special National Monument (2022), and keeper of the Trấn Vũ variant of the fox slaying.
 
 **Trấn Quốc pagoda**: the oldest pagoda in Hà Nội (founded under Lý Nam Đế, 541-548, originally named Khai Quốc), moved onto the Kim Ngư islet in the lake in 1615. Not connected to the tale directly, but it stands on the very water the legend calls a collapsed foxhole.
 
-**Phúc Lộc temple (Trích Sài)**: keeper of the lake's second fox-slaying legend.
+**Thọ Phúc Lộc temple (Trích Sài)**: keeper of the lake's second fox-slaying legend.
 
 The name "Fox Corpse Marsh" still opens most accounts of West Lake as its oldest name. In popular culture, Vietnamese fox spirits in games and comics are usually drawn after the Japanese kitsune or the Chinese nine-tailed fox; the one detail that is distinctively Vietnamese, a dead fox leaving behind a lake, is the one least often used.
 

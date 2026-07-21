@@ -271,7 +271,7 @@ Xem thêm entry Hồ Tinh và Mộc Tinh cho hai mắt xích sau, và entry Lạ
 
 Chứng tích được gán cho truyện là đảo Bạch Long Vĩ, huyện đảo của Hải Phòng giữa vịnh Bắc Bộ, có dân cư, âu cảng và trạm ra đa. Nhưng như mục Địa lý đã nêu, mối nối đảo với truyện là chuyện thế kỷ XX; ba địa danh còn lại mất dấu.
 
-Trong văn hóa đại chúng, Ngư Tinh xuất hiện trong game, truyện tranh, phim như một phần của tam tượng kinh điển cùng Hồ Tinh và Mộc Tinh, và thường là con ít được khai thác nhất. Lý do dễ thấy là địa lý: Hồ Tây nằm giữa Hà Nội, ai cũng đi qua; Bạch Long Vĩ nằm ngoài khơi xa, và mối liên hệ với truyện lại lỏng. Con quái gắn với một chỗ người ta chạm vào hàng ngày thì sống trong trí tưởng tượng; con quái ngoài khơi thì sống trong sách.
+Trong văn hóa đại chúng, Ngư Tinh xuất hiện trong game, truyện tranh, phim như một phần của tam tượng kinh điển cùng Hồ Tinh và Mộc Tinh, và thường là con ít được khai thác nhất. Lý do dễ thấy là địa lý: Hồ Tây nằm trong nội thành Hà Nội, ai cũng đi qua; Bạch Long Vĩ nằm ngoài khơi xa, và mối liên hệ với truyện lại lỏng. Con quái gắn với một chỗ người ta chạm vào hàng ngày thì sống trong trí tưởng tượng; con quái ngoài khơi thì sống trong sách.
 
 ## Lưu ý _khi sử dụng_
 

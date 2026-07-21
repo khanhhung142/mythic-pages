@@ -244,7 +244,7 @@ The tree's name carries three layers of meaning, each opening a different readin
 
 **(ii)** The Chinese divinatory system Qimen Dunjia includes a malevolent spirit named "Bạch Hổ Xương Cuồng" (白虎猖狂), tying the white tiger directly to the name Xương Cuồng.
 
-**(iii)** In the twelve Earthly Branches, Dần is the tiger; the tenth Heavenly Stem is Kỷ; by Đặng Tiến's reckoning the two combine to make 30, "the day of the tiger sacrifice."
+**(iii)** In the twelve Earthly Branches, Dần is the tiger; Kỷ is the sixth of the ten Heavenly Stems. By Đặng Tiến's own reckoning these numbers combine to make 30, "the day of the tiger sacrifice"; this is his own numerological method, not a standard Can Chi convention.
 
 **(iv)** Phạm Đình Hổ, in the 18th-century _Vũ Trung Tùy Bút_, records a cult of a "tiger demon" at Ngọc Cục village (Đường An, Hải Dương) that received living human offerings, and compares it directly to Nhâm Ngao's encounter with the Xương Cuồng sacrifice. That cult lasted until 1800.
 

@@ -271,7 +271,7 @@ See the Hồ Tinh and Mộc Tinh entries for the two later links, and the Lạc 
 
 The relic assigned to the tale is Bạch Long Vĩ island, Hải Phòng's island district in the middle of the Gulf of Tonkin, with residents, a harbor, and a radar station. But as the Geography section sets out, the join between island and tale is a 20th-century affair, and the other three place names are lost.
 
-In popular culture, Ngư Tinh appears in games, comics, and film as part of the classic trio with Hồ Tinh and Mộc Tinh, and it is usually the least developed of the three. The reason is geographic: West Lake sits in the middle of Hanoi, where people pass it every day; Bạch Long Vĩ lies far offshore, and its tie to the legend is loose. A monster attached to a place people touch daily lives on in the imagination; a monster far out at sea lives in books.
+In popular culture, Ngư Tinh appears in games, comics, and film as part of the classic trio with Hồ Tinh and Mộc Tinh, and it is usually the least developed of the three. The reason is geographic: West Lake sits inside Hà Nội's city center, where people pass it every day; Bạch Long Vĩ lies far offshore, and its tie to the legend is loose. A monster attached to a place people touch daily lives on in the imagination; a monster far out at sea lives in books.
 
 ## Notes _for Use_
 
