@@ -6,7 +6,6 @@ aliases:
   - Chử Đạo Tổ
   - Đức Thánh Chử
   - Chử Tiên
-  - Chử Cù Vân (tên cha, đôi khi dùng chỉ chính nhân vật)
 name_en: "Chử Đồng Tử: The Saint of Love, Patron of Merchants"
 category: than-linh
 subcategories:
@@ -16,16 +15,16 @@ subcategories:
   - nhan-than
 gender: nam
 era: Hùng Vương thứ 3 (theo Lĩnh Nam chích quái) / thứ 18 (theo thần tích đền Đa Hoà)
-year_approx: -2500
-year_note: "Theo khung Hùng Vương thứ 3; không có cơ sở niên đại học thuật độc lập."
+year_approx: -300
+year_note: "Theo khung Hùng Duệ Vương (Hùng Vương thứ 18); dị bản Lĩnh Nam chích quái đặt vào đời Hùng Vương thứ 3, nhưng cả hai khung đều không có cơ sở niên đại học thuật độc lập."
 region: bac
 locations:
   - Làng Chử Xá (Văn Đức, Gia Lâm, Hà Nội, quê hương)
   - Bãi Tự Nhiên (Thường Tín, Hà Nội, nơi kỳ ngộ Tiên Dung)
-  - Chợ Hà Thị (nay không còn, nơi mở chợ buôn bán)
+  - Chợ Hà Thám (nay không còn, nơi mở chợ buôn bán)
   - Núi Quỳnh Viên / Quỳnh Vi (Hà Tĩnh, nơi gặp sư Phật Quang)
   - Đầm Nhất Dạ Trạch (Khoái Châu, Hưng Yên, nơi thăng thiên)
-  - Đền Đa Hoà (xã Mễ Sở, Khoái Châu, Hưng Yên)
+  - Đền Đa Hoà (xã Bình Minh, Khoái Châu, Hưng Yên)
   - Đền Hoá Dạ Trạch (xã Triệu Việt Vương, Khoái Châu, Hưng Yên)
   - Đình Chử Xá (Văn Đức, Gia Lâm, Hà Nội)
 coordinates:
@@ -35,7 +34,7 @@ relations:
   family:
     - Chử Vi Vân / Chử Cù Vân (cha; nghèo đến mức hai bố con chỉ có một chiếc khố)
     - Tiên Dung (vợ, công chúa con Hùng Vương)
-    - Tây Sa công chúa (vợ thứ hai theo thần tích đền Hoá, không có trong Lĩnh Nam chích quái)
+    - Tây Sa công chúa (vợ thứ hai theo thần tích đền Hoá; gốc gác văn bản trong Lĩnh Nam chích quái còn chưa rõ ràng)
     - Hùng Vương thứ 3 (bố vợ)
   teachers:
     - Phật Quang / Phu Quang (sư tại núi Quỳnh Viên, trao gậy thần và nón thần)
@@ -73,16 +72,16 @@ sources:
     author: Tạ Chí Đại Trường
     edition: "California 1989; tái bản Nhã Nam, NXB Tri Thức"
     notes: "Khung phân tầng 'nhân thần chồng lên thiên thần, thiên thần chồng lên nhiên thần' là công cụ lý thuyết hữu ích nhất để đọc nhân vật Chử Đồng Tử."
-    url: "https://damau.org/20814/than-nguoi-va-dat-viet"
+    url: "https://damau.org/author/tachidaitruong"
   - title: Tứ bất tử
     author: Vũ Ngọc Khánh và Ngô Đức Thịnh
-    edition: "NXB Văn hoá Dân tộc, 1990/1991; tái bản NXB Tri Thức 2025"
-    notes: "Phổ biến hoá bảng 'Tứ bất tử' gồm Chử Đồng Tử trong folklore học hiện đại. Chu Xuân Giao (Tạp chí Nghiên cứu Tôn giáo, 1/2014) chỉ rõ bảng này không có trong Hội Chân Biên như lâu nay vẫn tưởng."
-    url: "https://thuvientinh.quangngai.gov.vn/tu-bat-tu-bon-vi-thanh-bat-tu-cua-viet-nam/"
+    edition: "NXB Hà Nội, 2022"
+    notes: "Phổ biến hoá bảng 'Tứ bất tử' bốn vị (thay Từ Đạo Hạnh bằng Liễu Hạnh) gồm Chử Đồng Tử trong folklore học hiện đại. Chu Xuân Giao (Tạp chí Nghiên cứu Tôn giáo) chỉ rõ bảng bốn vị này không có trong Hội Chân Biên như lâu nay vẫn tưởng; thuật ngữ 'Tứ bất tử' thực ra đã có từ Dư địa chí của Nguyễn Trãi (thế kỷ XV), được Nguyễn Tông Quai chú giải (thế kỷ XVII)."
+    url: "https://nxbhcm.com.vn/73/tu-bat-tu-bon-vi-thanh-bat-tu-cua-viet-nam-5977"
   - title: Đạo giáo với văn hoá Việt Nam
     author: Nguyễn Đăng Duy
     notes: "Luận điểm 'Chử Đạo Tổ', ông tổ Đạo giáo Việt Nam. Nguyễn Duy Hinh phản bác: chỉ nên gọi là nhân vật của 'Tiên đạo', không phải Đạo giáo thần tiên chính thức."
-    url: "http://web.archive.org/web/20240519060748/https://timtailieu.vn/tai-lieu/dao-giao-va-van-hoa-viet-nam-29373/"
+    url: "https://thuvien.stellamaris.edu.vn/index.php/thuvien/catalog_product/view/id/2686/"
 summary: "Chử Đồng Tử là chàng trai nghèo làng Chử Xá, nghèo đến mức nhường chiếc khố duy nhất liệm cha, lại lấy được công chúa Tiên Dung trong một cuộc kỳ ngộ bất ngờ trên bãi sông Hồng. Hai vợ chồng bỏ cung đình, mở chợ buôn bán, rồi Chử Đồng Tử gặp sư Phật Quang tại núi Quỳnh Viên và được trao gậy thần, nón thần. Đêm dựng lên cả thành quách, lâu đài. Sáng hôm sau, thành quách và cả hai người bay về trời, để lại đầm Nhất Dạ Trạch. Nhiều thế kỷ sau theo khung truyện, ông hiển linh trao móng rồng cho Triệu Quang Phục đánh giặc Lương. Là một trong Tứ bất tử, được thờ trong hệ thống hơn 70 làng ven sông Hồng. Được coi là ông tổ nghề buôn và nhân vật tổng hợp Phật giáo và Đạo giáo sớm nhất trong thần thoại Việt Nam."
 themes:
   - tu-bat-tu
@@ -94,15 +93,15 @@ themes:
   - nhat-da-trach
   - trieu-quang-phuc
 text_primary: Lĩnh Nam chích quái, Nhất Dạ Trạch truyện
-cult_center: Đền Đa Hoà (xã Mễ Sở) và đền Hoá Dạ Trạch (xã Triệu Việt Vương), huyện Khoái Châu, Hưng Yên
+cult_center: Đền Đa Hoà (xã Bình Minh) và đền Hoá Dạ Trạch (xã Triệu Việt Vương), huyện Khoái Châu, Hưng Yên
 heritage_status:
   - "Di tích quốc gia đặc biệt: Khu di tích Đa Hoà - Dạ Trạch (QĐ 1473/QĐ-TTg, 26/11/2024)"
-  - "Di sản văn hoá phi vật thể quốc gia: Lễ hội đền Đa Hoà (QĐ 152/QĐ-BVHTTDL, 2/2/2023) và lễ hội đền Hoá Dạ Trạch (QĐ 153/QĐ-BVHTTDL, 2/2/2023)"
+  - "Di sản văn hoá phi vật thể quốc gia: Lễ hội đền Đa Hoà (QĐ 153/QĐ-BVHTTDL, 2/2/2023) và lễ hội đền Hoá Dạ Trạch (QĐ 152/QĐ-BVHTTDL, 2/2/2023)"
 scholarly_debates:
   - "Nhân vật lịch sử hay huyền thoại? Đa số nghiên cứu hiện đại coi là huyền thoại"
   - "Đạo giáo hay Phật giáo? Nguyễn Đăng Duy vs. Lê Mạnh Thát"
   - "Hùng Vương thứ 3 hay thứ 18? Dị bản giữa Lĩnh Nam chích quái và thần tích đền Đa Hoà"
-  - "Tứ bất tử có phải truyền thống cổ? Chu Xuân Giao phủ nhận tính cổ xưa của bảng này"
+  - "Bảng Tứ bất tử bốn vị hiện đại có phải truyền thống cổ? Chu Xuân Giao chỉ ra Hội Chân Biên không phải nguồn của bảng này, dù thuật ngữ 'Tứ bất tử' đã có từ thế kỷ XV"
 popularity: 5
 status: published
 updated_at: 2026-07-10
@@ -124,7 +123,7 @@ Thuyền ghé bãi. Bãi đẹp, cát mịn, công chúa muốn tắm. Cung nữ
 
 Tiên Dung không kêu, không gọi lính. Nàng hỏi. Chàng kể: cha mất, chiếc khố duy nhất đã liệm cha, thân trần không dám gặp người, thấy thuyền thì vùi mình trốn, ai ngờ trốn đúng chỗ này. Nàng nghe xong, nói: ta đã nguyện không lấy chồng, nay trời xui gặp nhau thế này, ấy là duyên trời định. Hôm đó, ngay trên bãi cát, hai người thành vợ chồng. Không sính lễ, không phép tắc, không hỏi ai.
 
-Tin về đến kinh đô Phong Châu. Hùng Vương giận: con gái vua lấy kẻ trần thân giữa bãi sông. Vua không cho về cung. Tiên Dung cũng không về nữa. Hai vợ chồng ở lại bãi, dựng chỗ ở, đổi chác với thuyền bè qua lại. Chỗ ấy dần thành chợ, thuyền các nơi đổ về, cả khách buôn nước ngoài cũng tìm đến. Người ta gọi là chợ Hà Thị.
+Tin về đến kinh đô Phong Châu. Hùng Vương giận: con gái vua lấy kẻ trần thân giữa bãi sông. Vua không cho về cung. Tiên Dung cũng không về nữa. Hai vợ chồng ở lại bãi, dựng chỗ ở, đổi chác với thuyền bè qua lại. Chỗ ấy dần thành chợ, thuyền các nơi đổ về, cả khách buôn nước ngoài cũng tìm đến. Người ta gọi là chợ Hà Thám.
 
 Một chuyến, Chử Đồng Tử theo thuyền buôn ra biển. Thuyền ghé núi Quỳnh Viên. Trên núi có một nhà sư, hiệu là Phật Quang. Chử Đồng Tử gặp sư, ở lại học đạo. Ngày từ biệt, sư trao cho chàng một cây gậy và một chiếc nón, dặn rằng phép linh dị nằm cả ở hai vật này.
 
@@ -136,7 +135,7 @@ Tin lại về Phong Châu. Vua cho là chuyện chẳng lành, sai quân đến
 
 Nửa đêm, gió lớn nổi lên. Cả tòa thành, người trong thành, cùng Chử Đồng Tử và Tiên Dung, nhấc khỏi mặt đất, bay lên trời. Chỗ đất thành quách vừa đứng sụt xuống thành một cái đầm rộng.
 
-Sáng hôm sau, quân bên kia sông nhìn sang chỉ còn thấy mặt nước. Người quanh vùng lập đền thờ ngay bờ đầm. Đầm được gọi là Nhất Dạ Trạch, đầm một đêm. Bãi cát nơi kỳ ngộ gọi là bãi Tự Nhiên. Chợ cũ gọi là Hà Thị.
+Sáng hôm sau, quân bên kia sông nhìn sang chỉ còn thấy mặt nước. Người quanh vùng lập đền thờ ngay bờ đầm. Đầm được gọi là Nhất Dạ Trạch, đầm một đêm. Bãi cát nơi kỳ ngộ gọi là bãi Tự Nhiên. Chợ cũ gọi là Hà Thám.
 
 ---
 
@@ -164,13 +163,15 @@ Cặp gậy nón là vật chứng cho sự tranh luận này. Cùng một bộ 
 
 Chử Đồng Tử thường được xếp vào hệ **Tứ bất tử** cùng Tản Viên Sơn Thánh, Phù Đổng Thiên Vương và Thánh Mẫu Liễu Hạnh. Nhưng bảng này không ổn định như người ta tưởng.
 
-Chu Xuân Giao trong bài nghiên cứu đăng *Tạp chí Nghiên cứu Tôn giáo* (số 1/2014) chỉ rõ: *Hội Chân Biên*, cuốn sách thường được trích dẫn như nguồn cổ nhất của bảng Tứ bất tử, thực ra không đưa ra bảng bốn vị này. Sách liệt kê 27 vị bất tử (13 nam, 14 nữ), không có bảng rút gọn bốn người. Hệ Tứ bất tử như một bộ cố định là sản phẩm của folklore học Việt Nam hiện đại nửa sau thế kỷ XX, chủ yếu qua công trình của Vũ Ngọc Khánh và Ngô Đức Thịnh (1990/1991).
+Thuật ngữ "Tứ bất tử" thực ra đã có từ thế kỷ XV: xuất hiện trong *Dư địa chí* của Nguyễn Trãi (in trong *Ức Trai di tập*), được Nguyễn Tông Quai chú giải ở thế kỷ XVII với bốn tên: Tản Viên Đại Vương từ biển lên núi, Phù Đổng Thiên Vương cưỡi ngựa bay lên trời, Chử Đồng Tử cùng gậy nón lên trời, và Từ Đạo Hạnh hoá đá đầu thai ở núi Sài Sơn. Bảng gốc này không có Liễu Hạnh.
 
-Điều thú vị là: Chử Đồng Tử có mặt trong hầu như mọi dị bản danh sách "bất tử," dù tên còn lại thay đổi. Một số bản thế kỷ XV-XVII thay Liễu Hạnh bằng Nguyễn Minh Không hoặc Từ Đạo Hạnh. Ông là nhân vật ổn định nhất trong một hệ thống vốn không ổn định. Chi tiết này thường được dẫn làm luận cứ rằng tín ngưỡng thờ Chử Đồng Tử có gốc rễ sâu hơn bảng Tứ bất tử, không phải ngược lại.
+Chu Xuân Giao trong bài nghiên cứu đăng *Tạp chí Nghiên cứu Tôn giáo* chỉ rõ: *Hội Chân Biên*, cuốn sách nhiều người vẫn tưởng là nguồn cổ nhất của bảng Tứ bất tử, thực ra không đưa ra bảng bốn vị này. Sách liệt kê 27 vị bất tử (13 nam, 14 nữ), không có bảng rút gọn bốn người. Bảng Tứ bất tử hiện đại, thay Từ Đạo Hạnh bằng Liễu Hạnh, được phổ biến hoá qua công trình của Vũ Ngọc Khánh và Ngô Đức Thịnh.
+
+Điều thú vị là: Chử Đồng Tử có mặt trong phần lớn dị bản danh sách "bất tử," dù tên còn lại thay đổi. Một số bản cổ hơn có Từ Đạo Hạnh hoặc Nguyễn Minh Không ở vị trí sau này Liễu Hạnh thay thế. Ông là nhân vật ổn định nhất trong một hệ thống vốn không ổn định. Chi tiết này thường được dẫn làm luận cứ rằng tín ngưỡng thờ Chử Đồng Tử có gốc rễ sâu hơn bảng Tứ bất tử, không phải ngược lại.
 
 ## Ông tổ nghề _buôn_
 
-Chi tiết thương mại trong truyện không phải tình tiết phụ. Sau khi bị vua cha cấm về cung, Chử Đồng Tử và Tiên Dung không về quê sống ẩn dật. Họ mở chợ. Chợ Hà Thị, ngay tại bãi sông nơi kỳ ngộ, giao thương với "khách nước ngoài." Trước khi gặp sư Phật Quang, Chử Đồng Tử đi trên thuyền buôn, không phải thuyền hành hương.
+Chi tiết thương mại trong truyện không phải tình tiết phụ. Sau khi bị vua cha cấm về cung, Chử Đồng Tử và Tiên Dung không về quê sống ẩn dật. Họ mở chợ. Chợ Hà Thám, ngay tại bãi sông nơi kỳ ngộ, giao thương với "khách nước ngoài." Trước khi gặp sư Phật Quang, Chử Đồng Tử đi trên thuyền buôn, không phải thuyền hành hương.
 
 Dân gian vùng Khoái Châu và dọc sông Hồng từ lâu thờ ông như tổ sư nghề thương mại, đặc biệt buôn bán đường sông. Ngày nay một số cộng đồng doanh nhân Việt Nam tôn ông là "Thánh tổ doanh thương", tiếp nối truyền thống này trong hình thức mới.
 
@@ -180,8 +181,8 @@ Hệ thống thờ Chử Đồng Tử trải theo trục sông Hồng từ Gia L
 
 **Đình Chử Xá** (Văn Đức, Gia Lâm, Hà Nội), quê hương theo truyền thuyết. Còn lưu giữ sắc phong niên hiệu Dương Đức 3 (1675) và Chính Hoà 5 (1684). Lễ hội 17-19 tháng Giêng.
 
-**Đền Đa Hoà** (xã Mễ Sở, Khoái Châu), trung tâm thờ Chử Đồng Tử và Tiên Dung lớn nhất. Xây từ thế kỷ XVII, kiến trúc hiện tại chủ yếu thời Nguyễn. Còn ba ngai thờ gỗ cuối thế kỷ XVI-XVII, bảo vật độc bản, và 38 đạo sắc phong. Lễ hội 10-12 tháng Hai âm lịch, trung tâm là **nghi thức rước nước từ giữa sông Hồng**.
+**Đền Đa Hoà** (xã Bình Minh, Khoái Châu), trung tâm thờ Chử Đồng Tử và Tiên Dung chính. Ngôi đền hiện tại được tiến sĩ Chu Mạnh Trinh khởi xướng xây lại năm 1894 trên nền đền cũ. Còn ba ngai thờ gỗ thế kỷ XVI, bảo vật độc bản, và 38 đạo sắc phong. Lễ hội 10-12 tháng Hai âm lịch, trung tâm là **nghi thức rước nước từ giữa sông Hồng**.
 
-**Đền Hoá Dạ Trạch** (xã Triệu Việt Vương, Khoái Châu), nơi theo truyền thuyết là thành quách bay lên trời và đầm Nhất Dạ Trạch hình thành. Thờ Chử Đồng Tử cùng Tiên Dung và **Tây Sa công chúa** (nhân vật thứ ba trong thần tích địa phương, không có trong *Lĩnh Nam chích quái*; xem entry **Tiên Dung** về nhân vật này). Lễ hội 10-12 tháng Hai âm lịch.
+**Đền Hoá Dạ Trạch** (xã Triệu Việt Vương, Khoái Châu), nơi theo truyền thuyết là thành quách bay lên trời và đầm Nhất Dạ Trạch hình thành. Thờ Chử Đồng Tử cùng Tiên Dung và **Tây Sa công chúa** (nhân vật thứ ba trong thần tích địa phương; gốc gác văn bản trong *Lĩnh Nam chích quái* còn chưa rõ ràng; xem entry **Tiên Dung** về nhân vật này). Lễ hội 10-12 tháng Hai âm lịch.
 
-Tháng 2/2023, Bộ VHTTDL đưa hai lễ hội này vào Danh mục Di sản văn hoá phi vật thể quốc gia (QĐ 152 và 153). Tháng 11/2024, khu di tích Đa Hoà - Dạ Trạch được xếp hạng Di tích quốc gia đặc biệt (QĐ 1473/QĐ-TTg). Chưa có hồ sơ UNESCO.
+Tháng 2/2023, Bộ VHTTDL đưa lễ hội đền Đa Hoà (QĐ 153) và lễ hội đền Hoá Dạ Trạch (QĐ 152) vào Danh mục Di sản văn hoá phi vật thể quốc gia. Tháng 11/2024, khu di tích Đa Hoà - Dạ Trạch được xếp hạng Di tích quốc gia đặc biệt (QĐ 1473/QĐ-TTg). Chưa có hồ sơ UNESCO.

@@ -70,7 +70,7 @@ sources:
     url: "https://thuvientinh.quangngai.gov.vn/hung-vuong-thanh-to-ngoc-pha/"
   - title: Kho Tàng Truyện Cổ Tích Việt Nam (Treasury of Vietnamese Folktales)
     author: Nguyễn Đổng Chi
-    chapter: "The Origin of Bánh Chưng and Bánh Dày (vol. I, no. 1, Origins of the Land section)"
+    chapter: "The Origin of Bánh Chưng and Bánh Dày (vol. I, Origins of the Land section)"
     edition: "5 vols., 1957-1982"
     url: "https://archive.org/details/khotangtruyencotichvietnam_quyen1"
   - title: Lược Khảo về Thần Thoại Việt Nam (Survey of Vietnamese Mythology)
@@ -149,7 +149,7 @@ The twenty-one brothers went out to hold the frontier lands, and villages and se
 
 ## The character in _Chưng Bính Truyện_
 
-Lang Liêu (郎僚) appears in writing in one place: **Chưng Bính Truyện** (蒸餅傳), the eighth tale of juan I in Lĩnh Nam Chích Quái, in the redaction completed by Vũ Quỳnh and Kiều Phú in 1492-1493. Outside LNCQ and its derivatives, no early text records him. Đại Việt Sử Ký Toàn Thư keeps only the framework of eighteen Hùng reigns in its outer annals; Việt Sử Lược compresses the whole era into a notice. Lang Liêu is a wholly legendary figure: he exists in a tale, in the ngọc phả registers, and in a cake, and nowhere in the historical record.
+Lang Liêu (郎僚) is the central figure of **Chưng Bính Truyện** (蒸餅傳), the eighth tale of juan I in Lĩnh Nam Chích Quái, in the redaction completed by Vũ Quỳnh and Kiều Phú in 1492-1493. Outside LNCQ and its derivatives, no early text records him. Đại Việt Sử Ký Toàn Thư keeps only the framework of eighteen Hùng reigns in its outer annals; Việt Sử Lược compresses the whole era into a notice. Lang Liêu is a wholly legendary figure: he exists in a tale, in the ngọc phả registers, and in a cake, and nowhere in the historical record.
 
 For the full text, the Classical Chinese original, the manuscripts, and the editorial history of the tale itself, see **Chưng Bính Truyện: The Tale of the Steamed Cake**. This entry concerns the figure.
 

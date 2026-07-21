@@ -75,7 +75,7 @@ sources:
     url: "http://www.thuvienmythuat.vn/cgi-bin/koha/opac-detail.pl?biblionumber=6937"
   - title: Kho Tàng Truyện Cổ Tích Việt Nam (Treasury of Vietnamese Folktales)
     author: Nguyễn Đổng Chi
-    chapter: "The Origin of Bánh Chưng and Bánh Dày (vol. I, no. 1, Origins of the Land section)"
+    chapter: "The Origin of Bánh Chưng and Bánh Dày (vol. I, Origins of the Land section)"
     edition: "5 vols., 1957-1982"
     url: "https://opac.nlv.gov.vn/chi-tiet-tai-lieu/kho-tang-truyen-co-tich-viet-nam.-t.2-20251142790518142931"
   - title: Tìm Hiểu Tiến Trình Văn Học Dân Gian Việt Nam
@@ -229,7 +229,7 @@ The philological consensus (Trần Văn Giáp, Đinh Gia Khánh, Nguyễn Thị 
 
 The material core of the tale is the most ordinary matter in Vietnamese life: glutinous rice, green leaves, a boiling pot. The dream figure's words, "among the things of heaven and earth, nothing is more precious to people than rice," put the creed of a wet-rice civilization into a god's mouth.
 
-Nguyễn Đổng Chi (Lược Khảo về Thần Thoại Việt Nam, 1956) read the tale as a rice-growing society sacralizing its staple: the daily grain is lifted out of the category of ordinary food and set inside a system of meaning, with a divine teacher, cosmic shapes, and an ancestral altar. Through the story, making rice cakes becomes an act of commemoration. In his Kho Tàng Truyện Cổ Tích Việt Nam, he placed "The Origin of Bánh Chưng and Bánh Dày" as number one in the section on origins of the land, the opening tale of the whole treasury.
+Nguyễn Đổng Chi (Lược Khảo về Thần Thoại Việt Nam, 1956) read the tale as a rice-growing society sacralizing its staple: the daily grain is lifted out of the category of ordinary food and set inside a system of meaning, with a divine teacher, cosmic shapes, and an ancestral altar. Through the story, making rice cakes becomes an act of commemoration. In his Kho Tàng Truyện Cổ Tích Việt Nam, he placed "The Origin of Bánh Chưng and Bánh Dày" in the section on origins of the land.
 
 ### Square and round
 
@@ -247,7 +247,7 @@ There is a silence built into the structure. The orphaned son wins a contest tha
 
 **Thần Nông and Hậu Tắc.** Chinese agricultural mythology has Shennong, who taught cultivation, and Hòu Jì (后稷), the millet lord and ancestor of the Zhou. The dream figure in Lang Liêu's story is unnamed in LNCQ. Some contemporary Vietnamese commentary on the internet, citing Việt Điện U Linh, identifies him with Hậu Tắc; the identification is a modern reading with no basis in the medieval text. What the figures genuinely share is a structure: a god teaches, and a human makes the sacred food.
 
-**The Mường and Đẻ Đất Đẻ Nước.** The Mường, the Vietic people closest to the Kinh in language, have the epic Đẻ Đất Đẻ Nước ("The Birth of Earth and Water"; collected versions include Nguyễn Từ Chi and Nguyễn Trần Đản, NXB Kim Đồng 1974; Đặng Văn Lung, Vương Anh and Hoàng Anh Nhân, NXB Khoa học Xã hội; Đinh Văn Ân, NXB Văn hóa dân tộc 2005). The epic carries the same complex of rice and cosmogony but lacks the square-round binary. Phan Đăng Nhật (Nghiên cứu Lịch sử 3, 1981, p. 43) traced specific motif overlaps between the Mường Mo tradition and LNCQ. The comparison suggests a shared Vietic ground of sacred rice, with the geometric scheme as the LNCQ text's own classical layer.
+**The Mường and Đẻ Đất Đẻ Nước.** The Mường, the Vietic people closest to the Kinh in language, have the epic Đẻ Đất Đẻ Nước ("The Birth of Earth and Water"; collected versions include Đặng Văn Lung, ed., with Vương Anh and Hoàng Anh Nhân, NXB Khoa học Xã hội 1988; Đinh Văn Ân, NXB Văn hóa dân tộc 2005). The epic carries the same complex of rice and cosmogony but lacks the square-round binary. Phan Đăng Nhật (Nghiên cứu Lịch sử 3, 1981, p. 43) traced specific motif overlaps between the Mường Mo tradition and LNCQ. The comparison suggests a shared Vietic ground of sacred rice, with the geometric scheme as the LNCQ text's own classical layer.
 
 **Rice-origin myths in Southeast Asia.** Legends in which rice reaches humanity through a divine intermediary occur across mainland and island Southeast Asia, among Tai-Kadai, Khmer, Javanese, and Tagalog peoples. Chưng Bính Truyện differs in what it loads onto the grain: cosmology and succession politics at once. Three problems, one story, one object.
 
@@ -265,7 +265,7 @@ Nguyễn Thị Điểu ("A mythographical journey to modernity," Journal of Sout
 
 ## Living _heritage_
 
-**Heritage listings.** In 2012, UNESCO inscribed "The worship of Hùng kings in Phú Thọ," the cultic system within which this tale lives, on the Representative List of the Intangible Cultural Heritage of Humanity. In May 2023, Vietnam's Ministry of Culture, Sports and Tourism added "the craft of making bánh chưng and bánh giầy" to the national intangible cultural heritage register.
+**Heritage listings.** In 2012, UNESCO inscribed "The worship of Hùng kings in Phú Thọ" on the Representative List of the Intangible Cultural Heritage of Humanity; the cult belongs to the wider Hùng-king myth cycle that this tale is part of, though the UNESCO dossier does not enumerate individual tales. In May 2023, Vietnam's Ministry of Culture, Sports and Tourism added "the craft of making bánh chưng and bánh giầy" to the national intangible cultural heritage register.
 
 **Education.** "Sự tích bánh chưng bánh giầy" is the legend unit in the Grade 6 literature curriculum, present in every current textbook series. The classroom text is the modern folk branch; its core structure is the LNCQ tale's.
 
@@ -279,6 +279,6 @@ Nguyễn Thị Điểu ("A mythographical journey to modernity," Journal of Sout
 
 **The ngọc phả are hagiography.** The 1472 registers' promotion of Lang Liêu to seventh Hùng king is a Lê-dynasty historicizing operation, usable for the history of the cult, not as chronology.
 
-**Editions differ by base manuscript.** The 1960 Đinh Gia Khánh and Lê Hữu Mục translations use different transmission copies; Nguyễn Thị Oanh's edition follows A.2914. The Đinh Gia Khánh translation's first printing is credited to NXB Văn hóa and later reprints to NXB Văn học; they are one translation.
+**Editions differ by base manuscript.** The 1960 Đinh Gia Khánh and Lê Hữu Mục translations use different transmission copies; Nguyễn Thị Oanh's edition follows A.2914. The Đinh Gia Khánh translation's first printing is credited to NXB Văn hóa and later reprints to NXB Giáo dục; they are one translation.
 
 **Thi viện misattribution.** Some websites, Thi viện among them, credit LNCQ to Nguyễn Dữ. Nguyễn Dữ wrote Truyền Kỳ Mạn Lục, a different work.

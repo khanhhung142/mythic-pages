@@ -15,7 +15,7 @@ subcategories:
   - di-tich-van-hoa
 type: marsh / sacred site
 era_mythic: Hùng Vương period (a palace appeared overnight, then vanished into the sky, and the ground collapsed into a lake)
-era_historic: 6th century CE (Triệu Quang Phục held the position here, 547-550)
+era_historic: 6th century CE (Triệu Quang Phục held the position here, 546-550)
 region: bac
 sovereignty_relevant: false
 locations:
@@ -34,11 +34,11 @@ relations:
   mythic_events:
     - "The palace of Chử Đồng Tử and Tiên Dung appeared overnight, then flew into the sky; the earth beneath collapsed into a lake"
   historic_events:
-    - "Triệu Quang Phục (Triệu Việt Vương) held out here from 547-550, driving back the Liang army"
+    - "Triệu Quang Phục (Triệu Việt Vương) held out here from 546-550, driving back the Liang army"
     - "Chử Đồng Tử reportedly appeared to Triệu Quang Phục and gave him a dragon claw (noted in Đại Việt sử ký toàn thư as popular legend)"
   related_sites:
     - Bãi Tự Nhiên (Thường Tín, Hanoi; site of the encounter between Chử Đồng Tử and Tiên Dung)
-    - Đền Đa Hoà (Mễ Sở commune, Khoái Châu; the larger main worship complex)
+    - Đền Đa Hoà (Bình Minh commune, Khoái Châu; the main worship complex)
     - Đình Chử Xá (Gia Lâm, Hanoi; Chử Đồng Tử's home village)
     - Núi Quỳnh Viên / Nam Giới (Hà Tĩnh; where Chử Đồng Tử studied under a monk)
 sources:
@@ -80,7 +80,7 @@ themes:
   - landscape-change
 heritage_status:
   - "Special National Heritage Site: Đa Hoà - Dạ Trạch Heritage Complex (Decision 1473/QĐ-TTg, 26 Nov 2024), includes Đền Đa Hoà, Đền Hoá Dạ Trạch, Đền Trung, Đa Hoà Pagoda, and Triệu Việt Vương Shrine"
-  - "National Intangible Cultural Heritage: Đền Hoá Dạ Trạch Festival (Decision 153/QĐ-BVHTTDL, 2 Feb 2023)"
+  - "National Intangible Cultural Heritage: Đền Hoá Dạ Trạch Festival (Decision 152/QĐ-BVHTTDL, 2 Feb 2023)"
 archaeological_note: "No dedicated archaeological excavation has been published for the Nhất Dạ Trạch lake area or Đền Hoá Dạ Trạch. Artifacts recorded in the heritage designation files (three carved wooden thrones from the late 16th-17th century, 38 imperial edicts, a pair of celadon vases) all date to the Lê-Nguyễn period; no prehistoric cultural layer has been confirmed on-site. The nearest excavated Đông Sơn site is Động Xá (Kim Động district, Hưng Yên, ~15 km away), where dug-out boat burials predating the 1st century BCE were found in the 2001-2005 excavation."
 scholarly_debates:
   - "What natural formation did the lake derive from? Most likely a remnant of a former Red River channel that shifted course, but no dedicated geological study has addressed the question."
@@ -103,7 +103,7 @@ It did not stand long. The king heard of it, judged that nothing good was rising
 
 Then the marsh lay there, age after age, the reeds growing thicker every year, until the story gained a second layer. This one comes with dates.
 
-In 547, the armies of the Liang dynasty came down from the north to crush the young independence the Việt people had just won back. The general charged with fighting them was Triệu Quang Phục. The invaders were too strong to meet head-on, so he took his forces into Dạ Trạch marsh.
+In 546, the armies of the Liang dynasty came down from the north to crush the young independence the Việt people had just won back. The general charged with fighting them was Triệu Quang Phục. The invaders were too strong to meet head-on, so he took his forces into Dạ Trạch marsh.
 
 He did not choose high ground. He chose mud. The marsh was vast, the reed beds dense, the bog bottomless on every side; the Liang troops were many and hardened, but in the marsh they sank, and their ships could not thread the narrow channels. Triệu Quang Phục used dug-out canoes. By day he hid his men in the reeds, and the marsh looked as empty as any wilderness. By night the canoes slid out, struck the enemy camps, took their grain, and dissolved back into the reeds before first light. The invaders could not find the man they were supposed to be fighting. They camped outside the marsh year after year, and wore down.
 
@@ -117,7 +117,7 @@ The marsh is gone now. The Red River shifted, the dykes went up, the silt kept c
 
 ## The _Name_
 
-**Nhất Dạ Trạch** (一夜澤) means "Lake of a Single Night." The name explains itself: a lake born in one night. According to _Lĩnh Nam chích quái_, when the palace of Chử Đồng Tử and Tiên Dung flew up to the heavens, the ground beneath collapsed into a large lake. The sandbar was called **Tự Nhiên**, "natural" or "spontaneous," the same name still carried by a commune across the Red River in Thường Tín, Hanoi. The market that had formed there was called **Hà Thị**. And the lake became Nhất Dạ Trạch.
+**Nhất Dạ Trạch** (一夜澤) means "Lake of a Single Night." The name explains itself: a lake born in one night. According to _Lĩnh Nam chích quái_, when the palace of Chử Đồng Tử and Tiên Dung flew up to the heavens, the ground beneath collapsed into a large lake. The sandbar was called **Tự Nhiên**, "natural" or "spontaneous," the same name still carried by a commune across the Red River in Thường Tín, Hanoi. The market that had formed there was called **Hà Thám**. And the lake became Nhất Dạ Trạch.
 
 In _Đại Việt sử ký toàn thư_, the site appears under an older name: **"Màn Trò flats, Chu Diên district,"** an administrative unit from the Chinese occupation period, corresponding roughly to today's Khoái Châu, Hưng Yên.
 
@@ -127,7 +127,7 @@ Nhất Dạ Trạch is not a purely mythological place-name. It appears in two e
 
 **First layer: Hùng Vương.** _Lĩnh Nam chích quái_ ties the location to Chử Đồng Tử and Tiên Dung and the "overnight palace" event. This is an etiological myth, the kind that explains how a place got its name, common across Asian folk literature. Both figures have their own entries: see **Chử Đồng Tử** and **Tiên Dung**.
 
-**Second layer: 6th century.** Ngô Sĩ Liên's _Đại Việt sử ký toàn thư_ records that in 547, General **Triệu Quang Phục** withdrew here to hold out against the invading Liang forces under **Trần Bá Tiên**. The choice was practical: dense reeds, deep mud, impossible terrain for a large army. Triệu Quang Phục hid his small boats in the reed beds by day and raided for food and skirmished by night. He held out until 550, when Trần Bá Tiên had to return home to suppress the Hou Jing rebellion. Triệu Quang Phục retook Long Biên and declared himself Việt Vương.
+**Second layer: 6th century.** Ngô Sĩ Liên's _Đại Việt sử ký toàn thư_ records that in 546, General **Triệu Quang Phục** withdrew here to hold out against the invading Liang forces under **Trần Bá Tiên**. The choice was practical: dense reeds, deep mud, impossible terrain for a large army. Triệu Quang Phục hid his small boats in the reed beds by day and raided for food and skirmished by night. He held out until 550, when Trần Bá Tiên had to return home to suppress the Hou Jing rebellion. Triệu Quang Phục retook Long Biên and declared himself Việt Vương.
 
 In the same entry, Ngô Sĩ Liên adds a gloss: "folk legend holds that a divine figure in the lake, Chử Đồng Tử, rode a golden dragon down from the sky and handed the king a dragon claw" to use against the enemy. This is **the first time Chử Đồng Tử appears in the official record**, not under the Hùng Vương section, but under Triệu Việt Vương. Ngô Sĩ Liên follows the note with his own comment: stories like this are words borrowed to make objects seem sacred.
 
@@ -149,7 +149,7 @@ Nhất Dạ Trạch is one point in a chain of sacred sites stretching along the
 
 - **Chử Xá village** (Gia Lâm): Chử Đồng Tử's birthplace
 - **Bãi Tự Nhiên** (Thường Tín): site of the encounter; Đền Ngự Dội stands there
-- **Đền Đa Hoà** (Mễ Sở, Khoái Châu): the largest worship complex in the network
+- **Đền Đa Hoà** (Bình Minh, Khoái Châu): the main worship complex in the network
 - **Đền Hoá / Nhất Dạ Trạch** (Triệu Việt Vương commune, Khoái Châu): the site of the ascension, according to legend
 
 Around 72 villages along both banks of the Red River between Hanoi and Hưng Yên have communal halls or shrines dedicated to Đức Thánh Chử and his two wives. That density of worship reflects something real about how deeply this tradition is woven into the lives of farming, fishing, and trading communities in the northern delta.
@@ -158,7 +158,7 @@ Around 72 villages along both banks of the Red River between Hanoi and Hưng Yê
 
 The main festival at Đền Hoá Dạ Trạch falls on the **10th-12th of the second lunar month**, coinciding with the festival at Đền Đa Hoà in the neighboring commune. The procession draws participants from Triệu Việt Vương commune and four surrounding communes, with **7 palanquins**: a Dragon Hall palanquin, three Dragon Throne palanquins for Thánh Chử, Tiên Dung, and Princess Tây Sa, and a palanquin carrying the sacred staff and conical hat. The central ritual is the **water-drawing ceremony**: water scooped from mid-river and carried back to bathe the statues and conduct the offerings.
 
-In February 2023, the Ministry of Culture, Sports and Tourism added the festival to the National Intangible Cultural Heritage list (Decision 153). In November 2024, the Đa Hoà - Dạ Trạch Heritage Complex, which includes Đền Hoá Dạ Trạch, was designated a Special National Heritage Site (Decision 1473/QĐ-TTg). From 2026, the festival is being organized at provincial scale for the first time.
+In February 2023, the Ministry of Culture, Sports and Tourism added the festival to the National Intangible Cultural Heritage list (Decision 152). In November 2024, the Đa Hoà - Dạ Trạch Heritage Complex, which includes Đền Hoá Dạ Trạch, was designated a Special National Heritage Site (Decision 1473/QĐ-TTg). From 2026, the festival is being organized at provincial scale for the first time.
 
 ## _Archaeology_: What We Don't Know
 

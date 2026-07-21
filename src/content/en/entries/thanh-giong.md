@@ -117,7 +117,7 @@ scholarly_debates:
   - "Dating the figure: roughly seven centuries old (Tạ Chí Đại Trường) versus the traditional 6th Hùng King attribution"
   - "Is the Four Immortals list ancient? Chu Xuân Giao argues the fixed list of four is a modern compilation"
 popularity: 5
-status: draft
+status: published
 updated_at: 2026-07-17
 ---
 

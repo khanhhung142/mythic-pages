@@ -83,6 +83,10 @@ sources:
     author: Sīmǎ Qiān
     edition: "c. 91 BCE"
     url: "https://ctext.org/shiji/zhou-ben-ji"
+  - title: Hàn Shū, Wáng Mǎng Zhuàn
+    author: Bān Gù (班固)
+    edition: "1st c. CE. Records the Han court granting Wáng Mǎng the title Duke Ānhàn in the first year of the Yuánshǐ era (1 CE)"
+    url: "https://ctext.org/han-shu/wang-mang-zhuan"
   - title: Qín Cāo (琴操)
     author: Cài Yōng (蔡邕)
     chapter: "Yuè Cháng Cāo (越裳操)"
@@ -100,6 +104,10 @@ sources:
     author: Liam C. Kelley
     chapter: "Journal of Vietnamese Studies 7/2 (2012), pp. 87-130"
     url: "https://online.ucpress.edu/jvs/article/7/2/87/60674/The-Biography-of-the-H-ng-Bang-Clan-as-a-Medieval"
+  - title: "Chim trĩ trắng và mối quan hệ triều cống Hoa-Việt"
+    author: Liam C. Kelley (Le Minh Khai)
+    edition: "Le Minh Khai blog, 27 April 2013. Applies the 'medieval invention' frame specifically to the Bạch Trĩ story, separate from the 2012 JVS article, which concerns the Hồng Bàng Clan story"
+    url: "https://leminhkhaiviet.wordpress.com/2013/04/27/chim-tri-trang-va-moi-quan-he-trieu-cong-hoa-viet/"
   - title: "Comments on Liam Kelley"
     author: Keith Weller Taylor
     chapter: "JVS 7/2 (2012), pp. 131-138"
@@ -225,7 +233,7 @@ The whole thing runs under 200 characters of classical Chinese. No moral is draw
 
 This is the central interpretive axis. It determines what the story means.
 
-**Reading 1: the "tribute" lens.** In Chinese classical scholarship and in Western Sinology (Kelley 2005, 2012), "越裳獻白雉" is one of the iconic episodes of the tiānxià-tribute system: barbarians spontaneously drawn to the Son of Heaven when his virtue radiates far enough. Kelley inherits this frame: fifteenth-century Đại Việt literati voluntarily placed their national history inside the Chinese "All-under-Heaven" schema, constructing a timeline parallel to Yáo and Shùn. In 1 BCE, Wáng Mǎng staged a white-pheasant offering from Yì Province barbarians and claimed it as proof of his own Zhou-like virtue, which shows that in Chinese political history the pheasant episode was routinely instrumentalized.
+**Reading 1: the "tribute" lens.** In Chinese classical scholarship and in Western Sinology (Kelley 2005, 2012), "越裳獻白雉" is one of the iconic episodes of the tiānxià-tribute system: barbarians spontaneously drawn to the Son of Heaven when his virtue radiates far enough. Kelley inherits this frame: fifteenth-century Đại Việt literati voluntarily placed their national history inside the Chinese "All-under-Heaven" schema, constructing a timeline parallel to Yáo and Shùn. In 1 CE, the Han court granted Wáng Mǎng the title Duke Ānhàn on the strength of a staged white-pheasant tribute ([*Hàn Shū*, Wáng Mǎng Zhuàn](https://ctext.org/han-shu/wang-mang-zhuan)), which shows that in Chinese political history the pheasant episode was routinely instrumentalized for political ends.
 
 **Reading 2: "seeking the Way," cultural exchange between equals.** When you read the story itself, rather than reading it through a pre-existing Sinological lens, a clear pattern of internal signals emerges:
 
@@ -305,7 +313,7 @@ The Toàn Thư strips the story down to bare events: no quoted dialogue, just th
 
 Bạch Trĩ truyện sits at the center of the Kelley, Taylor, and Tạ Chí Đại Trường debate on the LNCQ.
 
-**Liam Kelley** (JVS 2012; Le Minh Khai blog 2010) applies Eric Hobsbawm's "invented tradition" framework: the pheasant story is "clearly the invention of a medieval scholar," and fifteenth-century Đại Việt literati voluntarily inserted their history into the Chinese tiānxià schema. Kelley reads through the tribute lens, treating "presenting a white pheasant" as barbarian submission.
+**Liam Kelley** develops Eric Hobsbawm's "invented tradition" framework for the Hồng Bàng Clan story in [Kelley (JVS 7/2, 2012, pp. 87-130)](https://online.ucpress.edu/jvs/article/7/2/87/60674/The-Biography-of-the-H-ng-Bang-Clan-as-a-Medieval). For the Bạch Trĩ story specifically, he applies a similar frame in a separate piece: [Kelley, "Chim trĩ trắng và mối quan hệ triều cống Hoa-Việt" (Le Minh Khai blog, 27 April 2013)](https://leminhkhaiviet.wordpress.com/2013/04/27/chim-tri-trang-va-moi-quan-he-trieu-cong-hoa-viet/) calls the story a construction of a medieval scholar, stitched together from Chinese sources rather than recording a real event, reflecting the pride of a Sinicized literati class in Vietnam's ancient tributary relationship with the north. Kelley criticizes nationalist readings that treat it as an exchange between equals or a quest to study a sage. He reads through the tribute lens, treating "presenting a white pheasant" as barbarian submission.
 
 **Keith Taylor** (JVS 2012) partly agrees on the constructedness but stresses the "layered accretion" of sources, not a single act of invention. Taylor also reads through a broadly Sinological frame.
 

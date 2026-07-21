@@ -70,7 +70,7 @@ sources:
     url: "https://thuvientinh.quangngai.gov.vn/hung-vuong-thanh-to-ngoc-pha/"
   - title: Kho tàng truyện cổ tích Việt Nam
     author: Nguyễn Đổng Chi
-    chapter: "Gốc tích bánh chưng và bánh dày (tập I, số 1, mục Sự tích đất nước)"
+    chapter: "Gốc tích bánh chưng và bánh dày (tập I, mục Sự tích đất nước)"
     edition: "5 tập, 1957-1982"
     url: "https://archive.org/details/khotangtruyencotichvietnam_quyen1"
   - title: Lược khảo về thần thoại Việt Nam
@@ -149,7 +149,7 @@ Hai mươi mốt người anh em tỏa đi trấn giữ biên viễn, lập làn
 
 ## Nhân vật trong _Chưng Bính truyện_
 
-Lang Liêu (郎僚) xuất hiện thành văn bản lần đầu và duy nhất trong **Chưng Bính truyện** (蒸餅傳), truyện thứ tám quyển I của _Lĩnh Nam Chích Quái_ theo bản biên tập Vũ Quỳnh và Kiều Phú 1492-1493. Ngoài LNCQ và các nhánh phái sinh từ nó, không văn bản cổ nào chép hành trạng của ông: _Đại Việt sử ký toàn thư_ chỉ giữ khung 18 đời Hùng Vương trong Ngoại kỷ, _Việt sử lược_ tóm cả thời đại trong một đoạn. Lang Liêu là nhân vật truyền thuyết trọn vẹn, tồn tại bằng truyện, bằng ngọc phả và bằng chiếc bánh, không bằng sử.
+Lang Liêu (郎僚) là nhân vật trung tâm của **Chưng Bính truyện** (蒸餅傳), truyện thứ tám quyển I của _Lĩnh Nam Chích Quái_ theo bản biên tập Vũ Quỳnh và Kiều Phú 1492-1493. Ngoài LNCQ và các nhánh phái sinh từ nó, không văn bản cổ nào chép hành trạng của ông: _Đại Việt sử ký toàn thư_ chỉ giữ khung 18 đời Hùng Vương trong Ngoại kỷ, _Việt sử lược_ tóm cả thời đại trong một đoạn. Lang Liêu là nhân vật truyền thuyết trọn vẹn, tồn tại bằng truyện, bằng ngọc phả và bằng chiếc bánh, không bằng sử.
 
 Toàn văn truyện, nguyên bản Hán văn, hệ truyền bản và lịch sử biên tập: xem entry **Sự tích bánh chưng bánh giầy (Chưng Bính truyện)**. Entry này tập trung vào nhân vật.
 

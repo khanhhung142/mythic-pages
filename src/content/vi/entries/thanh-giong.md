@@ -117,7 +117,7 @@ scholarly_debates:
   - "Niên đại hình tượng: hình thành khoảng bảy thế kỷ trước (Tạ Chí Đại Trường) so với truyền thống Hùng Vương thứ 6"
   - "Tứ bất tử có phải bảng cổ? Chu Xuân Giao phủ nhận tính cổ xưa của bảng bốn vị"
 popularity: 5
-status: draft
+status: published
 updated_at: 2026-07-17
 ---
 

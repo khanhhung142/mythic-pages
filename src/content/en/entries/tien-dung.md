@@ -18,11 +18,11 @@ region: bac
 locations:
   - Capital Phong Châu (birthplace; Việt Trì, Phú Thọ)
   - Bãi Tự Nhiên (Thường Tín, Hà Nội; site of the encounter with Chử Đồng Tử)
-  - Chợ Hà Thị (Red River sandbank; where she built a life)
+  - Chợ Hà Thám (Red River sandbank; where she built a life)
   - Đầm Nhất Dạ Trạch (Khoái Châu, Hưng Yên; site of ascension)
-  - Đền Đa Hoà (Mễ Sở commune, Khoái Châu, Hưng Yên)
+  - Đền Đa Hoà (Bình Minh commune, Khoái Châu, Hưng Yên)
   - Đền Hoá Dạ Trạch (Triệu Việt Vương commune, Khoái Châu, Hưng Yên)
-  - Đền Ngự Dội (Tự Nhiên commune, Thường Tín, Hà Nội)
+  - Đền Ngự Dội - Màn Trầu (Tứ Dân commune, Khoái Châu, Hưng Yên)
 coordinates:
   - 20.8636
   - 106.0583
@@ -31,7 +31,7 @@ relations:
     - Hùng Vương (father; reign 3 or 18 depending on variant)
     - Chử Đồng Tử (husband)
   cohabitors:
-    - Tây Sa công chúa (per thần tích đền Hoá; later companion, absent from Lĩnh Nam chích quái)
+    - Tây Sa công chúa (per thần tích đền Hoá; later companion, her textual origin within Lĩnh Nam chích quái is unclear)
 sources:
   - title: Lĩnh Nam chích quái liệt truyện
     author: Trần Thế Pháp (compiled late 14th c.), Vũ Quỳnh and Kiều Phú (revised 1492)
@@ -61,10 +61,10 @@ themes:
   - song-hong
   - dao-giao-phat-giao
 text_primary: Lĩnh Nam chích quái, Nhất Dạ Trạch truyện
-cult_center: Đền Đa Hoà (Mễ Sở commune) and Đền Hoá Dạ Trạch (Triệu Việt Vương commune), Khoái Châu, Hưng Yên; Đền Ngự Dội (Tự Nhiên commune, Thường Tín, Hà Nội)
+cult_center: Đền Đa Hoà (Bình Minh commune) and Đền Hoá Dạ Trạch (Triệu Việt Vương commune), Khoái Châu, Hưng Yên; Đền Ngự Dội - Màn Trầu (Tứ Dân commune, Khoái Châu, Hưng Yên)
 heritage_status:
   - "National Special Heritage Site: Đa Hoà - Dạ Trạch Complex (Decision 1473/QĐ-TTg, 26/11/2024)"
-  - "National Intangible Cultural Heritage: Đền Đa Hoà Festival (Decision 152) and Đền Hoá Dạ Trạch Festival (Decision 153), 2/2/2023"
+  - "National Intangible Cultural Heritage: Đền Đa Hoà Festival (Decision 153) and Đền Hoá Dạ Trạch Festival (Decision 152), 2/2/2023"
 scholarly_debates:
   - "Historical figure or myth? No independent sources outside Lĩnh Nam chích quái"
   - "Tây Sa công chúa in local temple records: when was she added, and why? No dedicated research yet"
@@ -94,7 +94,7 @@ No betrothal gifts. No matching of families. No one's permission asked.
 
 The news reached Phong Châu before her boats did. The king raged: a daughter who married a beggar off a sandbar could stay away from his palace. Tiên Dung heard the decree and made no appeal. She stayed on the riverbank with her husband.
 
-The two of them built a place to live and traded with the boats going by. The spot grew into a market, called Hà Thị, and merchant vessels came from everywhere, foreign traders among them. The girl raised in a palace turned out to know how to build a business, and the man with no loincloth became a trader known along that whole reach of the river.
+The two of them built a place to live and traded with the boats going by. The spot grew into a market, called Hà Thám, and merchant vessels came from everywhere, foreign traders among them. The girl raised in a palace turned out to know how to build a business, and the man with no loincloth became a trader known along that whole reach of the river.
 
 Then Chử Đồng Tử went to sea with a trading vessel, called at Quỳnh Viên mountain, met a monk named Phật Quang, and came home carrying a staff, a conical hat, and what he had learned. Tiên Dung listened to her husband, then gave up the market and the fortune with it, and went with him to seek a teacher. The first time, she had given up a palace for a man. This time she gave up everything they had built, for a way.
 
@@ -116,7 +116,7 @@ Whether that makes her more radical or less radical than what we usually mean by
 
 ## After the _Encounter_
 
-They couldn't return to court. So they stayed. They built the Hà Thị market right there on the riverbank, trading with boat merchants and travelers passing through. Then Chử Đồng Tử sailed off with a merchant, stopped at Quỳnh Viên mountain, met a monk named Phật Quang, and came back with a magic staff and a magic hat (the full arc is in the **Chử Đồng Tử** entry).
+They couldn't return to court. So they stayed. They built the Hà Thám market right there on the riverbank, trading with boat merchants and travelers passing through. Then Chử Đồng Tử sailed off with a merchant, stopped at Quỳnh Viên mountain, met a monk named Phật Quang, and came back with a magic staff and a magic hat (the full arc is in the **Chử Đồng Tử** entry).
 
 _Lĩnh Nam chích quái_ records that Tiên Dung studied too. The practice was not her husband's alone, and she was not a passive companion. Both abandoned the market. Both traveled. Both practiced. Both ascended.
 
@@ -126,7 +126,7 @@ The text records no reaction from Tiên Dung when her father's army arrived. No 
 
 ## The Third Figure: Tây Sa _công chúa_
 
-In the shrine records of Khoái Châu, Tiên Dung is worshipped alongside Chử Đồng Tử and a third figure, **Tây Sa công chúa** (also called Nội Trạch Tây Cung). This triad is a local cult structure. It doesn't exist in the original _Lĩnh Nam chích quái_.
+In the shrine records of Khoái Châu, Tiên Dung is worshipped alongside Chử Đồng Tử and a third figure, **Tây Sa công chúa** (also called Nội Trạch Tây Cung). This triad is a local cult structure. Tây Sa's textual origin within the original _Lĩnh Nam chích quái_ is unclear.
 
 Some shrine records say Tây Sa công chúa joined them later in their journey and taught Chử Đồng Tử additional magic. When this figure entered the tradition, from which local legend, for what reason: nobody has written a dedicated study on it.
 
@@ -136,6 +136,6 @@ This is what Tạ Chí Đại Trường described: a living tradition. Each comm
 
 At the Chử Đồng Tử and Tiên Dung festival in Khoái Châu (10th-12th of the second lunar month), she is not a secondary figure. Her palanquin is one of three in the main procession. The central ritual, drawing water from the middle of the Red River, directly echoes the water and the sandbank in her story.
 
-At Tự Nhiên (Thường Tín, Hà Nội), the Đền Ngự Dội shrine marks the exact spot where she bathed and met Chử Đồng Tử. It holds its own festival on the 1st-4th of the fourth lunar month, with its own Red River water-drawing ceremony. It's rare for a single scene inside a legend, a bathing spot, to become a sacred site in its own right.
+Across the river, at Toàn Thắng hamlet in Tứ Dân commune (Khoái Châu, Hưng Yên), the Đền Ngự Dội - Màn Trầu shrine marks the encounter tradition, while the bathing site itself is conventionally placed at Tự Nhiên (Thường Tín, Hanoi) on the opposite bank. It's rare for a single scene inside a legend, a bathing spot, to become a sacred site honored on both banks of a river.
 
-Tiên Dung is never worshipped alone, separated from Chử Đồng Tử. Always together. That says something about how the tradition holds her: not as an independent deity, but as one half of a story that breaks apart if you split it.
+Tiên Dung is almost always worshipped alongside Chử Đồng Tử, as an inseparable pair. One exception: Đền Bảo Sài, in Hải Dương city, worships Tiên Dung alone, without Chử Đồng Tử. But that is the exception, not the rule. Nearly everywhere else, she stands beside her husband.
