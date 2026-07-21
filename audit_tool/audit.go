@@ -9,7 +9,7 @@ import (
 	"time"
 )
 
-func runAudit(entryPath, outputPath string, verbose bool) error {
+func runAudit(entryPath, outputPath string, verbose bool, rt Runtime) error {
 	entryPath, err := resolveEntryPath(entryPath)
 	if err != nil {
 		return err
@@ -38,7 +38,7 @@ func runAudit(entryPath, outputPath string, verbose bool) error {
 	for _, block := range blocks {
 		logf(verbose, "  extracting [%s/%s]...\n", block.Kind, truncate(block.Section, 30))
 
-		claims, err := extractFromBlock(block, entryType, claimID)
+		claims, err := extractFromBlock(block, entryType, claimID, rt.LLM)
 		if err != nil {
 			logf(verbose, "  WARN: %v\n", err)
 			blockAudits = append(blockAudits, BlockAudit{Block: block})
@@ -60,20 +60,32 @@ func runAudit(entryPath, outputPath string, verbose bool) error {
 		totalClaims += len(ba.Claims)
 	}
 	logf(verbose, "  total claims to verify: %d\n", totalClaims)
-	blockAudits = verifyAllBlocks(blockAudits, verbose)
+	blockAudits = verifyAllBlocks(blockAudits, verbose, rt)
 
 	logf(verbose, "Scanning patterns...\n")
 	patterns := scanPatterns(raw)
 	logf(verbose, "  %d pattern issues\n", len(patterns))
 
+	logf(verbose, "Auditing source URLs...\n")
+	fm := extractFrontmatter(raw)
+	sources := parseSources(fm)
+	sourceLinks := auditSourceLinks(sources, nil)
+	sourceLinks = append(sourceLinks, auditInlineLinks(raw)...)
+	unlinked := scanUnlinkedCitations(blocks)
+	patterns = append(patterns, unlinked...)
+	missingURL, badURL, unreachable := countSourceLinkIssues(sourceLinks)
+	logf(verbose, "  sources=%d missing_url=%d bad=%d unreachable=%d unlinked_cites=%d\n",
+		len(sources), missingURL, badURL, unreachable, len(unlinked))
+
 	allResults := flattenResults(blockAudits)
-	verdict, rejectReason, summary := deriveVerdict(allResults, patterns, blockAudits)
+	verdict, rejectReason, summary := deriveVerdict(allResults, patterns, blockAudits, sourceLinks)
 
 	report := AuditReport{
 		EntryPath:    entryPath,
 		EntryTitle:   entryTitle,
 		EntryType:    entryType,
 		BlockAudits:  blockAudits,
+		SourceLinks:  sourceLinks,
 		Patterns:     patterns,
 		Verdict:      verdict,
 		RejectReason: rejectReason,
@@ -152,7 +164,7 @@ func resolveAuditDir() string {
 	return "audit"
 }
 
-func verifyAllBlocks(blockAudits []BlockAudit, verbose bool) []BlockAudit {
+func verifyAllBlocks(blockAudits []BlockAudit, verbose bool, rt Runtime) []BlockAudit {
 	type indexedClaim struct {
 		blockIdx int
 		claimIdx int
@@ -182,7 +194,7 @@ func verifyAllBlocks(blockAudits []BlockAudit, verbose bool) []BlockAudit {
 				ic.claim.Block,
 				truncate(ic.claim.Text, 55))
 
-			res, err := verifyClaim(ic.claim, verbose)
+			res, err := verifyClaim(ic.claim, verbose, rt)
 			if err != nil {
 				res = VerificationResult{
 					Claim:      ic.claim,
@@ -222,7 +234,7 @@ func flattenResults(blockAudits []BlockAudit) []VerificationResult {
 	return out
 }
 
-func deriveVerdict(results []VerificationResult, patterns []PatternIssue, blockAudits []BlockAudit) (verdict, rejectReason, summary string) {
+func deriveVerdict(results []VerificationResult, patterns []PatternIssue, blockAudits []BlockAudit, sourceLinks []SourceLinkResult) (verdict, rejectReason, summary string) {
 	total := len(results)
 	if total == 0 {
 		return "REVISE", "No claims extracted", "Entry may be empty or unparseable."
@@ -250,11 +262,16 @@ func deriveVerdict(results []VerificationResult, patterns []PatternIssue, blockA
 	suspPct := float64(counts["suspicious"]) / float64(total) * 100
 
 	stanceIssues := 0
+	unlinkedCites := 0
 	for _, p := range patterns {
 		if p.Pass == 5 {
 			stanceIssues++
 		}
+		if p.Pass == 7 && p.Pattern == "Unlinked scholarly citation" {
+			unlinkedCites++
+		}
 	}
+	missingURL, badURL, unreachable := countSourceLinkIssues(sourceLinks)
 
 	switch {
 	case chuyenKeInvented >= 1:
@@ -269,18 +286,31 @@ func deriveVerdict(results []VerificationResult, patterns []PatternIssue, blockA
 	case wrongPct >= 15:
 		verdict = "REJECT"
 		rejectReason = fmt.Sprintf("%.0f%% of claims wrong or invented", wrongPct)
-	case counts["wrong"]+counts["invented"] >= 1 || suspPct >= 20 || stanceIssues > 0 || len(patterns) >= 5:
+	case counts["wrong"]+counts["invented"] >= 1 || suspPct >= 20 || stanceIssues > 0 || len(patterns) >= 5 || missingURL > 0 || badURL > 0 || unreachable > 0 || unlinkedCites > 0:
 		verdict = "REVISE"
+		if missingURL > 0 && rejectReason == "" {
+			rejectReason = fmt.Sprintf("%d source(s) missing url in sources[]", missingURL)
+		}
+		if badURL > 0 && rejectReason == "" {
+			rejectReason = fmt.Sprintf("%d source url(s) on banned/invalid domain", badURL)
+		}
+		if unreachable > 0 && rejectReason == "" {
+			rejectReason = fmt.Sprintf("%d source url(s) unreachable (4xx/5xx or network error)", unreachable)
+		}
+		if unlinkedCites > 0 && rejectReason == "" {
+			rejectReason = fmt.Sprintf("%d inline citation(s) without markdown link", unlinkedCites)
+		}
 	default:
 		verdict = "PASS"
 	}
 
 	summary = fmt.Sprintf(
-		"%d claims across %d blocks. verified=%d wrong=%d invented=%d suspicious=%d not_found=%d (wrong+invented=%.0f%%). Patterns=%d (stance=%d).",
+		"%d claims across %d blocks. verified=%d wrong=%d invented=%d suspicious=%d not_found=%d (wrong+invented=%.0f%%). Patterns=%d (stance=%d). Sources=%d (missing_url=%d bad=%d unreachable=%d unlinked_cites=%d).",
 		total, len(blockAudits),
 		counts["verified"], counts["wrong"], counts["invented"],
 		counts["suspicious"], counts["not_found"],
 		wrongPct, len(patterns), stanceIssues,
+		len(sourceLinks), missingURL, badURL, unreachable, unlinkedCites,
 	)
 
 	return verdict, rejectReason, summary

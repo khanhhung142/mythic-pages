@@ -2,6 +2,7 @@ package main
 
 import (
 	"bytes"
+	"context"
 	"encoding/json"
 	"fmt"
 	"io"
@@ -9,8 +10,17 @@ import (
 	"os"
 )
 
-const claudeModel = "claude-sonnet-4-6"
-const claudeEndpoint = "https://api.anthropic.com/v1/messages"
+const (
+	defaultClaudeModel    = "claude-sonnet-4-6"
+	claudeMessagesURL     = "https://api.anthropic.com/v1/messages"
+	claudeAPIKeyEnv       = "ANTHROPIC_API_KEY_API_PLATFORM"
+)
+
+type claudeLLM struct {
+	model  string
+	apiKey string
+	client *http.Client
+}
 
 // Explicit cache on the system block (static across calls). Do NOT use
 // top-level automatic cache_control — that breakpoints on the last user
@@ -18,20 +28,20 @@ const claudeEndpoint = "https://api.anthropic.com/v1/messages"
 // https://platform.claude.com/docs/en/build-with-claude/prompt-caching
 type cacheControl struct {
 	Type string `json:"type"`
-	TTL  string `json:"ttl,omitempty"` // "5m" (default) or "1h"
+	TTL  string `json:"ttl,omitempty"`
 }
 
-type systemBlock struct {
+type claudeSystemBlock struct {
 	Type         string        `json:"type"`
 	Text         string        `json:"text"`
 	CacheControl *cacheControl `json:"cache_control,omitempty"`
 }
 
 type claudeRequest struct {
-	Model     string          `json:"model"`
-	MaxTokens int             `json:"max_tokens"`
-	System    []systemBlock   `json:"system,omitempty"`
-	Messages  []claudeMessage `json:"messages"`
+	Model     string              `json:"model"`
+	MaxTokens int                 `json:"max_tokens"`
+	System    []claudeSystemBlock `json:"system,omitempty"`
+	Messages  []claudeMessage     `json:"messages"`
 }
 
 type claudeMessage struct {
@@ -49,24 +59,27 @@ type claudeResponse struct {
 	} `json:"error"`
 }
 
-func callClaude(system, prompt string, maxTokens int) (string, error) {
-	apiKey := os.Getenv("ANTHROPIC_API_KEY_API_PLATFORM")
+func newClaudeLLM(model string) (*claudeLLM, error) {
+	apiKey := os.Getenv(claudeAPIKeyEnv)
 	if apiKey == "" {
-		return "", fmt.Errorf("ANTHROPIC_API_KEY_API_PLATFORM not set")
+		return nil, fmt.Errorf("%s not set", claudeAPIKeyEnv)
 	}
+	if model == "" {
+		model = defaultClaudeModel
+	}
+	return &claudeLLM{model: model, apiKey: apiKey, client: http.DefaultClient}, nil
+}
 
+func (c *claudeLLM) Complete(_ context.Context, system, prompt string, maxTokens int) (string, error) {
 	req := claudeRequest{
-		Model:     claudeModel,
+		Model:     c.model,
 		MaxTokens: maxTokens,
-		System: []systemBlock{{
-			Type: "text",
-			Text: system,
-			// 1h: audit runs can exceed the default 5m TTL across many claims.
+		System: []claudeSystemBlock{{
+			Type:         "text",
+			Text:         system,
 			CacheControl: &cacheControl{Type: "ephemeral", TTL: "1h"},
 		}},
-		Messages: []claudeMessage{
-			{Role: "user", Content: prompt},
-		},
+		Messages: []claudeMessage{{Role: "user", Content: prompt}},
 	}
 
 	body, err := json.Marshal(req)
@@ -74,15 +87,15 @@ func callClaude(system, prompt string, maxTokens int) (string, error) {
 		return "", err
 	}
 
-	httpReq, err := http.NewRequest("POST", claudeEndpoint, bytes.NewReader(body))
+	httpReq, err := http.NewRequest(http.MethodPost, claudeMessagesURL, bytes.NewReader(body))
 	if err != nil {
 		return "", err
 	}
 	httpReq.Header.Set("Content-Type", "application/json")
-	httpReq.Header.Set("x-api-key", apiKey)
+	httpReq.Header.Set("x-api-key", c.apiKey)
 	httpReq.Header.Set("anthropic-version", "2023-06-01")
 
-	resp, err := http.DefaultClient.Do(httpReq)
+	resp, err := c.client.Do(httpReq)
 	if err != nil {
 		return "", err
 	}
@@ -95,14 +108,13 @@ func callClaude(system, prompt string, maxTokens int) (string, error) {
 
 	var cr claudeResponse
 	if err := json.Unmarshal(raw, &cr); err != nil {
-		return "", fmt.Errorf("parse error: %w\nraw: %s", err, raw)
+		return "", fmt.Errorf("claude parse error: %w\nraw: %s", err, raw)
 	}
 	if cr.Error != nil {
 		return "", fmt.Errorf("claude error: %s", cr.Error.Message)
 	}
 	if len(cr.Content) == 0 {
-		return "", fmt.Errorf("empty response")
+		return "", fmt.Errorf("claude empty response")
 	}
-
 	return cr.Content[0].Text, nil
 }

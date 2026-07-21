@@ -3,7 +3,6 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"strings"
 )
 
 const frontmatterExtractSystem = `You extract verifiable claims from the YAML frontmatter of a Vietnamese mythology encyclopedia entry.
@@ -15,7 +14,7 @@ Each claim:
   "id": <number>,
   "text": "<self-contained claim in English>",
   "source": "<citation given in the field, or empty>",
-  "type": "<person|date|event|quote|motif|place|han-tu|atu|source-existence>",
+  "type": "<person|date|event|quote|motif|place|han-tu|atu|source-existence|source-url>",
   "block": "frontmatter",
   "field": "<yaml field name, e.g. name_han, sources, birth_death, events, motifs>",
   "risk": "<high|medium|low>"
@@ -25,7 +24,7 @@ Extract from EVERY field that can be verified:
 - name_han: Hán tự characters -> type=han-tu, risk=high
 - aliases: alternate names -> type=person or place
 - era: era claim -> type=date, risk=medium
-- sources[]: EACH source is TWO claims: (1) "Source exists: [title] by [author]" type=source-existence risk=high; (2) chapter/edition/page if present type=event risk=high
+- sources[]: EACH source is THREE claims: (1) "Source exists: [title] by [author]" type=source-existence risk=high; (2) chapter/edition/page if present type=event risk=high; (3) if url present, "Source URL: [url] for [title]" type=source-url risk=high — if url missing, emit "Source URL missing for [title]" type=source-url risk=high
 - characters[]: each named character -> type=person
 - motifs[]: each ATU/Thompson code -> type=atu, risk=high
 - birth_death: -> type=date, risk=high
@@ -76,7 +75,7 @@ Each claim:
   "id": <number>,
   "text": "<self-contained verifiable claim>",
   "source": "<attribution given in this section, or empty>",
-  "type": "<person|date|event|quote|motif|place|han-tu|atu|source-existence>",
+  "type": "<person|date|event|quote|motif|place|han-tu|atu|source-existence|source-url>",
   "block": "section:%s",
   "field": "%s",
   "risk": "<high|medium|low>"
@@ -85,6 +84,7 @@ Each claim:
 Rules by section type:
 - named scholar + claim -> risk=high
 - source references (LNCQ tale, ĐVSKTT quyển, etc.) -> risk=high
+- inline markdown links [text](url) in analysis -> note url for verification
 - dates, battles, dynasties, title names with years -> risk=high
 - Hán tự -> risk=high
 - ATU/Thompson codes -> risk=high
@@ -93,7 +93,7 @@ Rules by section type:
 
 Max 40 claims per section. Skip pure interpretive prose with no verifiable anchor.`
 
-func extractFromBlock(block EntryBlock, entryType string, baseID int) ([]Claim, error) {
+func extractFromBlock(block EntryBlock, entryType string, baseID int, llm LLM) ([]Claim, error) {
 	var systemPrompt string
 	var userPrompt string
 
@@ -112,7 +112,7 @@ func extractFromBlock(block EntryBlock, entryType string, baseID int) ([]Claim, 
 		return nil, nil
 	}
 
-	raw, err := callClaudeJSON(systemPrompt, userPrompt, 8192)
+	raw, err := callLLMJSON(llm, systemPrompt, userPrompt, 8192)
 	if err != nil {
 		return nil, fmt.Errorf("extract [%s/%s]: %w", block.Kind, block.Section, err)
 	}
@@ -133,46 +133,6 @@ func extractFromBlock(block EntryBlock, entryType string, baseID int) ([]Claim, 
 	}
 
 	return claims, nil
-}
-
-func callClaudeJSON(systemPrompt, userPrompt string, maxTokens int) (string, error) {
-	// ponytail: retry once for truncated JSON; switch to streaming/tool-use only if this proves flaky.
-	var lastRaw string
-	var lastErr error
-	for range 2 {
-		raw, err := callClaude(systemPrompt, userPrompt, maxTokens)
-		if err != nil {
-			return "", err
-		}
-		raw = cleanClaudeJSON(raw)
-		lastRaw = raw
-
-		if isJSONArray(raw) || isJSONObject(raw) {
-			return raw, nil
-		}
-		lastErr = fmt.Errorf("parse claims JSON")
-	}
-	return "", fmt.Errorf("%w\nraw output: %s", lastErr, lastRaw)
-}
-
-func cleanClaudeJSON(raw string) string {
-	raw = strings.TrimSpace(raw)
-	raw = strings.TrimPrefix(raw, "```json")
-	raw = strings.TrimPrefix(raw, "```")
-	raw = strings.TrimSuffix(raw, "```")
-	raw = strings.TrimSpace(raw)
-
-	if start := strings.Index(raw, "["); start >= 0 {
-		if end := strings.LastIndex(raw, "]"); end > start {
-			return strings.TrimSpace(raw[start : end+1])
-		}
-	}
-	if start := strings.Index(raw, "{"); start >= 0 {
-		if end := strings.LastIndex(raw, "}"); end > start {
-			return strings.TrimSpace(raw[start : end+1])
-		}
-	}
-	return raw
 }
 
 func isJSONArray(raw string) bool {

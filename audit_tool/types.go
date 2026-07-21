@@ -45,14 +45,15 @@ type BlockAudit struct {
 
 // AuditReport final output.
 type AuditReport struct {
-	EntryPath    string         `json:"entry_path"`
-	EntryTitle   string         `json:"entry_title"`
-	EntryType    string         `json:"entry_type"`
-	BlockAudits  []BlockAudit   `json:"block_audits"`
-	Patterns     []PatternIssue `json:"patterns"`
-	Verdict      string         `json:"verdict"`
-	RejectReason string         `json:"reject_reason,omitempty"`
-	Summary      string         `json:"summary"`
+	EntryPath    string             `json:"entry_path"`
+	EntryTitle   string             `json:"entry_title"`
+	EntryType    string             `json:"entry_type"`
+	BlockAudits  []BlockAudit       `json:"block_audits"`
+	SourceLinks  []SourceLinkResult `json:"source_links"`
+	Patterns     []PatternIssue     `json:"patterns"`
+	Verdict      string             `json:"verdict"`
+	RejectReason string             `json:"reject_reason,omitempty"`
+	Summary      string             `json:"summary"`
 }
 
 func (r *AuditReport) AllResults() []VerificationResult {

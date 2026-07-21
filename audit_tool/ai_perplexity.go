@@ -2,6 +2,7 @@ package main
 
 import (
 	"bytes"
+	"context"
 	"encoding/json"
 	"fmt"
 	"io"
@@ -9,12 +10,20 @@ import (
 	"os"
 )
 
-const perplexityEndpoint = "https://api.perplexity.ai/chat/completions"
-const perplexityModel = "sonar"
+const (
+	perplexityEndpoint   = "https://api.perplexity.ai/chat/completions"
+	defaultPerplexityModel = "sonar"
+)
+
+type perplexitySearch struct {
+	model  string
+	apiKey string
+	client *http.Client
+}
 
 type perplexityRequest struct {
-	Model    string               `json:"model"`
-	Messages []perplexityMessage  `json:"messages"`
+	Model    string              `json:"model"`
+	Messages []perplexityMessage `json:"messages"`
 }
 
 type perplexityMessage struct {
@@ -34,14 +43,16 @@ type perplexityResponse struct {
 	} `json:"error"`
 }
 
-type searchResult struct {
-	Answer    string
-	Citations []string
+func newPerplexitySearch() *perplexitySearch {
+	return &perplexitySearch{
+		model:  defaultPerplexityModel,
+		apiKey: os.Getenv("PERPLEXITY_API_KEY"),
+		client: http.DefaultClient,
+	}
 }
 
-func searchClaim(claim string) (*searchResult, error) {
-	apiKey := os.Getenv("PERPLEXITY_API_KEY")
-	if apiKey == "" {
+func (p *perplexitySearch) Search(_ context.Context, query string) (*SearchResult, error) {
+	if p.apiKey == "" {
 		return nil, fmt.Errorf("PERPLEXITY_API_KEY not set")
 	}
 
@@ -52,10 +63,10 @@ Claim: %s
 Respond concisely:
 1. Verdict: supported / contradicted / not_found / uncertain
 2. Evidence: what sources say
-3. Key source titles if found`, claim)
+3. Key source titles if found`, query)
 
 	req := perplexityRequest{
-		Model: perplexityModel,
+		Model: p.model,
 		Messages: []perplexityMessage{
 			{
 				Role:    "system",
@@ -70,14 +81,14 @@ Respond concisely:
 		return nil, err
 	}
 
-	httpReq, err := http.NewRequest("POST", perplexityEndpoint, bytes.NewReader(body))
+	httpReq, err := http.NewRequest(http.MethodPost, perplexityEndpoint, bytes.NewReader(body))
 	if err != nil {
 		return nil, err
 	}
 	httpReq.Header.Set("Content-Type", "application/json")
-	httpReq.Header.Set("Authorization", "Bearer "+apiKey)
+	httpReq.Header.Set("Authorization", "Bearer "+p.apiKey)
 
-	resp, err := http.DefaultClient.Do(httpReq)
+	resp, err := p.client.Do(httpReq)
 	if err != nil {
 		return nil, err
 	}
@@ -90,16 +101,16 @@ Respond concisely:
 
 	var pr perplexityResponse
 	if err := json.Unmarshal(raw, &pr); err != nil {
-		return nil, fmt.Errorf("parse error: %w\nraw: %s", err, raw)
+		return nil, fmt.Errorf("perplexity parse error: %w\nraw: %s", err, raw)
 	}
 	if pr.Error != nil {
 		return nil, fmt.Errorf("perplexity error: %s", pr.Error.Message)
 	}
 	if len(pr.Choices) == 0 {
-		return nil, fmt.Errorf("empty response")
+		return nil, fmt.Errorf("perplexity empty response")
 	}
 
-	return &searchResult{
+	return &SearchResult{
 		Answer:    pr.Choices[0].Message.Content,
 		Citations: pr.Citations,
 	}, nil

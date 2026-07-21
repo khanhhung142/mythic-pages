@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"strings"
@@ -35,8 +36,8 @@ Special rules by claim type:
 - atu: if code doesn't exist in ATU index, mark invented; if code exists but description doesn't match, mark wrong
 - chuyen-ke narrative: be skeptical of very specific details absent from known versions`
 
-func verifyClaim(claim Claim, verbose bool) (VerificationResult, error) {
-	result, err := judgeOnce(claim, buildSearchQuery(claim), verbose)
+func verifyClaim(claim Claim, verbose bool, rt Runtime) (VerificationResult, error) {
+	result, err := judgeOnce(claim, buildSearchQuery(claim), verbose, rt)
 	if err != nil {
 		return result, err
 	}
@@ -45,7 +46,7 @@ func verifyClaim(claim Claim, verbose bool) (VerificationResult, error) {
 	// search summary, so a single pass hallucinates false wrong/invented.
 	// Upgrade path: fetch top citation page content if this still misfires.
 	if result.Status == "wrong" || result.Status == "invented" {
-		second, err := judgeOnce(claim, altSearchQuery(claim), verbose)
+		second, err := judgeOnce(claim, altSearchQuery(claim), verbose, rt)
 		if err == nil && second.Status == "verified" {
 			result.Status = "suspicious"
 			result.Evidence = fmt.Sprintf("Conflicting verdicts across two searches. First (%s): %s | Second (verified): %s",
@@ -58,10 +59,10 @@ func verifyClaim(claim Claim, verbose bool) (VerificationResult, error) {
 	return result, nil
 }
 
-func judgeOnce(claim Claim, searchQuery string, verbose bool) (VerificationResult, error) {
+func judgeOnce(claim Claim, searchQuery string, verbose bool, rt Runtime) (VerificationResult, error) {
 	result := VerificationResult{Claim: claim}
 
-	sr, err := searchClaim(searchQuery)
+	sr, err := rt.Search.Search(context.Background(), searchQuery)
 	if err != nil {
 		result.Status = "not_found"
 		result.Evidence = fmt.Sprintf("Search failed: %v", err)
@@ -86,7 +87,7 @@ Search results:
 Citations:
 %s`, claim.Text, claim.Block, claim.Field, claim.Type, claim.Source, sr.Answer, citationList)
 
-	raw, err := callClaudeJSON(judgeSystem, prompt, 512)
+	raw, err := callLLMJSON(rt.LLM, judgeSystem, prompt, 512)
 	if err != nil {
 		result.Status = "not_found"
 		result.Evidence = fmt.Sprintf("Judgment failed: %v", err)

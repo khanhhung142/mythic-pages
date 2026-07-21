@@ -4,10 +4,17 @@ CLI tool tự động audit entries vietmyth.vn.
 
 ## Setup
 
-```bash
-export ANTHROPIC_API_KEY_API_PLATFORM=sk-ant-...
-export PERPLEXITY_API_KEY=pplx-...
-```
+Set API keys for the providers you use:
+
+| Provider | Env var | Default model |
+|---|---|---|
+| Claude (default LLM) | `ANTHROPIC_API_KEY_API_PLATFORM` | `claude-sonnet-4-6` |
+| OpenAI | `OPENAI_API_KEY` | `gpt-4o` |
+| DeepSeek | `DEEPSEEK_API_KEY` | `deepseek-chat` |
+| Gemini | `GEMINI_API_KEY` or `GOOGLE_API_KEY` | `gemini-2.0-flash` |
+| Perplexity (search) | `PERPLEXITY_API_KEY` | `sonar` |
+
+Optional env: `AUDIT_LLM`, `AUDIT_LLM_MODEL`, `AUDIT_SEARCH`.
 
 ```bash
 go mod tidy
@@ -17,8 +24,18 @@ go build -o vietmyth-auditor .
 ## Dùng
 
 ```bash
-# Audit 1 entry theo slug, tự đọc từ src/content/vi/entries/<slug>.md
-# Output luôn vào audit/<slug>-audit.md
+# Audit 1 entry theo slug
+./vietmyth-auditor audit thanh-giong
+
+# Dùng OpenAI làm LLM judge/extract
+./vietmyth-auditor audit thanh-giong --llm openai --llm-model gpt-4o
+
+# DeepSeek / Gemini
+./vietmyth-auditor audit thanh-giong --llm deepseek
+./vietmyth-auditor audit thanh-giong --llm gemini --llm-model gemini-2.0-flash
+
+# Hoặc qua env
+export AUDIT_LLM=deepseek
 ./vietmyth-auditor audit thanh-giong
 
 # Đổi tên file trong audit/ (vẫn luôn ghi vào folder audit/)
@@ -50,10 +67,27 @@ File `audit/<entry>-audit.md` gồm:
 
 | Pass | Nội dung | Tool |
 |---|---|---|
-| 1 | Extract claims | Claude |
-| 3 | Verify từng claim | Perplexity + Claude |
+| 1 | Extract claims | LLM (`--llm`) |
+| 3 | Verify từng claim | Perplexity + LLM |
 | 5 | Stance check (sovereignty, framing) | Regex |
 | 6 | AI writing patterns | Regex |
+| 7 | Source URLs + unlinked citations | HTTP + Regex |
+
+Pass 7 kiểm tra:
+
+- Mỗi mục `sources[]` có `url` không
+- URL có reachable (HTTP), domain không nằm danh sách cấm (blog, wiki, …)
+- Link markdown inline `[text](url)` trong thân bài
+- Trích dẫn analysis thiếu link (tên + năm / *tựa sách* không bọc link)
+
+## Kiến trúc AI
+
+LLM và search tách qua interface — thêm provider mới bằng cách implement:
+
+- `LLM.Complete(ctx, system, prompt, maxTokens)` — extract claims + judge verdicts
+- `SearchProvider.Search(ctx, query)` — grounded search (hiện chỉ Perplexity)
+
+Factory: `NewRuntime(AIConfig{...})` trong `ai.go`.
 
 ## Giới hạn
 

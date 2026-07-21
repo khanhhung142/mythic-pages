@@ -40,10 +40,11 @@ vi/en song song cùng slug.)
    stance check output từng câu nghi vấn, không output "đã kiểm tra, ổn".
 7. **Hán tự:** verify từng ký tự bằng web search khi không chắc. Đây là
    lỗi phổ biến nhất.
-8. **Citation:** mọi claim học thuật có tên + tác phẩm + năm + trang.
-   Không chắc nguồn → bỏ claim, không bịa. Mỗi mục trong `sources:` bắt
-   buộc có `url` dẫn tới nguồn uy tín (thư viện, NXB, journal/DOI, archive
-   — không blog, wiki, bài viết cá nhân). Chi tiết: skill §2.7.
+8. **Citation:** mọi claim học thuật có tên + tác phẩm + năm + trang **và
+   markdown link** tới nguồn uy tín. Không chắc nguồn → bỏ claim, không bịa.
+   Mỗi mục trong `sources:` bắt buộc có `url`; mọi trích dẫn trong analysis
+   cũng phải có link (thư viện, NXB, journal/DOI, archive — không blog, wiki,
+   bài viết cá nhân). Chi tiết: skill §2.7.
 9. **humanizer:** dùng skill có sẵn đã cài đặt vào máy
 
 ## Không được làm

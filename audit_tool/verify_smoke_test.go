@@ -9,8 +9,12 @@ import (
 // "invented" (the JSEAS 2013 article by Nguyễn Thị Điểu, which exists).
 // Run: go test -run Smoke -v   (needs both API keys; skipped otherwise)
 func TestSmokeVerifyRealSource(t *testing.T) {
-	if os.Getenv("PERPLEXITY_API_KEY") == "" || os.Getenv("ANTHROPIC_API_KEY_API_PLATFORM") == "" {
-		t.Skip("API keys not set")
+	if os.Getenv("PERPLEXITY_API_KEY") == "" {
+		t.Skip("PERPLEXITY_API_KEY not set")
+	}
+	rt, err := NewRuntime(AIConfig{LLMProvider: envOr("AUDIT_LLM", "claude")})
+	if err != nil {
+		t.Skip(err)
 	}
 	c := Claim{
 		ID:     1,
@@ -21,7 +25,7 @@ func TestSmokeVerifyRealSource(t *testing.T) {
 		Field:  "scholarship",
 		Risk:   "high",
 	}
-	r, err := verifyClaim(c, true)
+	r, err := verifyClaim(c, true, rt)
 	if err != nil {
 		t.Fatalf("verifyClaim: %v", err)
 	}

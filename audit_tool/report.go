@@ -73,6 +73,26 @@ func renderReport(r AuditReport) string {
 		}
 	}
 
+	sb.WriteString("---\n\n## Source URL Audit\n\n")
+	if len(r.SourceLinks) == 0 {
+		sb.WriteString("No `sources[]` entries or inline citation links found.\n\n")
+	} else {
+		sb.WriteString("| # | Title | URL | Status | Note |\n|---|---|---|---|---|\n")
+		for i, sl := range r.SourceLinks {
+			title := sl.Source.Title
+			if sl.Source.Author != "" && title != "inline citation" {
+				title = sl.Source.Author + " — " + title
+			}
+			url := sl.Source.URL
+			if url == "" {
+				url = "—"
+			}
+			sb.WriteString(fmt.Sprintf("| %d | %s | %s | %s | %s |\n",
+				i+1, title, url, sl.Status, sl.Evidence))
+		}
+		sb.WriteString("\n")
+	}
+
 	sb.WriteString("---\n\n## Writing Pattern Issues\n\n")
 	if len(r.Patterns) == 0 {
 		sb.WriteString("None.\n\n")
