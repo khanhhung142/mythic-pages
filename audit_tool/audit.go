@@ -24,6 +24,7 @@ func runAudit(entryPath, outputPath string, verbose bool, rt Runtime) error {
 	entryTitle := extractTitle(raw, entryPath)
 	entryType := detectEntryType(raw)
 	logf(verbose, "Entry: %s (type: %s)\n", entryTitle, entryType)
+	logf(verbose, "AI: extract=%s judge=%s search=perplexity\n", rt.ExtractProvider, rt.JudgeProvider)
 
 	logf(verbose, "Parsing blocks...\n")
 	blocks := parseEntry(raw)
@@ -38,7 +39,7 @@ func runAudit(entryPath, outputPath string, verbose bool, rt Runtime) error {
 	for _, block := range blocks {
 		logf(verbose, "  extracting [%s/%s]...\n", block.Kind, truncate(block.Section, 30))
 
-		claims, err := extractFromBlock(block, entryType, claimID, rt.LLM)
+		claims, err := extractFromBlock(block, entryType, claimID, rt.Extract)
 		if err != nil {
 			logf(verbose, "  WARN: %v\n", err)
 			blockAudits = append(blockAudits, BlockAudit{Block: block})

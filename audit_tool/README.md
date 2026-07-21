@@ -2,19 +2,27 @@
 
 CLI tool tự động audit entries vietmyth.vn.
 
+## Kiến trúc AI (mặc định)
+
+| Job | Provider | Lý do |
+|---|---|---|
+| **Search** | Perplexity `sonar` | Grounded web search + citations |
+| **Extract** | DeepSeek | Rẻ, JSON extraction |
+| **Judge** | Claude Sonnet | Bám hard rules, ít false invented |
+
+Judge **không nên** dùng Gemini/DeepSeek cho encyclopedia Việt/Hán Nôm — tool sẽ cảnh báo nếu bạn override.
+
 ## Setup
 
-Set API keys for the providers you use:
+Set API keys:
 
-| Provider | Env var | Default model |
+| Job | Env var | Default model |
 |---|---|---|
-| Claude (default LLM) | `ANTHROPIC_API_KEY_API_PLATFORM` | `claude-sonnet-4-6` |
-| OpenAI | `OPENAI_API_KEY` | `gpt-4o` |
-| DeepSeek | `DEEPSEEK_API_KEY` | `deepseek-chat` |
-| Gemini | `GEMINI_API_KEY` or `GOOGLE_API_KEY` | `gemini-2.0-flash` |
-| Perplexity (search) | `PERPLEXITY_API_KEY` | `sonar` |
+| Extract (DeepSeek) | `DEEPSEEK_API_KEY` | `deepseek-chat` |
+| Judge (Claude) | `ANTHROPIC_API_KEY_API_PLATFORM` | `claude-sonnet-4-6` |
+| Search | `PERPLEXITY_API_KEY` | `sonar` |
 
-Optional env: `AUDIT_LLM`, `AUDIT_LLM_MODEL`, `AUDIT_SEARCH`.
+Optional overrides: `AUDIT_EXTRACT_LLM`, `AUDIT_EXTRACT_MODEL`, `AUDIT_JUDGE_LLM`, `AUDIT_JUDGE_MODEL`, `AUDIT_SEARCH`.
 
 ```bash
 go mod tidy
@@ -24,24 +32,20 @@ go build -o vietmyth-auditor .
 ## Dùng
 
 ```bash
-# Audit 1 entry theo slug
+# Mặc định: extract=deepseek, judge=claude, search=perplexity
 ./vietmyth-auditor audit thanh-giong
 
-# Dùng OpenAI làm LLM judge/extract
-./vietmyth-auditor audit thanh-giong --llm openai --llm-model gpt-4o
+# Đổi extract sang Gemini
+./vietmyth-auditor audit thanh-giong --extract-llm gemini
 
-# DeepSeek / Gemini
+# Chỉ định model cụ thể
+./vietmyth-auditor audit thanh-giong --extract-llm gemini --extract-model gemini-2.0-flash
+./vietmyth-auditor audit thanh-giong --judge-llm claude --judge-model claude-sonnet-4-6
+
+# Batch thử nghiệm: một provider cho cả extract + judge (không khuyến nghị)
 ./vietmyth-auditor audit thanh-giong --llm deepseek
-./vietmyth-auditor audit thanh-giong --llm gemini --llm-model gemini-2.0-flash
 
-# Hoặc qua env
-export AUDIT_LLM=deepseek
-./vietmyth-auditor audit thanh-giong
-
-# Đổi tên file trong audit/ (vẫn luôn ghi vào folder audit/)
-./vietmyth-auditor audit thanh-giong -o thanh-giong-v2.md
-
-# Verbose (xem progress)
+# Verbose
 ./vietmyth-auditor audit thanh-giong -v
 ```
 
@@ -67,25 +71,16 @@ File `audit/<entry>-audit.md` gồm:
 
 | Pass | Nội dung | Tool |
 |---|---|---|
-| 1 | Extract claims | LLM (`--llm`) |
-| 3 | Verify từng claim | Perplexity + LLM |
+| 1 | Extract claims | Extract LLM (`--extract-llm`) |
+| 3 | Verify từng claim | Perplexity + Judge LLM |
 | 5 | Stance check (sovereignty, framing) | Regex |
 | 6 | AI writing patterns | Regex |
 | 7 | Source URLs + unlinked citations | HTTP + Regex |
 
-Pass 7 kiểm tra:
+## Interface
 
-- Mỗi mục `sources[]` có `url` không
-- URL có reachable (HTTP), domain không nằm danh sách cấm (blog, wiki, …)
-- Link markdown inline `[text](url)` trong thân bài
-- Trích dẫn analysis thiếu link (tên + năm / *tựa sách* không bọc link)
-
-## Kiến trúc AI
-
-LLM và search tách qua interface — thêm provider mới bằng cách implement:
-
-- `LLM.Complete(ctx, system, prompt, maxTokens)` — extract claims + judge verdicts
-- `SearchProvider.Search(ctx, query)` — grounded search (hiện chỉ Perplexity)
+- `LLM.Complete(ctx, system, prompt, maxTokens)` — extract + judge
+- `SearchProvider.Search(ctx, query)` — Perplexity
 
 Factory: `NewRuntime(AIConfig{...})` trong `ai.go`.
 
@@ -93,5 +88,4 @@ Factory: `NewRuntime(AIConfig{...})` trong `ai.go`.
 
 - Max 60 claims/entry (tránh API cost)
 - Verify chạy concurrent 5 goroutines, rate limit 200ms/claim
-- Perplexity `sonar` model — web search grounded
 - Claim "not_found" không có nghĩa là sai, chỉ là không verify được — cần check tay

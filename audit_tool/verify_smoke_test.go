@@ -12,7 +12,7 @@ func TestSmokeVerifyRealSource(t *testing.T) {
 	if os.Getenv("PERPLEXITY_API_KEY") == "" {
 		t.Skip("PERPLEXITY_API_KEY not set")
 	}
-	rt, err := NewRuntime(AIConfig{LLMProvider: envOr("AUDIT_LLM", "claude")})
+	rt, err := NewRuntime(AIConfig{}) // default: judge=claude, search=perplexity
 	if err != nil {
 		t.Skip(err)
 	}

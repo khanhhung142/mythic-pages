@@ -3,6 +3,7 @@ package main
 import (
 	"context"
 	"fmt"
+	"os"
 	"strings"
 )
 
@@ -23,28 +24,82 @@ type SearchResult struct {
 }
 
 // Runtime holds injectable AI backends for the audit pipeline.
+// Extract: cheap/fast JSON parsing. Judge: strict instruction-following (Claude).
 type Runtime struct {
-	LLM    LLM
-	Search SearchProvider
+	Extract         LLM
+	Judge           LLM
+	Search          SearchProvider
+	ExtractProvider string
+	JudgeProvider   string
 }
 
 // AIConfig selects LLM and search providers from CLI / env.
 type AIConfig struct {
-	LLMProvider    string // claude | openai | deepseek | gemini
-	LLMModel       string // optional override
-	SearchProvider string // perplexity (default)
+	ExtractProvider string // default deepseek
+	ExtractModel    string
+	JudgeProvider   string // default claude
+	JudgeModel      string
+	SearchProvider  string // default perplexity
+
+	// Legacy: --llm / AUDIT_LLM overrides both extract and judge (batch experiment).
+	LLMProvider string
+	LLMModel    string
 }
 
 func NewRuntime(cfg AIConfig) (Runtime, error) {
-	llm, err := NewLLM(cfg.LLMProvider, cfg.LLMModel)
+	extractProv := cfg.ExtractProvider
+	extractModel := cfg.ExtractModel
+	judgeProv := cfg.JudgeProvider
+	judgeModel := cfg.JudgeModel
+
+	if cfg.LLMProvider != "" {
+		extractProv = cfg.LLMProvider
+		judgeProv = cfg.LLMProvider
+		if cfg.LLMModel != "" {
+			extractModel = cfg.LLMModel
+			judgeModel = cfg.LLMModel
+		}
+	}
+	if extractProv == "" {
+		extractProv = "deepseek"
+	}
+	if judgeProv == "" {
+		judgeProv = "claude"
+	}
+
+	extract, err := NewLLM(extractProv, extractModel)
 	if err != nil {
-		return Runtime{}, err
+		return Runtime{}, fmt.Errorf("extract LLM: %w", err)
+	}
+	judge, err := NewLLM(judgeProv, judgeModel)
+	if err != nil {
+		return Runtime{}, fmt.Errorf("judge LLM: %w", err)
 	}
 	search, err := NewSearch(cfg.SearchProvider)
 	if err != nil {
 		return Runtime{}, err
 	}
-	return Runtime{LLM: llm, Search: search}, nil
+
+	warnJudgeProvider(judgeProv)
+
+	return Runtime{
+		Extract:         extract,
+		Judge:           judge,
+		Search:          search,
+		ExtractProvider: extractProv,
+		JudgeProvider:   judgeProv,
+	}, nil
+}
+
+// warnJudgeProvider flags risky judge choices for Vietnamese/Hán Nôm encyclopedia work.
+func warnJudgeProvider(provider string) {
+	switch strings.ToLower(strings.TrimSpace(provider)) {
+	case "gemini", "deepseek":
+		fmt.Fprintf(os.Stderr,
+			"warning: judge=%s is not recommended for Vietnamese/Hán Nôm fact-checking; use --judge-llm claude\n",
+			provider,
+		)
+	}
 }
 
 func NewLLM(provider, model string) (LLM, error) {

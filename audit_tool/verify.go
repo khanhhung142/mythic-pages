@@ -87,7 +87,7 @@ Search results:
 Citations:
 %s`, claim.Text, claim.Block, claim.Field, claim.Type, claim.Source, sr.Answer, citationList)
 
-	raw, err := callLLMJSON(rt.LLM, judgeSystem, prompt, 512)
+	raw, err := callLLMJSON(rt.Judge, judgeSystem, prompt, 512)
 	if err != nil {
 		result.Status = "not_found"
 		result.Evidence = fmt.Sprintf("Judgment failed: %v", err)
