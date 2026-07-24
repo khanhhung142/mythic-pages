@@ -30,6 +30,7 @@ func renderReport(r AuditReport) string {
 	sb.WriteString(fmt.Sprintf("| 💀 invented | %d |\n", counts["invented"]))
 	sb.WriteString(fmt.Sprintf("| ⚠️ suspicious | %d |\n", counts["suspicious"]))
 	sb.WriteString(fmt.Sprintf("| 🔍 not_found | %d |\n", counts["not_found"]))
+	sb.WriteString(fmt.Sprintf("| 🛑 error (not checked) | %d |\n", counts["error"]))
 	sb.WriteString(fmt.Sprintf("| 🔶 pattern issues | %d |\n\n", len(r.Patterns)))
 
 	urgent := filterByStatuses(allResults, "invented", "wrong")
@@ -139,6 +140,8 @@ func verdictBadge(v string) string {
 		return "⚠️ REVISE"
 	case "REJECT":
 		return "❌ REJECT"
+	case "INCONCLUSIVE":
+		return "🚫 INCONCLUSIVE (audit did not complete)"
 	default:
 		return v
 	}
@@ -154,6 +157,8 @@ func statusIcon(s string) string {
 		return "💀"
 	case "suspicious":
 		return "⚠️"
+	case "error":
+		return "🛑"
 	default:
 		return "🔍"
 	}

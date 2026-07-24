@@ -1,0 +1,99 @@
+# Việt Tỉnh Truyện (越井傳): truyện "Giếng Việt" trong Lĩnh Nam Chích Quái — một tích cổ Việt phóng tác từ truyện truyền kỳ Trung Hoa "Thôi Vĩ" (崔煒)
+
+**Entry type:** A — `tich-co` (tích cổ / thần thoại–truyền kỳ). Lý do: đây là một truyện chép trong tuyển tập chí quái/truyền kỳ *Lĩnh Nam Chích Quái* (嶺南摭怪), thuộc dòng thần thoại–truyền thuyết có yếu tố kỳ ảo (người lạc xuống giếng/động, gặp cõi âm phủ – long cung, hôn phối với thần nữ, bảo châu thần). **Ghi chú tính lai (hybrid, Type C):** truyện giao cắt với nhân vật lịch sử [Triệu Đà (趙佗) – vua Nam Việt](https://ctext.org/taiping-guangji/34/cuiwei) và với một địa danh có thật là gò/giếng "Việt Tỉnh cương" (越井岡) ở núi Việt Tú (越秀山) gần Phiên Ngung/Quảng Châu, nên có một chiều kích lịch sử–chủ quyền (Nam Việt / Triệu Đà) đáng gắn cờ. Bản Trung Hoa lấy lăng Triệu Đà làm trung tâm; bản Việt lại dời bối cảnh về đất Việt và thay bằng Ân Vương — chính điểm "dời chỗ" này là hạt nhân của giá trị Type C.
+
+## TL;DR
+
+- *Việt Tỉnh truyện* (越井傳, "Truyện Giếng Việt") là một trong các truyện thuộc quyển 2 của *Lĩnh Nam Chích Quái* (嶺南摭怪) — tuyển tập truyện cổ chữ Hán tương truyền do Trần Thế Pháp soạn, được Vũ Quỳnh và Kiều Phú hiệu chính cuối thế kỷ XV; một bản chép tay (NLVNPF-0651 / R.1618) hiện được số hóa trong sưu tập Thư viện Quốc gia Việt Nam trên [Nôm Foundation](https://lib.nomfoundation.org/collection/1/volume/819/).
+- Truyện là một phóng tác từ truyện truyền kỳ đời Đường **"Thôi Vĩ" (崔煒)**, vốn thuộc tập *Truyền Kỳ* (傳奇) của Bùi Hình (裴鉶) và được bảo tồn trong *Thái Bình Quảng Ký* (太平廣記) quyển 34 — điều này được xác nhận bởi văn bản gốc trên [ctext.org](https://ctext.org/taiping-guangji/34/cuiwei) và được giới nghiên cứu Đông Á nêu tường minh.
+- Trong bản Trung Hoa, chàng Thôi Vĩ lạc xuống một hang giếng ở Quảng Châu, cuối cùng nhận ra đó là **lăng mộ Nam Việt vương Triệu Đà** (南越王趙佗墓), được ban ngọc *Dương Toại châu* (陽燧珠) và cưới thần nữ **Điền phu nhân** (田夫人) — con gái Tề vương Điền Hoành (齊王橫); bà lão cho ngải cứu ở gò Việt Tỉnh chính là tiên cô **Bào Cô** (鮑姑), vợ Cát Hồng (葛洪). Tất cả các tình tiết này được kiểm chứng nguyên văn trong [Thái Bình Quảng Ký q.34](https://ctext.org/taiping-guangji/34/cuiwei).
+- Bản Việt trong *Lĩnh Nam Chích Quái* **dời bối cảnh về đất Việt** (miền Trâu Sơn, Vũ Ninh) và thay "lăng Triệu Đà" bằng cung điện của **Ân Vương** (vua nhà Ân bị Phù Đổng Thiên Vương đánh bại, hóa làm vua cõi âm), giữ lại mô-típ giếng–âm cung–bảo châu–hôn phối thần nữ và etiology địa danh "Việt Tỉnh Cương". Đây là ví dụ điển hình về việc giới nho sĩ Đại Việt thế kỷ XV "bản địa hóa" một cốt truyện Hoa.
+- Truyện mang lớp lịch sử Nam Việt/Triệu Đà — một nhân vật mà sử học Việt Nam **chia rẽ sâu sắc** về tính chính thống: từ Lê Văn Hưu và Ngô Sĩ Liên coi là chính thống, đến Ngô Thì Sĩ và sử học hiện đại (Đào Duy Anh, Phan Huy Lê) coi là ngoại bang xâm lược. Cần trình bày cả hai phía.
+
+## Key Findings
+
+1. **Vị trí văn bản.** *Việt Tỉnh truyện* nằm trong *Lĩnh Nam Chích Quái liệt truyện* (嶺南摭怪列傳), tác phẩm văn xuôi chữ Hán được [Vũ Quỳnh và Kiều Phú hiệu chính cuối thế kỷ XV](https://lib.nomfoundation.org/collection/1/volume/819/). Số truyện thay đổi theo dị bản: bản A.33 (chép lại từ bản đề năm Chính Hòa thứ 18, tức 1697) có 2 quyển gồm 22 truyện; bản A.1200 theo mục lục có 45 truyện nhưng thiếu mất 10 truyện; bản 3 quyển là A.1300; xem thêm [bản dịch của Liam Kelley](https://sites.google.com/hawaii.edu/viettexts/lncqlt).
+2. **Nguồn gốc Trung Hoa.** Cốt truyện phóng tác từ truyện "Thôi Vĩ" (崔煒) đời Đường, thuộc *Truyền Kỳ* (傳奇) của Bùi Hình (裴鉶), lưu trong *Thái Bình Quảng Ký* (太平廣記) — bộ loại thư 500 quyển do Lý Phưởng (李昉, 925–996) cùng Hồ Mông (扈蒙), Lý Mục (李穆) v.v. biên soạn theo lệnh Tống Thái Tông, khởi soạn 977 và hoàn thành 978; truyện được đặt ở quyển 34 phần "Thần tiên" trên [ctext.org](https://ctext.org/taiping-guangji/34/cuiwei).
+3. **Xác nhận nguyên văn cái kết bản Hoa.** Người Ba Tư/Hồ nhận ra viên ngọc và nói: "郎君的入南越王趙佗墓中來" (chàng đã vào trong mộ Nam Việt vương Triệu Đà); Thôi Vĩ được ban "國寶陽燧珠" và bán được "十萬緡" (mười vạn quan tiền); thần nữ là "田夫人", "夫人即齊王女也… 王諱橫"; bà lão cho ngải là "鮑姑… 鮑靚女，葛洪妻也" — tất cả trích từ [Thái Bình Quảng Ký q.34](https://ctext.org/taiping-guangji/34/cuiwei).
+4. **Sự "dời chỗ" bản địa hóa.** Bản Việt chuyển bối cảnh về "miền Trâu Sơn huyện Vũ Ninh", gắn với truyền thuyết Ân Vương bị Phù Đổng Thiên Vương đánh bại, và đưa Triệu Đà xuống vai một viên tướng qua vùng này tu sửa miếu — một thao tác biên tập phản ánh chủ trương "tạo lập truyền thống" của nho sĩ Lê sơ mà [Liam Kelley phân tích cho các truyện LNCQ](https://www.cambridge.org/core/journals/journal-of-asian-studies/article/what-lies-behind-the-earliest-story-of-buddhism-in-ancient-vietnam/DB39DCFD3FAD0971F056A896E3664C2F).
+5. **Địa danh có thật.** "Việt Tỉnh cương" (越井岡) là đỉnh chính (主峰) của núi Việt Tú (越秀山, hải bạt 70m) ở Quảng Châu, cùng sáu gò khác (Bàn Long, Quế Hoa…) hợp thành. Gắn với nó là giếng "Việt vương tỉnh" (越王井, còn gọi 九眼井/Cửu Nhãn tỉnh) — được coi là giếng cổ nhất Quảng Châu, tương truyền do Nam Việt vương Triệu Đà đào; đây cũng là vùng gắn với tiên cô Bào Cô và nghề cứu ngải — bối cảnh địa lý xác thực của truyện gốc Hoa.
+6. **Lớp lịch sử gây tranh cãi.** Vị thế của nhà Triệu/Triệu Đà trong sử Việt là một cuộc tranh luận kéo dài nhiều thế kỷ, có tài liệu học thuật hệ thống hóa cả hai lập trường.
+
+## Details
+
+### 1. Cốt truyện (bám sát nguồn)
+
+**Bản gốc Trung Hoa — "Thôi Vĩ" (崔煒), *Thái Bình Quảng Ký* q.34.** Vào niên hiệu Trinh Nguyên đời Đường, Thôi Vĩ (con quan giám sát họ Thôi) sống ở Nam Hải (Quảng Châu), tính hào hiệp, tán gia sản. Chàng thương một bà lão ăn xin làm đổ vò rượu, cởi áo đền thay; bà lão tạ ơn bằng cách tặng "ngải gò Việt Tỉnh" (越井岡艾) chữa được bướu/nốt sần. Nhờ ngải, Thôi Vĩ chữa cho nhà họ Nhậm; rồi vì bị nhà này định giết tế thần "Độc Cước", chàng chạy trốn và **rơi xuống một giếng khô sâu**. Dưới giếng gặp bạch xà (rồng), chàng dùng ngải cứu chữa bướu cho rồng, được rồng đưa đi qua động phủ. Chàng vào một "huyền cung" nguy nga, gặp bốn thần nữ, được biết đó là cung của "hoàng đế", được gả **Điền phu nhân** (田夫人). Sứ giả Dương Thành (羊城使者) đưa chàng về nhân gian, đế ban **Dương Toại châu** (陽燧珠). Về Quảng Châu, chàng bán ngọc cho một lão Hồ (người Đại Thực/Ba Tư) ở "Ba Tư để" (波斯邸) lấy mười vạn quan; lão Hồ nhận ra "ngọc quốc bảo Dương Toại" và cho biết chàng đã vào **mộ Nam Việt vương Triệu Đà** (南越王趙佗墓), rằng "hoàng đế" chính là Triệu Đà từng xưng Nam Việt Vũ Đế. Sau chàng mới biết bà lão cho ngải là tiên cô **Bào Cô** (鮑姑), con Bào Tĩnh, vợ Cát Hồng. Nguồn: [Thái Bình Quảng Ký q.34, "Thôi Vĩ"](https://ctext.org/taiping-guangji/34/cuiwei).
+
+**Bản Việt — *Việt Tỉnh truyện* trong *Lĩnh Nam Chích Quái*.** Theo các bản phổ biến hiện lưu hành, mở đầu định vị "Giếng Việt ở miền Trâu Sơn huyện Vũ Ninh"; đời Hùng Vương thứ ba, nhà Ân sang xâm lược, bị Phù Đổng Thiên Vương (Sóc Thiên Vương) đánh bại, Ân Vương chết dưới núi hóa làm "vua cõi âm phủ", dân lập miếu thờ. Nhân vật họ Thôi (Thôi Lượng/Thôi Vĩ) làm quan ngự sử qua vùng này tu sửa miếu; về sau các tướng Nhâm Hiêu, Triệu Đà cũng qua đây trú quân và sai tu sửa miếu. Phần kỳ ảo giữ mô-típ người lạc vào "Ân Vương thành" dưới lòng đất, gặp Ân hậu, hôn phối thần nữ, nhận bảo châu (bản Việt gọi là ngọc *Long Tụy*), rồi được tiên nữ Ma Cô đón đi; kết bằng etiology: giếng cạn thành huyệt, tục gọi **Việt Tỉnh Cương** (sườn núi giếng Việt). *[Các chi tiết bản Việt này hiện chỉ tra được trên các trang phổ biến/dịch thuật không đạt chuẩn nguồn uy tín — cần đối chiếu với bản dịch phê bình của Đinh Gia Khánh–Nguyễn Ngọc San hoặc bản khảo cứu Nguyễn Thị Oanh (NXB KHXH) trước khi trích dẫn cố định — xem Caveats.]*
+
+### 2. Nguồn gốc văn bản / Sử liệu
+
+**Lĩnh Nam Chích Quái (嶺南摭怪).** Tuyển tập truyện cổ chữ Hán, tương truyền do Trần Thế Pháp soạn (khoảng cuối thế kỷ XIV), sau được Vũ Quỳnh (bài tựa năm 1492) và Kiều Phú hiệu chính. Tác phẩm chưa từng được khắc in và tồn tại qua nhiều bản chép tay khác nhau; một bản (NLVNPF-0651 / R.1618, chép tay, 115 trang, khổ 30×16cm) được số hóa trong sưu tập Thư viện Quốc gia Việt Nam trên [Nôm Foundation](https://lib.nomfoundation.org/collection/1/volume/819/); một bản khác đề niên đại Hồng Đức (1480) được dùng trong [nghiên cứu của UC Berkeley](https://escholarship.org/content/qt2p3293k8/qt2p3293k8_noSplash_488eb599b3f80885c04a2b9dde3d99e0.pdf?t=rcswt8). Émile Gaspardone đã lập thư mục các dị bản trong ["Bibliographie annamite", BEFEO 34 (1934)](https://www.jstor.org/stable/43731833).
+
+**Bản dịch quốc ngữ và khảo cứu hiện đại.** Bản dịch của Lê Hữu Mục (Nhà sách Khai Trí, Sài Gòn, 1960/1961) và bản phổ biến của Đinh Gia Khánh–Nguyễn Ngọc San (NXB Văn Hóa, 1960; tái bản nhiều lần). Công trình khảo cứu văn bản học đầy đủ nhất là chuyên luận *Lĩnh Nam chích quái (Khảo luận – Dịch chú – Nguyên bản chữ Hán)* của PGS.TS Nguyễn Thị Oanh (NXB Khoa học Xã hội), phát triển từ luận án tiến sĩ (bảo vệ 22/10/2005 tại ĐH Sư phạm Hà Nội), khảo sát toàn bộ các bản *Lĩnh Nam chích quái* lưu tại các thư viện Hà Nội.
+
+**Thái Bình Quảng Ký (太平廣記).** Bộ loại thư đời Tống, Lý Phưởng (李昉, 925–996) chủ biên theo lệnh Tống Thái Tông, khởi soạn năm Thái Bình Hưng Quốc thứ 2 (977) và hoàn thành năm 978 (dâng lên năm 981, in năm 984), gồm 500 quyển với hơn 7.000 truyện chia 92 loại. Truyện "Thôi Vĩ" nằm ở quyển 34 ("Thần tiên tam thập tứ"), cuối truyện chua xuất xứ "(出《傳奇》)" — tức từ tập *Truyền Kỳ* của Bùi Hình (裴鉶), tác gia đời Đường mạt. Nguồn: [ctext.org](https://ctext.org/taiping-guangji/34/cuiwei).
+
+### 3. Dị bản / đối chiếu (apparatus)
+
+| Yếu tố | Bản Trung Hoa (太平廣記 q.34 "崔煒") | Bản Việt (*Việt Tỉnh truyện*, LNCQ) |
+|---|---|---|
+| Bối cảnh | Nam Hải / Quảng Châu (Phiên Ngung) | Miền Trâu Sơn, huyện Vũ Ninh (đất Việt) |
+| Cung điện dưới giếng | Lăng/huyền cung của **Nam Việt vương Triệu Đà** | Cung của **Ân Vương** (vua nhà Ân hóa vua âm phủ) |
+| Vai trò Triệu Đà | Nhân vật trung tâm (chủ nhân ngôi mộ) | Bị "hạ cấp" thành viên tướng qua vùng tu sửa miếu |
+| Bảo châu | 陽燧珠 (Dương Toại châu), bán cho lão Hồ Đại Thực lấy 十萬緡 | Ngọc *Long Tụy* (theo bản phổ biến) |
+| Thần nữ | 田夫人, con Tề vương Điền Hoành (齊王橫) | Thần nữ được gả (chi tiết cần đối chiếu) |
+| Người trợ giúp | Tiên cô 鮑姑 (Bào Cô), vợ Cát Hồng | Tiên nữ Ma Cô đón đi |
+| Etiology | Gò Việt Tỉnh (越井岡) ở Quảng Châu | "Việt Tỉnh Cương" ở núi Trâu |
+
+Các dữ kiện cột bản Hoa được kiểm chứng nguyên văn trên [ctext.org](https://ctext.org/taiping-guangji/34/cuiwei). Điểm mấu chốt: bản Việt bảo lưu **khung mô-típ** (giếng → âm cung → hôn phối thần nữ → bảo châu → etiology địa danh) nhưng thay **nội dung lịch sử** (Triệu Đà → Ân Vương; Quảng Châu → Vũ Ninh), khiến một truyện Quảng Châu trở thành một truyện của đất Việt.
+
+### 4. Ý nghĩa văn hóa / lớp truyền thuyết
+
+**Sự chiếm dụng và bản địa hóa truyện Hoa.** *Việt Tỉnh truyện* là trường hợp mẫu mực cho hiện tượng nho sĩ Đại Việt thế kỷ XV thu nạp cốt truyện Trung Hoa rồi khoác cho nó một "diện mạo bản địa". Luận văn danh dự của Jenkin Leung (UC Berkeley, 2022) — dù bàn ba truyện khác — lập luận rằng tác giả LNCQ tạo một "diện mạo Hoa" (Chinese façade) cho các truyện gốc phi-Hoa để dung hòa với thế giới quan Tân Nho, một khung phân tích áp dụng được (theo chiều ngược) cho *Việt Tỉnh truyện*; xem [bản toàn văn trên eScholarship](https://escholarship.org/content/qt2p3293k8/qt2p3293k8_noSplash_488eb599b3f80885c04a2b9dde3d99e0.pdf?t=rcswt8).
+
+**Lớp Nam Việt / Triệu Đà và tính chính thống gây tranh cãi.** Sử học Việt Nam chia rẽ sâu sắc về Triệu Đà:
+- *Phía công nhận chính thống*: Lê Văn Hưu (Đại Việt sử ký) mở đầu, Ngô Sĩ Liên (Đại Việt sử ký toàn thư) tiếp nối, coi nhà Triệu là một triều đại chính thống của nước Việt.
+- *Phía phủ nhận*: Ngô Thì Sĩ (Đại Việt sử ký tiền biên) lập luận Triệu Đà khởi phát ngoài đất Việt, chiếm nước Việt làm quận huyện; học giả hiện đại như Đào Duy Anh và Phan Huy Lê coi nhà Triệu là mở đầu thời Bắc thuộc, Triệu Đà là ngoại bang. Đây là quan điểm chính thống trong sử học Việt Nam hiện nay. *(Các dẫn liệu tranh luận này hiện tra được chủ yếu trên nguồn phổ biến/bách khoa; nên cố định lại bằng chính văn Ngô Thì Sĩ và các công trình Đào Duy Anh/Phan Huy Lê khi viết entry — xem Caveats.)*
+
+### 5. Nghiên cứu học thuật
+
+- **Nguyễn Thị Oanh**, *Lĩnh Nam chích quái (Khảo luận – Dịch chú – Nguyên bản chữ Hán)*, NXB Khoa học Xã hội — khảo cứu văn bản học đầy đủ nhất về các dị bản LNCQ (phát triển từ luận án tiến sĩ 2005).
+- **Đinh Gia Khánh – Nguyễn Ngọc San**, *Lĩnh Nam chích quái* (NXB Văn Hóa, 1960) — bản dịch phổ biến; **Lê Hữu Mục** (Khai Trí, 1960/1961).
+- **Liam C. Kelley**, "The Biography of the Hồng Bàng Clan as a Medieval Vietnamese Invented Tradition", *Journal of Vietnamese Studies* 7.2 (2012) — nền tảng lý thuyết "truyền thống được kiến tạo" cho LNCQ; và bản dịch mở [LNCQ liệt truyện trên Viet Texts](https://sites.google.com/hawaii.edu/viettexts/lncqlt).
+- **Émile Gaspardone**, ["Bibliographie annamite", *BEFEO* 34 (1934): 1–173](https://www.jstor.org/stable/43731833) — thư mục nền tảng về các bản LNCQ (tr. 128–130).
+- **戴可来 (Đới Khả Lai) & 杨保筠 (Dương Bảo Quân)** hiệu chú, *嶺南摭怪等史料三種* (Lĩnh Nam chích quái đẳng sử liệu tam chủng), Trung Châu Cổ Tịch xuất bản xã, 1991 — bản hiệu chú chữ Hán chuẩn, ghi rõ truyện *Việt Tỉnh* lấy từ truyện Thôi Vĩ đời Đường; xem [mục lục catalog Douban](https://book.douban.com/subject/24296257/).
+- **Ch'oe China (최진아)**, nghiên cứu so sánh "崔煒"(Thôi Vĩ) của Bùi Hình với *Việt Tỉnh truyện*, được dẫn tường minh trong bài "South Korean Studies on Literary Sinitic Sources from Vietnam", *Sungkyun Journal of East Asian Studies* 25.2 (2025), do [Duke University Press](https://read.dukeupress.edu/sungkyun-journal-of-east-asian-studies/article/25/2/213/405435/South-Korean-Studies-on-Literary-Sinitic-Sources) / [Project MUSE](https://muse.jhu.edu/article/976568) phát hành — nguồn tường minh nhất khẳng định phái sinh 越井傳 ← 崔煒 ← 裴鉶《傳奇》.
+- **Keith Weller Taylor**, *The Birth of Vietnam*, University of California Press, 1983 (DOI 10.2307/jj.8501140; ISBN 978-0-520-07417-0) — thông tin cơ bản về LNCQ (tr. 354–357).
+
+## Proposed Chuyện kể angle
+
+Mở đầu entry bằng **cảnh Thôi Vĩ rơi xuống giếng khô** (scene-before-summary): khoảnh khắc chàng trai hào hiệp, bị truy đuổi trong đêm, sảy chân rơi vào lòng giếng tối; nhờ lớp lá khô mà thoát chết, rồi trong bóng tối bắt gặp con bạch xà khổng lồ có cái bướu ở mép — chính con rồng sẽ dẫn chàng vào cõi âm cung. Cảnh này hội tụ cả ba tầng của truyện: cái giếng (địa danh sẽ được lý giải), thế giới dưới lòng đất (âm cung/long cung), và mô-típ "làm ơn được báo" (chữa bướu cho rồng). Sau đó mới tóm tắt và chỉ ra bước ngoặt: khung cảnh Quảng Châu–lăng Triệu Đà của bản Hoa đã được người Việt "dời" về đất Trâu Sơn–Vũ Ninh và thay bằng Ân Vương như thế nào. **Word count đề xuất: 900–1.100 từ** cho phần Chuyện kể.
+
+## Recommended scope
+
+- **Nên có**: mục 1 (Cốt truyện, tách rõ bản Hoa vs bản Việt), mục 2 (Nguồn gốc văn bản), mục 3 (Dị bản/đối chiếu — đây là phần giá trị nhất vì có tổ tiên Trung Hoa được ghi nhận), mục 4 (Ý nghĩa văn hóa + lớp Triệu Đà/Nam Việt gây tranh cãi), mục 5 (Nghiên cứu học thuật).
+- **Bỏ**: mục 6 (khoa học/khảo cổ) — không trực tiếp liên quan, dù có thể nhắc thoáng qua khảo cổ như một chú thích về "lăng vua Nam Việt có thật": mộ Nam Việt Văn Vương Triệu Muội (赵眜, vua thứ 2, trị vì ~137–122 TCN) phát hiện tháng 6/1983 tại gò Tượng Cương (象岗) phía tây núi Việt Tú, khai quật 25/8–6/10/1983 bởi đội do Mạch Anh Hào (麦英豪) và Hoàng Triển Nhạc (黄展岳) dẫn đầu, thu hơn 1.000 bộ hiện vật (tiêu biểu là ấn vàng "文帝行璽" và áo ngọc tơ lụa) — lưu ý: đây là mộ **Triệu Muội** (cháu Triệu Đà), **không** phải mộ Triệu Đà (chưa tìm thấy), nên không được lẫn với "lăng Triệu Đà" trong truyện.
+- **Cần đối chiếu bắt buộc trước khi viết entry**: chi tiết bản Việt (Long Tụy châu, Ma Cô, thứ tự truyện trong quyển 2) phải kiểm trên bản dịch phê bình Đinh Gia Khánh–Nguyễn Ngọc San hoặc Nguyễn Thị Oanh, không lấy từ blog.
+
+## Nguồn
+
+1. [Nôm Foundation — 嶺南摭怪 / Lĩnh Nam chích quái, NLVNPF-0651 (R.1618)](https://lib.nomfoundation.org/collection/1/volume/819/) — *số hóa văn bản chép tay của Thư viện Quốc gia VN (institutional digitization / catalog)*.
+2. [Chinese Text Project (ctext.org) — 太平廣記 卷34 「崔煒」](https://ctext.org/taiping-guangji/34/cuiwei) — *văn bản Hán cổ gốc trên host học thuật (digitized primary text)*.
+3. [Émile Gaspardone, "Bibliographie annamite", BEFEO 34 (1934), trên JSTOR](https://www.jstor.org/stable/43731833) — *tạp chí bình duyệt (journal/JSTOR)*.
+4. [Jenkin Leung, "Beyond the Chinese Façade: A Preliminary Study of Three Sino-Vietnamese Legends from Lĩnh Nam Chích Quái", UC Berkeley (2022), eScholarship](https://escholarship.org/content/qt2p3293k8/qt2p3293k8_noSplash_488eb599b3f80885c04a2b9dde3d99e0.pdf?t=rcswt8) — *kho học thuật đại học (institutional/eScholarship)*.
+5. [Liam C. Kelley, bản dịch LNCQ liệt truyện — Viet Texts (University of Hawai'i)](https://sites.google.com/hawaii.edu/viettexts/lncqlt) — *trang dịch thuật học thuật, host university (institutional)*.
+6. [Đới Khả Lai & Dương Bảo Quân (hiệu chú), 嶺南摭怪等史料三種, Trung Châu Cổ Tịch, 1991 — catalog Douban](https://book.douban.com/subject/24296257/) — *catalog thư tịch*.
+7. [Sungkyun Journal of East Asian Studies 25.2 (2025), Duke University Press](https://read.dukeupress.edu/sungkyun-journal-of-east-asian-studies/article/25/2/213/405435/South-Korean-Studies-on-Literary-Sinitic-Sources) — *tạp chí bình duyệt (DOI/university press)*.
+8. [Cambridge Core — "What Lies Behind the Earliest Story of Buddhism in Ancient Vietnam?", The Journal of Asian Studies](https://www.cambridge.org/core/journals/journal-of-asian-studies/article/what-lies-behind-the-earliest-story-of-buddhism-in-ancient-vietnam/DB39DCFD3FAD0971F056A896E3664C2F) — *tạp chí bình duyệt (Cambridge/DOI)* — dẫn về đặc điểm dị bản LNCQ.
+
+## Caveats
+
+- **Chi tiết bản Việt chưa xác minh được nguồn uy tín**: tên viên ngọc ("Long Tụy châu"), sự xuất hiện của tiên nữ Ma Cô, thứ tự truyện trong quyển 2, và các câu văn cụ thể của *Việt Tỉnh truyện* bản Việt hiện chỉ tra được trên các trang phổ biến/blog (dotchuoinon, studocu, wattpad…) — thuộc diện DISCOVERY, không được trích dẫn. Phải đối chiếu bản Đinh Gia Khánh–Nguyễn Ngọc San hoặc Nguyễn Thị Oanh.
+- **Cuộc tranh luận Triệu Đà**: các trích dẫn Ngô Thì Sĩ, Đào Duy Anh, Phan Huy Lê trong mục 4 hiện lấy từ nguồn phổ biến/bách khoa; cần cố định lại bằng chính văn (Đại Việt sử ký tiền biên, Lịch sử cổ đại Việt Nam) hoặc công trình học thuật in trước khi trích dẫn cố định.
+- **Số trang chính xác** trong các công trình của Nguyễn Thị Oanh, Đới Khả Lai và bài SJEAS chưa xác định được trang cụ thể cho câu khẳng định phái sinh — cần tra bản in.
+- **Trần Ích Nguyên (陳益源)**: nhiều khả năng có công trình so sánh trực tiếp 越井傳/崔煒 nhưng chưa tìm được đoạn văn tường minh trên nguồn uy tín — để ngỏ. (Chuỗi phái sinh cụ thể LNCQ ← Thôi Vĩ ← Thái Bình Quảng Ký ← Bùi Hình được nguồn Hàn Quốc SJEAS nêu tường minh; bản Hoa Đới Khả Lai còn định tuyến qua các tập trung gian như *Tài Quỷ Ký* 才鬼記 và *Nam Hải cổ tích ký* 南海古迹記 — cần kiểm chứng thêm.)
+- **Ba tầng thời gian** cần phân biệt rõ trong entry: (a) thời điểm biên soạn văn bản (Thái Bình Quảng Ký 978; LNCQ thế kỷ XV); (b) bối cảnh truyện tự nhận (đời Đường Trinh Nguyên với bản Hoa; đời Hùng Vương/Ân với bản Việt) — **không được trình bày như sự thật lịch sử**; (c) hiện thực lịch sử–khảo cổ (Nam Việt, Triệu Đà thế kỷ II TCN; lăng Triệu Muội khai quật 1983).
+- **Bẫy thường gặp**: một số trang gán nhầm LNCQ cho Nguyễn Dữ — sai; Nguyễn Dữ viết *Truyền Kỳ Mạn Lục*. Cần cảnh báo nếu gặp.
+- **Niên đại và tác giả Trần Thế Pháp** không rõ ("không rõ năm sinh mất"); việc quy tác cho ông chỉ là "tương truyền".

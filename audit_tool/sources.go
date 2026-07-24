@@ -42,6 +42,7 @@ var bannedSourceHosts = []string{
 var trustedSourceHints = []string{
 	"jstor.org",
 	"doi.org",
+	"vjol.info.vn",
 	"han-nom.org",
 	"thuvienquocgia.gov.vn",
 	"gallica.bnf.fr",
@@ -161,6 +162,14 @@ func auditOneSourceURL(src SourceRef, client *http.Client) SourceLinkResult {
 		res.Evidence = fmt.Sprintf("request failed: %v", fetchErr)
 		return res
 	}
+	// Bot-blocking (403/401/429) means the host refuses automated probes, NOT
+	// that the page is dead. Flagging these as unreachable produced false
+	// REVISE verdicts on gov/scholarly hosts. Surface for human eyes instead.
+	if code == 401 || code == 403 || code == 429 {
+		res.Status = "blocked"
+		res.Evidence = fmt.Sprintf("HTTP %d — host blocks automated probes; verify link by hand", code)
+		return res
+	}
 	if code >= 400 {
 		res.Status = "unreachable"
 		res.Evidence = fmt.Sprintf("HTTP %d", code)
@@ -259,7 +268,10 @@ func doProbe(client *http.Client, method, rawURL string) (int, error) {
 	if err != nil {
 		return 0, err
 	}
-	req.Header.Set("User-Agent", "vietmyth-auditor/1.0")
+	// Real browser UA: many gov/scholarly hosts 403 a bot-looking UA, which
+	// otherwise shows up as a false dead-link.
+	req.Header.Set("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36")
+	req.Header.Set("Accept", "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8")
 	resp, err := client.Do(req)
 	if err != nil {
 		return 0, err

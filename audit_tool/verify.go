@@ -4,6 +4,7 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
+	"net/url"
 	"strings"
 )
 
@@ -29,6 +30,17 @@ HARD RULES (violating any of these is a critical failure):
 - NEVER mention a name, title, date, or fact that does not appear in the search results above. Do not fill gaps from your own knowledge.
 - confidence "high" is only allowed when the evidence field quotes the search results directly.
 - Absence from a single search is weak evidence. A person or work missing from these results is at most not_found with confidence medium, NEVER invented with high confidence.
+
+SOURCE HIERARCHY (this is a scholarly encyclopedia; not all contradictions count):
+- Wikipedia, newspapers (báo/tin tức), blogs, forums, and content farms CANNOT overturn a claim. If the ONLY contradicting evidence comes from such sources, the status is at most "suspicious", never "wrong" or "invented". Overturning a cited academic source requires an equally reputable source (journal/DOI, university/library, NXB, archive).
+- When the entry cites a specific scholarly source and the search surfaces only popular sources, prefer "not_found" or "suspicious".
+
+FOLKLORE VARIANT RULE (most false "wrong" verdicts come from here):
+- Vietnamese legends exist in many regional and textual variants. Place names, market names, character names, and plot details LEGITIMATELY differ between versions.
+- If the search shows a DIFFERENT variant (e.g. the market is called "Hà Thám" while the claim says "Hà Thị"), that is NOT a contradiction. Mark "suspicious" (variant), never "wrong". Only mark "wrong" if a source explicitly states the claim's specific version is false or erroneous.
+
+INTERPRETIVE-CLAIM RULE:
+- Analytical or interpretive statements (about origins, dating of a concept, scholarly framing, "product of modern studies", symbolism) are arguments, not checkable facts. NEVER mark these "wrong". At most "suspicious" if reputable scholarship visibly disagrees. Reserve "wrong"/"invented" for hard, checkable facts: dates, coordinates, Hán tự, source existence, ATU codes.
 
 Special rules by claim type:
 - source-existence: mark invented ONLY if the search results positively state the work does not exist or positively attribute it to a different author (quote that statement). Vietnamese author names are often romanized differently (given-name order, dropped diacritics); a name mismatch alone is not contradiction.
@@ -56,7 +68,52 @@ func verifyClaim(claim Claim, verbose bool, rt Runtime) (VerificationResult, err
 		}
 	}
 
-	return result, nil
+	return gateDamningVerdict(result), nil
+}
+
+// gateDamningVerdict is the mechanical backstop for false "wrong"/"invented":
+// such a verdict is only allowed to stand when the judge's own cited source is a
+// reputable scholarly host. Wikipedia, newspapers, and blogs cannot overturn a
+// cited academic source (skill §2.7), and observed false positives all rested on
+// exactly those. Downgrade the rest to "suspicious" so a human reviews instead of
+// the tool auto-rejecting on weak evidence. Independent of prompt compliance.
+func gateDamningVerdict(r VerificationResult) VerificationResult {
+	if r.Status != "wrong" && r.Status != "invented" {
+		return r
+	}
+	if reputableVerdictSource(r.SourceURL) {
+		return r
+	}
+	r.Evidence = "[auto-downgraded: contradicting source is not a reputable scholarly host — verify by hand] " + r.Evidence
+	r.Status = "suspicious"
+	r.Confidence = "low"
+	return r
+}
+
+func reputableVerdictSource(rawURL string) bool {
+	rawURL = strings.TrimSpace(rawURL)
+	if rawURL == "" {
+		return false
+	}
+	u, err := url.Parse(rawURL)
+	if err != nil || u.Host == "" {
+		return false
+	}
+	host := strings.ToLower(u.Host)
+	return isTrustedSourceHost(host) && !isBannedSourceHost(host)
+}
+
+// isFatalBackendErr reports whether an "error"-status evidence string looks
+// like a non-recoverable backend failure (quota/auth), so the pipeline can
+// stop hammering a dead API instead of burning ~250 paid calls per bad run.
+func isFatalBackendErr(evidence string) bool {
+	e := strings.ToLower(evidence)
+	for _, sig := range []string{"quota", "billing", "unauthorized", "invalid api key", "invalid_api_key", " 401", " 403", "exceeded"} {
+		if strings.Contains(e, sig) {
+			return true
+		}
+	}
+	return false
 }
 
 func judgeOnce(claim Claim, searchQuery string, verbose bool, rt Runtime) (VerificationResult, error) {
@@ -64,7 +121,10 @@ func judgeOnce(claim Claim, searchQuery string, verbose bool, rt Runtime) (Verif
 
 	sr, err := rt.Search.Search(context.Background(), searchQuery)
 	if err != nil {
-		result.Status = "not_found"
+		// Infra failure, NOT evidence of absence. Distinct status so a dead
+		// backend can't masquerade as a benign not_found and produce a
+		// confident verdict on an audit that checked nothing.
+		result.Status = "error"
 		result.Evidence = fmt.Sprintf("Search failed: %v", err)
 		result.Confidence = "low"
 		return result, nil
@@ -89,7 +149,7 @@ Citations:
 
 	raw, err := callLLMJSON(rt.Judge, judgeSystem, prompt, 512)
 	if err != nil {
-		result.Status = "not_found"
+		result.Status = "error"
 		result.Evidence = fmt.Sprintf("Judgment failed: %v", err)
 		result.Confidence = "low"
 		return result, nil

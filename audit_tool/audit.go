@@ -6,6 +6,7 @@ import (
 	"path/filepath"
 	"strings"
 	"sync"
+	"sync/atomic"
 	"time"
 )
 
@@ -110,6 +111,12 @@ func runAudit(entryPath, outputPath string, verbose bool, rt Runtime) error {
 	fmt.Printf("Summary: %s\n", summary)
 	fmt.Printf("Report:  %s\n", outputPath)
 
+	// Non-zero exit when the audit could not actually run, so a failed backend
+	// is never mistaken for a clean pass by a human or a script.
+	if verdict == "INCONCLUSIVE" {
+		return fmt.Errorf("audit inconclusive: %s", rejectReason)
+	}
+
 	return nil
 }
 
@@ -182,6 +189,7 @@ func verifyAllBlocks(blockAudits []BlockAudit, verbose bool, rt Runtime) []Block
 	results := make([]VerificationResult, len(all))
 	sem := make(chan struct{}, 5)
 	var wg sync.WaitGroup
+	var aborted atomic.Bool
 
 	for i, ic := range all {
 		wg.Add(1)
@@ -189,6 +197,18 @@ func verifyAllBlocks(blockAudits []BlockAudit, verbose bool, rt Runtime) []Block
 			defer wg.Done()
 			sem <- struct{}{}
 			defer func() { <-sem }()
+
+			// Fail-fast: once the backend returns a fatal error (quota/auth),
+			// skip the rest instead of firing hundreds more doomed paid calls.
+			if aborted.Load() {
+				results[idx] = VerificationResult{
+					Claim:      ic.claim,
+					Status:     "error",
+					Evidence:   "skipped: search/judge backend failing (quota or auth) — audit aborted early",
+					Confidence: "low",
+				}
+				return
+			}
 
 			logf(verbose, "  [%d/%d] [%s] %s\n",
 				idx+1, len(all),
@@ -199,10 +219,13 @@ func verifyAllBlocks(blockAudits []BlockAudit, verbose bool, rt Runtime) []Block
 			if err != nil {
 				res = VerificationResult{
 					Claim:      ic.claim,
-					Status:     "not_found",
+					Status:     "error",
 					Evidence:   fmt.Sprintf("Error: %v", err),
 					Confidence: "low",
 				}
+			}
+			if res.Status == "error" && isFatalBackendErr(res.Evidence) {
+				aborted.Store(true)
 			}
 			results[idx] = res
 
@@ -259,6 +282,20 @@ func deriveVerdict(results []VerificationResult, patterns []PatternIssue, blockA
 		}
 	}
 
+	// Guard first: if too many claims errored out (dead search/judge backend),
+	// no fact verdict is trustworthy. Never let PASS/REVISE/REJECT ship on an
+	// audit that checked almost nothing.
+	errorCount := counts["error"]
+	errorPct := float64(errorCount) / float64(total) * 100
+	if errorPct >= 20 {
+		mURL, bURL, unr := countSourceLinkIssues(sourceLinks)
+		verdict = "INCONCLUSIVE"
+		rejectReason = fmt.Sprintf("%d/%d claims could not be checked (search/judge backend failed) — fix API access and rerun", errorCount, total)
+		summary = fmt.Sprintf("AUDIT DID NOT COMPLETE. %d/%d claims errored out (%.0f%%). No factual verdict possible. Sources=%d (missing_url=%d bad=%d unreachable=%d).",
+			errorCount, total, errorPct, len(sourceLinks), mURL, bURL, unr)
+		return verdict, rejectReason, summary
+	}
+
 	wrongPct := float64(counts["wrong"]+counts["invented"]) / float64(total) * 100
 	suspPct := float64(counts["suspicious"]) / float64(total) * 100
 
@@ -306,10 +343,10 @@ func deriveVerdict(results []VerificationResult, patterns []PatternIssue, blockA
 	}
 
 	summary = fmt.Sprintf(
-		"%d claims across %d blocks. verified=%d wrong=%d invented=%d suspicious=%d not_found=%d (wrong+invented=%.0f%%). Patterns=%d (stance=%d). Sources=%d (missing_url=%d bad=%d unreachable=%d unlinked_cites=%d).",
+		"%d claims across %d blocks. verified=%d wrong=%d invented=%d suspicious=%d not_found=%d error=%d (wrong+invented=%.0f%%). Patterns=%d (stance=%d). Sources=%d (missing_url=%d bad=%d unreachable=%d unlinked_cites=%d).",
 		total, len(blockAudits),
 		counts["verified"], counts["wrong"], counts["invented"],
-		counts["suspicious"], counts["not_found"],
+		counts["suspicious"], counts["not_found"], errorCount,
 		wrongPct, len(patterns), stanceIssues,
 		len(sourceLinks), missingURL, badURL, unreachable, unlinkedCites,
 	)
